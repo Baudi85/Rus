@@ -1,0 +1,947 @@
+//Filename: gumball_helmet_zombie.behavior.json
+//Generated with Anvil@StarkTMA 0.5.4
+//25-10-2023 01:06:43 +0100
+//
+
+{
+    "format_version": "1.19.0",
+    "minecraft:entity": {
+        "component_groups": {
+            "despawn": {
+                "minecraft:instant_despawn": {}
+            },
+            "is_target": {
+                "minecraft:type_family": {
+                    "family": [
+                        "attacker",
+                        "is_target",
+                        "give_fake_1_damage"
+                    ]
+                }
+            },
+            "ai": {
+                "minecraft:type_family": {
+                    "family": [
+                        "attacker",
+                        "give_fake_1_damage"
+                    ]
+                },
+                "minecraft:behavior.nearest_attackable_target": {
+                    "entity_types": [
+                        {
+                            "filters": {
+                                "test": "is_family",
+                                "value": "attacker_target",
+                                "subject": "other"
+                            },
+                            "max_dist": 64
+                        }
+                    ],
+                    "must_reach": true,
+                    "priority": 1
+                },
+                "minecraft:behavior.nearest_prioritized_attackable_target": {
+                    "entity_types": [
+                        {
+                            "filters": {
+                                "all_of": [
+                                    {
+                                        "test": "is_family",
+                                        "value": "tower",
+                                        "subject": "other"
+                                    },
+                                    {
+                                        "test": "is_family",
+                                        "value": "is_target",
+                                        "subject": "other"
+                                    }
+                                ]
+                            },
+                            "max_dist": 2
+                        }
+                    ],
+                    "must_reach": true,
+                    "must_see": true,
+                    "within_radius": 2,
+                    "priority": 0
+                },
+                "minecraft:behavior.delayed_attack": {
+                    "attack_duration": 0.5,
+                    "cooldown_time": 0.05,
+                    "track_target": true,
+                    "priority": 2
+                }
+            },
+            "is_dying": {
+                "minecraft:ageable": {
+                    "duration": 2,
+                    "grow_up": {
+                        "event": "is_dead",
+                        "target": "self"
+                    }
+                },
+                "minecraft:collision_box": {
+                    "height": 2,
+                    "width": 0
+                }
+            },
+            "is_exploding": {
+                "minecraft:timer": {
+                    "time_down_event": {
+                        "event": "explode",
+                        "target": "self"
+                    },
+                    "time": 2
+                },
+                "minecraft:movement": {
+                    "value": 0
+                }
+            },
+            "is_stunned": {
+                "minecraft:timer": {
+                    "time_down_event": {
+                        "event": "not_stunned",
+                        "target": "self"
+                    },
+                    "time": 4
+                }
+            },
+            "is_slowed": {
+                "minecraft:spell_effects": {
+                    "add_effects": [
+                        {
+                            "effect": "slowness",
+                            "duration": 4,
+                            "amplifier": 1,
+                            "ambient": false,
+                            "visible": false
+                        }
+                    ]
+                },
+                "minecraft:timer": {
+                    "time_down_event": {
+                        "event": "not_frozen",
+                        "target": "self"
+                    },
+                    "time": 8
+                }
+            },
+            "is_frozen": {
+                "minecraft:spell_effects": {
+                    "add_effects": [
+                        {
+                            "effect": "slowness",
+                            "duration": 8,
+                            "amplifier": 255,
+                            "ambient": false,
+                            "visible": false
+                        }
+                    ]
+                },
+                "minecraft:timer": {
+                    "time_down_event": {
+                        "event": "not_frozen",
+                        "target": "self"
+                    },
+                    "time": 8
+                }
+            },
+            "no_slowness": {
+                "minecraft:spell_effects": {
+                    "remove_effects": [
+                        "slowness"
+                    ]
+                }
+            },
+            "is_on_fire": {
+                "minecraft:timer": {
+                    "time_down_event": {
+                        "event": "not_on_fire",
+                        "target": "self"
+                    },
+                    "time": 4
+                }
+            }
+        },
+        "components": {
+            "minecraft:conditional_bandwidth_optimization": {
+                "default_values": {
+                    "use_motion_prediction_hints": true
+                }
+            },
+            "minecraft:damage_sensor": {
+                "triggers": [
+                    {
+                        "deals_damage": false,
+                        "on_damage": {
+                            "event": "take_fake_1_damage",
+                            "filters": {
+                                "all_of": [
+                                    {
+                                        "test": "is_family",
+                                        "value": "damage_1",
+                                        "subject": "damager"
+                                    },
+                                    {
+                                        "test": "is_family",
+                                        "value": "tower",
+                                        "subject": "damager"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "deals_damage": false,
+                        "on_damage": {
+                            "event": "take_fake_2_damage",
+                            "filters": {
+                                "all_of": [
+                                    {
+                                        "test": "is_family",
+                                        "value": "damage_2",
+                                        "subject": "damager"
+                                    },
+                                    {
+                                        "test": "is_family",
+                                        "value": "tower",
+                                        "subject": "damager"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "deals_damage": false,
+                        "on_damage": {
+                            "event": "take_fake_3_damage",
+                            "filters": {
+                                "all_of": [
+                                    {
+                                        "test": "is_family",
+                                        "value": "damage_3",
+                                        "subject": "damager"
+                                    },
+                                    {
+                                        "test": "is_family",
+                                        "value": "tower",
+                                        "subject": "damager"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "deals_damage": false,
+                        "on_damage": {
+                            "event": "take_fake_4_damage",
+                            "filters": {
+                                "all_of": [
+                                    {
+                                        "test": "is_family",
+                                        "value": "damage_4",
+                                        "subject": "damager"
+                                    },
+                                    {
+                                        "test": "is_family",
+                                        "value": "tower",
+                                        "subject": "damager"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "deals_damage": false,
+                        "on_damage": {
+                            "event": "take_fake_5_damage",
+                            "filters": {
+                                "all_of": [
+                                    {
+                                        "test": "is_family",
+                                        "value": "damage_5",
+                                        "subject": "damager"
+                                    },
+                                    {
+                                        "test": "is_family",
+                                        "value": "tower",
+                                        "subject": "damager"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "deals_damage": false,
+                        "on_damage": {
+                            "event": "take_fake_6_damage",
+                            "filters": {
+                                "all_of": [
+                                    {
+                                        "test": "is_family",
+                                        "value": "damage_6",
+                                        "subject": "damager"
+                                    },
+                                    {
+                                        "test": "is_family",
+                                        "value": "tower",
+                                        "subject": "damager"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "deals_damage": false,
+                        "on_damage": {
+                            "event": "take_fake_7_damage",
+                            "filters": {
+                                "all_of": [
+                                    {
+                                        "test": "is_family",
+                                        "value": "damage_7",
+                                        "subject": "damager"
+                                    },
+                                    {
+                                        "test": "is_family",
+                                        "value": "tower",
+                                        "subject": "damager"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "deals_damage": false,
+                        "on_damage": {
+                            "event": "take_fake_8_damage",
+                            "filters": {
+                                "all_of": [
+                                    {
+                                        "test": "is_family",
+                                        "value": "damage_8",
+                                        "subject": "damager"
+                                    },
+                                    {
+                                        "test": "is_family",
+                                        "value": "tower",
+                                        "subject": "damager"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "deals_damage": false,
+                        "on_damage": {
+                            "event": "take_fake_9_damage",
+                            "filters": {
+                                "all_of": [
+                                    {
+                                        "test": "is_family",
+                                        "value": "damage_9",
+                                        "subject": "damager"
+                                    },
+                                    {
+                                        "test": "is_family",
+                                        "value": "tower",
+                                        "subject": "damager"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "deals_damage": false,
+                        "on_damage": {
+                            "event": "take_fake_10_damage",
+                            "filters": {
+                                "all_of": [
+                                    {
+                                        "test": "is_family",
+                                        "value": "damage_10",
+                                        "subject": "damager"
+                                    },
+                                    {
+                                        "test": "is_family",
+                                        "value": "tower",
+                                        "subject": "damager"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "deals_damage": false
+                    }
+                ]
+            },
+            "minecraft:attack": {
+                "damage": 1
+            },
+            "minecraft:follow_range": {
+                "value": 64
+            },
+            "minecraft:health": {
+                "value": 1,
+                "max": 1,
+                "min": 1
+            },
+            "minecraft:physics": {
+                "has_collision": true,
+                "has_gravity": true
+            },
+            "minecraft:fire_immune": {},
+            "minecraft:movement": {
+                "value": 0.09613324086911873
+            },
+            "minecraft:collision_box": {
+                "height": 2,
+                "width": 0.9
+            },
+            "minecraft:custom_hit_test": {
+                "hitboxes": [
+                    {
+                        "width": 2,
+                        "height": 2,
+                        "pivot": [
+                            0,
+                            1.5,
+                            0
+                        ]
+                    }
+                ]
+            },
+            "minecraft:pushable": {
+                "is_pushable": false,
+                "is_pushable_by_piston": false
+            },
+            "minecraft:movement.basic": {},
+            "minecraft:navigation.generic": {
+                "can_jump": false
+            },
+            "minecraft:equipment": {
+                "table": "loot_tables/gumball_helmet_zombie.loot_table.json"
+            },
+            "minecraft:behavior.equip_item": {}
+        },
+        "events": {
+            "despawn": {
+                "add": {
+                    "component_groups": [
+                        "despawn"
+                    ]
+                }
+            },
+            "take_fake_1_damage": {
+                "sequence": [
+                    {
+                        "set_property": {
+                            "starktma:protection_health": "math.max((q.property('starktma:protection_health') - 1), 0)"
+                        },
+                        "filters": {
+                            "test": "int_property",
+                            "value": 0,
+                            "operator": ">",
+                            "domain": "starktma:protection_health"
+                        }
+                    },
+                    {
+                        "set_property": {
+                            "starktma:health": "math.max((q.property('starktma:health') - 1), 0)"
+                        },
+                        "filters": {
+                            "test": "int_property",
+                            "value": 0,
+                            "operator": "<=",
+                            "domain": "starktma:protection_health"
+                        }
+                    }
+                ]
+            },
+            "take_fake_2_damage": {
+                "sequence": [
+                    {
+                        "set_property": {
+                            "starktma:protection_health": "math.max((q.property('starktma:protection_health') - 2), 0)"
+                        },
+                        "filters": {
+                            "test": "int_property",
+                            "value": 0,
+                            "operator": ">",
+                            "domain": "starktma:protection_health"
+                        }
+                    },
+                    {
+                        "set_property": {
+                            "starktma:health": "math.max((q.property('starktma:health') - 2), 0)"
+                        },
+                        "filters": {
+                            "test": "int_property",
+                            "value": 0,
+                            "operator": "<=",
+                            "domain": "starktma:protection_health"
+                        }
+                    }
+                ]
+            },
+            "take_fake_3_damage": {
+                "sequence": [
+                    {
+                        "set_property": {
+                            "starktma:protection_health": "math.max((q.property('starktma:protection_health') - 3), 0)"
+                        },
+                        "filters": {
+                            "test": "int_property",
+                            "value": 0,
+                            "operator": ">",
+                            "domain": "starktma:protection_health"
+                        }
+                    },
+                    {
+                        "set_property": {
+                            "starktma:health": "math.max((q.property('starktma:health') - 3), 0)"
+                        },
+                        "filters": {
+                            "test": "int_property",
+                            "value": 0,
+                            "operator": "<=",
+                            "domain": "starktma:protection_health"
+                        }
+                    }
+                ]
+            },
+            "take_fake_4_damage": {
+                "sequence": [
+                    {
+                        "set_property": {
+                            "starktma:protection_health": "math.max((q.property('starktma:protection_health') - 4), 0)"
+                        },
+                        "filters": {
+                            "test": "int_property",
+                            "value": 0,
+                            "operator": ">",
+                            "domain": "starktma:protection_health"
+                        }
+                    },
+                    {
+                        "set_property": {
+                            "starktma:health": "math.max((q.property('starktma:health') - 4), 0)"
+                        },
+                        "filters": {
+                            "test": "int_property",
+                            "value": 0,
+                            "operator": "<=",
+                            "domain": "starktma:protection_health"
+                        }
+                    }
+                ]
+            },
+            "take_fake_5_damage": {
+                "sequence": [
+                    {
+                        "set_property": {
+                            "starktma:protection_health": "math.max((q.property('starktma:protection_health') - 5), 0)"
+                        },
+                        "filters": {
+                            "test": "int_property",
+                            "value": 0,
+                            "operator": ">",
+                            "domain": "starktma:protection_health"
+                        }
+                    },
+                    {
+                        "set_property": {
+                            "starktma:health": "math.max((q.property('starktma:health') - 5), 0)"
+                        },
+                        "filters": {
+                            "test": "int_property",
+                            "value": 0,
+                            "operator": "<=",
+                            "domain": "starktma:protection_health"
+                        }
+                    }
+                ]
+            },
+            "take_fake_6_damage": {
+                "sequence": [
+                    {
+                        "set_property": {
+                            "starktma:protection_health": "math.max((q.property('starktma:protection_health') - 6), 0)"
+                        },
+                        "filters": {
+                            "test": "int_property",
+                            "value": 0,
+                            "operator": ">",
+                            "domain": "starktma:protection_health"
+                        }
+                    },
+                    {
+                        "set_property": {
+                            "starktma:health": "math.max((q.property('starktma:health') - 6), 0)"
+                        },
+                        "filters": {
+                            "test": "int_property",
+                            "value": 0,
+                            "operator": "<=",
+                            "domain": "starktma:protection_health"
+                        }
+                    }
+                ]
+            },
+            "take_fake_7_damage": {
+                "sequence": [
+                    {
+                        "set_property": {
+                            "starktma:protection_health": "math.max((q.property('starktma:protection_health') - 7), 0)"
+                        },
+                        "filters": {
+                            "test": "int_property",
+                            "value": 0,
+                            "operator": ">",
+                            "domain": "starktma:protection_health"
+                        }
+                    },
+                    {
+                        "set_property": {
+                            "starktma:health": "math.max((q.property('starktma:health') - 7), 0)"
+                        },
+                        "filters": {
+                            "test": "int_property",
+                            "value": 0,
+                            "operator": "<=",
+                            "domain": "starktma:protection_health"
+                        }
+                    }
+                ]
+            },
+            "take_fake_8_damage": {
+                "sequence": [
+                    {
+                        "set_property": {
+                            "starktma:protection_health": "math.max((q.property('starktma:protection_health') - 8), 0)"
+                        },
+                        "filters": {
+                            "test": "int_property",
+                            "value": 0,
+                            "operator": ">",
+                            "domain": "starktma:protection_health"
+                        }
+                    },
+                    {
+                        "set_property": {
+                            "starktma:health": "math.max((q.property('starktma:health') - 8), 0)"
+                        },
+                        "filters": {
+                            "test": "int_property",
+                            "value": 0,
+                            "operator": "<=",
+                            "domain": "starktma:protection_health"
+                        }
+                    }
+                ]
+            },
+            "take_fake_9_damage": {
+                "sequence": [
+                    {
+                        "set_property": {
+                            "starktma:protection_health": "math.max((q.property('starktma:protection_health') - 9), 0)"
+                        },
+                        "filters": {
+                            "test": "int_property",
+                            "value": 0,
+                            "operator": ">",
+                            "domain": "starktma:protection_health"
+                        }
+                    },
+                    {
+                        "set_property": {
+                            "starktma:health": "math.max((q.property('starktma:health') - 9), 0)"
+                        },
+                        "filters": {
+                            "test": "int_property",
+                            "value": 0,
+                            "operator": "<=",
+                            "domain": "starktma:protection_health"
+                        }
+                    }
+                ]
+            },
+            "take_fake_10_damage": {
+                "sequence": [
+                    {
+                        "set_property": {
+                            "starktma:protection_health": "math.max((q.property('starktma:protection_health') - 10), 0)"
+                        },
+                        "filters": {
+                            "test": "int_property",
+                            "value": 0,
+                            "operator": ">",
+                            "domain": "starktma:protection_health"
+                        }
+                    },
+                    {
+                        "set_property": {
+                            "starktma:health": "math.max((q.property('starktma:health') - 10), 0)"
+                        },
+                        "filters": {
+                            "test": "int_property",
+                            "value": 0,
+                            "operator": "<=",
+                            "domain": "starktma:protection_health"
+                        }
+                    }
+                ]
+            },
+            "minecraft:entity_spawned": {
+                "add": {
+                    "component_groups": [
+                        "ai",
+                        "is_target"
+                    ]
+                }
+            },
+            "is_target": {
+                "add": {
+                    "component_groups": [
+                        "is_target"
+                    ]
+                }
+            },
+            "kill": {
+                "set_property": {
+                    "starktma:health": 0,
+                    "starktma:is_dead": true
+                }
+            },
+            "is_dying": {
+                "add": {
+                    "component_groups": [
+                        "is_dying"
+                    ]
+                },
+                "remove": {
+                    "component_groups": [
+                        "ai"
+                    ]
+                },
+                "set_property": {
+                    "starktma:is_dying": true
+                }
+            },
+            "is_dead": {
+                "set_property": {
+                    "starktma:is_dead": true
+                }
+            },
+            "is_exploding": {
+                "add": {
+                    "component_groups": [
+                        "is_exploding"
+                    ]
+                },
+                "set_property": {
+                    "starktma:is_exploding": true
+                }
+            },
+            "explode": {
+                "set_property": {
+                    "starktma:explode": true
+                }
+            },
+            "is_stunned": {
+                "add": {
+                    "component_groups": [
+                        "is_stunned"
+                    ]
+                },
+                "remove": {
+                    "component_groups": [
+                        "ai"
+                    ]
+                },
+                "set_property": {
+                    "starktma:is_stunned": true
+                }
+            },
+            "not_stunned": {
+                "add": {
+                    "component_groups": [
+                        "ai"
+                    ]
+                },
+                "remove": {
+                    "component_groups": [
+                        "is_stunned"
+                    ]
+                },
+                "set_property": {
+                    "starktma:is_stunned": false
+                }
+            },
+            "is_slowed": {
+                "sequence": [
+                    {
+                        "trigger": "not_on_fire"
+                    },
+                    {
+                        "set_property": {
+                            "starktma:is_slowed": true
+                        },
+                        "add": {
+                            "component_groups": [
+                                "is_slowed"
+                            ]
+                        }
+                    }
+                ]
+            },
+            "is_frozen": {
+                "sequence": [
+                    {
+                        "trigger": "not_on_fire"
+                    },
+                    {
+                        "set_property": {
+                            "starktma:is_frozen": true
+                        },
+                        "add": {
+                            "component_groups": [
+                                "is_frozen"
+                            ]
+                        }
+                    }
+                ]
+            },
+            "not_frozen": {
+                "add": {
+                    "component_groups": [
+                        "no_slowness"
+                    ]
+                },
+                "set_property": {
+                    "starktma:is_frozen": false,
+                    "starktma:is_slowed": false
+                }
+            },
+            "is_on_fire": {
+                "sequence": [
+                    {
+                        "trigger": "not_frozen"
+                    },
+                    {
+                        "set_property": {
+                            "starktma:is_on_fire": true
+                        },
+                        "add": {
+                            "component_groups": [
+                                "is_on_fire"
+                            ]
+                        }
+                    }
+                ]
+            },
+            "not_on_fire": {
+                "set_property": {
+                    "starktma:is_on_fire": false
+                }
+            }
+        },
+        "description": {
+            "identifier": "starktma:gumball_helmet_zombie",
+            "animations": {
+                "root": "controller.animation.starktma.gumball_helmet_zombie.root",
+                "is_exploding_ctrl": "controller.animation.starktma.gumball_helmet_zombie.is_exploding_ctrl",
+                "is_on_fire": "animation.starktma.gumball_helmet_zombie.is_on_fire"
+            },
+            "scripts": {
+                "animate": [
+                    "root",
+                    {
+                        "is_on_fire": "q.property('starktma:is_on_fire')"
+                    }
+                ]
+            },
+            "properties": {
+                "starktma:health": {
+                    "type": "int",
+                    "default": 10,
+                    "range": [
+                        -1,
+                        10
+                    ],
+                    "client_sync": true
+                },
+                "starktma:max_health": {
+                    "type": "int",
+                    "default": 10,
+                    "range": [
+                        -1,
+                        10
+                    ],
+                    "client_sync": true
+                },
+                "starktma:is_stunned": {
+                    "type": "bool",
+                    "default": false,
+                    "client_sync": true
+                },
+                "starktma:is_on_fire": {
+                    "type": "bool",
+                    "default": false,
+                    "client_sync": true
+                },
+                "starktma:is_frozen": {
+                    "type": "bool",
+                    "default": false,
+                    "client_sync": true
+                },
+                "starktma:is_slowed": {
+                    "type": "bool",
+                    "default": false,
+                    "client_sync": true
+                },
+                "starktma:is_exploding": {
+                    "type": "bool",
+                    "default": false,
+                    "client_sync": true
+                },
+                "starktma:explode": {
+                    "type": "bool",
+                    "default": false,
+                    "client_sync": true
+                },
+                "starktma:protection_health": {
+                    "type": "int",
+                    "default": 25,
+                    "range": [
+                        -1,
+                        25
+                    ],
+                    "client_sync": true
+                },
+                "starktma:protection_max_health": {
+                    "type": "int",
+                    "default": 25,
+                    "range": [
+                        -1,
+                        25
+                    ],
+                    "client_sync": true
+                },
+                "starktma:is_dying": {
+                    "type": "bool",
+                    "default": false,
+                    "client_sync": true
+                },
+                "starktma:is_dead": {
+                    "type": "bool",
+                    "default": false,
+                    "client_sync": true
+                }
+            },
+            "is_spawnable": true,
+            "is_summonable": true
+        }
+    }
+}

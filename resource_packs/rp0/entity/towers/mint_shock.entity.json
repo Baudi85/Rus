@@ -1,0 +1,42 @@
+//Filename: mint_shock.entity.json
+//Generated with Anvil@StarkTMA 0.5.4
+//25-10-2023 01:06:41 +0100
+//
+
+{
+    "format_version": "1.10.0",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "starktma:mint_shock",
+            "animations": {
+                "idle": "animation.starktma.mint_shock.idle",
+                "is_disabled_ctrl": "controller.animation.starktma.mint_shock.is_disabled_ctrl"
+            },
+            "scripts": {
+                "animate": [
+                    "idle",
+                    "is_disabled_ctrl"
+                ]
+            },
+            "materials": {
+                "default": "entity_alphatest"
+            },
+            "textures": {
+                "default": "textures/entity/mint_shock/mint_shock"
+            },
+            "geometry": {
+                "default": "geometry.starktma.mint_shock"
+            },
+            "particle_effects": {
+                "disabled_particle": "starktma:disabled_particle"
+            },
+            "render_controllers": [
+                "controller.render.starktma.mint_shock.root"
+            ],
+            "spawn_egg": {
+                "base_color": "#000000",
+                "overlay_color": "#ffffff"
+            }
+        }
+    }
+}

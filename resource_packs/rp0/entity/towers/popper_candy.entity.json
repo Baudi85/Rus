@@ -1,0 +1,69 @@
+//Filename: popper_candy.entity.json
+//Generated with Anvil@StarkTMA 0.5.4
+//25-10-2023 01:06:41 +0100
+//
+
+{
+    "format_version": "1.10.0",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "starktma:popper_candy",
+            "animations": {
+                "idle": "animation.starktma.popper_candy.idle",
+                "is_disabled_ctrl": "controller.animation.starktma.popper_candy.is_disabled_ctrl"
+            },
+            "scripts": {
+                "pre_animation": [
+                    "v.h = q.in_range(v.h, 0, 359) ? (v.h + 0.01) : (0);",
+                    "v.c = ((1 - math.abs(((2 * v.l) - 1))) * v.s);",
+                    "v.x = (v.c * (1 - math.abs((math.mod((v.h / 60), 2) - 1))));",
+                    "v.m = (v.l - (v.c / 2));",
+                    "v.r = v.h < 60 ? v.c : (v.h < 120 ? v.x : (v.h < 180 ? 0 : (v.h < 240 ? 0 : (v.h < 300 ? v.x : (v.c)))));",
+                    "v.g = v.h < 60 ? v.x : (v.h < 120 ? v.c : (v.h < 180 ? v.c : (v.h < 240 ? v.x : (v.h < 300 ? 0 : (0)))));",
+                    "v.b = v.h < 60 ? 0 : (v.h < 120 ? 0 : (v.h < 180 ? v.x : (v.h < 240 ? v.c : (v.h < 300 ? v.c : (v.x)))));",
+                    "v.r = math.max(0, (v.r * 2.5));",
+                    "v.g = math.max(0, (v.g * 2.5));",
+                    "v.b = math.max(0, (v.b * 2.5));"
+                ],
+                "initialize": [
+                    "v.r=0;",
+                    "v.g=0;",
+                    "v.b=0;",
+                    "v.s=1;",
+                    "v.l=0.8;",
+                    "v.h=0;",
+                    "v.c=0;",
+                    "v.x=0;",
+                    "v.m=0;",
+                    "v.r=0;",
+                    "v.g=0;",
+                    "v.b=0;",
+                    "v.h=math.random(0, 359);"
+                ],
+                "animate": [
+                    "idle",
+                    "is_disabled_ctrl"
+                ]
+            },
+            "materials": {
+                "default": "entity_alphatest"
+            },
+            "textures": {
+                "default": "textures/entity/popper_candy/popper_candy"
+            },
+            "geometry": {
+                "default": "geometry.starktma.popper_candy"
+            },
+            "particle_effects": {
+                "disabled_particle": "starktma:disabled_particle"
+            },
+            "render_controllers": [
+                "controller.render.starktma.popper_candy.root"
+            ],
+            "spawn_egg": {
+                "base_color": "#000000",
+                "overlay_color": "#000000"
+            }
+        }
+    }
+}

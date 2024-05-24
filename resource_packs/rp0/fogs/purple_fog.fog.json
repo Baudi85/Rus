@@ -1,0 +1,21 @@
+//Filename: purple_fog.fog.json
+//Generated with Anvil@StarkTMA 0.5.4
+//25-10-2023 01:06:40 +0100
+//
+
+{
+    "format_version": "1.16.100",
+    "minecraft:fog_settings": {
+        "distance": {
+            "air": {
+                "fog_color": "#6B1BEA",
+                "fog_start": 25,
+                "fog_end": 40,
+                "render_distance_type": "fixed"
+            }
+        },
+        "description": {
+            "identifier": "starktma:purple_fog"
+        }
+    }
+}

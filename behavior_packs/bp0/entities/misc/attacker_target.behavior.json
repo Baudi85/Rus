@@ -1,0 +1,84 @@
+//Filename: attacker_target.behavior.json
+//Generated with Anvil@StarkTMA 0.5.4
+//25-10-2023 01:06:43 +0100
+//
+
+{
+    "format_version": "1.19.0",
+    "minecraft:entity": {
+        "component_groups": {
+            "despawn": {
+                "minecraft:instant_despawn": {}
+            }
+        },
+        "components": {
+            "minecraft:conditional_bandwidth_optimization": {
+                "default_values": {
+                    "use_motion_prediction_hints": true
+                }
+            },
+            "minecraft:physics": {
+                "has_collision": true,
+                "has_gravity": false
+            },
+            "minecraft:collision_box": {
+                "height": 1,
+                "width": 0.01
+            },
+            "minecraft:type_family": {
+                "family": [
+                    "attacker_target"
+                ]
+            },
+            "minecraft:damage_sensor": {
+                "triggers": [
+                    {
+                        "deals_damage": false,
+                        "on_damage": {
+                            "event": "has_damage"
+                        },
+                        "cause": "entity_attack"
+                    }
+                ]
+            }
+        },
+        "events": {
+            "despawn": {
+                "add": {
+                    "component_groups": [
+                        "despawn"
+                    ]
+                }
+            },
+            "has_damage": {
+                "set_property": {
+                    "starktma:player_lost": true
+                }
+            },
+            "kill": {
+                "trigger": "despawn"
+            }
+        },
+        "description": {
+            "identifier": "starktma:attacker_target",
+            "animations": {
+                "has_damage": "animation.starktma.attacker_target.has_damage"
+            },
+            "scripts": {
+                "animate": [
+                    {
+                        "has_damage": "q.property('starktma:player_lost')"
+                    }
+                ]
+            },
+            "properties": {
+                "starktma:player_lost": {
+                    "type": "bool",
+                    "default": false,
+                    "client_sync": true
+                }
+            },
+            "is_summonable": true
+        }
+    }
+}

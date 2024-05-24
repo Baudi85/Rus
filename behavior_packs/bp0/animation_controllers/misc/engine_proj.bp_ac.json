@@ -1,0 +1,193 @@
+//Filename: engine_proj.bp_ac.json
+//Generated with Anvil@StarkTMA 0.5.4
+//25-10-2023 01:06:44 +0100
+//
+
+{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.starktma.engine_proj.root": {
+            "initial_state": "default",
+            "states": {
+                "default": {
+                    "transitions": [
+                        {
+                            "choc_shoot": "q.property('starktma:variant') == 0"
+                        },
+                        {
+                            "j_bean_shoot": "q.property('starktma:variant') == 1"
+                        },
+                        {
+                            "slushie_shoot": "q.property('starktma:variant') == 2"
+                        },
+                        {
+                            "toast_marsh": "q.property('starktma:variant') == 3"
+                        },
+                        {
+                            "candy_cane": "q.property('starktma:variant') == 4"
+                        },
+                        {
+                            "gumball_blast": "q.property('starktma:variant') == 5"
+                        },
+                        {
+                            "bubblegum_shoot": "q.property('starktma:variant') == 6"
+                        },
+                        {
+                            "jellybean_juggler": "q.property('starktma:variant') == 7"
+                        }
+                    ]
+                },
+                "choc_shoot": {
+                    "transitions": [
+                        {
+                            "choc_shoot_hit": "q.property('starktma:on_hit')"
+                        }
+                    ]
+                },
+                "choc_shoot_hit": {
+                    "on_entry": [
+                        "/event entity @e [c = 1, family = attacker] take_fake_1_damage",
+                        "@s despawn"
+                    ],
+                    "transitions": [
+                        {
+                            "choc_shoot": "!(q.property('starktma:on_hit'))"
+                        }
+                    ]
+                },
+                "j_bean_shoot": {
+                    "transitions": [
+                        {
+                            "j_bean_shoot_hit": "q.property('starktma:on_hit')"
+                        }
+                    ]
+                },
+                "j_bean_shoot_hit": {
+                    "on_entry": [
+                        "/event entity @e [c = 1, family = attacker] take_fake_1_damage",
+                        "@s despawn"
+                    ],
+                    "transitions": [
+                        {
+                            "j_bean_shoot": "!(q.property('starktma:on_hit'))"
+                        }
+                    ]
+                },
+                "slushie_shoot": {
+                    "transitions": [
+                        {
+                            "slushie_shoot_hit": "q.property('starktma:on_hit')"
+                        }
+                    ]
+                },
+                "slushie_shoot_hit": {
+                    "on_entry": [
+                        "/event entity @e [c = 1, family = attacker] take_fake_1_damage",
+                        "/event entity @e [c = 1, family = attacker] is_slowed",
+                        "@s despawn"
+                    ],
+                    "transitions": [
+                        {
+                            "slushie_shoot": "!(q.property('starktma:on_hit'))"
+                        }
+                    ]
+                },
+                "toast_marsh": {
+                    "transitions": [
+                        {
+                            "toast_marsh_hit": "q.property('starktma:on_hit')"
+                        }
+                    ]
+                },
+                "toast_marsh_hit": {
+                    "on_entry": [
+                        "/event entity @e [c = 1, family = attacker] take_fake_1_damage",
+                        "/event entity @e [c = 1, family = attacker] is_on_fire",
+                        "@s despawn"
+                    ],
+                    "transitions": [
+                        {
+                            "toast_marsh": "!(q.property('starktma:on_hit'))"
+                        }
+                    ]
+                },
+                "candy_cane": {
+                    "animations": [
+                        "candy_cane_damage"
+                    ],
+                    "transitions": [
+                        {
+                            "candy_cane_hit": "q.property('starktma:on_hit')"
+                        }
+                    ]
+                },
+                "candy_cane_hit": {
+                    "on_entry": [
+                        "@s despawn"
+                    ],
+                    "transitions": [
+                        {
+                            "candy_cane": "!(q.property('starktma:on_hit'))"
+                        }
+                    ]
+                },
+                "gumball_blast": {
+                    "transitions": [
+                        {
+                            "gumball_blast_hit": "q.property('starktma:on_hit')"
+                        }
+                    ]
+                },
+                "gumball_blast_hit": {
+                    "on_entry": [
+                        "/event entity @e [c = 1, family = attacker] take_fake_1_damage",
+                        "/execute  as @e [c = 1, family = attacker, tag = knockback, r = 2] at @s run teleport @s ~2 ~ ~ ",
+                        "@s despawn"
+                    ],
+                    "transitions": [
+                        {
+                            "gumball_blast": "!(q.property('starktma:on_hit'))"
+                        }
+                    ]
+                },
+                "bubblegum_shoot": {
+                    "transitions": [
+                        {
+                            "bubblegum_shoot_hit": "q.property('starktma:on_hit')"
+                        }
+                    ]
+                },
+                "bubblegum_shoot_hit": {
+                    "on_entry": [
+                        "/event entity @e [c = 1, family = attacker] take_fake_1_damage",
+                        "/event entity @e [r = 3, family = attacker] take_fake_3_damage",
+                        "@s despawn"
+                    ],
+                    "transitions": [
+                        {
+                            "bubblegum_shoot": "!(q.property('starktma:on_hit'))"
+                        }
+                    ]
+                },
+                "jellybean_juggler": {
+                    "transitions": [
+                        {
+                            "jellybean_juggler_hit": "q.property('starktma:on_hit')"
+                        }
+                    ]
+                },
+                "jellybean_juggler_hit": {
+                    "on_entry": [
+                        "/event entity @e [c = 1, family = tower] take_fake_1_damage",
+                        "@s despawn"
+                    ],
+                    "transitions": [
+                        {
+                            "jellybean_juggler": "!(q.property('starktma:on_hit'))"
+                        }
+                    ]
+                }
+            }
+        }
+    }
+}

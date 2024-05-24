@@ -1,0 +1,108 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.starktma.candy_zombie.is_dying": {
+			"loop": "hold_on_last_frame",
+			"animation_length": 2,
+			"bones": {
+				"root": {
+					"scale": {
+						"0.0": [1, 1, 1],
+						"0.0417": {
+							"pre": [1, 1, 1],
+							"post": [0, 0, 0]
+						}
+					}
+				}
+			}
+		},
+		"animation.starktma.candy_zombie.is_walking": {
+			"loop": true,
+			"animation_length": 1.5,
+			"bones": {
+				"body": {
+					"rotation": [-5, -12.5, 0]
+				},
+				"rightArm": {
+					"rotation": [-50, 0, 0]
+				},
+				"leftArm": {
+					"rotation": [-45, 0, 0]
+				},
+				"rightLeg": {
+					"rotation": ["Math.sin(q.anim_time * 240) * 30", 0, 0]
+				},
+				"leftLeg": {
+					"rotation": ["-Math.sin(q.anim_time * 240) * 30", 0, 0]
+				},
+				"head": {
+					"rotation": ["-16.1735 + Math.sin(q.anim_time * 240) * 5", -21.69365, 6.1191]
+				}
+			}
+		},
+		"animation.starktma.candy_zombie.is_melee": {
+			"animation_length": 0.5,
+			"bones": {
+				"rightArm": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.25": [-80, 0, 0],
+						"0.5": [0, 0, 0]
+					}
+				}
+			}
+		},
+		"animation.starktma.candy_zombie.is_exploding": {
+			"loop": "hold_on_last_frame",
+			"animation_length": 2,
+			"bones": {
+				"root": {
+					"scale": {
+						"0.0": [
+							"1+math.sin(q.anim_time*(q.anim_time*500)*2)*0.01",
+							"1+math.sin(q.anim_time*(q.anim_time*500)*2)*0.01",
+							"1+math.sin(q.anim_time*(q.anim_time*500)*2)*0.01"
+						],
+						"1.9167": [
+							"1+math.sin(q.anim_time*(q.anim_time*500)*2)*0.01",
+							"1+math.sin(q.anim_time*(q.anim_time*500)*2)*0.01",
+							"1+math.sin(q.anim_time*(q.anim_time*500)*2)*0.01"
+						],
+						"2.0": {
+							"pre": [
+								"1+math.sin(q.anim_time*(q.anim_time*500)*2)*0.01",
+								"1+math.sin(q.anim_time*(q.anim_time*500)*2)*0.01",
+								"1+math.sin(q.anim_time*(q.anim_time*500)*2)*0.01"
+							],
+							"post": [0, 0, 0]
+						}
+					}
+				}
+			}
+		},
+		"animation.starktma.candy_zombie.is_stunned": {
+			"loop": true,
+			"bones": {
+				"rightArm": {
+					"rotation": ["-14.6599+Math.sin(q.anim_time*100)*10", 3.21132, -12.0868]
+				},
+				"leftArm": {
+					"rotation": ["-14.6599+Math.sin(q.anim_time*100)*10", 3.21132, 12.0868]
+				},
+				"head": {
+					"rotation": ["-40+Math.sin(q.anim_time*100)*15", 0, "-Math.cos(q.anim_time*100)*15"]
+				}
+			}
+		},
+		"animation.starktma.candy_zombie.is_on_fire": {
+			"loop": true,
+			"animation_length": 1,
+			"particle_effects": {
+				"0.0": {
+					"effect": "fire_particle_xyz",
+					"locator": "fire_particle"
+				}
+			}
+		}
+	}
+}

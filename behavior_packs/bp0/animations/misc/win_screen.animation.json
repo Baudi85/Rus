@@ -1,0 +1,33 @@
+//Filename: win_screen.animation.json
+//Generated with Anvil@StarkTMA 0.5.4
+//25-10-2023 01:06:43 +0100
+//
+
+{
+    "format_version": "1.10.0",
+    "animations": {
+        "animation.starktma.win_screen.root": {
+            "loop": true,
+            "timeline": {
+                "0": [
+                    "/execute  if score sugar_rush level_index matches 0 run dialogue open @s @a win_screen_0",
+                    "/execute  if score sugar_rush level_index matches 2 run dialogue open @s @a win_screen_2",
+                    "/execute  if score sugar_rush level_index matches 4 run dialogue open @s @a win_screen_4",
+                    "/execute  if score sugar_rush level_index matches 6 run dialogue open @s @a win_screen_6",
+                    "/execute  if score sugar_rush level_index matches 8 run dialogue open @s @a win_screen_8",
+                    "/execute  if score sugar_rush level_index matches 10 run dialogue open @s @a win_screen_10",
+                    "/execute  if score sugar_rush level_index matches 12 run dialogue open @s @a win_screen_12",
+                    "/execute  if score sugar_rush level_index matches 14 run dialogue open @s @a win_screen_14",
+                    "/execute  if score sugar_rush level_index matches 16 run dialogue open @s @a win_screen_16",
+                    "/execute  if score sugar_rush level_index matches 18 run dialogue open @s @a win_screen_18",
+                    "/execute  if score sugar_rush level_index matches 20 run dialogue open @s @a win_screen_20",
+                    "/execute  if score sugar_rush level_index matches 22 run dialogue open @s @a win_screen_22",
+                    "/execute  if score sugar_rush level_index matches 24 run dialogue open @s @a win_screen_24",
+                    "/execute  if score sugar_rush level_index matches 26 run dialogue open @s @a win_screen_26",
+                    "/execute  if score sugar_rush level_index matches 28 run dialogue open @s @a win_screen_28"
+                ]
+            },
+            "animation_length": 0.01
+        }
+    }
+}

@@ -1,0 +1,37 @@
+//Filename: lollipop_shield.attachable.json
+//Generated with Anvil@StarkTMA 0.5.4
+//25-10-2023 01:06:43 +0100
+//
+
+{
+    "format_version": "1.10.0",
+    "minecraft:attachable": {
+        "description": {
+            "identifier": "starktma:lollipop_shield",
+            "scripts": {
+                "pre_animation": [
+                    "v.health_step = math.floor((q.property('starktma:protection_max_health') / 2));",
+                    "v.health_frame = math.min(math.ceil((q.property('starktma:protection_health') / v.health_step)), 2);"
+                ],
+                "initialize": [
+                    "v.health_step=1;",
+                    "v.health_frame=2;"
+                ]
+            },
+            "materials": {
+                "default": "entity_alphatest"
+            },
+            "textures": {
+                "lollipop_shield_0": "textures/attachables/lollipop_shield/lollipop_shield_0",
+                "lollipop_shield_1": "textures/attachables/lollipop_shield/lollipop_shield_1",
+                "lollipop_shield_2": "textures/attachables/lollipop_shield/lollipop_shield_2"
+            },
+            "geometry": {
+                "default": "geometry.starktma.lollipop_shield"
+            },
+            "render_controllers": [
+                "controller.render.starktma.lollipop_shield.lollipop_shield"
+            ]
+        }
+    }
+}

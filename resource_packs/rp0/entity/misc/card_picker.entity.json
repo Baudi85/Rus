@@ -1,0 +1,57 @@
+//Filename: card_picker.entity.json
+//Generated with Anvil@StarkTMA 0.5.4
+//25-10-2023 01:06:43 +0100
+//
+
+{
+    "format_version": "1.10.0",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "starktma:card_picker",
+            "materials": {
+                "default": "entity_alphatest"
+            },
+            "textures": {
+                "card_picker_0": "textures/entity/card_picker/choc_shoot",
+                "card_picker_1": "textures/entity/card_picker/gummy_bear",
+                "card_picker_2": "textures/entity/card_picker/popcorn_bomb",
+                "card_picker_3": "textures/entity/card_picker/j_bean_shoot",
+                "card_picker_4": "textures/entity/card_picker/slushie_shoot",
+                "card_picker_5": "textures/entity/card_picker/cotton_candy",
+                "card_picker_6": "textures/entity/card_picker/molten_chocolate",
+                "card_picker_7": "textures/entity/card_picker/gingerbread",
+                "card_picker_8": "textures/entity/card_picker/toast_marsh",
+                "card_picker_9": "textures/entity/card_picker/mint_shock",
+                "card_picker_10": "textures/entity/card_picker/candy_cane",
+                "card_picker_11": "textures/entity/card_picker/popper_candy",
+                "card_picker_12": "textures/entity/card_picker/gumball_blast",
+                "card_picker_13": "textures/entity/card_picker/bubblegum_shoot",
+                "card_picker_14": "textures/entity/card_picker/ice_cream_bomb"
+            },
+            "geometry": {
+                "card_picker_0": "geometry.starktma.choc_shoot",
+                "card_picker_1": "geometry.starktma.gummy_bear",
+                "card_picker_2": "geometry.starktma.popcorn_bomb",
+                "card_picker_3": "geometry.starktma.j_bean_shoot",
+                "card_picker_4": "geometry.starktma.slushie_shoot",
+                "card_picker_5": "geometry.starktma.cotton_candy",
+                "card_picker_6": "geometry.starktma.molten_chocolate",
+                "card_picker_7": "geometry.starktma.gingerbread",
+                "card_picker_8": "geometry.starktma.toast_marsh",
+                "card_picker_9": "geometry.starktma.mint_shock",
+                "card_picker_10": "geometry.starktma.candy_cane",
+                "card_picker_11": "geometry.starktma.popper_candy",
+                "card_picker_12": "geometry.starktma.gumball_blast",
+                "card_picker_13": "geometry.starktma.bubblegum_shoot",
+                "card_picker_14": "geometry.starktma.ice_cream_bomb"
+            },
+            "render_controllers": [
+                "controller.render.starktma.card_picker.default"
+            ],
+            "spawn_egg": {
+                "base_color": "#000000",
+                "overlay_color": "#a4462a"
+            }
+        }
+    }
+}

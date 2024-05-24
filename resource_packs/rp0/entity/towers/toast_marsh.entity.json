@@ -1,0 +1,51 @@
+//Filename: toast_marsh.entity.json
+//Generated with Anvil@StarkTMA 0.5.4
+//25-10-2023 01:06:41 +0100
+//
+
+{
+    "format_version": "1.10.0",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "starktma:toast_marsh",
+            "animations": {
+                "idle": "animation.starktma.toast_marsh.idle",
+                "shoot": "animation.starktma.toast_marsh.shoot",
+                "root": "controller.animation.starktma.toast_marsh.root",
+                "is_disabled_ctrl": "controller.animation.starktma.toast_marsh.is_disabled_ctrl",
+                "fire_particle": "animation.starktma.toast_marsh.fire_particle"
+            },
+            "scripts": {
+                "animate": [
+                    "idle",
+                    "root",
+                    "is_disabled_ctrl",
+                    "fire_particle"
+                ]
+            },
+            "materials": {
+                "default": "entity_alphatest"
+            },
+            "textures": {
+                "default": "textures/entity/toast_marsh/toast_marsh"
+            },
+            "geometry": {
+                "default": "geometry.starktma.toast_marsh"
+            },
+            "particle_effects": {
+                "disabled_particle": "starktma:disabled_particle",
+                "fire_particle": "starktma:fire_particle"
+            },
+            "sound_effects": {
+                "shoot": "starktma.towers.shoot"
+            },
+            "render_controllers": [
+                "controller.render.starktma.toast_marsh.root"
+            ],
+            "spawn_egg": {
+                "base_color": "#000000",
+                "overlay_color": "#000000"
+            }
+        }
+    }
+}

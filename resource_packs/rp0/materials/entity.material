@@ -1,0 +1,56 @@
+//Filename: entity.material
+//Generated with Anvil@StarkTMA 0.5.4
+//25-10-2023 01:06:44 +0100
+//
+
+{
+    "materials": {
+        "version": "1.0.0",
+        "starktma_base:entity_alphatest": {
+            "+states": [
+                "EnableStencilTest",
+                "StencilWrite"
+            ],
+            "frontFace": {
+                "stencilFunc": "Always",
+                "stencilFailOp": "Replace",
+                "stencilDepthFailOp": "Replace",
+                "stencilPassOp": "Replace"
+            },
+            "backFace": {
+                "stencilFunc": "Always",
+                "stencilFailOp": "Replace",
+                "stencilDepthFailOp": "Replace",
+                "stencilPassOp": "Replace"
+            },
+            "stencilRef": 3
+        },
+        "starktma_outline:entity_alphatest": {
+            "+states": [
+                "EnableStencilTest",
+                "InvertCulling"
+            ],
+            "-states": [
+                "DisableCulling"
+            ],
+            "-defines": [
+                "FANCY"
+            ],
+            "frontFace": {
+                "stencilFunc": "NotEqual"
+            },
+            "stencilRef": 3,
+            "depthFunc": "Greater"
+        },
+        "starktma_vision_cone:entity_alphablend": {
+            "+states": [
+                "DisableDepthWrite"
+            ]
+        },
+        "jelly_beans:entity_alphatest": {
+            "+defines": [
+                "USE_UV_ANIM"
+            ]
+        }
+    }
+}

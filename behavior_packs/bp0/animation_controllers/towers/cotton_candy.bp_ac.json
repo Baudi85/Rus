@@ -1,0 +1,69 @@
+//Filename: cotton_candy.bp_ac.json
+//Generated with Anvil@StarkTMA 0.5.4
+//25-10-2023 01:06:41 +0100
+//
+
+{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.starktma.cotton_candy.root": {
+            "initial_state": "default",
+            "states": {
+                "default": {
+                    "on_entry": [
+                        "/setblock  ~ ~-2 ~ minecraft:barrier []"
+                    ],
+                    "transitions": [
+                        {
+                            "despawn": "q.property('starktma:health') == 0"
+                        }
+                    ]
+                },
+                "despawn": {
+                    "on_entry": [
+                        "/event entity @a refresh_slot",
+                        "/setblock  ~ ~-2 ~ minecraft:air []",
+                        "@s despawn"
+                    ]
+                }
+            }
+        },
+        "controller.animation.starktma.cotton_candy.candy_generator": {
+            "initial_state": "default",
+            "states": {
+                "default": {
+                    "transitions": [
+                        {
+                            "generate": "q.property('starktma:generate')"
+                        }
+                    ]
+                },
+                "generate": {
+                    "on_entry": [
+                        "/scoreboard  players add sugar_rush tower_cost 2",
+                        "/event entity @a refresh_slot",
+                        "v.delay = q.life_time;"
+                    ],
+                    "on_exit": [
+                        "@s end_generate"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "q.life_time >= (1.25 + v.delay)"
+                        }
+                    ]
+                }
+            }
+        },
+        "controller.animation.starktma.cotton_candy.variables": {
+            "initial_state": "default",
+            "states": {
+                "default": {
+                    "on_entry": [
+                        "v.delay=0;"
+                    ]
+                }
+            }
+        }
+    }
+}

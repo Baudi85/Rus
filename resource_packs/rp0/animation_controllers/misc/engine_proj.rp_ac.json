@@ -1,0 +1,224 @@
+//Filename: engine_proj.rp_ac.json
+//Generated with Anvil@StarkTMA 0.5.4
+//25-10-2023 01:06:43 +0100
+//
+
+{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.starktma.engine_proj.root": {
+            "initial_state": "default",
+            "states": {
+                "default": {
+                    "transitions": [
+                        {
+                            "choc_shoot": "q.property('starktma:variant') == 0"
+                        },
+                        {
+                            "j_bean_shoot": "q.property('starktma:variant') == 1"
+                        },
+                        {
+                            "slushie_shoot": "q.property('starktma:variant') == 2"
+                        },
+                        {
+                            "toast_marsh": "q.property('starktma:variant') == 3"
+                        },
+                        {
+                            "candy_cane": "q.property('starktma:variant') == 4"
+                        },
+                        {
+                            "gumball_blast": "q.property('starktma:variant') == 5"
+                        },
+                        {
+                            "bubblegum_shoot": "q.property('starktma:variant') == 6"
+                        },
+                        {
+                            "jellybean_juggler": "q.property('starktma:variant') == 7"
+                        }
+                    ]
+                },
+                "choc_shoot": {
+                    "animations": [
+                        "face_2d"
+                    ],
+                    "transitions": [
+                        {
+                            "choc_shoot_hit": "q.property('starktma:on_hit')"
+                        }
+                    ]
+                },
+                "choc_shoot_hit": {
+                    "animations": [
+                        "face_2d"
+                    ],
+                    "particle_effects": [
+                        {
+                            "effect": "choc_shoot_particle",
+                            "locator": "root"
+                        }
+                    ],
+                    "sound_effects": [
+                        {
+                            "effect": "splat"
+                        }
+                    ]
+                },
+                "j_bean_shoot": {
+                    "animations": [
+                        "face_3d"
+                    ],
+                    "transitions": [
+                        {
+                            "j_bean_shoot_hit": "q.property('starktma:on_hit')"
+                        }
+                    ]
+                },
+                "j_bean_shoot_hit": {
+                    "animations": [
+                        "face_3d"
+                    ],
+                    "sound_effects": [
+                        {
+                            "effect": "splat"
+                        }
+                    ]
+                },
+                "slushie_shoot": {
+                    "animations": [
+                        "face_3d"
+                    ],
+                    "transitions": [
+                        {
+                            "slushie_shoot_hit": "q.property('starktma:on_hit')"
+                        }
+                    ],
+                    "particle_effects": [
+                        {
+                            "effect": "slushie_drip_particle",
+                            "locator": "root"
+                        }
+                    ]
+                },
+                "slushie_shoot_hit": {
+                    "animations": [
+                        "face_3d"
+                    ],
+                    "particle_effects": [
+                        {
+                            "effect": "slushie_shoot_particle",
+                            "locator": "root"
+                        }
+                    ],
+                    "sound_effects": [
+                        {
+                            "effect": "splat"
+                        }
+                    ]
+                },
+                "toast_marsh": {
+                    "animations": [
+                        "face_2d"
+                    ],
+                    "transitions": [
+                        {
+                            "toast_marsh_hit": "q.property('starktma:on_hit')"
+                        }
+                    ]
+                },
+                "toast_marsh_hit": {
+                    "animations": [
+                        "face_2d"
+                    ],
+                    "sound_effects": [
+                        {
+                            "effect": "splat"
+                        }
+                    ]
+                },
+                "candy_cane": {
+                    "animations": [
+                        "face_2d",
+                        "rotate_2d"
+                    ],
+                    "transitions": [
+                        {
+                            "candy_cane_hit": "q.property('starktma:on_hit')"
+                        }
+                    ]
+                },
+                "candy_cane_hit": {
+                    "animations": [
+                        "face_2d",
+                        "rotate_2d"
+                    ]
+                },
+                "gumball_blast": {
+                    "animations": [
+                        "face_3d"
+                    ],
+                    "transitions": [
+                        {
+                            "gumball_blast_hit": "q.property('starktma:on_hit')"
+                        }
+                    ]
+                },
+                "gumball_blast_hit": {
+                    "animations": [
+                        "face_3d"
+                    ],
+                    "sound_effects": [
+                        {
+                            "effect": "splat"
+                        }
+                    ]
+                },
+                "bubblegum_shoot": {
+                    "animations": [
+                        "face_2d"
+                    ],
+                    "transitions": [
+                        {
+                            "bubblegum_shoot_hit": "q.property('starktma:on_hit')"
+                        }
+                    ]
+                },
+                "bubblegum_shoot_hit": {
+                    "animations": [
+                        "face_2d"
+                    ],
+                    "particle_effects": [
+                        {
+                            "effect": "bubblegum_shoot_particle",
+                            "locator": "root"
+                        }
+                    ],
+                    "sound_effects": [
+                        {
+                            "effect": "splat"
+                        }
+                    ]
+                },
+                "jellybean_juggler": {
+                    "animations": [
+                        "face_3d"
+                    ],
+                    "transitions": [
+                        {
+                            "jellybean_juggler_hit": "q.property('starktma:on_hit')"
+                        }
+                    ]
+                },
+                "jellybean_juggler_hit": {
+                    "animations": [
+                        "face_3d"
+                    ],
+                    "sound_effects": [
+                        {
+                            "effect": "splat"
+                        }
+                    ]
+                }
+            }
+        }
+    }
+}

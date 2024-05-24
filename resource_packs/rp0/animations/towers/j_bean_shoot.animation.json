@@ -1,0 +1,365 @@
+//Filename: j_bean_shoot.animation.json
+//Generated with Anvil@StarkTMA 0.5.0
+//22-07-2023 12:07:05 +0100
+//
+
+{
+    "format_version": "1.8.0",
+    "animations": {
+        "animation.starktma.j_bean_shoot.directional_setup": {
+            "loop": true,
+            "override_previous_animation": false,
+            "bones": {
+                "root": {
+                    "rotation": [
+                        0,
+                        "v.rounded_rotation",
+                        0
+                    ]
+                }
+            }
+        },
+        "animation.starktma.j_bean_shoot.idle": {
+            "loop": true,
+            "bones": {
+                "head": {
+                    "position": [
+                        "Math.cos(q.anim_time*200)",
+                        "Math.sin(q.anim_time*400)",
+                        0
+                    ]
+                },
+                "eyes": {
+                    "position": [
+                        0,
+                        "Math.sin(q.anim_time*400-90) ",
+                        0
+                    ]
+                },
+                "arms": {
+                    "position": [
+                        0,
+                        "Math.sin(q.anim_time*400-45) ",
+                        0
+                    ]
+                },
+                "b0": {
+                    "rotation": [
+                        "- q.anim_time * 100",
+                        0,
+                        "q.anim_time * 200"
+                    ],
+                    "position": [
+                        "4 * Math.sin(q.anim_time * 200)",
+                        "3 * Math.cos(q.anim_time * 200)",
+                        "3 * Math.cos(q.anim_time * 200)"
+                    ]
+                },
+                "b1": {
+                    "rotation": [
+                        "-q.anim_time * 100",
+                        0,
+                        "-q.anim_time * 200"
+                    ],
+                    "position": [
+                        "-3 * Math.sin(q.anim_time * 200)",
+                        "3 * Math.cos(q.anim_time * 200)",
+                        "-5 * Math.cos(q.anim_time * 200)"
+                    ]
+                },
+                "b2": {
+                    "rotation": [
+                        "q.anim_time * 100",
+                        0,
+                        "-q.anim_time * 200"
+                    ],
+                    "position": [
+                        "-5 * Math.cos(q.anim_time * 200)",
+                        "-3 * Math.cos(q.anim_time * 200)",
+                        "-5 * Math.sin(q.anim_time * 200)"
+                    ]
+                },
+                "b3": {
+                    "rotation": [
+                        "q.anim_time * 100",
+                        0,
+                        "q.anim_time * 200"
+                    ],
+                    "position": [
+                        "4 * Math.cos(q.anim_time * 100)",
+                        "-3 * Math.cos(q.anim_time * 200)",
+                        "-5 * Math.cos(q.anim_time * 200)"
+                    ]
+                },
+                "b4": {
+                    "rotation": [
+                        "- q.anim_time * 100",
+                        0,
+                        "q.anim_time * 200"
+                    ],
+                    "position": [
+                        "3 * Math.cos(q.anim_time * 200)",
+                        "3 * Math.sin(q.anim_time * 200)",
+                        "5 * Math.cos(q.anim_time * 200)"
+                    ]
+                },
+                "b5": {
+                    "rotation": [
+                        "q.anim_time * 100",
+                        0,
+                        "-q.anim_time * 200"
+                    ],
+                    "position": [
+                        "-3 * Math.cos(q.anim_time * 200)",
+                        "-3 * Math.cos(q.anim_time * 200)",
+                        "-5 * Math.cos(q.anim_time * 200)"
+                    ]
+                },
+                "b6": {
+                    "rotation": [
+                        "- q.anim_time * 100",
+                        0,
+                        "q.anim_time * 200"
+                    ],
+                    "position": [
+                        "-2 * Math.cos(q.anim_time * 200)",
+                        "-3 * Math.sin(q.anim_time * 200)",
+                        "-5 * Math.cos(q.anim_time * 200)"
+                    ]
+                },
+                "b7": {
+                    "rotation": [
+                        "q.anim_time * 100",
+                        0,
+                        "-q.anim_time * 200"
+                    ],
+                    "position": [
+                        "5 * Math.cos(q.anim_time * 200)",
+                        "1 * Math.sin(q.anim_time * 200)",
+                        "-3 * Math.cos(q.anim_time * 200)"
+                    ]
+                },
+                "b8": {
+                    "rotation": [
+                        "q.anim_time * 100",
+                        0,
+                        "q.anim_time * 200"
+                    ],
+                    "position": [
+                        "5 * Math.cos(q.anim_time * 200)",
+                        "-3 * Math.sin(q.anim_time * 200)",
+                        "-3 * Math.sin(q.anim_time * 200)"
+                    ]
+                },
+                "b9": {
+                    "rotation": [
+                        "q.anim_time * 100",
+                        0,
+                        "q.anim_time * 200"
+                    ],
+                    "position": [
+                        "3 * Math.sin(q.anim_time * 200)",
+                        "-3 * Math.sin(q.anim_time * 100)",
+                        "5 * Math.sin(q.anim_time * 100)"
+                    ]
+                },
+                "b10": {
+                    "rotation": [
+                        "q.anim_time * 100",
+                        0,
+                        "-q.anim_time * 200"
+                    ],
+                    "position": [
+                        "-4 * Math.cos(q.anim_time * 150)",
+                        "-4 * Math.cos(q.anim_time * 250)",
+                        "4 * Math.cos(q.anim_time * 100)"
+                    ]
+                },
+                "b11": {
+                    "rotation": [
+                        "q.anim_time * 100",
+                        0,
+                        "-q.anim_time * 200"
+                    ],
+                    "position": [
+                        "5 * Math.cos(q.anim_time * 200)",
+                        "3 * Math.sin(q.anim_time * 200)",
+                        "5 * Math.cos(q.anim_time * 200)"
+                    ]
+                }
+            }
+        },
+        "animation.starktma.j_bean_shoot.shoot": {
+            "animation_length": 1.6667,
+            "override_previous_animation": true,
+            "bones": {
+                "root": {
+                    "position": {
+                        "0.0": [
+                            0,
+                            0,
+                            0
+                        ],
+                        "0.25": [
+                            0,
+                            0,
+                            -3
+                        ],
+                        "0.4167": [
+                            0,
+                            0,
+                            3
+                        ],
+                        "0.75": [
+                            0,
+                            0,
+                            -3
+                        ],
+                        "0.9167": [
+                            0,
+                            0,
+                            3
+                        ],
+                        "1.25": [
+                            0,
+                            0,
+                            -3
+                        ],
+                        "1.4167": [
+                            0,
+                            0,
+                            3
+                        ],
+                        "1.6667": [
+                            0,
+                            0,
+                            0
+                        ]
+                    }
+                },
+                "arms": {
+                    "rotation": {
+                        "0.25": [
+                            0,
+                            0,
+                            0
+                        ],
+                        "0.4167": [
+                            -30,
+                            0,
+                            0
+                        ],
+                        "0.75": [
+                            0,
+                            0,
+                            0
+                        ],
+                        "0.9167": [
+                            -30,
+                            0,
+                            0
+                        ],
+                        "1.25": [
+                            0,
+                            0,
+                            0
+                        ],
+                        "1.4167": [
+                            -30,
+                            0,
+                            0
+                        ],
+                        "1.6667": [
+                            0,
+                            0,
+                            0
+                        ]
+                    }
+                },
+                "octagon": {
+                    "scale": {
+                        "0.25": [
+                            1,
+                            1,
+                            1
+                        ],
+                        "0.4167": [
+                            1,
+                            1,
+                            2
+                        ],
+                        "0.75": [
+                            1,
+                            1,
+                            1
+                        ],
+                        "0.9167": [
+                            1,
+                            1,
+                            2
+                        ],
+                        "1.25": [
+                            1,
+                            1,
+                            1
+                        ],
+                        "1.4167": [
+                            1,
+                            1,
+                            2
+                        ],
+                        "1.6667": [
+                            1,
+                            1,
+                            1
+                        ]
+                    }
+                },
+                "jellybeans": {
+                    "position": {
+                        "0.0": [
+                            0,
+                            0,
+                            0
+                        ],
+                        "0.25": [
+                            0,
+                            0,
+                            -3
+                        ],
+                        "0.4167": [
+                            0,
+                            0,
+                            3
+                        ],
+                        "0.75": [
+                            0,
+                            0,
+                            -3
+                        ],
+                        "0.9167": [
+                            0,
+                            0,
+                            3
+                        ],
+                        "1.25": [
+                            0,
+                            0,
+                            -3
+                        ],
+                        "1.4167": [
+                            0,
+                            0,
+                            3
+                        ],
+                        "1.6667": [
+                            0,
+                            0,
+                            0
+                        ]
+                    }
+                }
+            }
+        }
+    }
+}

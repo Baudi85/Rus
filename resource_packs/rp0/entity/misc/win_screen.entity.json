@@ -1,0 +1,57 @@
+//Filename: win_screen.entity.json
+//Generated with Anvil@StarkTMA 0.5.4
+//25-10-2023 01:06:43 +0100
+//
+
+{
+    "format_version": "1.10.0",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "starktma:win_screen",
+            "materials": {
+                "default": "entity_alphatest"
+            },
+            "textures": {
+                "win_screen_0": "textures/entity/win_screen/choc_shoot",
+                "win_screen_2": "textures/entity/win_screen/gummy_bear",
+                "win_screen_4": "textures/entity/win_screen/popcorn_bomb",
+                "win_screen_6": "textures/entity/win_screen/j_bean_shoot",
+                "win_screen_8": "textures/entity/win_screen/slushie_shoot",
+                "win_screen_10": "textures/entity/win_screen/cotton_candy",
+                "win_screen_12": "textures/entity/win_screen/molten_chocolate",
+                "win_screen_14": "textures/entity/win_screen/gingerbread",
+                "win_screen_16": "textures/entity/win_screen/toast_marsh",
+                "win_screen_18": "textures/entity/win_screen/mint_shock",
+                "win_screen_20": "textures/entity/win_screen/candy_cane",
+                "win_screen_22": "textures/entity/win_screen/popper_candy",
+                "win_screen_24": "textures/entity/win_screen/gumball_blast",
+                "win_screen_26": "textures/entity/win_screen/bubblegum_shoot",
+                "win_screen_28": "textures/entity/win_screen/ice_cream_bomb"
+            },
+            "geometry": {
+                "win_screen_0": "geometry.starktma.choc_shoot",
+                "win_screen_2": "geometry.starktma.gummy_bear",
+                "win_screen_4": "geometry.starktma.popcorn_bomb",
+                "win_screen_6": "geometry.starktma.j_bean_shoot",
+                "win_screen_8": "geometry.starktma.slushie_shoot",
+                "win_screen_10": "geometry.starktma.cotton_candy",
+                "win_screen_12": "geometry.starktma.molten_chocolate",
+                "win_screen_14": "geometry.starktma.gingerbread",
+                "win_screen_16": "geometry.starktma.toast_marsh",
+                "win_screen_18": "geometry.starktma.mint_shock",
+                "win_screen_20": "geometry.starktma.candy_cane",
+                "win_screen_22": "geometry.starktma.popper_candy",
+                "win_screen_24": "geometry.starktma.gumball_blast",
+                "win_screen_26": "geometry.starktma.bubblegum_shoot",
+                "win_screen_28": "geometry.starktma.ice_cream_bomb"
+            },
+            "render_controllers": [
+                "controller.render.starktma.win_screen.default"
+            ],
+            "spawn_egg": {
+                "base_color": "#000000",
+                "overlay_color": "#a4462a"
+            }
+        }
+    }
+}

@@ -1,0 +1,30 @@
+//Filename: j_bean_shoot_enabled.item.json
+//Generated with Anvil@StarkTMA 0.5.2
+//11-10-2023 00:51:12 +0100
+//
+
+{
+    "format_version": "1.20.30",
+    "minecraft:item": {
+        "components": {
+            "minecraft:icon": {
+                "texture": "j_bean_shoot_enabled"
+            },
+            "minecraft:display_name": {
+                "value": "item.starktma:jelly_bean_shooter.name"
+            },
+            "minecraft:cooldown": {
+                "category": "j_bean_shoot",
+                "duration": 15
+            },
+            "minecraft:max_stack_size": 1,
+            "minecraft:use_duration": 999999,
+            "minecraft:food": {
+                "can_always_eat": true
+            }
+        },
+        "description": {
+            "identifier": "starktma:j_bean_shoot_enabled"
+        }
+    }
+}

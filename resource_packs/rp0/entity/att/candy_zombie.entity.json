@@ -1,0 +1,50 @@
+//Filename: candy_zombie.entity.json
+//Generated with Anvil@StarkTMA 0.5.4
+//25-10-2023 01:06:39 +0100
+//
+
+{
+    "format_version": "1.10.0",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "starktma:candy_zombie",
+            "animations": {
+                "root": "controller.animation.starktma.candy_zombie.root",
+                "health_bar": "controller.animation.starktma.candy_zombie.health_bar",
+                "is_walking": "animation.starktma.candy_zombie.is_walking",
+                "is_dying": "animation.starktma.candy_zombie.is_dying",
+                "is_melee": "animation.starktma.candy_zombie.is_melee",
+                "is_stunned": "animation.starktma.candy_zombie.is_stunned",
+                "is_on_fire": "animation.starktma.candy_zombie.is_on_fire",
+                "is_exploding": "animation.starktma.candy_zombie.is_exploding"
+            },
+            "scripts": {
+                "animate": [
+                    "root",
+                    "health_bar"
+                ],
+                "scale": "1.5"
+            },
+            "materials": {
+                "default": "entity_alphatest"
+            },
+            "textures": {
+                "default": "textures/entity/candy_zombie/candy_zombie"
+            },
+            "geometry": {
+                "default": "geometry.starktma.candy_zombie"
+            },
+            "particle_effects": {
+                "health_bar": "starktma:health_bar",
+                "fire_particle_xyz": "starktma:fire_particle_xyz"
+            },
+            "render_controllers": [
+                "controller.render.starktma.candy_zombie.default"
+            ],
+            "spawn_egg": {
+                "base_color": "#000000",
+                "overlay_color": "#714954"
+            }
+        }
+    }
+}

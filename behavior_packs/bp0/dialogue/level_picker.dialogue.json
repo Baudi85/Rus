@@ -1,0 +1,48 @@
+//Filename: level_picker.dialogue.json
+//Generated with Anvil@StarkTMA 0.5.4
+//25-10-2023 01:06:40 +0100
+//
+
+{
+    "format_version": "1.18.0",
+    "minecraft:npc_dialogue": {
+        "scenes": [
+            {
+                "scene_tag": "level_picker",
+                "npc_name": "{\"rawtext\":[{\"text\": \"level_picker\"}]}",
+                "text": "{\"rawtext\":[{\"translate\": \"raw_text_32\", \"with\": [\"\\n\"]}]}",
+                "buttons": [
+                    {
+                        "name": "Frontyard Frenzy",
+                        "commands": [
+                            "/scoreboard  players set sugar_rush side_level -1",
+                            "/event entity @s despawn"
+                        ]
+                    },
+                    {
+                        "name": "Campsite Confection",
+                        "commands": [
+                            "/scoreboard  players set sugar_rush side_level -2",
+                            "/event entity @s despawn"
+                        ]
+                    },
+                    {
+                        "name": "Graveyard Grapple",
+                        "commands": [
+                            "/scoreboard  players set sugar_rush side_level -3",
+                            "/event entity @s despawn"
+                        ]
+                    },
+                    {
+                        "name": "Start a new game.",
+                        "commands": [
+                            "/function setup",
+                            "/gamemode adventure @a",
+                            "/event entity @s despawn"
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

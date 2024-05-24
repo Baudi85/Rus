@@ -1,0 +1,331 @@
+//Filename: player.behavior.json
+//Generated with Anvil@StarkTMA 0.5.4
+//25-10-2023 01:06:43 +0100
+//
+
+{
+    "format_version": "1.19.0",
+    "minecraft:entity": {
+        "component_groups": {
+            "despawn": {
+                "minecraft:instant_despawn": {}
+            },
+            "vulnerable": {
+                "minecraft:damage_sensor": {
+                    "triggers": [
+                        {
+                            "deals_damage": true
+                        }
+                    ]
+                }
+            },
+            "invulnerable": {
+                "minecraft:damage_sensor": {
+                    "triggers": [
+                        {
+                            "deals_damage": false
+                        }
+                    ]
+                }
+            }
+        },
+        "components": {
+            "minecraft:conditional_bandwidth_optimization": {
+                "default_values": {
+                    "use_motion_prediction_hints": true
+                }
+            },
+            "minecraft:health": {
+                "value": 6,
+                "max": 6,
+                "min": 2
+            },
+            "minecraft:pushable": {
+                "is_pushable": false,
+                "is_pushable_by_piston": false
+            },
+            "minecraft:collision_box": {
+                "height": 1,
+                "width": 0.8
+            },
+            "minecraft:physics": {
+                "has_collision": true,
+                "has_gravity": true
+            },
+            "minecraft:jump.static": {
+                "jump_power": 0
+            },
+            "minecraft:type_family": {
+                "family": [
+                    "player"
+                ]
+            },
+            "minecraft:is_stackable": {},
+            "minecraft:push_through": {
+                "value": 1
+            },
+            "minecraft:can_climb": {},
+            "minecraft:attack": {
+                "damage": 1
+            },
+            "minecraft:breathable": {
+                "breathes_solids": true
+            },
+            "minecraft:movement": {
+                "value": 0.01,
+                "max": 0.01
+            }
+        },
+        "events": {
+            "despawn": {
+                "add": {
+                    "component_groups": [
+                        "despawn"
+                    ]
+                }
+            },
+            "sugar_rush": {
+                "trigger": "engine"
+            },
+            "lock_in_place": {
+                "set_property": {
+                    "starktma:lock_in_place": true
+                }
+            },
+            "not_lock_in_place": {
+                "set_property": {
+                    "starktma:lock_in_place": false
+                }
+            },
+            "vulnerable": {
+                "add": {
+                    "component_groups": [
+                        "vulnerable"
+                    ]
+                },
+                "remove": {
+                    "component_groups": [
+                        "invulnerable"
+                    ]
+                }
+            },
+            "invulnerable": {
+                "add": {
+                    "component_groups": [
+                        "invulnerable"
+                    ]
+                },
+                "remove": {
+                    "component_groups": [
+                        "vulnerable"
+                    ]
+                }
+            },
+            "engine": {
+                "sequence": [
+                    {
+                        "set_property": {
+                            "starktma:engine": true
+                        },
+                        "add": {
+                            "component_groups": [
+                                "engine"
+                            ]
+                        },
+                        "remove": {
+                            "component_groups": [
+                                "normal"
+                            ]
+                        },
+                        "trigger": "vulnerable"
+                    },
+                    {
+                        "trigger": "reset_selector"
+                    }
+                ]
+            },
+            "normal": {
+                "sequence": [
+                    {
+                        "set_property": {
+                            "starktma:engine": false
+                        },
+                        "add": {
+                            "component_groups": [
+                                "normal"
+                            ]
+                        },
+                        "remove": {
+                            "component_groups": [
+                                "engine"
+                            ]
+                        },
+                        "trigger": "invulnerable"
+                    }
+                ]
+            },
+            "y_offset_min_0": {
+                "set_property": {
+                    "starktma:y_offset_min": 0
+                }
+            },
+            "y_offset_min_1": {
+                "set_property": {
+                    "starktma:y_offset_min": 1
+                }
+            },
+            "y_offset_min_2": {
+                "set_property": {
+                    "starktma:y_offset_min": 2
+                }
+            },
+            "y_offset_max_3": {
+                "set_property": {
+                    "starktma:y_offset_max": 3
+                }
+            },
+            "y_offset_max_4": {
+                "set_property": {
+                    "starktma:y_offset_max": 4
+                }
+            },
+            "y_offset_max_5": {
+                "set_property": {
+                    "starktma:y_offset_max": 5
+                }
+            },
+            "next_slot": {
+                "set_property": {
+                    "starktma:x_offset": "math.min((q.property('starktma:x_offset') + 1), q.property('starktma:x_offset_max'))"
+                }
+            },
+            "next_line": {
+                "set_property": {
+                    "starktma:y_offset": "math.min((q.property('starktma:y_offset') + 1), q.property('starktma:y_offset_max'))"
+                }
+            },
+            "previous_line": {
+                "set_property": {
+                    "starktma:y_offset": "math.max((q.property('starktma:y_offset') - 1), q.property('starktma:y_offset_min'))"
+                }
+            },
+            "previous_slot": {
+                "set_property": {
+                    "starktma:x_offset": "math.max((q.property('starktma:x_offset') - 1), q.property('starktma:x_offset_min'))"
+                }
+            },
+            "reset_selector": {
+                "set_property": {
+                    "starktma:x_offset": "q.property('starktma:x_offset_min')",
+                    "starktma:y_offset": "q.property('starktma:y_offset_min')"
+                }
+            },
+            "refresh_slot": {
+                "set_property": {
+                    "starktma:refresh_slot": true
+                }
+            },
+            "set_slot": {
+                "set_property": {
+                    "starktma:refresh_slot": false
+                }
+            }
+        },
+        "description": {
+            "identifier": "minecraft:player",
+            "animations": {
+                "lock_in_place": "animation.starktma.player.lock_in_place",
+                "root": "controller.animation.starktma.player.root",
+                "ambient_sounds_controller": "controller.animation.starktma.player.ambient_sounds_controller",
+                "selector_controller": "controller.animation.starktma.player.selector_controller",
+                "force_camera_controller": "controller.animation.starktma.player.force_camera_controller",
+                "camera_fixer": "animation.starktma.player.camera_fixer",
+                "slot_spawner_controller": "controller.animation.starktma.player.slot_spawner_controller",
+                "slot_availability_test_controller": "controller.animation.starktma.player.slot_availability_test_controller",
+                "variables": "controller.animation.starktma.player.variables"
+            },
+            "scripts": {
+                "animate": [
+                    {
+                        "lock_in_place": "q.property('starktma:lock_in_place')"
+                    },
+                    {
+                        "root": "q.property('starktma:engine')"
+                    },
+                    "variables"
+                ]
+            },
+            "properties": {
+                "starktma:engine": {
+                    "type": "bool",
+                    "default": false,
+                    "client_sync": true
+                },
+                "starktma:lock_in_place": {
+                    "type": "bool",
+                    "default": false,
+                    "client_sync": true
+                },
+                "starktma:x_offset_min": {
+                    "type": "int",
+                    "default": 0,
+                    "range": [
+                        0,
+                        4
+                    ],
+                    "client_sync": true
+                },
+                "starktma:x_offset_max": {
+                    "type": "int",
+                    "default": 8,
+                    "range": [
+                        4,
+                        8
+                    ],
+                    "client_sync": true
+                },
+                "starktma:y_offset_min": {
+                    "type": "int",
+                    "default": 0,
+                    "range": [
+                        0,
+                        2
+                    ],
+                    "client_sync": true
+                },
+                "starktma:y_offset_max": {
+                    "type": "int",
+                    "default": 5,
+                    "range": [
+                        3,
+                        5
+                    ],
+                    "client_sync": true
+                },
+                "starktma:x_offset": {
+                    "type": "int",
+                    "default": 0,
+                    "range": [
+                        0,
+                        8
+                    ],
+                    "client_sync": true
+                },
+                "starktma:y_offset": {
+                    "type": "int",
+                    "default": 0,
+                    "range": [
+                        0,
+                        5
+                    ],
+                    "client_sync": true
+                },
+                "starktma:refresh_slot": {
+                    "type": "bool",
+                    "default": false,
+                    "client_sync": true
+                }
+            }
+        }
+    }
+}

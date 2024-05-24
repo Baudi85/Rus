@@ -1,0 +1,370 @@
+//Filename: engine_proj.behavior.json
+//Generated with Anvil@StarkTMA 0.5.4
+//25-10-2023 01:06:44 +0100
+//
+
+{
+    "format_version": "1.19.0",
+    "minecraft:entity": {
+        "component_groups": {
+            "despawn": {
+                "minecraft:instant_despawn": {}
+            },
+            "choc_shoot": {
+                "minecraft:entity_sensor": {
+                    "event": "on_hit",
+                    "event_filters": {
+                        "test": "is_family",
+                        "value": "attacker",
+                        "subject": "other"
+                    },
+                    "minimum_count": 1,
+                    "sensor_range": 0.1
+                },
+                "minecraft:projectile": {
+                    "gravity": 0,
+                    "inertia": 1,
+                    "liquid_inertia": 1,
+                    "offset": [
+                        0,
+                        0.6,
+                        0
+                    ],
+                    "power": 0.4
+                }
+            },
+            "j_bean_shoot": {
+                "minecraft:entity_sensor": {
+                    "event": "on_hit",
+                    "event_filters": {
+                        "test": "is_family",
+                        "value": "attacker",
+                        "subject": "other"
+                    },
+                    "minimum_count": 1,
+                    "sensor_range": 0.1
+                },
+                "minecraft:projectile": {
+                    "gravity": 0,
+                    "inertia": 1,
+                    "liquid_inertia": 1,
+                    "offset": [
+                        0,
+                        0.625,
+                        0
+                    ],
+                    "power": 0.4
+                }
+            },
+            "slushie_shoot": {
+                "minecraft:entity_sensor": {
+                    "event": "on_hit",
+                    "event_filters": {
+                        "test": "is_family",
+                        "value": "attacker",
+                        "subject": "other"
+                    },
+                    "minimum_count": 1,
+                    "sensor_range": 0.1
+                },
+                "minecraft:projectile": {
+                    "gravity": 0,
+                    "inertia": 1,
+                    "liquid_inertia": 1,
+                    "offset": [
+                        0,
+                        1.55,
+                        0
+                    ],
+                    "power": 0.4
+                }
+            },
+            "toast_marsh": {
+                "minecraft:entity_sensor": {
+                    "event": "on_hit",
+                    "event_filters": {
+                        "test": "is_family",
+                        "value": "attacker",
+                        "subject": "other"
+                    },
+                    "minimum_count": 1,
+                    "sensor_range": 0.1
+                },
+                "minecraft:projectile": {
+                    "gravity": 0,
+                    "inertia": 1,
+                    "liquid_inertia": 1,
+                    "offset": [
+                        0,
+                        0.6,
+                        0
+                    ],
+                    "power": 0.4
+                }
+            },
+            "candy_cane": {
+                "minecraft:projectile": {
+                    "gravity": 0,
+                    "inertia": 1,
+                    "knockback": false,
+                    "liquid_inertia": 1,
+                    "offset": [
+                        0,
+                        1,
+                        0
+                    ],
+                    "power": 0.4
+                },
+                "minecraft:timer": {
+                    "time_down_event": {
+                        "event": "despawn",
+                        "target": "self"
+                    },
+                    "time": 4
+                }
+            },
+            "gumball_blast": {
+                "minecraft:entity_sensor": {
+                    "event": "on_hit",
+                    "event_filters": {
+                        "test": "is_family",
+                        "value": "attacker",
+                        "subject": "other"
+                    },
+                    "minimum_count": 1,
+                    "sensor_range": 0.1
+                },
+                "minecraft:projectile": {
+                    "gravity": 0,
+                    "inertia": 1,
+                    "liquid_inertia": 1,
+                    "offset": [
+                        0,
+                        0.6,
+                        0
+                    ],
+                    "power": 0.4
+                }
+            },
+            "bubblegum_shoot": {
+                "minecraft:entity_sensor": {
+                    "event": "on_hit",
+                    "event_filters": {
+                        "test": "is_family",
+                        "value": "attacker",
+                        "subject": "other"
+                    },
+                    "minimum_count": 1,
+                    "sensor_range": 0.1
+                },
+                "minecraft:projectile": {
+                    "gravity": 0,
+                    "inertia": 1,
+                    "liquid_inertia": 1,
+                    "offset": [
+                        0,
+                        0.6,
+                        0
+                    ],
+                    "power": 0.4
+                }
+            },
+            "jellybean_juggler": {
+                "minecraft:projectile": {
+                    "gravity": 0,
+                    "inertia": 1,
+                    "knockback": false,
+                    "liquid_inertia": 1,
+                    "multiple_targets": false,
+                    "offset": [
+                        0,
+                        1.1875,
+                        0
+                    ],
+                    "power": 0.4
+                },
+                "minecraft:timer": {
+                    "time_down_event": {
+                        "event": "despawn",
+                        "target": "self"
+                    },
+                    "time": 4
+                },
+                "minecraft:entity_sensor": {
+                    "event": "on_hit",
+                    "event_filters": {
+                        "all_of": [
+                            {
+                                "test": "is_family",
+                                "value": "tower",
+                                "subject": "other"
+                            },
+                            {
+                                "test": "is_family",
+                                "value": "is_target",
+                                "subject": "other"
+                            }
+                        ]
+                    },
+                    "minimum_count": 1,
+                    "sensor_range": 1
+                }
+            }
+        },
+        "components": {
+            "minecraft:conditional_bandwidth_optimization": {
+                "default_values": {
+                    "use_motion_prediction_hints": true
+                }
+            },
+            "minecraft:collision_box": {
+                "height": 0.005,
+                "width": 0.005
+            },
+            "minecraft:physics": {
+                "has_collision": true,
+                "has_gravity": true
+            },
+            "minecraft:pushable": {
+                "is_pushable": true,
+                "is_pushable_by_piston": true
+            },
+            "minecraft:damage_sensor": {
+                "triggers": [
+                    {
+                        "deals_damage": false
+                    }
+                ]
+            }
+        },
+        "events": {
+            "despawn": {
+                "add": {
+                    "component_groups": [
+                        "despawn"
+                    ]
+                }
+            },
+            "on_hit": {
+                "set_property": {
+                    "starktma:on_hit": true
+                }
+            },
+            "not_hit": {
+                "set_property": {
+                    "starktma:on_hit": false
+                }
+            },
+            "choc_shoot": {
+                "add": {
+                    "component_groups": [
+                        "choc_shoot"
+                    ]
+                },
+                "set_property": {
+                    "starktma:variant": 0
+                }
+            },
+            "j_bean_shoot": {
+                "add": {
+                    "component_groups": [
+                        "j_bean_shoot"
+                    ]
+                },
+                "set_property": {
+                    "starktma:variant": 1
+                }
+            },
+            "slushie_shoot": {
+                "add": {
+                    "component_groups": [
+                        "slushie_shoot"
+                    ]
+                },
+                "set_property": {
+                    "starktma:variant": 2
+                }
+            },
+            "toast_marsh": {
+                "add": {
+                    "component_groups": [
+                        "toast_marsh"
+                    ]
+                },
+                "set_property": {
+                    "starktma:variant": 3
+                }
+            },
+            "candy_cane": {
+                "add": {
+                    "component_groups": [
+                        "candy_cane"
+                    ]
+                },
+                "set_property": {
+                    "starktma:variant": 4
+                }
+            },
+            "gumball_blast": {
+                "add": {
+                    "component_groups": [
+                        "gumball_blast"
+                    ]
+                },
+                "set_property": {
+                    "starktma:variant": 5
+                }
+            },
+            "bubblegum_shoot": {
+                "add": {
+                    "component_groups": [
+                        "bubblegum_shoot"
+                    ]
+                },
+                "set_property": {
+                    "starktma:variant": 6
+                }
+            },
+            "jellybean_juggler": {
+                "add": {
+                    "component_groups": [
+                        "jellybean_juggler"
+                    ]
+                },
+                "set_property": {
+                    "starktma:variant": 7
+                }
+            }
+        },
+        "description": {
+            "identifier": "starktma:engine_proj",
+            "animations": {
+                "root": "controller.animation.starktma.engine_proj.root",
+                "candy_cane_damage": "animation.starktma.engine_proj.candy_cane_damage"
+            },
+            "scripts": {
+                "animate": [
+                    "root"
+                ]
+            },
+            "properties": {
+                "starktma:on_hit": {
+                    "type": "bool",
+                    "default": false,
+                    "client_sync": true
+                },
+                "starktma:variant": {
+                    "type": "int",
+                    "default": 0,
+                    "range": [
+                        0,
+                        128
+                    ],
+                    "client_sync": true
+                }
+            },
+            "is_summonable": true,
+            "runtime_identifier": "minecraft:arrow"
+        }
+    }
+}

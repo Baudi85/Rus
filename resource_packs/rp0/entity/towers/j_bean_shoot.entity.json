@@ -1,0 +1,48 @@
+//Filename: j_bean_shoot.entity.json
+//Generated with Anvil@StarkTMA 0.5.4
+//25-10-2023 01:06:41 +0100
+//
+
+{
+    "format_version": "1.10.0",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "starktma:j_bean_shoot",
+            "animations": {
+                "idle": "animation.starktma.j_bean_shoot.idle",
+                "shoot": "animation.starktma.j_bean_shoot.shoot",
+                "root": "controller.animation.starktma.j_bean_shoot.root",
+                "is_disabled_ctrl": "controller.animation.starktma.j_bean_shoot.is_disabled_ctrl"
+            },
+            "scripts": {
+                "animate": [
+                    "idle",
+                    "root",
+                    "is_disabled_ctrl"
+                ]
+            },
+            "materials": {
+                "default": "entity_alphatest"
+            },
+            "textures": {
+                "default": "textures/entity/j_bean_shoot/j_bean_shoot"
+            },
+            "geometry": {
+                "default": "geometry.starktma.j_bean_shoot"
+            },
+            "particle_effects": {
+                "disabled_particle": "starktma:disabled_particle"
+            },
+            "sound_effects": {
+                "shoot": "starktma.towers.shoot"
+            },
+            "render_controllers": [
+                "controller.render.starktma.j_bean_shoot.root"
+            ],
+            "spawn_egg": {
+                "base_color": "#000000",
+                "overlay_color": "#baffc5"
+            }
+        }
+    }
+}

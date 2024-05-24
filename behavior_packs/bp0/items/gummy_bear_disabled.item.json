@@ -1,0 +1,26 @@
+//Filename: gummy_bear_disabled.item.json
+//Generated with Anvil@StarkTMA 0.5.2
+//11-10-2023 00:51:12 +0100
+//
+
+{
+    "format_version": "1.20.30",
+    "minecraft:item": {
+        "components": {
+            "minecraft:icon": {
+                "texture": "gummy_bear_disabled"
+            },
+            "minecraft:display_name": {
+                "value": "item.starktma:gummy_bear.name"
+            },
+            "minecraft:cooldown": {
+                "category": "gummy_bear",
+                "duration": 7.5
+            },
+            "minecraft:max_stack_size": 1
+        },
+        "description": {
+            "identifier": "starktma:gummy_bear_disabled"
+        }
+    }
+}

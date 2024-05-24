@@ -1,0 +1,49 @@
+//Filename: engine_proj.animation.json
+//Generated with Anvil@StarkTMA 0.5.4
+//25-10-2023 01:06:38 +0100
+//
+
+{
+    "format_version": "1.8.0",
+    "animations": {
+        "animation.starktma.engine_proj.face_3d": {
+            "loop": true,
+            "override_previous_animation": false,
+            "bones": {
+                "root": {
+                    "rotation": [
+                        "v.pitch",
+                        "v.yaw",
+                        0
+                    ]
+                }
+            }
+        },
+        "animation.starktma.engine_proj.face_2d": {
+            "loop": true,
+            "override_previous_animation": false,
+            "bones": {
+                "root": {
+                    "rotation": [
+                        "q.rotation_to_camera(0)",
+                        "q.rotation_to_camera(1)",
+                        0
+                    ]
+                }
+            }
+        },
+        "animation.starktma.engine_proj.rotate_2d": {
+            "loop": true,
+            "override_previous_animation": false,
+            "bones": {
+                "sprite": {
+                    "rotation": [
+                        0,
+                        0,
+                        "(q.anim_time * 500)"
+                    ]
+                }
+            }
+        }
+    }
+}

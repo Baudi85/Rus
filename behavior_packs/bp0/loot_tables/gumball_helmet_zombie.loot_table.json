@@ -1,0 +1,21 @@
+//Filename: gumball_helmet_zombie.loot_table.json
+//Generated with Anvil@StarkTMA 0.5.4
+//25-10-2023 01:06:39 +0100
+//
+
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "type": "item",
+            "entries": [
+                {
+                    "type": "item",
+                    "name": "starktma:gumball_helmet",
+                    "count": 1,
+                    "weight": 1
+                }
+            ]
+        }
+    ]
+}

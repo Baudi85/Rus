@@ -1,0 +1,61 @@
+//Filename: card_picker.rc.json
+//Generated with Anvil@StarkTMA 0.5.4
+//25-10-2023 01:06:43 +0100
+//
+
+{
+    "format_version": "1.10.0",
+    "render_controllers": {
+        "controller.render.starktma.card_picker.default": {
+            "arrays": {
+                "textures": {
+                    "Array.texts": [
+                        "Texture.card_picker_0",
+                        "Texture.card_picker_1",
+                        "Texture.card_picker_2",
+                        "Texture.card_picker_3",
+                        "Texture.card_picker_4",
+                        "Texture.card_picker_5",
+                        "Texture.card_picker_6",
+                        "Texture.card_picker_7",
+                        "Texture.card_picker_8",
+                        "Texture.card_picker_9",
+                        "Texture.card_picker_10",
+                        "Texture.card_picker_11",
+                        "Texture.card_picker_12",
+                        "Texture.card_picker_13",
+                        "Texture.card_picker_14"
+                    ]
+                },
+                "geometries": {
+                    "Array.geos": [
+                        "Geometry.card_picker_0",
+                        "Geometry.card_picker_1",
+                        "Geometry.card_picker_2",
+                        "Geometry.card_picker_3",
+                        "Geometry.card_picker_4",
+                        "Geometry.card_picker_5",
+                        "Geometry.card_picker_6",
+                        "Geometry.card_picker_7",
+                        "Geometry.card_picker_8",
+                        "Geometry.card_picker_9",
+                        "Geometry.card_picker_10",
+                        "Geometry.card_picker_11",
+                        "Geometry.card_picker_12",
+                        "Geometry.card_picker_13",
+                        "Geometry.card_picker_14"
+                    ]
+                }
+            },
+            "materials": [
+                {
+                    "*": "Material.default"
+                }
+            ],
+            "geometry": "Array.geos[q.variant]",
+            "textures": [
+                "Array.texts[q.variant]"
+            ]
+        }
+    }
+}

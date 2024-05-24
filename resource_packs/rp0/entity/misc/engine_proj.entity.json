@@ -1,0 +1,132 @@
+//Filename: engine_proj.entity.json
+//Generated with Anvil@StarkTMA 0.5.4
+//25-10-2023 01:06:43 +0100
+//
+
+{
+    "format_version": "1.10.0",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "starktma:engine_proj",
+            "animations": {
+                "face_3d": "animation.starktma.engine_proj.face_3d",
+                "face_2d": "animation.starktma.engine_proj.face_2d",
+                "rotate_2d": "animation.starktma.engine_proj.rotate_2d",
+                "root": "controller.animation.starktma.engine_proj.root"
+            },
+            "scripts": {
+                "pre_animation": [
+                    "v.pos_x = q.position(0);",
+                    "v.pos_y = q.position(1);",
+                    "v.pos_z = q.position(2);",
+                    "v.d0 = v.target_x - v.pos_x;",
+                    "v.d1 = v.target_y - v.pos_y;",
+                    "v.d2 = v.target_z - v.pos_z;",
+                    "v.d3 = math.sqrt((math.pow(v.d0, 2) + math.pow(v.d2, 2)));",
+                    "v.pitch = math.min_angle(math.atan2(v.d1, v.d3));",
+                    "v.yaw = (180 - math.min_angle(math.atan2(-v.d0, v.d2)));",
+                    "v.h = q.in_range(v.h, 0, 359) ? (v.h + 0.01) : (0);",
+                    "v.c = ((1 - math.abs(((2 * v.l) - 1))) * v.s);",
+                    "v.x = (v.c * (1 - math.abs((math.mod((v.h / 60), 2) - 1))));",
+                    "v.m = (v.l - (v.c / 2));",
+                    "v.r = v.h < 60 ? v.c : (v.h < 120 ? v.x : (v.h < 180 ? 0 : (v.h < 240 ? 0 : (v.h < 300 ? v.x : (v.c)))));",
+                    "v.g = v.h < 60 ? v.x : (v.h < 120 ? v.c : (v.h < 180 ? v.c : (v.h < 240 ? v.x : (v.h < 300 ? 0 : (0)))));",
+                    "v.b = v.h < 60 ? 0 : (v.h < 120 ? 0 : (v.h < 180 ? v.x : (v.h < 240 ? v.c : (v.h < 300 ? v.c : (v.x)))));",
+                    "v.r = math.max(0, (v.r * 2.5));",
+                    "v.g = math.max(0, (v.g * 2.5));",
+                    "v.b = math.max(0, (v.b * 2.5));"
+                ],
+                "initialize": [
+                    "v.target_x=q.position(0);",
+                    "v.target_y=q.position(1);",
+                    "v.target_z=q.position(2);",
+                    "v.pos_x=0;",
+                    "v.pos_y=0;",
+                    "v.pos_z=0;",
+                    "v.d0=0;",
+                    "v.d1=0;",
+                    "v.d2=0;",
+                    "v.d3=0;",
+                    "v.pitch=0;",
+                    "v.yaw=0;",
+                    "v.s=1;",
+                    "v.l=0.8;",
+                    "v.h=0;",
+                    "v.c=0;",
+                    "v.x=0;",
+                    "v.m=0;",
+                    "v.r=0;",
+                    "v.g=0;",
+                    "v.b=0;",
+                    "v.h=math.random(0, 359);",
+                    "v.uv_frame=(math.random_integer(0, 3) / 4);",
+                    "v.uv_frame=(math.random_integer(0, 3) / 4);"
+                ],
+                "animate": [
+                    "root"
+                ]
+            },
+            "materials": {
+                "default": "entity_alphatest",
+                "blend": "entity_alphablend",
+                "jelly_beans": "jelly_beans"
+            },
+            "textures": {
+                "choc_shoot": "textures/entity/engine_proj/choc_shoot_projectile",
+                "j_bean_shoot": "textures/entity/engine_proj/j_bean_shoot_projectile",
+                "slushie_shoot": "textures/entity/engine_proj/slushie_shoot_projectile",
+                "toast_marsh": "textures/entity/engine_proj/toast_marsh_projectile",
+                "candy_cane": "textures/entity/engine_proj/candy_cane_projectile",
+                "gumball_blast": "textures/entity/engine_proj/gumball_blast_projectile",
+                "bubblegum_shoot": "textures/entity/engine_proj/bubblegum_shoot_projectile",
+                "jellybean_juggler": "textures/entity/engine_proj/jellybean_juggler_projectile"
+            },
+            "geometry": {
+                "sprite": "geometry.starktma.sprite",
+                "j_bean_shoot": "geometry.starktma.j_bean_shoot_projectile",
+                "slushie_shoot": "geometry.starktma.slushie_shoot_projectile",
+                "gumball_blast": "geometry.starktma.gumball_blast_projectile",
+                "jellybean_juggler": "geometry.starktma.jellybean_juggler_projectile"
+            },
+            "particle_effects": {
+                "choc_shoot_particle": "starktma:choc_shoot_particle",
+                "slushie_shoot_particle": "starktma:slushie_shoot_particle",
+                "slushie_drip_particle": "starktma:slushie_drip_particle",
+                "bubblegum_shoot_particle": "starktma:bubblegum_shoot_particle"
+            },
+            "sound_effects": {
+                "splat": "starktma.engine_proj.splat"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.starktma.engine_proj.choc_shoot": "q.property('starktma:variant') == 0"
+                },
+                {
+                    "controller.render.starktma.engine_proj.j_bean_shoot": "q.property('starktma:variant') == 1"
+                },
+                {
+                    "controller.render.starktma.engine_proj.slushie_shoot": "q.property('starktma:variant') == 2"
+                },
+                {
+                    "controller.render.starktma.engine_proj.toast_marsh": "q.property('starktma:variant') == 3"
+                },
+                {
+                    "controller.render.starktma.engine_proj.candy_cane": "q.property('starktma:variant') == 4"
+                },
+                {
+                    "controller.render.starktma.engine_proj.gumball_blast": "q.property('starktma:variant') == 5"
+                },
+                {
+                    "controller.render.starktma.engine_proj.bubblegum_shoot": "q.property('starktma:variant') == 6"
+                },
+                {
+                    "controller.render.starktma.engine_proj.jellybean_juggler": "q.property('starktma:variant') == 7"
+                }
+            ],
+            "spawn_egg": {
+                "base_color": "#000000",
+                "overlay_color": "#efa17f"
+            }
+        }
+    }
+}

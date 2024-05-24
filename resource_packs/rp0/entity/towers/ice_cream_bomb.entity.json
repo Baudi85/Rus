@@ -1,0 +1,44 @@
+//Filename: ice_cream_bomb.entity.json
+//Generated with Anvil@StarkTMA 0.5.4
+//25-10-2023 01:06:42 +0100
+//
+
+{
+    "format_version": "1.10.0",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "starktma:ice_cream_bomb",
+            "animations": {
+                "freeze": "animation.starktma.ice_cream_bomb.freeze",
+                "root": "controller.animation.starktma.ice_cream_bomb.root"
+            },
+            "scripts": {
+                "animate": [
+                    "freeze",
+                    {
+                        "root": "q.property('starktma:freeze')"
+                    }
+                ]
+            },
+            "materials": {
+                "default": "entity_alphatest"
+            },
+            "textures": {
+                "default": "textures/entity/ice_cream_bomb/ice_cream_bomb"
+            },
+            "geometry": {
+                "default": "geometry.starktma.ice_cream_bomb"
+            },
+            "sound_effects": {
+                "ice_cream_bomb_freeze": "starktma.ice_cream_bomb.freeze"
+            },
+            "render_controllers": [
+                "controller.render.starktma.ice_cream_bomb.root"
+            ],
+            "spawn_egg": {
+                "base_color": "#000000",
+                "overlay_color": "#ffffff"
+            }
+        }
+    }
+}

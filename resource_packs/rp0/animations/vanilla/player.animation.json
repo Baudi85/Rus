@@ -1,0 +1,114 @@
+//Filename: player.animation.json
+//Generated with Anvil@StarkTMA 0.5.4
+//25-10-2023 01:06:38 +0100
+//
+
+{
+    "format_version": "1.8.0",
+    "animations": {
+        "animation.starktma.player.cursor_move": {
+            "animation_length": 0.25,
+            "bones": {
+                "a0": {
+                    "position": {
+                        "0.0": [
+                            0,
+                            0,
+                            0
+                        ],
+                        "0.125": [
+                            3,
+                            0,
+                            -3
+                        ],
+                        "0.25": [
+                            0,
+                            0,
+                            0
+                        ]
+                    }
+                },
+                "a1": {
+                    "position": {
+                        "0.0": [
+                            0,
+                            0,
+                            0
+                        ],
+                        "0.125": [
+                            -3,
+                            0,
+                            -3
+                        ],
+                        "0.25": [
+                            0,
+                            0,
+                            0
+                        ]
+                    }
+                },
+                "a2": {
+                    "position": {
+                        "0.0": [
+                            0,
+                            0,
+                            0
+                        ],
+                        "0.125": [
+                            -3,
+                            0,
+                            3
+                        ],
+                        "0.25": [
+                            0,
+                            0,
+                            0
+                        ]
+                    }
+                },
+                "a3": {
+                    "position": {
+                        "0.0": [
+                            0,
+                            0,
+                            0
+                        ],
+                        "0.125": [
+                            3,
+                            0,
+                            3
+                        ],
+                        "0.25": [
+                            0,
+                            0,
+                            0
+                        ]
+                    }
+                }
+            }
+        },
+        "animation.starktma.player.projection_third": {
+            "loop": true,
+            "override_previous_animation": false,
+            "bones": {
+                "facing": {
+                    "rotation": [
+                        0,
+                        "-q.body_y_rotation",
+                        0
+                    ]
+                },
+                "projecting": {
+                    "position": [
+                        "(16 * (-12 + (q.property('starktma:x_offset') * 3)))",
+                        -240,
+                        "(16 * (23 - (q.property('starktma:y_offset') * 3)))"
+                    ]
+                },
+                "root": {
+                    "scale": 3
+                }
+            }
+        }
+    }
+}

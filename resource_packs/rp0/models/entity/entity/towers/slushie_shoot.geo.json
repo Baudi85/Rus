@@ -1,0 +1,72 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.starktma.slushie_shoot",
+				"texture_width": 128,
+				"texture_height": 128,
+				"visible_bounds_width": 3,
+				"visible_bounds_height": 4.5,
+				"visible_bounds_offset": [0, 1.75, 0]
+			},
+			"bones": [
+				{
+					"name": "root",
+					"pivot": [0, 11, 0],
+					"locators": {
+						"health_bar": [0, 36, 0]
+					}
+				},
+				{
+					"name": "head",
+					"parent": "root",
+					"pivot": [0, 6, 0],
+					"cubes": [
+						{"origin": [-8, 2, -8], "size": [16, 12, 16], "uv": [0, 44]},
+						{"origin": [-10, 14, -10], "size": [20, 2, 20], "uv": [0, 0]},
+						{"origin": [-9, 16, -9], "size": [18, 4, 18], "uv": [0, 22]},
+						{"origin": [-6, 0, -6], "size": [12, 2, 12], "uv": [60, 0]}
+					]
+				},
+				{
+					"name": "eyes",
+					"parent": "head",
+					"pivot": [0, 18, -11],
+					"cubes": [
+						{"origin": [-7, 14, -11], "size": [6, 8, 0], "uv": [0, 8]},
+						{"origin": [1, 14, -11], "size": [6, 8, 0], "uv": [0, 0]}
+					]
+				},
+				{
+					"name": "straw",
+					"parent": "head",
+					"pivot": [1, 2, -2],
+					"rotation": [162.5, 0, 0],
+					"cubes": [
+						{"origin": [-1, -22, -2], "size": [2, 24, 2], "uv": [0, 72]}
+					]
+				},
+				{
+					"name": "tip",
+					"parent": "straw",
+					"pivot": [1, -22, 0],
+					"rotation": [-162.5, 0, 0],
+					"cubes": [
+						{"origin": [-1, -24, -12], "size": [2, 2, 12], "uv": [52, 60]}
+					]
+				},
+				{
+					"name": "slushie",
+					"parent": "head",
+					"pivot": [0, 6, 0],
+					"cubes": [
+						{"origin": [-8, 15, -8], "size": [16, 4, 16], "uv": [0, 98]},
+						{"origin": [-7, 3, -7], "size": [14, 12, 14], "uv": [8, 72]},
+						{"origin": [-5, 1, -5], "size": [10, 2, 10], "uv": [64, 74]}
+					]
+				}
+			]
+		}
+	]
+}

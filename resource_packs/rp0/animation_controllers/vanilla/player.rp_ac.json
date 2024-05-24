@@ -1,0 +1,49 @@
+//Filename: player.rp_ac.json
+//Generated with Anvil@StarkTMA 0.5.4
+//25-10-2023 01:06:43 +0100
+//
+
+{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.starktma.player.root": {
+            "initial_state": "default",
+            "states": {
+                "default": {
+                    "animations": [
+                        {
+                            "cursor": "(!(q.is_in_ui) && !(v.is_paperdoll))"
+                        },
+                        "projection_third"
+                    ]
+                }
+            }
+        },
+        "controller.animation.starktma.player.cursor": {
+            "initial_state": "default",
+            "states": {
+                "default": {
+                    "on_entry": [
+                        "v.prev_x = q.property('starktma:x_offset');",
+                        "v.prev_y = q.property('starktma:y_offset');"
+                    ],
+                    "transitions": [
+                        {
+                            "move": "((q.property('starktma:x_offset') != v.prev_x || q.property('starktma:y_offset') != v.prev_y) || q.is_using_item)"
+                        }
+                    ]
+                },
+                "move": {
+                    "animations": [
+                        "cursor_move"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "q.all_animations_finished"
+                        }
+                    ]
+                }
+            }
+        }
+    }
+}

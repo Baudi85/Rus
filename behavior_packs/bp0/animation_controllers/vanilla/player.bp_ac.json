@@ -1,0 +1,1607 @@
+//Filename: player.bp_ac.json
+//Generated with Anvil@StarkTMA 0.5.4
+//25-10-2023 01:06:43 +0100
+//
+
+{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.starktma.player.root": {
+            "initial_state": "default",
+            "states": {
+                "default": {
+                    "animations": [
+                        "ambient_sounds_controller",
+                        "selector_controller",
+                        "force_camera_controller",
+                        "camera_fixer",
+                        "slot_availability_test_controller",
+                        "slot_spawner_controller"
+                    ]
+                }
+            }
+        },
+        "controller.animation.starktma.player.ambient_sounds_controller": {
+            "initial_state": "default",
+            "states": {
+                "default": {
+                    "on_entry": [
+                        "/scoreboard  players set sugar_rush starktma8 0"
+                    ]
+                }
+            }
+        },
+        "controller.animation.starktma.player.selector_controller": {
+            "initial_state": "default",
+            "states": {
+                "default": {
+                    "on_entry": [
+                        "/scoreboard  players set sugar_rush player_is_moving 0"
+                    ],
+                    "transitions": [
+                        {
+                            "next_line": "(math.abs((q.movement_direction(0) * 400)) < math.abs((q.movement_direction(2) * 400)) && (q.movement_direction(2) * 400) > 0)"
+                        },
+                        {
+                            "previous_line": "(math.abs((q.movement_direction(0) * 400)) < math.abs((q.movement_direction(2) * 400)) && (q.movement_direction(2) * 400) < 0)"
+                        },
+                        {
+                            "next_slot": "(math.abs((q.movement_direction(0) * 400)) > math.abs((q.movement_direction(2) * 400)) && (q.movement_direction(0) * 400) > 0)"
+                        },
+                        {
+                            "previous_slot": "(math.abs((q.movement_direction(0) * 400)) > math.abs((q.movement_direction(2) * 400)) && (q.movement_direction(0) * 400) < 0)"
+                        }
+                    ]
+                },
+                "next_slot": {
+                    "on_entry": [
+                        "@s next_slot",
+                        "v.move_timer = q.life_time;",
+                        "/scoreboard  players set sugar_rush player_is_moving 1"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "(q.life_time - v.move_timer) > 0.1"
+                        }
+                    ]
+                },
+                "previous_slot": {
+                    "on_entry": [
+                        "@s previous_slot",
+                        "v.move_timer = q.life_time;",
+                        "/scoreboard  players set sugar_rush player_is_moving 1"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "(q.life_time - v.move_timer) > 0.1"
+                        }
+                    ]
+                },
+                "next_line": {
+                    "on_entry": [
+                        "@s next_line",
+                        "v.move_timer = q.life_time;",
+                        "/scoreboard  players set sugar_rush player_is_moving 1"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "(q.life_time - v.move_timer) > 0.1"
+                        }
+                    ]
+                },
+                "previous_line": {
+                    "on_entry": [
+                        "@s previous_line",
+                        "v.move_timer = q.life_time;",
+                        "/scoreboard  players set sugar_rush player_is_moving 1"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "(q.life_time - v.move_timer) > 0.1"
+                        }
+                    ]
+                }
+            }
+        },
+        "controller.animation.starktma.player.force_camera_controller": {
+            "initial_state": "default",
+            "states": {
+                "default": {
+                    "on_entry": [
+                        "/camera @a set minecraft:free pos ~ ~ ~ rot 50 -180 pos ~ ~ ~ rot 50 -180 pos ~ ~ ~ rot 50 -180 pos ~ ~ ~ rot 50 -180 pos ~ ~ ~ rot 50 -180 pos ~ ~ ~ rot 50 -180 pos ~ ~ ~ rot 50 -180 pos ~ ~ ~ rot 50 -180 pos ~ ~ ~ rot 50 -180 pos ~ ~ ~ rot 50 -180",
+                        "/inputpermission set @s camera disabled"
+                    ]
+                }
+            }
+        },
+        "controller.animation.starktma.player.slot_spawner_controller": {
+            "initial_state": "default",
+            "states": {
+                "default": {
+                    "transitions": [
+                        {
+                            "grid_0_0": "((q.is_using_item && q.property('starktma:x_offset') == 0) && q.property('starktma:y_offset') == 0)"
+                        },
+                        {
+                            "grid_0_1": "((q.is_using_item && q.property('starktma:x_offset') == 0) && q.property('starktma:y_offset') == 1)"
+                        },
+                        {
+                            "grid_0_2": "((q.is_using_item && q.property('starktma:x_offset') == 0) && q.property('starktma:y_offset') == 2)"
+                        },
+                        {
+                            "grid_0_3": "((q.is_using_item && q.property('starktma:x_offset') == 0) && q.property('starktma:y_offset') == 3)"
+                        },
+                        {
+                            "grid_0_4": "((q.is_using_item && q.property('starktma:x_offset') == 0) && q.property('starktma:y_offset') == 4)"
+                        },
+                        {
+                            "grid_0_5": "((q.is_using_item && q.property('starktma:x_offset') == 0) && q.property('starktma:y_offset') == 5)"
+                        },
+                        {
+                            "grid_1_0": "((q.is_using_item && q.property('starktma:x_offset') == 1) && q.property('starktma:y_offset') == 0)"
+                        },
+                        {
+                            "grid_1_1": "((q.is_using_item && q.property('starktma:x_offset') == 1) && q.property('starktma:y_offset') == 1)"
+                        },
+                        {
+                            "grid_1_2": "((q.is_using_item && q.property('starktma:x_offset') == 1) && q.property('starktma:y_offset') == 2)"
+                        },
+                        {
+                            "grid_1_3": "((q.is_using_item && q.property('starktma:x_offset') == 1) && q.property('starktma:y_offset') == 3)"
+                        },
+                        {
+                            "grid_1_4": "((q.is_using_item && q.property('starktma:x_offset') == 1) && q.property('starktma:y_offset') == 4)"
+                        },
+                        {
+                            "grid_1_5": "((q.is_using_item && q.property('starktma:x_offset') == 1) && q.property('starktma:y_offset') == 5)"
+                        },
+                        {
+                            "grid_2_0": "((q.is_using_item && q.property('starktma:x_offset') == 2) && q.property('starktma:y_offset') == 0)"
+                        },
+                        {
+                            "grid_2_1": "((q.is_using_item && q.property('starktma:x_offset') == 2) && q.property('starktma:y_offset') == 1)"
+                        },
+                        {
+                            "grid_2_2": "((q.is_using_item && q.property('starktma:x_offset') == 2) && q.property('starktma:y_offset') == 2)"
+                        },
+                        {
+                            "grid_2_3": "((q.is_using_item && q.property('starktma:x_offset') == 2) && q.property('starktma:y_offset') == 3)"
+                        },
+                        {
+                            "grid_2_4": "((q.is_using_item && q.property('starktma:x_offset') == 2) && q.property('starktma:y_offset') == 4)"
+                        },
+                        {
+                            "grid_2_5": "((q.is_using_item && q.property('starktma:x_offset') == 2) && q.property('starktma:y_offset') == 5)"
+                        },
+                        {
+                            "grid_3_0": "((q.is_using_item && q.property('starktma:x_offset') == 3) && q.property('starktma:y_offset') == 0)"
+                        },
+                        {
+                            "grid_3_1": "((q.is_using_item && q.property('starktma:x_offset') == 3) && q.property('starktma:y_offset') == 1)"
+                        },
+                        {
+                            "grid_3_2": "((q.is_using_item && q.property('starktma:x_offset') == 3) && q.property('starktma:y_offset') == 2)"
+                        },
+                        {
+                            "grid_3_3": "((q.is_using_item && q.property('starktma:x_offset') == 3) && q.property('starktma:y_offset') == 3)"
+                        },
+                        {
+                            "grid_3_4": "((q.is_using_item && q.property('starktma:x_offset') == 3) && q.property('starktma:y_offset') == 4)"
+                        },
+                        {
+                            "grid_3_5": "((q.is_using_item && q.property('starktma:x_offset') == 3) && q.property('starktma:y_offset') == 5)"
+                        },
+                        {
+                            "grid_4_0": "((q.is_using_item && q.property('starktma:x_offset') == 4) && q.property('starktma:y_offset') == 0)"
+                        },
+                        {
+                            "grid_4_1": "((q.is_using_item && q.property('starktma:x_offset') == 4) && q.property('starktma:y_offset') == 1)"
+                        },
+                        {
+                            "grid_4_2": "((q.is_using_item && q.property('starktma:x_offset') == 4) && q.property('starktma:y_offset') == 2)"
+                        },
+                        {
+                            "grid_4_3": "((q.is_using_item && q.property('starktma:x_offset') == 4) && q.property('starktma:y_offset') == 3)"
+                        },
+                        {
+                            "grid_4_4": "((q.is_using_item && q.property('starktma:x_offset') == 4) && q.property('starktma:y_offset') == 4)"
+                        },
+                        {
+                            "grid_4_5": "((q.is_using_item && q.property('starktma:x_offset') == 4) && q.property('starktma:y_offset') == 5)"
+                        },
+                        {
+                            "grid_5_0": "((q.is_using_item && q.property('starktma:x_offset') == 5) && q.property('starktma:y_offset') == 0)"
+                        },
+                        {
+                            "grid_5_1": "((q.is_using_item && q.property('starktma:x_offset') == 5) && q.property('starktma:y_offset') == 1)"
+                        },
+                        {
+                            "grid_5_2": "((q.is_using_item && q.property('starktma:x_offset') == 5) && q.property('starktma:y_offset') == 2)"
+                        },
+                        {
+                            "grid_5_3": "((q.is_using_item && q.property('starktma:x_offset') == 5) && q.property('starktma:y_offset') == 3)"
+                        },
+                        {
+                            "grid_5_4": "((q.is_using_item && q.property('starktma:x_offset') == 5) && q.property('starktma:y_offset') == 4)"
+                        },
+                        {
+                            "grid_5_5": "((q.is_using_item && q.property('starktma:x_offset') == 5) && q.property('starktma:y_offset') == 5)"
+                        },
+                        {
+                            "grid_6_0": "((q.is_using_item && q.property('starktma:x_offset') == 6) && q.property('starktma:y_offset') == 0)"
+                        },
+                        {
+                            "grid_6_1": "((q.is_using_item && q.property('starktma:x_offset') == 6) && q.property('starktma:y_offset') == 1)"
+                        },
+                        {
+                            "grid_6_2": "((q.is_using_item && q.property('starktma:x_offset') == 6) && q.property('starktma:y_offset') == 2)"
+                        },
+                        {
+                            "grid_6_3": "((q.is_using_item && q.property('starktma:x_offset') == 6) && q.property('starktma:y_offset') == 3)"
+                        },
+                        {
+                            "grid_6_4": "((q.is_using_item && q.property('starktma:x_offset') == 6) && q.property('starktma:y_offset') == 4)"
+                        },
+                        {
+                            "grid_6_5": "((q.is_using_item && q.property('starktma:x_offset') == 6) && q.property('starktma:y_offset') == 5)"
+                        },
+                        {
+                            "grid_7_0": "((q.is_using_item && q.property('starktma:x_offset') == 7) && q.property('starktma:y_offset') == 0)"
+                        },
+                        {
+                            "grid_7_1": "((q.is_using_item && q.property('starktma:x_offset') == 7) && q.property('starktma:y_offset') == 1)"
+                        },
+                        {
+                            "grid_7_2": "((q.is_using_item && q.property('starktma:x_offset') == 7) && q.property('starktma:y_offset') == 2)"
+                        },
+                        {
+                            "grid_7_3": "((q.is_using_item && q.property('starktma:x_offset') == 7) && q.property('starktma:y_offset') == 3)"
+                        },
+                        {
+                            "grid_7_4": "((q.is_using_item && q.property('starktma:x_offset') == 7) && q.property('starktma:y_offset') == 4)"
+                        },
+                        {
+                            "grid_7_5": "((q.is_using_item && q.property('starktma:x_offset') == 7) && q.property('starktma:y_offset') == 5)"
+                        },
+                        {
+                            "grid_8_0": "((q.is_using_item && q.property('starktma:x_offset') == 8) && q.property('starktma:y_offset') == 0)"
+                        },
+                        {
+                            "grid_8_1": "((q.is_using_item && q.property('starktma:x_offset') == 8) && q.property('starktma:y_offset') == 1)"
+                        },
+                        {
+                            "grid_8_2": "((q.is_using_item && q.property('starktma:x_offset') == 8) && q.property('starktma:y_offset') == 2)"
+                        },
+                        {
+                            "grid_8_3": "((q.is_using_item && q.property('starktma:x_offset') == 8) && q.property('starktma:y_offset') == 3)"
+                        },
+                        {
+                            "grid_8_4": "((q.is_using_item && q.property('starktma:x_offset') == 8) && q.property('starktma:y_offset') == 4)"
+                        },
+                        {
+                            "grid_8_5": "((q.is_using_item && q.property('starktma:x_offset') == 8) && q.property('starktma:y_offset') == 5)"
+                        }
+                    ]
+                },
+                "grid_0_0": {
+                    "on_entry": [
+                        "/execute  positioned ~-12 ~-15 ~-23 run function StateMachine/TD/towers_spawner"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "!(q.is_using_item)"
+                        }
+                    ]
+                },
+                "grid_0_1": {
+                    "on_entry": [
+                        "/execute  positioned ~-12 ~-15 ~-20 run function StateMachine/TD/towers_spawner"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "!(q.is_using_item)"
+                        }
+                    ]
+                },
+                "grid_0_2": {
+                    "on_entry": [
+                        "/execute  positioned ~-12 ~-15 ~-17 run function StateMachine/TD/towers_spawner"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "!(q.is_using_item)"
+                        }
+                    ]
+                },
+                "grid_0_3": {
+                    "on_entry": [
+                        "/execute  positioned ~-12 ~-15 ~-14 run function StateMachine/TD/towers_spawner"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "!(q.is_using_item)"
+                        }
+                    ]
+                },
+                "grid_0_4": {
+                    "on_entry": [
+                        "/execute  positioned ~-12 ~-15 ~-11 run function StateMachine/TD/towers_spawner"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "!(q.is_using_item)"
+                        }
+                    ]
+                },
+                "grid_0_5": {
+                    "on_entry": [
+                        "/execute  positioned ~-12 ~-15 ~-8 run function StateMachine/TD/towers_spawner"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "!(q.is_using_item)"
+                        }
+                    ]
+                },
+                "grid_1_0": {
+                    "on_entry": [
+                        "/execute  positioned ~-9 ~-15 ~-23 run function StateMachine/TD/towers_spawner"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "!(q.is_using_item)"
+                        }
+                    ]
+                },
+                "grid_1_1": {
+                    "on_entry": [
+                        "/execute  positioned ~-9 ~-15 ~-20 run function StateMachine/TD/towers_spawner"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "!(q.is_using_item)"
+                        }
+                    ]
+                },
+                "grid_1_2": {
+                    "on_entry": [
+                        "/execute  positioned ~-9 ~-15 ~-17 run function StateMachine/TD/towers_spawner"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "!(q.is_using_item)"
+                        }
+                    ]
+                },
+                "grid_1_3": {
+                    "on_entry": [
+                        "/execute  positioned ~-9 ~-15 ~-14 run function StateMachine/TD/towers_spawner"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "!(q.is_using_item)"
+                        }
+                    ]
+                },
+                "grid_1_4": {
+                    "on_entry": [
+                        "/execute  positioned ~-9 ~-15 ~-11 run function StateMachine/TD/towers_spawner"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "!(q.is_using_item)"
+                        }
+                    ]
+                },
+                "grid_1_5": {
+                    "on_entry": [
+                        "/execute  positioned ~-9 ~-15 ~-8 run function StateMachine/TD/towers_spawner"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "!(q.is_using_item)"
+                        }
+                    ]
+                },
+                "grid_2_0": {
+                    "on_entry": [
+                        "/execute  positioned ~-6 ~-15 ~-23 run function StateMachine/TD/towers_spawner"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "!(q.is_using_item)"
+                        }
+                    ]
+                },
+                "grid_2_1": {
+                    "on_entry": [
+                        "/execute  positioned ~-6 ~-15 ~-20 run function StateMachine/TD/towers_spawner"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "!(q.is_using_item)"
+                        }
+                    ]
+                },
+                "grid_2_2": {
+                    "on_entry": [
+                        "/execute  positioned ~-6 ~-15 ~-17 run function StateMachine/TD/towers_spawner"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "!(q.is_using_item)"
+                        }
+                    ]
+                },
+                "grid_2_3": {
+                    "on_entry": [
+                        "/execute  positioned ~-6 ~-15 ~-14 run function StateMachine/TD/towers_spawner"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "!(q.is_using_item)"
+                        }
+                    ]
+                },
+                "grid_2_4": {
+                    "on_entry": [
+                        "/execute  positioned ~-6 ~-15 ~-11 run function StateMachine/TD/towers_spawner"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "!(q.is_using_item)"
+                        }
+                    ]
+                },
+                "grid_2_5": {
+                    "on_entry": [
+                        "/execute  positioned ~-6 ~-15 ~-8 run function StateMachine/TD/towers_spawner"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "!(q.is_using_item)"
+                        }
+                    ]
+                },
+                "grid_3_0": {
+                    "on_entry": [
+                        "/execute  positioned ~-3 ~-15 ~-23 run function StateMachine/TD/towers_spawner"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "!(q.is_using_item)"
+                        }
+                    ]
+                },
+                "grid_3_1": {
+                    "on_entry": [
+                        "/execute  positioned ~-3 ~-15 ~-20 run function StateMachine/TD/towers_spawner"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "!(q.is_using_item)"
+                        }
+                    ]
+                },
+                "grid_3_2": {
+                    "on_entry": [
+                        "/execute  positioned ~-3 ~-15 ~-17 run function StateMachine/TD/towers_spawner"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "!(q.is_using_item)"
+                        }
+                    ]
+                },
+                "grid_3_3": {
+                    "on_entry": [
+                        "/execute  positioned ~-3 ~-15 ~-14 run function StateMachine/TD/towers_spawner"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "!(q.is_using_item)"
+                        }
+                    ]
+                },
+                "grid_3_4": {
+                    "on_entry": [
+                        "/execute  positioned ~-3 ~-15 ~-11 run function StateMachine/TD/towers_spawner"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "!(q.is_using_item)"
+                        }
+                    ]
+                },
+                "grid_3_5": {
+                    "on_entry": [
+                        "/execute  positioned ~-3 ~-15 ~-8 run function StateMachine/TD/towers_spawner"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "!(q.is_using_item)"
+                        }
+                    ]
+                },
+                "grid_4_0": {
+                    "on_entry": [
+                        "/execute  positioned ~0 ~-15 ~-23 run function StateMachine/TD/towers_spawner"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "!(q.is_using_item)"
+                        }
+                    ]
+                },
+                "grid_4_1": {
+                    "on_entry": [
+                        "/execute  positioned ~0 ~-15 ~-20 run function StateMachine/TD/towers_spawner"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "!(q.is_using_item)"
+                        }
+                    ]
+                },
+                "grid_4_2": {
+                    "on_entry": [
+                        "/execute  positioned ~0 ~-15 ~-17 run function StateMachine/TD/towers_spawner"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "!(q.is_using_item)"
+                        }
+                    ]
+                },
+                "grid_4_3": {
+                    "on_entry": [
+                        "/execute  positioned ~0 ~-15 ~-14 run function StateMachine/TD/towers_spawner"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "!(q.is_using_item)"
+                        }
+                    ]
+                },
+                "grid_4_4": {
+                    "on_entry": [
+                        "/execute  positioned ~0 ~-15 ~-11 run function StateMachine/TD/towers_spawner"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "!(q.is_using_item)"
+                        }
+                    ]
+                },
+                "grid_4_5": {
+                    "on_entry": [
+                        "/execute  positioned ~0 ~-15 ~-8 run function StateMachine/TD/towers_spawner"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "!(q.is_using_item)"
+                        }
+                    ]
+                },
+                "grid_5_0": {
+                    "on_entry": [
+                        "/execute  positioned ~3 ~-15 ~-23 run function StateMachine/TD/towers_spawner"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "!(q.is_using_item)"
+                        }
+                    ]
+                },
+                "grid_5_1": {
+                    "on_entry": [
+                        "/execute  positioned ~3 ~-15 ~-20 run function StateMachine/TD/towers_spawner"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "!(q.is_using_item)"
+                        }
+                    ]
+                },
+                "grid_5_2": {
+                    "on_entry": [
+                        "/execute  positioned ~3 ~-15 ~-17 run function StateMachine/TD/towers_spawner"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "!(q.is_using_item)"
+                        }
+                    ]
+                },
+                "grid_5_3": {
+                    "on_entry": [
+                        "/execute  positioned ~3 ~-15 ~-14 run function StateMachine/TD/towers_spawner"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "!(q.is_using_item)"
+                        }
+                    ]
+                },
+                "grid_5_4": {
+                    "on_entry": [
+                        "/execute  positioned ~3 ~-15 ~-11 run function StateMachine/TD/towers_spawner"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "!(q.is_using_item)"
+                        }
+                    ]
+                },
+                "grid_5_5": {
+                    "on_entry": [
+                        "/execute  positioned ~3 ~-15 ~-8 run function StateMachine/TD/towers_spawner"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "!(q.is_using_item)"
+                        }
+                    ]
+                },
+                "grid_6_0": {
+                    "on_entry": [
+                        "/execute  positioned ~6 ~-15 ~-23 run function StateMachine/TD/towers_spawner"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "!(q.is_using_item)"
+                        }
+                    ]
+                },
+                "grid_6_1": {
+                    "on_entry": [
+                        "/execute  positioned ~6 ~-15 ~-20 run function StateMachine/TD/towers_spawner"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "!(q.is_using_item)"
+                        }
+                    ]
+                },
+                "grid_6_2": {
+                    "on_entry": [
+                        "/execute  positioned ~6 ~-15 ~-17 run function StateMachine/TD/towers_spawner"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "!(q.is_using_item)"
+                        }
+                    ]
+                },
+                "grid_6_3": {
+                    "on_entry": [
+                        "/execute  positioned ~6 ~-15 ~-14 run function StateMachine/TD/towers_spawner"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "!(q.is_using_item)"
+                        }
+                    ]
+                },
+                "grid_6_4": {
+                    "on_entry": [
+                        "/execute  positioned ~6 ~-15 ~-11 run function StateMachine/TD/towers_spawner"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "!(q.is_using_item)"
+                        }
+                    ]
+                },
+                "grid_6_5": {
+                    "on_entry": [
+                        "/execute  positioned ~6 ~-15 ~-8 run function StateMachine/TD/towers_spawner"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "!(q.is_using_item)"
+                        }
+                    ]
+                },
+                "grid_7_0": {
+                    "on_entry": [
+                        "/execute  positioned ~9 ~-15 ~-23 run function StateMachine/TD/towers_spawner"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "!(q.is_using_item)"
+                        }
+                    ]
+                },
+                "grid_7_1": {
+                    "on_entry": [
+                        "/execute  positioned ~9 ~-15 ~-20 run function StateMachine/TD/towers_spawner"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "!(q.is_using_item)"
+                        }
+                    ]
+                },
+                "grid_7_2": {
+                    "on_entry": [
+                        "/execute  positioned ~9 ~-15 ~-17 run function StateMachine/TD/towers_spawner"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "!(q.is_using_item)"
+                        }
+                    ]
+                },
+                "grid_7_3": {
+                    "on_entry": [
+                        "/execute  positioned ~9 ~-15 ~-14 run function StateMachine/TD/towers_spawner"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "!(q.is_using_item)"
+                        }
+                    ]
+                },
+                "grid_7_4": {
+                    "on_entry": [
+                        "/execute  positioned ~9 ~-15 ~-11 run function StateMachine/TD/towers_spawner"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "!(q.is_using_item)"
+                        }
+                    ]
+                },
+                "grid_7_5": {
+                    "on_entry": [
+                        "/execute  positioned ~9 ~-15 ~-8 run function StateMachine/TD/towers_spawner"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "!(q.is_using_item)"
+                        }
+                    ]
+                },
+                "grid_8_0": {
+                    "on_entry": [
+                        "/execute  positioned ~12 ~-15 ~-23 run function StateMachine/TD/towers_spawner"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "!(q.is_using_item)"
+                        }
+                    ]
+                },
+                "grid_8_1": {
+                    "on_entry": [
+                        "/execute  positioned ~12 ~-15 ~-20 run function StateMachine/TD/towers_spawner"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "!(q.is_using_item)"
+                        }
+                    ]
+                },
+                "grid_8_2": {
+                    "on_entry": [
+                        "/execute  positioned ~12 ~-15 ~-17 run function StateMachine/TD/towers_spawner"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "!(q.is_using_item)"
+                        }
+                    ]
+                },
+                "grid_8_3": {
+                    "on_entry": [
+                        "/execute  positioned ~12 ~-15 ~-14 run function StateMachine/TD/towers_spawner"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "!(q.is_using_item)"
+                        }
+                    ]
+                },
+                "grid_8_4": {
+                    "on_entry": [
+                        "/execute  positioned ~12 ~-15 ~-11 run function StateMachine/TD/towers_spawner"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "!(q.is_using_item)"
+                        }
+                    ]
+                },
+                "grid_8_5": {
+                    "on_entry": [
+                        "/execute  positioned ~12 ~-15 ~-8 run function StateMachine/TD/towers_spawner"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "!(q.is_using_item)"
+                        }
+                    ]
+                }
+            }
+        },
+        "controller.animation.starktma.player.slot_availability_test_controller": {
+            "initial_state": "default",
+            "states": {
+                "default": {
+                    "on_entry": [
+                        "@s set_slot"
+                    ],
+                    "transitions": [
+                        {
+                            "grid_0_0": "(q.property('starktma:x_offset') == 0 && q.property('starktma:y_offset') == 0)"
+                        },
+                        {
+                            "grid_0_1": "(q.property('starktma:x_offset') == 0 && q.property('starktma:y_offset') == 1)"
+                        },
+                        {
+                            "grid_0_2": "(q.property('starktma:x_offset') == 0 && q.property('starktma:y_offset') == 2)"
+                        },
+                        {
+                            "grid_0_3": "(q.property('starktma:x_offset') == 0 && q.property('starktma:y_offset') == 3)"
+                        },
+                        {
+                            "grid_0_4": "(q.property('starktma:x_offset') == 0 && q.property('starktma:y_offset') == 4)"
+                        },
+                        {
+                            "grid_0_5": "(q.property('starktma:x_offset') == 0 && q.property('starktma:y_offset') == 5)"
+                        },
+                        {
+                            "grid_1_0": "(q.property('starktma:x_offset') == 1 && q.property('starktma:y_offset') == 0)"
+                        },
+                        {
+                            "grid_1_1": "(q.property('starktma:x_offset') == 1 && q.property('starktma:y_offset') == 1)"
+                        },
+                        {
+                            "grid_1_2": "(q.property('starktma:x_offset') == 1 && q.property('starktma:y_offset') == 2)"
+                        },
+                        {
+                            "grid_1_3": "(q.property('starktma:x_offset') == 1 && q.property('starktma:y_offset') == 3)"
+                        },
+                        {
+                            "grid_1_4": "(q.property('starktma:x_offset') == 1 && q.property('starktma:y_offset') == 4)"
+                        },
+                        {
+                            "grid_1_5": "(q.property('starktma:x_offset') == 1 && q.property('starktma:y_offset') == 5)"
+                        },
+                        {
+                            "grid_2_0": "(q.property('starktma:x_offset') == 2 && q.property('starktma:y_offset') == 0)"
+                        },
+                        {
+                            "grid_2_1": "(q.property('starktma:x_offset') == 2 && q.property('starktma:y_offset') == 1)"
+                        },
+                        {
+                            "grid_2_2": "(q.property('starktma:x_offset') == 2 && q.property('starktma:y_offset') == 2)"
+                        },
+                        {
+                            "grid_2_3": "(q.property('starktma:x_offset') == 2 && q.property('starktma:y_offset') == 3)"
+                        },
+                        {
+                            "grid_2_4": "(q.property('starktma:x_offset') == 2 && q.property('starktma:y_offset') == 4)"
+                        },
+                        {
+                            "grid_2_5": "(q.property('starktma:x_offset') == 2 && q.property('starktma:y_offset') == 5)"
+                        },
+                        {
+                            "grid_3_0": "(q.property('starktma:x_offset') == 3 && q.property('starktma:y_offset') == 0)"
+                        },
+                        {
+                            "grid_3_1": "(q.property('starktma:x_offset') == 3 && q.property('starktma:y_offset') == 1)"
+                        },
+                        {
+                            "grid_3_2": "(q.property('starktma:x_offset') == 3 && q.property('starktma:y_offset') == 2)"
+                        },
+                        {
+                            "grid_3_3": "(q.property('starktma:x_offset') == 3 && q.property('starktma:y_offset') == 3)"
+                        },
+                        {
+                            "grid_3_4": "(q.property('starktma:x_offset') == 3 && q.property('starktma:y_offset') == 4)"
+                        },
+                        {
+                            "grid_3_5": "(q.property('starktma:x_offset') == 3 && q.property('starktma:y_offset') == 5)"
+                        },
+                        {
+                            "grid_4_0": "(q.property('starktma:x_offset') == 4 && q.property('starktma:y_offset') == 0)"
+                        },
+                        {
+                            "grid_4_1": "(q.property('starktma:x_offset') == 4 && q.property('starktma:y_offset') == 1)"
+                        },
+                        {
+                            "grid_4_2": "(q.property('starktma:x_offset') == 4 && q.property('starktma:y_offset') == 2)"
+                        },
+                        {
+                            "grid_4_3": "(q.property('starktma:x_offset') == 4 && q.property('starktma:y_offset') == 3)"
+                        },
+                        {
+                            "grid_4_4": "(q.property('starktma:x_offset') == 4 && q.property('starktma:y_offset') == 4)"
+                        },
+                        {
+                            "grid_4_5": "(q.property('starktma:x_offset') == 4 && q.property('starktma:y_offset') == 5)"
+                        },
+                        {
+                            "grid_5_0": "(q.property('starktma:x_offset') == 5 && q.property('starktma:y_offset') == 0)"
+                        },
+                        {
+                            "grid_5_1": "(q.property('starktma:x_offset') == 5 && q.property('starktma:y_offset') == 1)"
+                        },
+                        {
+                            "grid_5_2": "(q.property('starktma:x_offset') == 5 && q.property('starktma:y_offset') == 2)"
+                        },
+                        {
+                            "grid_5_3": "(q.property('starktma:x_offset') == 5 && q.property('starktma:y_offset') == 3)"
+                        },
+                        {
+                            "grid_5_4": "(q.property('starktma:x_offset') == 5 && q.property('starktma:y_offset') == 4)"
+                        },
+                        {
+                            "grid_5_5": "(q.property('starktma:x_offset') == 5 && q.property('starktma:y_offset') == 5)"
+                        },
+                        {
+                            "grid_6_0": "(q.property('starktma:x_offset') == 6 && q.property('starktma:y_offset') == 0)"
+                        },
+                        {
+                            "grid_6_1": "(q.property('starktma:x_offset') == 6 && q.property('starktma:y_offset') == 1)"
+                        },
+                        {
+                            "grid_6_2": "(q.property('starktma:x_offset') == 6 && q.property('starktma:y_offset') == 2)"
+                        },
+                        {
+                            "grid_6_3": "(q.property('starktma:x_offset') == 6 && q.property('starktma:y_offset') == 3)"
+                        },
+                        {
+                            "grid_6_4": "(q.property('starktma:x_offset') == 6 && q.property('starktma:y_offset') == 4)"
+                        },
+                        {
+                            "grid_6_5": "(q.property('starktma:x_offset') == 6 && q.property('starktma:y_offset') == 5)"
+                        },
+                        {
+                            "grid_7_0": "(q.property('starktma:x_offset') == 7 && q.property('starktma:y_offset') == 0)"
+                        },
+                        {
+                            "grid_7_1": "(q.property('starktma:x_offset') == 7 && q.property('starktma:y_offset') == 1)"
+                        },
+                        {
+                            "grid_7_2": "(q.property('starktma:x_offset') == 7 && q.property('starktma:y_offset') == 2)"
+                        },
+                        {
+                            "grid_7_3": "(q.property('starktma:x_offset') == 7 && q.property('starktma:y_offset') == 3)"
+                        },
+                        {
+                            "grid_7_4": "(q.property('starktma:x_offset') == 7 && q.property('starktma:y_offset') == 4)"
+                        },
+                        {
+                            "grid_7_5": "(q.property('starktma:x_offset') == 7 && q.property('starktma:y_offset') == 5)"
+                        },
+                        {
+                            "grid_8_0": "(q.property('starktma:x_offset') == 8 && q.property('starktma:y_offset') == 0)"
+                        },
+                        {
+                            "grid_8_1": "(q.property('starktma:x_offset') == 8 && q.property('starktma:y_offset') == 1)"
+                        },
+                        {
+                            "grid_8_2": "(q.property('starktma:x_offset') == 8 && q.property('starktma:y_offset') == 2)"
+                        },
+                        {
+                            "grid_8_3": "(q.property('starktma:x_offset') == 8 && q.property('starktma:y_offset') == 3)"
+                        },
+                        {
+                            "grid_8_4": "(q.property('starktma:x_offset') == 8 && q.property('starktma:y_offset') == 4)"
+                        },
+                        {
+                            "grid_8_5": "(q.property('starktma:x_offset') == 8 && q.property('starktma:y_offset') == 5)"
+                        }
+                    ]
+                },
+                "grid_0_0": {
+                    "on_entry": [
+                        "/execute  positioned ~-12 ~-17 ~-23 if block ~ ~ ~ minecraft:air [] run function StateMachine/TD/enable_towers",
+                        "/execute  positioned ~-12 ~-17 ~-23 if block ~ ~ ~ minecraft:barrier [] run function StateMachine/TD/disable_towers"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "((q.property('starktma:x_offset') != 0 || q.property('starktma:y_offset') != 0) || q.property('starktma:refresh_slot'))"
+                        }
+                    ]
+                },
+                "grid_0_1": {
+                    "on_entry": [
+                        "/execute  positioned ~-12 ~-17 ~-20 if block ~ ~ ~ minecraft:air [] run function StateMachine/TD/enable_towers",
+                        "/execute  positioned ~-12 ~-17 ~-20 if block ~ ~ ~ minecraft:barrier [] run function StateMachine/TD/disable_towers"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "((q.property('starktma:x_offset') != 0 || q.property('starktma:y_offset') != 1) || q.property('starktma:refresh_slot'))"
+                        }
+                    ]
+                },
+                "grid_0_2": {
+                    "on_entry": [
+                        "/execute  positioned ~-12 ~-17 ~-17 if block ~ ~ ~ minecraft:air [] run function StateMachine/TD/enable_towers",
+                        "/execute  positioned ~-12 ~-17 ~-17 if block ~ ~ ~ minecraft:barrier [] run function StateMachine/TD/disable_towers"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "((q.property('starktma:x_offset') != 0 || q.property('starktma:y_offset') != 2) || q.property('starktma:refresh_slot'))"
+                        }
+                    ]
+                },
+                "grid_0_3": {
+                    "on_entry": [
+                        "/execute  positioned ~-12 ~-17 ~-14 if block ~ ~ ~ minecraft:air [] run function StateMachine/TD/enable_towers",
+                        "/execute  positioned ~-12 ~-17 ~-14 if block ~ ~ ~ minecraft:barrier [] run function StateMachine/TD/disable_towers"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "((q.property('starktma:x_offset') != 0 || q.property('starktma:y_offset') != 3) || q.property('starktma:refresh_slot'))"
+                        }
+                    ]
+                },
+                "grid_0_4": {
+                    "on_entry": [
+                        "/execute  positioned ~-12 ~-17 ~-11 if block ~ ~ ~ minecraft:air [] run function StateMachine/TD/enable_towers",
+                        "/execute  positioned ~-12 ~-17 ~-11 if block ~ ~ ~ minecraft:barrier [] run function StateMachine/TD/disable_towers"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "((q.property('starktma:x_offset') != 0 || q.property('starktma:y_offset') != 4) || q.property('starktma:refresh_slot'))"
+                        }
+                    ]
+                },
+                "grid_0_5": {
+                    "on_entry": [
+                        "/execute  positioned ~-12 ~-17 ~-8 if block ~ ~ ~ minecraft:air [] run function StateMachine/TD/enable_towers",
+                        "/execute  positioned ~-12 ~-17 ~-8 if block ~ ~ ~ minecraft:barrier [] run function StateMachine/TD/disable_towers"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "((q.property('starktma:x_offset') != 0 || q.property('starktma:y_offset') != 5) || q.property('starktma:refresh_slot'))"
+                        }
+                    ]
+                },
+                "grid_1_0": {
+                    "on_entry": [
+                        "/execute  positioned ~-9 ~-17 ~-23 if block ~ ~ ~ minecraft:air [] run function StateMachine/TD/enable_towers",
+                        "/execute  positioned ~-9 ~-17 ~-23 if block ~ ~ ~ minecraft:barrier [] run function StateMachine/TD/disable_towers"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "((q.property('starktma:x_offset') != 1 || q.property('starktma:y_offset') != 0) || q.property('starktma:refresh_slot'))"
+                        }
+                    ]
+                },
+                "grid_1_1": {
+                    "on_entry": [
+                        "/execute  positioned ~-9 ~-17 ~-20 if block ~ ~ ~ minecraft:air [] run function StateMachine/TD/enable_towers",
+                        "/execute  positioned ~-9 ~-17 ~-20 if block ~ ~ ~ minecraft:barrier [] run function StateMachine/TD/disable_towers"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "((q.property('starktma:x_offset') != 1 || q.property('starktma:y_offset') != 1) || q.property('starktma:refresh_slot'))"
+                        }
+                    ]
+                },
+                "grid_1_2": {
+                    "on_entry": [
+                        "/execute  positioned ~-9 ~-17 ~-17 if block ~ ~ ~ minecraft:air [] run function StateMachine/TD/enable_towers",
+                        "/execute  positioned ~-9 ~-17 ~-17 if block ~ ~ ~ minecraft:barrier [] run function StateMachine/TD/disable_towers"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "((q.property('starktma:x_offset') != 1 || q.property('starktma:y_offset') != 2) || q.property('starktma:refresh_slot'))"
+                        }
+                    ]
+                },
+                "grid_1_3": {
+                    "on_entry": [
+                        "/execute  positioned ~-9 ~-17 ~-14 if block ~ ~ ~ minecraft:air [] run function StateMachine/TD/enable_towers",
+                        "/execute  positioned ~-9 ~-17 ~-14 if block ~ ~ ~ minecraft:barrier [] run function StateMachine/TD/disable_towers"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "((q.property('starktma:x_offset') != 1 || q.property('starktma:y_offset') != 3) || q.property('starktma:refresh_slot'))"
+                        }
+                    ]
+                },
+                "grid_1_4": {
+                    "on_entry": [
+                        "/execute  positioned ~-9 ~-17 ~-11 if block ~ ~ ~ minecraft:air [] run function StateMachine/TD/enable_towers",
+                        "/execute  positioned ~-9 ~-17 ~-11 if block ~ ~ ~ minecraft:barrier [] run function StateMachine/TD/disable_towers"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "((q.property('starktma:x_offset') != 1 || q.property('starktma:y_offset') != 4) || q.property('starktma:refresh_slot'))"
+                        }
+                    ]
+                },
+                "grid_1_5": {
+                    "on_entry": [
+                        "/execute  positioned ~-9 ~-17 ~-8 if block ~ ~ ~ minecraft:air [] run function StateMachine/TD/enable_towers",
+                        "/execute  positioned ~-9 ~-17 ~-8 if block ~ ~ ~ minecraft:barrier [] run function StateMachine/TD/disable_towers"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "((q.property('starktma:x_offset') != 1 || q.property('starktma:y_offset') != 5) || q.property('starktma:refresh_slot'))"
+                        }
+                    ]
+                },
+                "grid_2_0": {
+                    "on_entry": [
+                        "/execute  positioned ~-6 ~-17 ~-23 if block ~ ~ ~ minecraft:air [] run function StateMachine/TD/enable_towers",
+                        "/execute  positioned ~-6 ~-17 ~-23 if block ~ ~ ~ minecraft:barrier [] run function StateMachine/TD/disable_towers"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "((q.property('starktma:x_offset') != 2 || q.property('starktma:y_offset') != 0) || q.property('starktma:refresh_slot'))"
+                        }
+                    ]
+                },
+                "grid_2_1": {
+                    "on_entry": [
+                        "/execute  positioned ~-6 ~-17 ~-20 if block ~ ~ ~ minecraft:air [] run function StateMachine/TD/enable_towers",
+                        "/execute  positioned ~-6 ~-17 ~-20 if block ~ ~ ~ minecraft:barrier [] run function StateMachine/TD/disable_towers"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "((q.property('starktma:x_offset') != 2 || q.property('starktma:y_offset') != 1) || q.property('starktma:refresh_slot'))"
+                        }
+                    ]
+                },
+                "grid_2_2": {
+                    "on_entry": [
+                        "/execute  positioned ~-6 ~-17 ~-17 if block ~ ~ ~ minecraft:air [] run function StateMachine/TD/enable_towers",
+                        "/execute  positioned ~-6 ~-17 ~-17 if block ~ ~ ~ minecraft:barrier [] run function StateMachine/TD/disable_towers"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "((q.property('starktma:x_offset') != 2 || q.property('starktma:y_offset') != 2) || q.property('starktma:refresh_slot'))"
+                        }
+                    ]
+                },
+                "grid_2_3": {
+                    "on_entry": [
+                        "/execute  positioned ~-6 ~-17 ~-14 if block ~ ~ ~ minecraft:air [] run function StateMachine/TD/enable_towers",
+                        "/execute  positioned ~-6 ~-17 ~-14 if block ~ ~ ~ minecraft:barrier [] run function StateMachine/TD/disable_towers"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "((q.property('starktma:x_offset') != 2 || q.property('starktma:y_offset') != 3) || q.property('starktma:refresh_slot'))"
+                        }
+                    ]
+                },
+                "grid_2_4": {
+                    "on_entry": [
+                        "/execute  positioned ~-6 ~-17 ~-11 if block ~ ~ ~ minecraft:air [] run function StateMachine/TD/enable_towers",
+                        "/execute  positioned ~-6 ~-17 ~-11 if block ~ ~ ~ minecraft:barrier [] run function StateMachine/TD/disable_towers"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "((q.property('starktma:x_offset') != 2 || q.property('starktma:y_offset') != 4) || q.property('starktma:refresh_slot'))"
+                        }
+                    ]
+                },
+                "grid_2_5": {
+                    "on_entry": [
+                        "/execute  positioned ~-6 ~-17 ~-8 if block ~ ~ ~ minecraft:air [] run function StateMachine/TD/enable_towers",
+                        "/execute  positioned ~-6 ~-17 ~-8 if block ~ ~ ~ minecraft:barrier [] run function StateMachine/TD/disable_towers"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "((q.property('starktma:x_offset') != 2 || q.property('starktma:y_offset') != 5) || q.property('starktma:refresh_slot'))"
+                        }
+                    ]
+                },
+                "grid_3_0": {
+                    "on_entry": [
+                        "/execute  positioned ~-3 ~-17 ~-23 if block ~ ~ ~ minecraft:air [] run function StateMachine/TD/enable_towers",
+                        "/execute  positioned ~-3 ~-17 ~-23 if block ~ ~ ~ minecraft:barrier [] run function StateMachine/TD/disable_towers"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "((q.property('starktma:x_offset') != 3 || q.property('starktma:y_offset') != 0) || q.property('starktma:refresh_slot'))"
+                        }
+                    ]
+                },
+                "grid_3_1": {
+                    "on_entry": [
+                        "/execute  positioned ~-3 ~-17 ~-20 if block ~ ~ ~ minecraft:air [] run function StateMachine/TD/enable_towers",
+                        "/execute  positioned ~-3 ~-17 ~-20 if block ~ ~ ~ minecraft:barrier [] run function StateMachine/TD/disable_towers"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "((q.property('starktma:x_offset') != 3 || q.property('starktma:y_offset') != 1) || q.property('starktma:refresh_slot'))"
+                        }
+                    ]
+                },
+                "grid_3_2": {
+                    "on_entry": [
+                        "/execute  positioned ~-3 ~-17 ~-17 if block ~ ~ ~ minecraft:air [] run function StateMachine/TD/enable_towers",
+                        "/execute  positioned ~-3 ~-17 ~-17 if block ~ ~ ~ minecraft:barrier [] run function StateMachine/TD/disable_towers"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "((q.property('starktma:x_offset') != 3 || q.property('starktma:y_offset') != 2) || q.property('starktma:refresh_slot'))"
+                        }
+                    ]
+                },
+                "grid_3_3": {
+                    "on_entry": [
+                        "/execute  positioned ~-3 ~-17 ~-14 if block ~ ~ ~ minecraft:air [] run function StateMachine/TD/enable_towers",
+                        "/execute  positioned ~-3 ~-17 ~-14 if block ~ ~ ~ minecraft:barrier [] run function StateMachine/TD/disable_towers"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "((q.property('starktma:x_offset') != 3 || q.property('starktma:y_offset') != 3) || q.property('starktma:refresh_slot'))"
+                        }
+                    ]
+                },
+                "grid_3_4": {
+                    "on_entry": [
+                        "/execute  positioned ~-3 ~-17 ~-11 if block ~ ~ ~ minecraft:air [] run function StateMachine/TD/enable_towers",
+                        "/execute  positioned ~-3 ~-17 ~-11 if block ~ ~ ~ minecraft:barrier [] run function StateMachine/TD/disable_towers"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "((q.property('starktma:x_offset') != 3 || q.property('starktma:y_offset') != 4) || q.property('starktma:refresh_slot'))"
+                        }
+                    ]
+                },
+                "grid_3_5": {
+                    "on_entry": [
+                        "/execute  positioned ~-3 ~-17 ~-8 if block ~ ~ ~ minecraft:air [] run function StateMachine/TD/enable_towers",
+                        "/execute  positioned ~-3 ~-17 ~-8 if block ~ ~ ~ minecraft:barrier [] run function StateMachine/TD/disable_towers"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "((q.property('starktma:x_offset') != 3 || q.property('starktma:y_offset') != 5) || q.property('starktma:refresh_slot'))"
+                        }
+                    ]
+                },
+                "grid_4_0": {
+                    "on_entry": [
+                        "/execute  positioned ~0 ~-17 ~-23 if block ~ ~ ~ minecraft:air [] run function StateMachine/TD/enable_towers",
+                        "/execute  positioned ~0 ~-17 ~-23 if block ~ ~ ~ minecraft:barrier [] run function StateMachine/TD/disable_towers"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "((q.property('starktma:x_offset') != 4 || q.property('starktma:y_offset') != 0) || q.property('starktma:refresh_slot'))"
+                        }
+                    ]
+                },
+                "grid_4_1": {
+                    "on_entry": [
+                        "/execute  positioned ~0 ~-17 ~-20 if block ~ ~ ~ minecraft:air [] run function StateMachine/TD/enable_towers",
+                        "/execute  positioned ~0 ~-17 ~-20 if block ~ ~ ~ minecraft:barrier [] run function StateMachine/TD/disable_towers"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "((q.property('starktma:x_offset') != 4 || q.property('starktma:y_offset') != 1) || q.property('starktma:refresh_slot'))"
+                        }
+                    ]
+                },
+                "grid_4_2": {
+                    "on_entry": [
+                        "/execute  positioned ~0 ~-17 ~-17 if block ~ ~ ~ minecraft:air [] run function StateMachine/TD/enable_towers",
+                        "/execute  positioned ~0 ~-17 ~-17 if block ~ ~ ~ minecraft:barrier [] run function StateMachine/TD/disable_towers"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "((q.property('starktma:x_offset') != 4 || q.property('starktma:y_offset') != 2) || q.property('starktma:refresh_slot'))"
+                        }
+                    ]
+                },
+                "grid_4_3": {
+                    "on_entry": [
+                        "/execute  positioned ~0 ~-17 ~-14 if block ~ ~ ~ minecraft:air [] run function StateMachine/TD/enable_towers",
+                        "/execute  positioned ~0 ~-17 ~-14 if block ~ ~ ~ minecraft:barrier [] run function StateMachine/TD/disable_towers"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "((q.property('starktma:x_offset') != 4 || q.property('starktma:y_offset') != 3) || q.property('starktma:refresh_slot'))"
+                        }
+                    ]
+                },
+                "grid_4_4": {
+                    "on_entry": [
+                        "/execute  positioned ~0 ~-17 ~-11 if block ~ ~ ~ minecraft:air [] run function StateMachine/TD/enable_towers",
+                        "/execute  positioned ~0 ~-17 ~-11 if block ~ ~ ~ minecraft:barrier [] run function StateMachine/TD/disable_towers"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "((q.property('starktma:x_offset') != 4 || q.property('starktma:y_offset') != 4) || q.property('starktma:refresh_slot'))"
+                        }
+                    ]
+                },
+                "grid_4_5": {
+                    "on_entry": [
+                        "/execute  positioned ~0 ~-17 ~-8 if block ~ ~ ~ minecraft:air [] run function StateMachine/TD/enable_towers",
+                        "/execute  positioned ~0 ~-17 ~-8 if block ~ ~ ~ minecraft:barrier [] run function StateMachine/TD/disable_towers"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "((q.property('starktma:x_offset') != 4 || q.property('starktma:y_offset') != 5) || q.property('starktma:refresh_slot'))"
+                        }
+                    ]
+                },
+                "grid_5_0": {
+                    "on_entry": [
+                        "/execute  positioned ~3 ~-17 ~-23 if block ~ ~ ~ minecraft:air [] run function StateMachine/TD/enable_towers",
+                        "/execute  positioned ~3 ~-17 ~-23 if block ~ ~ ~ minecraft:barrier [] run function StateMachine/TD/disable_towers"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "((q.property('starktma:x_offset') != 5 || q.property('starktma:y_offset') != 0) || q.property('starktma:refresh_slot'))"
+                        }
+                    ]
+                },
+                "grid_5_1": {
+                    "on_entry": [
+                        "/execute  positioned ~3 ~-17 ~-20 if block ~ ~ ~ minecraft:air [] run function StateMachine/TD/enable_towers",
+                        "/execute  positioned ~3 ~-17 ~-20 if block ~ ~ ~ minecraft:barrier [] run function StateMachine/TD/disable_towers"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "((q.property('starktma:x_offset') != 5 || q.property('starktma:y_offset') != 1) || q.property('starktma:refresh_slot'))"
+                        }
+                    ]
+                },
+                "grid_5_2": {
+                    "on_entry": [
+                        "/execute  positioned ~3 ~-17 ~-17 if block ~ ~ ~ minecraft:air [] run function StateMachine/TD/enable_towers",
+                        "/execute  positioned ~3 ~-17 ~-17 if block ~ ~ ~ minecraft:barrier [] run function StateMachine/TD/disable_towers"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "((q.property('starktma:x_offset') != 5 || q.property('starktma:y_offset') != 2) || q.property('starktma:refresh_slot'))"
+                        }
+                    ]
+                },
+                "grid_5_3": {
+                    "on_entry": [
+                        "/execute  positioned ~3 ~-17 ~-14 if block ~ ~ ~ minecraft:air [] run function StateMachine/TD/enable_towers",
+                        "/execute  positioned ~3 ~-17 ~-14 if block ~ ~ ~ minecraft:barrier [] run function StateMachine/TD/disable_towers"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "((q.property('starktma:x_offset') != 5 || q.property('starktma:y_offset') != 3) || q.property('starktma:refresh_slot'))"
+                        }
+                    ]
+                },
+                "grid_5_4": {
+                    "on_entry": [
+                        "/execute  positioned ~3 ~-17 ~-11 if block ~ ~ ~ minecraft:air [] run function StateMachine/TD/enable_towers",
+                        "/execute  positioned ~3 ~-17 ~-11 if block ~ ~ ~ minecraft:barrier [] run function StateMachine/TD/disable_towers"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "((q.property('starktma:x_offset') != 5 || q.property('starktma:y_offset') != 4) || q.property('starktma:refresh_slot'))"
+                        }
+                    ]
+                },
+                "grid_5_5": {
+                    "on_entry": [
+                        "/execute  positioned ~3 ~-17 ~-8 if block ~ ~ ~ minecraft:air [] run function StateMachine/TD/enable_towers",
+                        "/execute  positioned ~3 ~-17 ~-8 if block ~ ~ ~ minecraft:barrier [] run function StateMachine/TD/disable_towers"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "((q.property('starktma:x_offset') != 5 || q.property('starktma:y_offset') != 5) || q.property('starktma:refresh_slot'))"
+                        }
+                    ]
+                },
+                "grid_6_0": {
+                    "on_entry": [
+                        "/execute  positioned ~6 ~-17 ~-23 if block ~ ~ ~ minecraft:air [] run function StateMachine/TD/enable_towers",
+                        "/execute  positioned ~6 ~-17 ~-23 if block ~ ~ ~ minecraft:barrier [] run function StateMachine/TD/disable_towers"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "((q.property('starktma:x_offset') != 6 || q.property('starktma:y_offset') != 0) || q.property('starktma:refresh_slot'))"
+                        }
+                    ]
+                },
+                "grid_6_1": {
+                    "on_entry": [
+                        "/execute  positioned ~6 ~-17 ~-20 if block ~ ~ ~ minecraft:air [] run function StateMachine/TD/enable_towers",
+                        "/execute  positioned ~6 ~-17 ~-20 if block ~ ~ ~ minecraft:barrier [] run function StateMachine/TD/disable_towers"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "((q.property('starktma:x_offset') != 6 || q.property('starktma:y_offset') != 1) || q.property('starktma:refresh_slot'))"
+                        }
+                    ]
+                },
+                "grid_6_2": {
+                    "on_entry": [
+                        "/execute  positioned ~6 ~-17 ~-17 if block ~ ~ ~ minecraft:air [] run function StateMachine/TD/enable_towers",
+                        "/execute  positioned ~6 ~-17 ~-17 if block ~ ~ ~ minecraft:barrier [] run function StateMachine/TD/disable_towers"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "((q.property('starktma:x_offset') != 6 || q.property('starktma:y_offset') != 2) || q.property('starktma:refresh_slot'))"
+                        }
+                    ]
+                },
+                "grid_6_3": {
+                    "on_entry": [
+                        "/execute  positioned ~6 ~-17 ~-14 if block ~ ~ ~ minecraft:air [] run function StateMachine/TD/enable_towers",
+                        "/execute  positioned ~6 ~-17 ~-14 if block ~ ~ ~ minecraft:barrier [] run function StateMachine/TD/disable_towers"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "((q.property('starktma:x_offset') != 6 || q.property('starktma:y_offset') != 3) || q.property('starktma:refresh_slot'))"
+                        }
+                    ]
+                },
+                "grid_6_4": {
+                    "on_entry": [
+                        "/execute  positioned ~6 ~-17 ~-11 if block ~ ~ ~ minecraft:air [] run function StateMachine/TD/enable_towers",
+                        "/execute  positioned ~6 ~-17 ~-11 if block ~ ~ ~ minecraft:barrier [] run function StateMachine/TD/disable_towers"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "((q.property('starktma:x_offset') != 6 || q.property('starktma:y_offset') != 4) || q.property('starktma:refresh_slot'))"
+                        }
+                    ]
+                },
+                "grid_6_5": {
+                    "on_entry": [
+                        "/execute  positioned ~6 ~-17 ~-8 if block ~ ~ ~ minecraft:air [] run function StateMachine/TD/enable_towers",
+                        "/execute  positioned ~6 ~-17 ~-8 if block ~ ~ ~ minecraft:barrier [] run function StateMachine/TD/disable_towers"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "((q.property('starktma:x_offset') != 6 || q.property('starktma:y_offset') != 5) || q.property('starktma:refresh_slot'))"
+                        }
+                    ]
+                },
+                "grid_7_0": {
+                    "on_entry": [
+                        "/execute  positioned ~9 ~-17 ~-23 if block ~ ~ ~ minecraft:air [] run function StateMachine/TD/enable_towers",
+                        "/execute  positioned ~9 ~-17 ~-23 if block ~ ~ ~ minecraft:barrier [] run function StateMachine/TD/disable_towers"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "((q.property('starktma:x_offset') != 7 || q.property('starktma:y_offset') != 0) || q.property('starktma:refresh_slot'))"
+                        }
+                    ]
+                },
+                "grid_7_1": {
+                    "on_entry": [
+                        "/execute  positioned ~9 ~-17 ~-20 if block ~ ~ ~ minecraft:air [] run function StateMachine/TD/enable_towers",
+                        "/execute  positioned ~9 ~-17 ~-20 if block ~ ~ ~ minecraft:barrier [] run function StateMachine/TD/disable_towers"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "((q.property('starktma:x_offset') != 7 || q.property('starktma:y_offset') != 1) || q.property('starktma:refresh_slot'))"
+                        }
+                    ]
+                },
+                "grid_7_2": {
+                    "on_entry": [
+                        "/execute  positioned ~9 ~-17 ~-17 if block ~ ~ ~ minecraft:air [] run function StateMachine/TD/enable_towers",
+                        "/execute  positioned ~9 ~-17 ~-17 if block ~ ~ ~ minecraft:barrier [] run function StateMachine/TD/disable_towers"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "((q.property('starktma:x_offset') != 7 || q.property('starktma:y_offset') != 2) || q.property('starktma:refresh_slot'))"
+                        }
+                    ]
+                },
+                "grid_7_3": {
+                    "on_entry": [
+                        "/execute  positioned ~9 ~-17 ~-14 if block ~ ~ ~ minecraft:air [] run function StateMachine/TD/enable_towers",
+                        "/execute  positioned ~9 ~-17 ~-14 if block ~ ~ ~ minecraft:barrier [] run function StateMachine/TD/disable_towers"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "((q.property('starktma:x_offset') != 7 || q.property('starktma:y_offset') != 3) || q.property('starktma:refresh_slot'))"
+                        }
+                    ]
+                },
+                "grid_7_4": {
+                    "on_entry": [
+                        "/execute  positioned ~9 ~-17 ~-11 if block ~ ~ ~ minecraft:air [] run function StateMachine/TD/enable_towers",
+                        "/execute  positioned ~9 ~-17 ~-11 if block ~ ~ ~ minecraft:barrier [] run function StateMachine/TD/disable_towers"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "((q.property('starktma:x_offset') != 7 || q.property('starktma:y_offset') != 4) || q.property('starktma:refresh_slot'))"
+                        }
+                    ]
+                },
+                "grid_7_5": {
+                    "on_entry": [
+                        "/execute  positioned ~9 ~-17 ~-8 if block ~ ~ ~ minecraft:air [] run function StateMachine/TD/enable_towers",
+                        "/execute  positioned ~9 ~-17 ~-8 if block ~ ~ ~ minecraft:barrier [] run function StateMachine/TD/disable_towers"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "((q.property('starktma:x_offset') != 7 || q.property('starktma:y_offset') != 5) || q.property('starktma:refresh_slot'))"
+                        }
+                    ]
+                },
+                "grid_8_0": {
+                    "on_entry": [
+                        "/execute  positioned ~12 ~-17 ~-23 if block ~ ~ ~ minecraft:air [] run function StateMachine/TD/enable_towers",
+                        "/execute  positioned ~12 ~-17 ~-23 if block ~ ~ ~ minecraft:barrier [] run function StateMachine/TD/disable_towers"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "((q.property('starktma:x_offset') != 8 || q.property('starktma:y_offset') != 0) || q.property('starktma:refresh_slot'))"
+                        }
+                    ]
+                },
+                "grid_8_1": {
+                    "on_entry": [
+                        "/execute  positioned ~12 ~-17 ~-20 if block ~ ~ ~ minecraft:air [] run function StateMachine/TD/enable_towers",
+                        "/execute  positioned ~12 ~-17 ~-20 if block ~ ~ ~ minecraft:barrier [] run function StateMachine/TD/disable_towers"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "((q.property('starktma:x_offset') != 8 || q.property('starktma:y_offset') != 1) || q.property('starktma:refresh_slot'))"
+                        }
+                    ]
+                },
+                "grid_8_2": {
+                    "on_entry": [
+                        "/execute  positioned ~12 ~-17 ~-17 if block ~ ~ ~ minecraft:air [] run function StateMachine/TD/enable_towers",
+                        "/execute  positioned ~12 ~-17 ~-17 if block ~ ~ ~ minecraft:barrier [] run function StateMachine/TD/disable_towers"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "((q.property('starktma:x_offset') != 8 || q.property('starktma:y_offset') != 2) || q.property('starktma:refresh_slot'))"
+                        }
+                    ]
+                },
+                "grid_8_3": {
+                    "on_entry": [
+                        "/execute  positioned ~12 ~-17 ~-14 if block ~ ~ ~ minecraft:air [] run function StateMachine/TD/enable_towers",
+                        "/execute  positioned ~12 ~-17 ~-14 if block ~ ~ ~ minecraft:barrier [] run function StateMachine/TD/disable_towers"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "((q.property('starktma:x_offset') != 8 || q.property('starktma:y_offset') != 3) || q.property('starktma:refresh_slot'))"
+                        }
+                    ]
+                },
+                "grid_8_4": {
+                    "on_entry": [
+                        "/execute  positioned ~12 ~-17 ~-11 if block ~ ~ ~ minecraft:air [] run function StateMachine/TD/enable_towers",
+                        "/execute  positioned ~12 ~-17 ~-11 if block ~ ~ ~ minecraft:barrier [] run function StateMachine/TD/disable_towers"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "((q.property('starktma:x_offset') != 8 || q.property('starktma:y_offset') != 4) || q.property('starktma:refresh_slot'))"
+                        }
+                    ]
+                },
+                "grid_8_5": {
+                    "on_entry": [
+                        "/execute  positioned ~12 ~-17 ~-8 if block ~ ~ ~ minecraft:air [] run function StateMachine/TD/enable_towers",
+                        "/execute  positioned ~12 ~-17 ~-8 if block ~ ~ ~ minecraft:barrier [] run function StateMachine/TD/disable_towers"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "((q.property('starktma:x_offset') != 8 || q.property('starktma:y_offset') != 5) || q.property('starktma:refresh_slot'))"
+                        }
+                    ]
+                }
+            }
+        },
+        "controller.animation.starktma.player.variables": {
+            "initial_state": "default",
+            "states": {
+                "default": {
+                    "on_entry": [
+                        "v.move_timer=0;"
+                    ]
+                }
+            }
+        }
+    }
+}

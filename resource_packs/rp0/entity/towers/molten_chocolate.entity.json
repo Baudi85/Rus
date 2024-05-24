@@ -1,0 +1,49 @@
+//Filename: molten_chocolate.entity.json
+//Generated with Anvil@StarkTMA 0.5.4
+//25-10-2023 01:06:41 +0100
+//
+
+{
+    "format_version": "1.10.0",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "starktma:molten_chocolate",
+            "animations": {
+                "idle": "animation.starktma.molten_chocolate.idle",
+                "launch": "animation.starktma.molten_chocolate.launch",
+                "root": "controller.animation.starktma.molten_chocolate.root",
+                "is_disabled_ctrl": "controller.animation.starktma.molten_chocolate.is_disabled_ctrl"
+            },
+            "scripts": {
+                "animate": [
+                    "idle",
+                    "root",
+                    "is_disabled_ctrl"
+                ]
+            },
+            "materials": {
+                "default": "entity_alphatest"
+            },
+            "textures": {
+                "default": "textures/entity/molten_chocolate/molten_chocolate",
+                "shoot": "textures/entity/molten_chocolate/molten_chocolate_shoot"
+            },
+            "geometry": {
+                "default": "geometry.starktma.molten_chocolate"
+            },
+            "particle_effects": {
+                "disabled_particle": "starktma:disabled_particle"
+            },
+            "sound_effects": {
+                "launch": "starktma.towers.launch"
+            },
+            "render_controllers": [
+                "controller.render.starktma.molten_chocolate.root"
+            ],
+            "spawn_egg": {
+                "base_color": "#000000",
+                "overlay_color": "#efa17f"
+            }
+        }
+    }
+}

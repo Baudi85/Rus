@@ -1,0 +1,35 @@
+//Filename: sugar_spawner_machine.bp_ac.json
+//Generated with Anvil@StarkTMA 0.5.4
+//25-10-2023 01:06:39 +0100
+//
+
+{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.starktma.sugar_spawner_machine.root": {
+            "initial_state": "default",
+            "states": {
+                "default": {
+                    "on_entry": [
+                        "/execute  as @s [tag = !setup] run scoreboard  players add sugar_rush att_spawned 1",
+                        "/execute  as @s [tag = !setup] run scoreboard  players add sugar_rush attackers_alive 1",
+                        "/execute  as @s [tag = !setup] run tag @s add setup",
+                        "@s is_target"
+                    ],
+                    "transitions": [
+                        {
+                            "is_dead": "q.property('starktma:health') == 0"
+                        }
+                    ]
+                },
+                "is_dead": {
+                    "on_entry": [
+                        "/scoreboard  players remove sugar_rush attackers_alive 1",
+                        "/scoreboard  players add sugar_rush attackers_killed 1",
+                        "@s despawn"
+                    ]
+                }
+            }
+        }
+    }
+}

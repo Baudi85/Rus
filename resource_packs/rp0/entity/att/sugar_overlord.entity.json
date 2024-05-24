@@ -1,0 +1,50 @@
+//Filename: sugar_overlord.entity.json
+//Generated with Anvil@StarkTMA 0.5.4
+//25-10-2023 01:06:43 +0100
+//
+
+{
+    "format_version": "1.10.0",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "starktma:sugar_overlord",
+            "animations": {
+                "root": "controller.animation.starktma.sugar_overlord.root",
+                "health_bar": "controller.animation.starktma.sugar_overlord.health_bar",
+                "is_walking": "animation.starktma.sugar_overlord.is_walking",
+                "is_dying": "animation.starktma.sugar_overlord.is_dying",
+                "is_melee": "animation.starktma.sugar_overlord.is_melee",
+                "is_stunned": "animation.starktma.basic_zombie.is_stunned",
+                "is_on_fire": "animation.starktma.basic_zombie.is_on_fire",
+                "is_exploding": "animation.starktma.basic_zombie.is_exploding"
+            },
+            "scripts": {
+                "animate": [
+                    "root",
+                    "health_bar"
+                ],
+                "scale": "1.5"
+            },
+            "materials": {
+                "default": "entity_alphatest"
+            },
+            "textures": {
+                "default": "textures/entity/sugar_overlord/sugar_overlord"
+            },
+            "geometry": {
+                "default": "geometry.starktma.sugar_overlord"
+            },
+            "particle_effects": {
+                "health_bar": "starktma:health_bar",
+                "fire_particle_xyz": "starktma:fire_particle_xyz"
+            },
+            "render_controllers": [
+                "controller.render.starktma.sugar_overlord.default"
+            ],
+            "spawn_egg": {
+                "base_color": "#000000",
+                "overlay_color": "#d0e8f8"
+            }
+        }
+    }
+}

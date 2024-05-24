@@ -1,0 +1,21 @@
+//Filename: bubblegum_shoot.rc.json
+//Generated with Anvil@StarkTMA 0.5.4
+//25-10-2023 01:06:41 +0100
+//
+
+{
+    "format_version": "1.10.0",
+    "render_controllers": {
+        "controller.render.starktma.bubblegum_shoot.root": {
+            "materials": [
+                {
+                    "*": "Material.default"
+                }
+            ],
+            "geometry": "Geometry.default",
+            "textures": [
+                "Texture.default"
+            ]
+        }
+    }
+}

@@ -1,0 +1,58 @@
+//Filename: gumball_helmet_zombie.entity.json
+//Generated with Anvil@StarkTMA 0.5.4
+//25-10-2023 01:06:42 +0100
+//
+
+{
+    "format_version": "1.10.0",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "starktma:gumball_helmet_zombie",
+            "animations": {
+                "root": "controller.animation.starktma.gumball_helmet_zombie.root",
+                "health_bar": "controller.animation.starktma.gumball_helmet_zombie.health_bar",
+                "protection_animation": "animation.starktma.gumball_helmet_zombie.protection_animation",
+                "protection_bar": "controller.animation.starktma.gumball_helmet_zombie.protection_bar",
+                "is_walking": "animation.starktma.basic_zombie.is_walking",
+                "is_dying": "animation.starktma.basic_zombie.is_dying",
+                "is_melee": "animation.starktma.basic_zombie.is_melee",
+                "is_stunned": "animation.starktma.basic_zombie.is_stunned",
+                "is_on_fire": "animation.starktma.basic_zombie.is_on_fire",
+                "is_exploding": "animation.starktma.basic_zombie.is_exploding"
+            },
+            "scripts": {
+                "animate": [
+                    "root",
+                    "health_bar",
+                    {
+                        "protection_animation": "q.property('starktma:protection_health') > 0"
+                    },
+                    "protection_bar"
+                ],
+                "scale": "1.5"
+            },
+            "materials": {
+                "default": "entity_alphatest"
+            },
+            "textures": {
+                "default": "textures/entity/gumball_helmet_zombie/gumball_helmet_zombie"
+            },
+            "geometry": {
+                "default": "geometry.starktma.gumball_helmet_zombie"
+            },
+            "particle_effects": {
+                "health_bar": "starktma:health_bar",
+                "protection_bar": "starktma:protection_bar",
+                "fire_particle_xyz": "starktma:fire_particle_xyz"
+            },
+            "render_controllers": [
+                "controller.render.starktma.gumball_helmet_zombie.default"
+            ],
+            "enable_attachables": true,
+            "spawn_egg": {
+                "base_color": "#000000",
+                "overlay_color": "#1e917d"
+            }
+        }
+    }
+}

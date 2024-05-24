@@ -1,0 +1,44 @@
+//Filename: sugar_spawner_machine.entity.json
+//Generated with Anvil@StarkTMA 0.5.4
+//25-10-2023 01:06:39 +0100
+//
+
+{
+    "format_version": "1.10.0",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "starktma:sugar_spawner_machine",
+            "animations": {
+                "root": "controller.animation.starktma.sugar_spawner_machine.root",
+                "health_bar": "controller.animation.starktma.sugar_spawner_machine.health_bar",
+                "spawner": "animation.starktma.sugar_spawner_machine.spawner"
+            },
+            "scripts": {
+                "animate": [
+                    "root",
+                    "health_bar"
+                ],
+                "scale": "1.5"
+            },
+            "materials": {
+                "default": "entity_alphatest"
+            },
+            "textures": {
+                "default": "textures/entity/sugar_spawner_machine/sugar_spawner_machine"
+            },
+            "geometry": {
+                "default": "geometry.starktma.sugar_spawner_machine"
+            },
+            "particle_effects": {
+                "health_bar": "starktma:health_bar"
+            },
+            "render_controllers": [
+                "controller.render.starktma.sugar_spawner_machine.default"
+            ],
+            "spawn_egg": {
+                "base_color": "#000000",
+                "overlay_color": "#213338"
+            }
+        }
+    }
+}

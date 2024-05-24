@@ -1,0 +1,19 @@
+//Filename: level_picker.animation.json
+//Generated with Anvil@StarkTMA 0.5.4
+//25-10-2023 01:06:43 +0100
+//
+
+{
+    "format_version": "1.10.0",
+    "animations": {
+        "animation.starktma.level_picker.dialogue_opener": {
+            "loop": true,
+            "timeline": {
+                "0.5": [
+                    "/execute  run dialogue open @s @a level_picker"
+                ]
+            },
+            "animation_length": 0.6
+        }
+    }
+}

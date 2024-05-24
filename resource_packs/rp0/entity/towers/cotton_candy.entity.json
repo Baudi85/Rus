@@ -1,0 +1,47 @@
+//Filename: cotton_candy.entity.json
+//Generated with Anvil@StarkTMA 0.5.4
+//25-10-2023 01:06:41 +0100
+//
+
+{
+    "format_version": "1.10.0",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "starktma:cotton_candy",
+            "animations": {
+                "idle": "animation.starktma.cotton_candy.idle",
+                "generate": "animation.starktma.cotton_candy.generate",
+                "candy_generator": "controller.animation.starktma.cotton_candy.candy_generator",
+                "is_disabled_ctrl": "controller.animation.starktma.cotton_candy.is_disabled_ctrl"
+            },
+            "scripts": {
+                "animate": [
+                    "idle",
+                    "candy_generator",
+                    "is_disabled_ctrl"
+                ]
+            },
+            "materials": {
+                "default": "entity_alphatest"
+            },
+            "textures": {
+                "default": "textures/entity/cotton_candy/cotton_candy",
+                "generate": "textures/entity/cotton_candy/cotton_candy_generate"
+            },
+            "geometry": {
+                "default": "geometry.starktma.cotton_candy"
+            },
+            "particle_effects": {
+                "candy_generate": "starktma:candy_generate",
+                "disabled_particle": "starktma:disabled_particle"
+            },
+            "render_controllers": [
+                "controller.render.starktma.cotton_candy.root"
+            ],
+            "spawn_egg": {
+                "base_color": "#000000",
+                "overlay_color": "#000000"
+            }
+        }
+    }
+}

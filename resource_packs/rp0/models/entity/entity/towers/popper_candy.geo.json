@@ -1,0 +1,57 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.starktma.popper_candy",
+				"texture_width": 64,
+				"texture_height": 64,
+				"visible_bounds_width": 5,
+				"visible_bounds_height": 5.5,
+				"visible_bounds_offset": [0, 2.25, 0]
+			},
+			"bones": [
+				{
+					"name": "root",
+					"pivot": [0, 11, 0],
+					"locators": {
+						"health_bar": [0, 36, 0]
+					}
+				},
+				{
+					"name": "rightLeg",
+					"parent": "root",
+					"pivot": [2, 4, 0],
+					"cubes": [
+						{"origin": [0, 0, -2], "size": [4, 4, 4], "uv": [16, 24]}
+					]
+				},
+				{
+					"name": "leftLeg",
+					"parent": "root",
+					"pivot": [-2, 4, 0],
+					"cubes": [
+						{"origin": [-4, 0, -2], "size": [4, 4, 4], "uv": [0, 24], "mirror": true}
+					]
+				},
+				{
+					"name": "head",
+					"parent": "root",
+					"pivot": [0, 6, 0],
+					"cubes": [
+						{"origin": [-6, 4, -6], "size": [12, 12, 12], "uv": [0, 0]}
+					]
+				},
+				{
+					"name": "eyes",
+					"parent": "head",
+					"pivot": [0, 10, -7],
+					"cubes": [
+						{"origin": [-7, 6, -7], "size": [6, 8, 0], "uv": [0, 32]},
+						{"origin": [1, 6, -7], "size": [6, 8, 0], "uv": [0, 0]}
+					]
+				}
+			]
+		}
+	]
+}

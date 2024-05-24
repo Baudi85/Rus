@@ -1,0 +1,19 @@
+//Filename: attacker_target.animation.json
+//Generated with Anvil@StarkTMA 0.5.4
+//25-10-2023 01:06:43 +0100
+//
+
+{
+    "format_version": "1.10.0",
+    "animations": {
+        "animation.starktma.attacker_target.has_damage": {
+            "loop": true,
+            "timeline": {
+                "0.05": [
+                    "/function StateMachine/TD/losing_seq"
+                ]
+            },
+            "animation_length": 0.15000000000000002
+        }
+    }
+}

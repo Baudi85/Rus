@@ -1,0 +1,28 @@
+//Filename: player.animation.json
+//Generated with Anvil@StarkTMA 0.5.4
+//25-10-2023 01:06:43 +0100
+//
+
+{
+    "format_version": "1.10.0",
+    "animations": {
+        "animation.starktma.player.lock_in_place": {
+            "loop": true,
+            "timeline": {
+                "0": [
+                    "/teleport @s ~ ~ ~ "
+                ]
+            },
+            "animation_length": 0.01
+        },
+        "animation.starktma.player.camera_fixer": {
+            "loop": true,
+            "timeline": {
+                "0": [
+                    "/execute  unless entity @s [m = creative] unless entity @s [ry = -179, rym = 179, rx = 46.0, rxm = 44.0] run teleport @s ~ ~ ~ -180 45.0"
+                ]
+            },
+            "animation_length": 0.01
+        }
+    }
+}

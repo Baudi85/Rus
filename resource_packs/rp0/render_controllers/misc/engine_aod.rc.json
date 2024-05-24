@@ -1,0 +1,35 @@
+//Filename: engine_aod.rc.json
+//Generated with Anvil@StarkTMA 0.5.4
+//25-10-2023 01:06:44 +0100
+//
+
+{
+    "format_version": "1.10.0",
+    "render_controllers": {
+        "controller.render.starktma.engine_aod.molten_chocolate": {
+            "arrays": {
+                "textures": {
+                    "Array.textures": [
+                        "Texture.molten_chocolate",
+                        "Texture.molten_chocolate_aod"
+                    ]
+                },
+                "geometries": {
+                    "Array.geo": [
+                        "Geometry.sprite",
+                        "Geometry.molten_chocolate_aod"
+                    ]
+                }
+            },
+            "materials": [
+                {
+                    "*": "Material.default"
+                }
+            ],
+            "geometry": "Array.geo[q.property('starktma:on_hit')]",
+            "textures": [
+                "Array.textures[q.property('starktma:on_hit')]"
+            ]
+        }
+    }
+}

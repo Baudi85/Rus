@@ -1,0 +1,54 @@
+{ "frames": [
+   {
+    "filename": "Sprite-0001 0.",
+    "frame": { "x": 0, "y": 0, "w": 224, "h": 176 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 224, "h": 176 },
+    "sourceSize": { "w": 224, "h": 176 },
+    "duration": 500
+   },
+   {
+    "filename": "Sprite-0001 1.",
+    "frame": { "x": 224, "y": 0, "w": 224, "h": 176 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 224, "h": 176 },
+    "sourceSize": { "w": 224, "h": 176 },
+    "duration": 500
+   },
+   {
+    "filename": "Sprite-0001 2.",
+    "frame": { "x": 448, "y": 0, "w": 224, "h": 176 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 224, "h": 176 },
+    "sourceSize": { "w": 224, "h": 176 },
+    "duration": 500
+   },
+   {
+    "filename": "Sprite-0001 3.",
+    "frame": { "x": 672, "y": 0, "w": 224, "h": 176 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 224, "h": 176 },
+    "sourceSize": { "w": 224, "h": 176 },
+    "duration": 500
+   }
+ ],
+ "meta": {
+  "app": "https://www.aseprite.org/",
+  "version": "1.2.40-x64",
+  "image": "tip_cursor_switch.png",
+  "format": "RGBA8888",
+  "size": { "w": 896, "h": 176 },
+  "scale": "1",
+  "frameTags": [
+  ],
+  "layers": [
+   { "name": "Layer 1", "opacity": 255, "blendMode": "normal" }
+  ],
+  "slices": [
+  ]
+ }
+}

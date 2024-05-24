@@ -1,0 +1,77 @@
+//Filename: gingerbread.rp_ac.json
+//Generated with Anvil@StarkTMA 0.5.4
+//25-10-2023 01:06:41 +0100
+//
+
+{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.starktma.gingerbread.root": {
+            "initial_state": "default",
+            "states": {
+                "default": {
+                    "transitions": [
+                        {
+                            "attack_0": "q.is_delayed_attacking"
+                        }
+                    ]
+                },
+                "attack_0": {
+                    "animations": [
+                        "attack_0"
+                    ],
+                    "transitions": [
+                        {
+                            "attack_1": "(q.all_animations_finished && q.is_delayed_attacking)"
+                        }
+                    ],
+                    "sound_effects": [
+                        {
+                            "effect": "attack"
+                        }
+                    ]
+                },
+                "attack_1": {
+                    "animations": [
+                        "attack_1"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "q.all_animations_finished"
+                        }
+                    ],
+                    "sound_effects": [
+                        {
+                            "effect": "attack"
+                        }
+                    ]
+                }
+            }
+        },
+        "controller.animation.starktma.gingerbread.is_disabled_ctrl": {
+            "initial_state": "default",
+            "states": {
+                "default": {
+                    "transitions": [
+                        {
+                            "is_disabled": "q.property('starktma:is_disabled')"
+                        }
+                    ]
+                },
+                "is_disabled": {
+                    "transitions": [
+                        {
+                            "default": "1"
+                        }
+                    ],
+                    "particle_effects": [
+                        {
+                            "effect": "disabled_particle",
+                            "locator": "root"
+                        }
+                    ]
+                }
+            }
+        }
+    }
+}

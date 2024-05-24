@@ -1,0 +1,447 @@
+//Filename: card_picker.dialogue.json
+//Generated with Anvil@StarkTMA 0.5.4
+//25-10-2023 01:06:40 +0100
+//
+
+{
+    "format_version": "1.18.0",
+    "minecraft:npc_dialogue": {
+        "scenes": [
+            {
+                "scene_tag": "card_picker_1",
+                "npc_name": "{\"rawtext\":[{\"text\": \"card_picker_1\"}]}",
+                "text": "{\"rawtext\":[{\"translate\": \"raw_text_17\", \"with\": [\"\\n\"]}]}",
+                "on_open_commands": [
+                    "/gamemode creative @a"
+                ],
+                "on_close_commands": [
+                    "/gamemode adventure @a"
+                ],
+                "buttons": [
+                    {
+                        "name": "Let's Play",
+                        "commands": [
+                            "/scoreboard  players set sugar_rush starktma3 -1",
+                            "/gamemode adventure @a",
+                            "/event entity @s despawn"
+                        ]
+                    },
+                    {
+                        "name": "Reset",
+                        "commands": [
+                            "/gamemode adventure @a",
+                            "/clear @a   ",
+                            "/event entity @s reset"
+                        ]
+                    }
+                ]
+            },
+            {
+                "scene_tag": "card_picker_2",
+                "npc_name": "{\"rawtext\":[{\"text\": \"card_picker_2\"}]}",
+                "text": "{\"rawtext\":[{\"translate\": \"raw_text_18\", \"with\": [\"\\n\"]}]}",
+                "on_open_commands": [
+                    "/gamemode creative @a"
+                ],
+                "on_close_commands": [
+                    "/gamemode adventure @a"
+                ],
+                "buttons": [
+                    {
+                        "name": "Let's Play",
+                        "commands": [
+                            "/scoreboard  players set sugar_rush starktma3 -1",
+                            "/gamemode adventure @a",
+                            "/event entity @s despawn"
+                        ]
+                    },
+                    {
+                        "name": "Reset",
+                        "commands": [
+                            "/gamemode adventure @a",
+                            "/clear @a   ",
+                            "/event entity @s reset"
+                        ]
+                    }
+                ]
+            },
+            {
+                "scene_tag": "card_picker_3",
+                "npc_name": "{\"rawtext\":[{\"text\": \"card_picker_3\"}]}",
+                "text": "{\"rawtext\":[{\"translate\": \"raw_text_19\", \"with\": [\"\\n\"]}]}",
+                "on_open_commands": [
+                    "/gamemode creative @a"
+                ],
+                "on_close_commands": [
+                    "/gamemode adventure @a"
+                ],
+                "buttons": [
+                    {
+                        "name": "Let's Play",
+                        "commands": [
+                            "/scoreboard  players set sugar_rush starktma3 -1",
+                            "/gamemode adventure @a",
+                            "/event entity @s despawn"
+                        ]
+                    },
+                    {
+                        "name": "Reset",
+                        "commands": [
+                            "/gamemode adventure @a",
+                            "/clear @a   ",
+                            "/event entity @s reset"
+                        ]
+                    }
+                ]
+            },
+            {
+                "scene_tag": "card_picker_4",
+                "npc_name": "{\"rawtext\":[{\"text\": \"card_picker_4\"}]}",
+                "text": "{\"rawtext\":[{\"translate\": \"raw_text_20\", \"with\": [\"\\n\"]}]}",
+                "on_open_commands": [
+                    "/gamemode creative @a"
+                ],
+                "on_close_commands": [
+                    "/gamemode adventure @a"
+                ],
+                "buttons": [
+                    {
+                        "name": "Let's Play",
+                        "commands": [
+                            "/scoreboard  players set sugar_rush starktma3 -1",
+                            "/gamemode adventure @a",
+                            "/event entity @s despawn"
+                        ]
+                    },
+                    {
+                        "name": "Reset",
+                        "commands": [
+                            "/gamemode adventure @a",
+                            "/clear @a   ",
+                            "/event entity @s reset"
+                        ]
+                    }
+                ]
+            },
+            {
+                "scene_tag": "card_picker_5",
+                "npc_name": "{\"rawtext\":[{\"text\": \"card_picker_5\"}]}",
+                "text": "{\"rawtext\":[{\"translate\": \"raw_text_21\", \"with\": [\"\\n\"]}]}",
+                "on_open_commands": [
+                    "/gamemode creative @a"
+                ],
+                "on_close_commands": [
+                    "/gamemode adventure @a"
+                ],
+                "buttons": [
+                    {
+                        "name": "Let's Play",
+                        "commands": [
+                            "/scoreboard  players set sugar_rush starktma3 -1",
+                            "/gamemode adventure @a",
+                            "/event entity @s despawn"
+                        ]
+                    },
+                    {
+                        "name": "Reset",
+                        "commands": [
+                            "/gamemode adventure @a",
+                            "/clear @a   ",
+                            "/event entity @s reset"
+                        ]
+                    }
+                ]
+            },
+            {
+                "scene_tag": "card_picker_6",
+                "npc_name": "{\"rawtext\":[{\"text\": \"card_picker_6\"}]}",
+                "text": "{\"rawtext\":[{\"translate\": \"raw_text_22\", \"with\": [\"\\n\"]}]}",
+                "on_open_commands": [
+                    "/gamemode creative @a"
+                ],
+                "on_close_commands": [
+                    "/gamemode adventure @a"
+                ],
+                "buttons": [
+                    {
+                        "name": "Let's Play",
+                        "commands": [
+                            "/scoreboard  players set sugar_rush starktma3 -1",
+                            "/gamemode adventure @a",
+                            "/event entity @s despawn"
+                        ]
+                    },
+                    {
+                        "name": "Reset",
+                        "commands": [
+                            "/gamemode adventure @a",
+                            "/clear @a   ",
+                            "/event entity @s reset"
+                        ]
+                    }
+                ]
+            },
+            {
+                "scene_tag": "card_picker_7",
+                "npc_name": "{\"rawtext\":[{\"text\": \"card_picker_7\"}]}",
+                "text": "{\"rawtext\":[{\"translate\": \"raw_text_23\", \"with\": [\"\\n\"]}]}",
+                "on_open_commands": [
+                    "/gamemode creative @a"
+                ],
+                "on_close_commands": [
+                    "/gamemode adventure @a"
+                ],
+                "buttons": [
+                    {
+                        "name": "Let's Play",
+                        "commands": [
+                            "/scoreboard  players set sugar_rush starktma3 -1",
+                            "/gamemode adventure @a",
+                            "/event entity @s despawn"
+                        ]
+                    },
+                    {
+                        "name": "Reset",
+                        "commands": [
+                            "/gamemode adventure @a",
+                            "/clear @a   ",
+                            "/event entity @s reset"
+                        ]
+                    }
+                ]
+            },
+            {
+                "scene_tag": "card_picker_8",
+                "npc_name": "{\"rawtext\":[{\"text\": \"card_picker_8\"}]}",
+                "text": "{\"rawtext\":[{\"translate\": \"raw_text_24\", \"with\": [\"\\n\"]}]}",
+                "on_open_commands": [
+                    "/gamemode creative @a"
+                ],
+                "on_close_commands": [
+                    "/gamemode adventure @a"
+                ],
+                "buttons": [
+                    {
+                        "name": "Let's Play",
+                        "commands": [
+                            "/scoreboard  players set sugar_rush starktma3 -1",
+                            "/gamemode adventure @a",
+                            "/event entity @s despawn"
+                        ]
+                    },
+                    {
+                        "name": "Reset",
+                        "commands": [
+                            "/gamemode adventure @a",
+                            "/clear @a   ",
+                            "/event entity @s reset"
+                        ]
+                    }
+                ]
+            },
+            {
+                "scene_tag": "card_picker_9",
+                "npc_name": "{\"rawtext\":[{\"text\": \"card_picker_9\"}]}",
+                "text": "{\"rawtext\":[{\"translate\": \"raw_text_25\", \"with\": [\"\\n\"]}]}",
+                "on_open_commands": [
+                    "/gamemode creative @a"
+                ],
+                "on_close_commands": [
+                    "/gamemode adventure @a"
+                ],
+                "buttons": [
+                    {
+                        "name": "Let's Play",
+                        "commands": [
+                            "/scoreboard  players set sugar_rush starktma3 -1",
+                            "/gamemode adventure @a",
+                            "/event entity @s despawn"
+                        ]
+                    },
+                    {
+                        "name": "Reset",
+                        "commands": [
+                            "/gamemode adventure @a",
+                            "/clear @a   ",
+                            "/event entity @s reset"
+                        ]
+                    }
+                ]
+            },
+            {
+                "scene_tag": "card_picker_10",
+                "npc_name": "{\"rawtext\":[{\"text\": \"card_picker_10\"}]}",
+                "text": "{\"rawtext\":[{\"translate\": \"raw_text_26\", \"with\": [\"\\n\"]}]}",
+                "on_open_commands": [
+                    "/gamemode creative @a"
+                ],
+                "on_close_commands": [
+                    "/gamemode adventure @a"
+                ],
+                "buttons": [
+                    {
+                        "name": "Let's Play",
+                        "commands": [
+                            "/scoreboard  players set sugar_rush starktma3 -1",
+                            "/gamemode adventure @a",
+                            "/event entity @s despawn"
+                        ]
+                    },
+                    {
+                        "name": "Reset",
+                        "commands": [
+                            "/gamemode adventure @a",
+                            "/clear @a   ",
+                            "/event entity @s reset"
+                        ]
+                    }
+                ]
+            },
+            {
+                "scene_tag": "card_picker_11",
+                "npc_name": "{\"rawtext\":[{\"text\": \"card_picker_11\"}]}",
+                "text": "{\"rawtext\":[{\"translate\": \"raw_text_27\", \"with\": [\"\\n\"]}]}",
+                "on_open_commands": [
+                    "/gamemode creative @a"
+                ],
+                "on_close_commands": [
+                    "/gamemode adventure @a"
+                ],
+                "buttons": [
+                    {
+                        "name": "Let's Play",
+                        "commands": [
+                            "/scoreboard  players set sugar_rush starktma3 -1",
+                            "/gamemode adventure @a",
+                            "/event entity @s despawn"
+                        ]
+                    },
+                    {
+                        "name": "Reset",
+                        "commands": [
+                            "/gamemode adventure @a",
+                            "/clear @a   ",
+                            "/event entity @s reset"
+                        ]
+                    }
+                ]
+            },
+            {
+                "scene_tag": "card_picker_12",
+                "npc_name": "{\"rawtext\":[{\"text\": \"card_picker_12\"}]}",
+                "text": "{\"rawtext\":[{\"translate\": \"raw_text_28\", \"with\": [\"\\n\"]}]}",
+                "on_open_commands": [
+                    "/gamemode creative @a"
+                ],
+                "on_close_commands": [
+                    "/gamemode adventure @a"
+                ],
+                "buttons": [
+                    {
+                        "name": "Let's Play",
+                        "commands": [
+                            "/scoreboard  players set sugar_rush starktma3 -1",
+                            "/gamemode adventure @a",
+                            "/event entity @s despawn"
+                        ]
+                    },
+                    {
+                        "name": "Reset",
+                        "commands": [
+                            "/gamemode adventure @a",
+                            "/clear @a   ",
+                            "/event entity @s reset"
+                        ]
+                    }
+                ]
+            },
+            {
+                "scene_tag": "card_picker_13",
+                "npc_name": "{\"rawtext\":[{\"text\": \"card_picker_13\"}]}",
+                "text": "{\"rawtext\":[{\"translate\": \"raw_text_29\", \"with\": [\"\\n\"]}]}",
+                "on_open_commands": [
+                    "/gamemode creative @a"
+                ],
+                "on_close_commands": [
+                    "/gamemode adventure @a"
+                ],
+                "buttons": [
+                    {
+                        "name": "Let's Play",
+                        "commands": [
+                            "/scoreboard  players set sugar_rush starktma3 -1",
+                            "/gamemode adventure @a",
+                            "/event entity @s despawn"
+                        ]
+                    },
+                    {
+                        "name": "Reset",
+                        "commands": [
+                            "/gamemode adventure @a",
+                            "/clear @a   ",
+                            "/event entity @s reset"
+                        ]
+                    }
+                ]
+            },
+            {
+                "scene_tag": "card_picker_14",
+                "npc_name": "{\"rawtext\":[{\"text\": \"card_picker_14\"}]}",
+                "text": "{\"rawtext\":[{\"translate\": \"raw_text_30\", \"with\": [\"\\n\"]}]}",
+                "on_open_commands": [
+                    "/gamemode creative @a"
+                ],
+                "on_close_commands": [
+                    "/gamemode adventure @a"
+                ],
+                "buttons": [
+                    {
+                        "name": "Let's Play",
+                        "commands": [
+                            "/scoreboard  players set sugar_rush starktma3 -1",
+                            "/gamemode adventure @a",
+                            "/event entity @s despawn"
+                        ]
+                    },
+                    {
+                        "name": "Reset",
+                        "commands": [
+                            "/gamemode adventure @a",
+                            "/clear @a   ",
+                            "/event entity @s reset"
+                        ]
+                    }
+                ]
+            },
+            {
+                "scene_tag": "card_picker_15",
+                "npc_name": "{\"rawtext\":[{\"text\": \"card_picker_15\"}]}",
+                "text": "{\"rawtext\":[{\"translate\": \"raw_text_31\", \"with\": [\"\\n\"]}]}",
+                "on_open_commands": [
+                    "/gamemode creative @a"
+                ],
+                "on_close_commands": [
+                    "/gamemode adventure @a"
+                ],
+                "buttons": [
+                    {
+                        "name": "Let's Play",
+                        "commands": [
+                            "/scoreboard  players set sugar_rush starktma3 -1",
+                            "/gamemode adventure @a",
+                            "/event entity @s despawn"
+                        ]
+                    },
+                    {
+                        "name": "Reset",
+                        "commands": [
+                            "/gamemode adventure @a",
+                            "/clear @a   ",
+                            "/event entity @s reset"
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

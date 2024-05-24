@@ -1,0 +1,60 @@
+//Filename: gummy_bear.entity.json
+//Generated with Anvil@StarkTMA 0.5.4
+//25-10-2023 01:06:41 +0100
+//
+
+{
+    "format_version": "1.10.0",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "starktma:gummy_bear",
+            "animations": {
+                "idle": "animation.starktma.gummy_bear.idle",
+                "is_disabled_ctrl": "controller.animation.starktma.gummy_bear.is_disabled_ctrl"
+            },
+            "scripts": {
+                "pre_animation": [
+                    "v.health_frame = (q.has_property('starktma:health') && q.property('starktma:max_health')) ? (q.property('starktma:health') / math.floor((q.property('starktma:max_health') / 3))) : (0);"
+                ],
+                "initialize": [
+                    "v.health_frame=0;"
+                ],
+                "animate": [
+                    "idle",
+                    "is_disabled_ctrl"
+                ]
+            },
+            "materials": {
+                "default": "entity_alphatest"
+            },
+            "textures": {
+                "gummy_bear_0": "textures/entity/gummy_bear/gummy_bear_0",
+                "gummy_bear_1": "textures/entity/gummy_bear/gummy_bear_1",
+                "gummy_bear_2": "textures/entity/gummy_bear/gummy_bear_2"
+            },
+            "geometry": {
+                "gummy_bear_0": "geometry.starktma.gummy_bear_0",
+                "gummy_bear_1": "geometry.starktma.gummy_bear_1",
+                "gummy_bear_2": "geometry.starktma.gummy_bear_2"
+            },
+            "particle_effects": {
+                "disabled_particle": "starktma:disabled_particle"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.starktma.gummy_bear.gummy_bear_0": "v.health_frame >= 0"
+                },
+                {
+                    "controller.render.starktma.gummy_bear.gummy_bear_1": "v.health_frame >= 1"
+                },
+                {
+                    "controller.render.starktma.gummy_bear.gummy_bear_2": "v.health_frame >= 2"
+                }
+            ],
+            "spawn_egg": {
+                "base_color": "#000000",
+                "overlay_color": "#ffa2a6"
+            }
+        }
+    }
+}

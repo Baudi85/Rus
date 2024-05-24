@@ -1,0 +1,286 @@
+//Filename: sound_definitions.json
+//Generated with Anvil@StarkTMA 0.5.4
+//25-10-2023 01:06:44 +0100
+//
+
+{
+    "format_version": "1.20.20",
+    "sound_definitions": {
+        "starktma.towers.shoot": {
+            "category": "ui",
+            "sounds": [
+                {
+                    "name": "sounds/starktma/towers/towers_shoot_0",
+                    "load_on_low_memory": true
+                },
+                {
+                    "name": "sounds/starktma/towers/towers_shoot_1",
+                    "load_on_low_memory": false
+                }
+            ]
+        },
+        "starktma.engine_proj.splat": {
+            "category": "ui",
+            "sounds": [
+                {
+                    "name": "sounds/starktma/engine_proj/splat_0",
+                    "load_on_low_memory": true
+                },
+                {
+                    "name": "sounds/starktma/engine_proj/splat_1",
+                    "load_on_low_memory": false
+                },
+                {
+                    "name": "sounds/starktma/engine_proj/splat_2",
+                    "load_on_low_memory": false
+                }
+            ]
+        },
+        "starktma.popcorn_bomb.explode": {
+            "category": "ui",
+            "sounds": [
+                {
+                    "name": "sounds/starktma/popcorn_bomb/popcorn_bomb_explode_0",
+                    "load_on_low_memory": true
+                }
+            ]
+        },
+        "starktma.towers.launch": {
+            "category": "ui",
+            "sounds": [
+                {
+                    "name": "sounds/starktma/towers/towers_launch_0",
+                    "load_on_low_memory": true
+                }
+            ]
+        },
+        "starktma.towers.attack": {
+            "category": "ui",
+            "sounds": [
+                {
+                    "name": "sounds/starktma/towers/towers_attack_0",
+                    "load_on_low_memory": true
+                },
+                {
+                    "name": "sounds/starktma/towers/towers_attack_1",
+                    "load_on_low_memory": false
+                }
+            ]
+        },
+        "starktma.ice_cream_bomb.freeze": {
+            "category": "ui",
+            "sounds": [
+                {
+                    "name": "sounds/starktma/ice_cream_bomb/ice_cream_bomb_freeze_0",
+                    "load_on_low_memory": true
+                }
+            ]
+        },
+        "starktma.basic_zombie.groan": {
+            "category": "ui",
+            "sounds": [
+                {
+                    "name": "sounds/starktma/basic_zombie/basic_zombie_groan_0",
+                    "load_on_low_memory": true
+                },
+                {
+                    "name": "sounds/starktma/basic_zombie/basic_zombie_groan_1",
+                    "load_on_low_memory": false
+                },
+                {
+                    "name": "sounds/starktma/basic_zombie/basic_zombie_groan_2",
+                    "load_on_low_memory": false
+                },
+                {
+                    "name": "sounds/starktma/basic_zombie/basic_zombie_groan_3",
+                    "load_on_low_memory": false
+                },
+                {
+                    "name": "sounds/starktma/basic_zombie/basic_zombie_groan_4",
+                    "load_on_low_memory": false
+                }
+            ]
+        },
+        "starktma.basic_zombie.attack": {
+            "category": "ui"
+        },
+        "starktma.jellybean_juggler.shoot": {
+            "category": "ui",
+            "sounds": [
+                {
+                    "name": "sounds/starktma/jellybean_juggler/jellybean_juggler_shoot_0",
+                    "load_on_low_memory": true
+                },
+                {
+                    "name": "sounds/starktma/jellybean_juggler/jellybean_juggler_shoot_1",
+                    "load_on_low_memory": false
+                }
+            ]
+        },
+        "starktma.sugar_imp_zombie.groan": {
+            "category": "ui",
+            "sounds": [
+                {
+                    "name": "sounds/starktma/sugar_imp_zombie/sugar_imp_zombie_groan_0",
+                    "load_on_low_memory": true
+                },
+                {
+                    "name": "sounds/starktma/sugar_imp_zombie/sugar_imp_zombie_groan_1",
+                    "load_on_low_memory": false
+                },
+                {
+                    "name": "sounds/starktma/sugar_imp_zombie/sugar_imp_zombie_groan_2",
+                    "load_on_low_memory": false
+                }
+            ]
+        },
+        "starktma.candy_jammer.groan": {
+            "category": "ui",
+            "sounds": [
+                {
+                    "name": "sounds/starktma/candy_jammer/candy_jammer_groan_0",
+                    "load_on_low_memory": true
+                },
+                {
+                    "name": "sounds/starktma/candy_jammer/candy_jammer_groan_1",
+                    "load_on_low_memory": false
+                }
+            ]
+        },
+        "music.game": {
+            "category": "music",
+            "sounds": [
+                {
+                    "name": "sounds/music/music_bonegrubber",
+                    "load_on_low_memory": true
+                },
+                {
+                    "name": "sounds/music/music_empty_orphanage",
+                    "load_on_low_memory": false
+                },
+                {
+                    "name": "sounds/music/music_ghosts_on_the_dancefloor",
+                    "load_on_low_memory": false
+                },
+                {
+                    "name": "sounds/music/music_nightwatch",
+                    "load_on_low_memory": false
+                },
+                {
+                    "name": "sounds/music/music_really_bad_luck",
+                    "load_on_low_memory": false
+                },
+                {
+                    "name": "sounds/music/music_slimy_slums",
+                    "load_on_low_memory": false
+                },
+                {
+                    "name": "sounds/music/music_styx_and_bones",
+                    "load_on_low_memory": false
+                },
+                {
+                    "name": "sounds/music/music_the_dusty_crypt",
+                    "load_on_low_memory": false
+                }
+            ]
+        },
+        "starktma.game.music_win": {
+            "category": "ui",
+            "sounds": [
+                {
+                    "name": "sounds/starktma/game/music_win",
+                    "load_on_low_memory": true,
+                    "volume": 2
+                }
+            ]
+        },
+        "starktma.game.music_lose": {
+            "category": "ui",
+            "sounds": [
+                {
+                    "name": "sounds/starktma/game/music_lose",
+                    "load_on_low_memory": true,
+                    "volume": 2
+                }
+            ]
+        },
+        "starktma.game.ambient_crows": {
+            "category": "ui",
+            "sounds": [
+                {
+                    "name": "sounds/starktma/game/ambient_crows",
+                    "load_on_low_memory": true,
+                    "volume": 0.6
+                }
+            ]
+        },
+        "starktma.game.ambient_wolf": {
+            "category": "ui",
+            "sounds": [
+                {
+                    "name": "sounds/starktma/game/ambient_wolf",
+                    "load_on_low_memory": true,
+                    "volume": 0.6
+                }
+            ]
+        },
+        "starktma.game.ambient_witch": {
+            "category": "ui",
+            "sounds": [
+                {
+                    "name": "sounds/starktma/game/ambient_witch",
+                    "load_on_low_memory": true,
+                    "volume": 0.6
+                }
+            ]
+        },
+        "starktma.game.music_huge_wave": {
+            "category": "ui",
+            "sounds": [
+                {
+                    "name": "sounds/starktma/game/music_huge_wave",
+                    "load_on_low_memory": true
+                }
+            ]
+        },
+        "starktma.game.music_small_wave": {
+            "category": "ui",
+            "sounds": [
+                {
+                    "name": "sounds/starktma/game/music_small_wave",
+                    "load_on_low_memory": true
+                }
+            ]
+        },
+        "starktma.game.music_ready_set_go": {
+            "category": "ui",
+            "sounds": [
+                {
+                    "name": "sounds/starktma/game/music_ready_set_go",
+                    "load_on_low_memory": true
+                }
+            ]
+        },
+        "starktma.game.tower_place": {
+            "category": "ui",
+            "sounds": [
+                {
+                    "name": "sounds/starktma/game/tower_place_0",
+                    "load_on_low_memory": true
+                },
+                {
+                    "name": "sounds/starktma/game/tower_place_1",
+                    "load_on_low_memory": false
+                },
+                {
+                    "name": "sounds/starktma/game/tower_place_2",
+                    "load_on_low_memory": false
+                },
+                {
+                    "name": "sounds/starktma/game/tower_place_3",
+                    "load_on_low_memory": false
+                }
+            ]
+        }
+    }
+}

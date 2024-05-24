@@ -1,0 +1,47 @@
+//Filename: engine_aod.entity.json
+//Generated with Anvil@StarkTMA 0.5.4
+//25-10-2023 01:06:44 +0100
+//
+
+{
+    "format_version": "1.10.0",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "starktma:engine_aod",
+            "animations": {
+                "face_2d": "animation.starktma.engine_aod.face_2d",
+                "root": "controller.animation.starktma.engine_aod.root",
+                "molten_chocolate_falling": "animation.starktma.engine_aod.molten_chocolate_falling"
+            },
+            "scripts": {
+                "animate": [
+                    "root"
+                ]
+            },
+            "materials": {
+                "default": "entity_alphatest",
+                "blend": "entity_alphablend"
+            },
+            "textures": {
+                "molten_chocolate": "textures/entity/engine_aod/molten_chocolate_projectile",
+                "molten_chocolate_aod": "textures/entity/engine_aod/molten_chocolate_aod"
+            },
+            "geometry": {
+                "sprite": "geometry.starktma.sprite",
+                "molten_chocolate_aod": "geometry.starktma.molten_chocolate_aod"
+            },
+            "particle_effects": {
+                "molten_chocolate": "starktma:molten_chocolate"
+            },
+            "render_controllers": [
+                {
+                    "controller.render.starktma.engine_aod.molten_chocolate": "q.property('starktma:variant') == 0"
+                }
+            ],
+            "spawn_egg": {
+                "base_color": "#000000",
+                "overlay_color": "#efa17f"
+            }
+        }
+    }
+}

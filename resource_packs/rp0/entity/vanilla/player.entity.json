@@ -1,0 +1,44 @@
+//Filename: player.entity.json
+//Generated with Anvil@StarkTMA 0.5.4
+//25-10-2023 01:06:43 +0100
+//
+
+{
+    "format_version": "1.10.0",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "minecraft:player",
+            "animations": {
+                "root": "controller.animation.starktma.player.root",
+                "cursor_move": "animation.starktma.player.cursor_move",
+                "cursor": "controller.animation.starktma.player.cursor",
+                "projection_third": "animation.starktma.player.projection_third"
+            },
+            "scripts": {
+                "initialize": [
+                    "v.prev_x=0;",
+                    "v.prev_y=0;"
+                ],
+                "animate": [
+                    {
+                        "root": "((!(q.is_in_ui) && !(v.is_paperdoll)) && q.property('starktma:engine'))"
+                    }
+                ]
+            },
+            "materials": {
+                "default": "entity_alphatest"
+            },
+            "textures": {
+                "selector": "textures/entity/player/selector",
+                "hud": "textures/entity/player/hud"
+            },
+            "geometry": {
+                "selector": "geometry.starktma.selector",
+                "hud": "geometry.starktma.hud"
+            },
+            "render_controllers": [
+                "controller.render.starktma.player.sugar_rush"
+            ]
+        }
+    }
+}

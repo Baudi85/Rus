@@ -1,0 +1,57 @@
+//Filename: ice_cream_bomb.animation.json
+//Generated with Anvil@StarkTMA 0.5.0
+//22-07-2023 12:07:05 +0100
+//
+
+{
+    "format_version": "1.8.0",
+    "animations": {
+        "animation.starktma.ice_cream_bomb.directional_setup": {
+            "loop": true,
+            "override_previous_animation": false,
+            "bones": {
+                "root": {
+                    "rotation": [
+                        0,
+                        "v.rounded_rotation",
+                        0
+                    ]
+                }
+            }
+        },
+        "animation.starktma.ice_cream_bomb.freeze": {
+            "loop": "hold_on_last_frame",
+            "animation_length": 1,
+            "bones": {
+                "root": {
+                    "scale": {
+                        "0.0": [
+                            1,
+                            1,
+                            1
+                        ],
+                        "0.8": [
+                            "3+math.sin(q.anim_time*1500)*0.1",
+                            "3+math.sin(q.anim_time*1500)*0.1",
+                            "3+math.sin(q.anim_time*1500)*0.1"
+                        ]
+                    }
+                },
+                "eyes": {
+                    "scale": {
+                        "0.0": [
+                            1,
+                            1,
+                            1
+                        ],
+                        "1.0": [
+                            2,
+                            2,
+                            2
+                        ]
+                    }
+                }
+            }
+        }
+    }
+}

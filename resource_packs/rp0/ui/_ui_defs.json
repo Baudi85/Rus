@@ -1,0 +1,21 @@
+//Filename: _ui_defs.json
+//Generated with Anvil@StarkTMA 0.5.4
+//25-10-2023 01:06:43 +0100
+//
+
+{
+    "ui_defs": [
+        "ui/hud_screen.json",
+        "ui/anvil/hud.json",
+        "ui/npc_interact_screen.json",
+        "ui/anvil/npc.json",
+        "ui/anvil/common.json",
+        "ui/anvil/hud.json",
+        "ui/anvil/npc.json",
+        "ui/anvil/common.json",
+        "ui/anvil/progress_bar.json",
+        "ui/anvil/hotbar.json",
+        "ui/anvil/tips.json",
+        "ui/anvil/animations.json"
+    ]
+}

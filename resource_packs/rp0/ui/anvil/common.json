@@ -1,0 +1,224 @@
+//Filename: common.json
+//Generated with Anvil@StarkTMA 0.5.4
+//25-10-2023 01:06:43 +0100
+//
+
+{
+    "namespace": "anvil_common",
+    "label": {
+        "type": "label",
+        "text_alignment": "center"
+    },
+    "image": {
+        "type": "image"
+    },
+    "stack_panel": {
+        "type": "stack_panel"
+    },
+    "panel": {
+        "type": "panel"
+    },
+    "image_label@anvil_common.image": {
+        "size": [
+            "100%c + 8px",
+            "100%c + 4px"
+        ],
+        "$text": "PLACEHOLDER TEXT",
+        "$localize": false,
+        "controls": [
+            {
+                "label@anvil_common.label": {
+                    "text": "$text",
+                    "localize": "$localize"
+                }
+            }
+        ]
+    },
+    "image_label_binding@anvil_common.image": {
+        "size": [
+            "100%c + 8px",
+            "100%c + 4px"
+        ],
+        "controls": [
+            {
+                "text@anvil_common.label": {
+                    "text": "#text",
+                    "layer": 1,
+                    "bindings": [
+                        {
+                            "binding_type": "view",
+                            "source_control_name": "$control_name",
+                            "source_property_name": "#text",
+                            "target_property_name": "#text"
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "title_binding": {
+        "property_bag": {
+            "#title_text": "",
+            "#subtitle_text": ""
+        },
+        "bindings": [
+            {
+                "binding_name": "#hud_title_text_string",
+                "binding_name_override": "#title_text"
+            },
+            {
+                "binding_name": "#hud_subtitle_text_string",
+                "binding_name_override": "#subtitle_text"
+            },
+            {
+                "binding_type": "view",
+                "source_property_name": "$binding_text",
+                "target_property_name": "#visible"
+            }
+        ]
+    },
+    "actionbar_binding": {
+        "$text": "$actionbar_text",
+        "visible": "$binding_text"
+    },
+    "scoreboard_score_element@anvil_common.label": {
+        "text": "#text",
+        "color": "$color",
+        "shadow": "$shadow",
+        "layer": 1,
+        "bindings": [
+            {
+                "binding_name": "#player_score_sidebar",
+                "binding_type": "collection",
+                "binding_collection_name": "scoreboard_scores"
+            },
+            {
+                "binding_type": "view",
+                "source_property_name": "('§z' + ((#player_score_sidebar * 1) - $score_offset))",
+                "target_property_name": "#text"
+            },
+            {
+                "binding_type": "view",
+                "source_property_name": "((#player_score_sidebar * 1) - $score_offset)",
+                "target_property_name": "#score"
+            }
+        ]
+    },
+    "retrieve_score@anvil_common.stack_panel": {
+        "size": [
+            "100%c",
+            "100%c"
+        ],
+        "$index": 0,
+        "$shadow": false,
+        "$score_offset": 0,
+        "$color": [
+            1,
+            1,
+            1
+        ],
+        "$name": "('score_text_' + $index)",
+        "collection_name": "scoreboard_scores",
+        "controls": [
+            {
+                "$name@scoreboard_score_element": {
+                    "collection_index": "$index"
+                }
+            }
+        ],
+        "visible": false,
+        "bindings": [
+            {
+                "binding_type": "view",
+                "source_control_name": "$name",
+                "source_property_name": "#text",
+                "target_property_name": "#text"
+            },
+            {
+                "binding_type": "view",
+                "source_control_name": "$name",
+                "source_property_name": "#score",
+                "target_property_name": "#score"
+            }
+        ]
+    },
+    "npc_renderer": {
+        "type": "panel",
+        "size": [
+            "100%",
+            "100%"
+        ],
+        "clips_children": true,
+        "controls": [
+            {
+                "npc_model": {
+                    "type": "custom",
+                    "layer": 5,
+                    "renderer": "actor_portrait_renderer",
+                    "size": [
+                        "120%",
+                        "120%"
+                    ],
+                    "enable_scissor_test": true,
+                    "bindings": [
+                        {
+                            "binding_type": "collection",
+                            "binding_collection_name": "skins_collection",
+                            "binding_name": "#skin_index"
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "player_renderer": {
+        "type": "panel",
+        "size": [
+            "80%",
+            "80%"
+        ],
+        "clips_children": true,
+        "controls": [
+            {
+                "player_model": {
+                    "type": "custom",
+                    "renderer": "live_player_renderer",
+                    "size": [
+                        "80%",
+                        "80%"
+                    ],
+                    "enable_scissor_test": true,
+                    "offset": [
+                        0,
+                        "50%y"
+                    ]
+                }
+            }
+        ]
+    },
+    "square_button@common_buttons.light_text_button": {
+        "size": [
+            "100%",
+            "100% + 4px"
+        ],
+        "$default_text_color": [
+            1,
+            1,
+            1
+        ],
+        "$hover_text_color": [
+            1,
+            1,
+            1
+        ],
+        "$pressed_text_color": [
+            1,
+            1,
+            1
+        ],
+        "$default_button_texture": "textures/ui/square_button_off",
+        "$hover_button_texture": "textures/ui/square_button_off_hover",
+        "$pressed_button_texture": "textures/ui/square_button_on",
+        "$locked_button_texture": "textures/ui/square_button_locked"
+    }
+}

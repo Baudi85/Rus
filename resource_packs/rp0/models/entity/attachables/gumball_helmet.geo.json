@@ -1,0 +1,36 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.starktma.gumball_helmet",
+				"texture_width": 128,
+				"texture_height": 128,
+				"visible_bounds_width": 3,
+				"visible_bounds_height": 3.5,
+				"visible_bounds_offset": [0, 1.25, 0]
+			},
+			"bones": [
+				{
+					"name": "root",
+					"pivot": [0.72855, 0, 0]
+				},
+				{
+					"name": "body",
+					"parent": "root",
+					"pivot": [0, 9, 0]
+				},
+				{
+					"name": "head",
+					"parent": "body",
+					"pivot": [-0.1, 11.8, 0],
+					"cubes": [
+						{"origin": [-8, 18, -8], "size": [16, 3, 16], "inflate": 0.25, "uv": [0, 0]},
+						{"origin": [-7, 21, -7], "size": [14, 7, 14], "uv": [0, 19]},
+						{"origin": [2, 24, 0], "size": [10, 10, 0], "uv": [48, 63]}
+					]
+				}
+			]
+		}
+	]
+}

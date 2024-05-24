@@ -1,0 +1,104 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.starktma.gumball_blast.directional_setup": {
+			"loop": true,
+			"override_previous_animation": false,
+			"bones": {
+				"root": {
+					"rotation": [0, "v.rounded_rotation", 0]
+				}
+			}
+		},
+		"animation.starktma.gumball_blast.idle": {
+			"loop": true,
+			"bones": {
+				"head": {
+					"position": ["Math.cos(q.anim_time*200)", "Math.sin(q.anim_time*400)", 0]
+				},
+				"eyes": {
+					"position": [0, "Math.sin(q.anim_time*400-90) ", 0]
+				},
+				"arms": {
+					"position": [0, "Math.sin(q.anim_time*400-45) ", 0]
+				},
+				"g0": {
+					"rotation": ["- q.anim_time * 100", 0, "q.anim_time * 200"],
+					"position": ["6 * Math.sin(q.anim_time * 200)", "6 * Math.cos(q.anim_time * 200)", "6 * Math.cos(q.anim_time * 200)"]
+				},
+				"g1": {
+					"rotation": ["-q.anim_time * 100", 0, "-q.anim_time * 200"],
+					"position": ["-6 * Math.sin(q.anim_time * 200)", "6 * Math.cos(q.anim_time * 200)", "-6 * Math.cos(q.anim_time * 200)"]
+				},
+				"g2": {
+					"rotation": ["q.anim_time * 100", 0, "-q.anim_time * 200"],
+					"position": ["-6 * Math.cos(q.anim_time * 200)", "-6 * Math.cos(q.anim_time * 200)", "-6 * Math.sin(q.anim_time * 200)"]
+				},
+				"g3": {
+					"rotation": ["q.anim_time * 100", 0, "q.anim_time * 200"],
+					"position": ["6 * Math.cos(q.anim_time * 100)", "-6 * Math.cos(q.anim_time * 200)", "-6 * Math.cos(q.anim_time * 200)"]
+				},
+				"g4": {
+					"rotation": ["- q.anim_time * 100", 0, "q.anim_time * 200"],
+					"position": ["6 * Math.cos(q.anim_time * 200)", "6 * Math.sin(q.anim_time * 200)", "6 * Math.cos(q.anim_time * 200)"]
+				},
+				"g5": {
+					"rotation": ["q.anim_time * 100", 0, "-q.anim_time * 200"],
+					"position": ["-6 * Math.cos(q.anim_time * 200)", "-6 * Math.cos(q.anim_time * 200)", "-6 * Math.cos(q.anim_time * 200)"]
+				},
+				"g6": {
+					"rotation": ["- q.anim_time * 100", 0, "q.anim_time * 200"],
+					"position": ["-6 * Math.cos(q.anim_time * 200)", "-6 * Math.sin(q.anim_time * 200)", "-6 * Math.cos(q.anim_time * 200)"]
+				},
+				"g7": {
+					"rotation": ["q.anim_time * 100", 0, "-q.anim_time * 200"],
+					"position": ["6 * Math.cos(q.anim_time * 200)", "6 * Math.sin(q.anim_time * 200)", "-6 * Math.cos(q.anim_time * 200)"]
+				},
+				"g8": {
+					"rotation": ["q.anim_time * 100", 0, "q.anim_time * 200"],
+					"position": ["6 * Math.cos(q.anim_time * 200)", "-6 * Math.sin(q.anim_time * 200)", "-6 * Math.sin(q.anim_time * 200)"]
+				},
+				"g9": {
+					"rotation": ["q.anim_time * 100", 0, "q.anim_time * 200"],
+					"position": ["6 * Math.sin(q.anim_time * 200)", "-6 * Math.sin(q.anim_time * 100)", "6 * Math.sin(q.anim_time * 100)"]
+				},
+				"g10": {
+					"rotation": ["q.anim_time * 100", 0, "-q.anim_time * 200"],
+					"position": ["-6 * Math.cos(q.anim_time * 150)", "-6 * Math.cos(q.anim_time * 250)", "6 * Math.cos(q.anim_time * 100)"]
+				},
+				"g11": {
+					"rotation": ["q.anim_time * 100", 0, "-q.anim_time * 200"],
+					"position": ["6 * Math.cos(q.anim_time * 200)", "6 * Math.sin(q.anim_time * 200)", "6 * Math.cos(q.anim_time * 200)"]
+				}
+			}
+		},
+		"animation.starktma.gumball_blast.shoot": {
+			"animation_length": 0.6667,
+			"override_previous_animation": true,
+			"bones": {
+				"root": {
+					"position": {
+						"0.0": [0, 0, 0],
+						"0.25": [0, 0, -3],
+						"0.4167": [0, 0, 3],
+						"0.6667": [0, 0, 0]
+					}
+				},
+				"arms": {
+					"rotation": {
+						"0.25": [0, 0, 0],
+						"0.4167": [-30, 0, 0],
+						"0.6667": [0, 0, 0]
+					}
+				},
+				"octagon": {
+					"scale": {
+						"0.25": [1, 1, 1],
+						"0.4167": [1, 1, 2],
+						"0.6667": [1, 1, 1]
+					}
+				}
+			}
+		}
+	}
+}

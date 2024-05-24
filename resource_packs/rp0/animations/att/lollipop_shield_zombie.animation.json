@@ -1,0 +1,13 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.starktma.lollipop_shield_zombie.protection_animation": {
+			"loop": true,
+			"bones": {
+				"rightArm": {
+					"rotation": [-63.14609, 34.08235, 1.81275]
+				}
+			}
+		}
+	}
+}

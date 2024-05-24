@@ -1,0 +1,28 @@
+//Filename: popcorn_bomb.rp_ac.json
+//Generated with Anvil@StarkTMA 0.5.4
+//25-10-2023 01:06:41 +0100
+//
+
+{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.starktma.popcorn_bomb.root": {
+            "initial_state": "default",
+            "states": {
+                "default": {
+                    "particle_effects": [
+                        {
+                            "effect": "popcorn_bomb_explode",
+                            "locator": "root"
+                        }
+                    ],
+                    "sound_effects": [
+                        {
+                            "effect": "popcorn_bomb_explode"
+                        }
+                    ]
+                }
+            }
+        }
+    }
+}

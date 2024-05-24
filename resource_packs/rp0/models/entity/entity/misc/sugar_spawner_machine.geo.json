@@ -1,0 +1,95 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.starktma.sugar_spawner_machine",
+				"texture_width": 128,
+				"texture_height": 128,
+				"visible_bounds_width": 3,
+				"visible_bounds_height": 3.5,
+				"visible_bounds_offset": [0, 1.25, 0]
+			},
+			"bones": [
+				{
+					"name": "root",
+					"pivot": [0, -4.25, -4],
+					"cubes": [
+						{"origin": [-1, 20.34854, 0.31964], "size": [1, 1, 1], "inflate": 0.25, "uv": [6, 9]},
+						{"origin": [-3.5, 17.34854, -2.18036], "size": [6, 3, 6], "uv": [36, 0]},
+						{"origin": [-3.5, 0.25, -2.18036], "size": [6, 1, 6], "inflate": 0.25, "uv": [24, 50]},
+						{"origin": [-1.5, 1.34854, 3.81964], "size": [2, 1, 2], "uv": [0, 9]},
+						{"origin": [-3.5, 0.34854, -2.18036], "size": [6, 7, 6], "uv": [0, 48]}
+					],
+					"locators": {
+						"health_bar": [0, 32, 0],
+						"fire_particle": [0, 0, 0]
+					}
+				},
+				{
+					"name": "tube_2",
+					"parent": "root",
+					"pivot": [-1.25, 0.69056, 0.87995],
+					"rotation": [-26.4641, 14.4536, -19.4954],
+					"cubes": [
+						{"origin": [-6.75, 5.69056, -0.12005], "size": [7, 2, 2], "uv": [48, 9]},
+						{"origin": [-6.75, 1.69056, -0.12005], "size": [2, 4, 2], "uv": [71, 0]},
+						{"origin": [-6.75, -0.30944, -0.12005], "size": [6, 2, 2], "uv": [54, 0]}
+					]
+				},
+				{
+					"name": "tube_1",
+					"parent": "root",
+					"pivot": [2.5, 2.34854, 4.81964],
+					"rotation": [-1.0684, 2.4967, 28.9749],
+					"cubes": [
+						{"origin": [2, 1.34854, 3.81964], "size": [6, 2, 2], "uv": [24, 57]},
+						{"origin": [6, 1.34854, -10.18036], "size": [2, 2, 14], "uv": [34, 34]},
+						{"origin": [6, 1.34854, -15.18036], "size": [2, 2, 2], "uv": [20, 61]},
+						{"origin": [6.5, 1.84854, -13.18036], "size": [1, 1, 3], "uv": [12, 61]}
+					]
+				},
+				{
+					"name": "glass",
+					"parent": "root",
+					"pivot": [-0.5, 11.09854, 0.81964],
+					"cubes": [
+						{"origin": [-5.5, 7.34854, -4.18036], "size": [10, 10, 10], "uv": [38, 14]}
+					]
+				},
+				{
+					"name": "liquid4",
+					"parent": "root",
+					"pivot": [-0.5, 9.84854, 0.81964],
+					"cubes": [
+						{"origin": [-5.5, 7.34854, -4.18036], "size": [10, 5, 10], "inflate": -0.25, "uv": [88, 45]}
+					]
+				},
+				{
+					"name": "liquid3",
+					"parent": "root",
+					"pivot": [-0.5, 9.84854, 0.81964],
+					"cubes": [
+						{"origin": [-5.5, 7.34854, -4.18036], "size": [10, 5, 10], "inflate": -0.25, "uv": [88, 30]}
+					]
+				},
+				{
+					"name": "liquid2",
+					"parent": "root",
+					"pivot": [-0.5, 9.84854, 0.81964],
+					"cubes": [
+						{"origin": [-5.5, 7.34854, -4.18036], "size": [10, 5, 10], "inflate": -0.25, "uv": [88, 15]}
+					]
+				},
+				{
+					"name": "liquid",
+					"parent": "root",
+					"pivot": [-0.5, 9.84854, 0.81964],
+					"cubes": [
+						{"origin": [-5.5, 7.34854, -4.18036], "size": [10, 5, 10], "inflate": -0.25, "uv": [88, 0]}
+					]
+				}
+			]
+		}
+	]
+}

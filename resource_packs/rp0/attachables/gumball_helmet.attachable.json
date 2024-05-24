@@ -1,0 +1,37 @@
+//Filename: gumball_helmet.attachable.json
+//Generated with Anvil@StarkTMA 0.5.4
+//25-10-2023 01:06:42 +0100
+//
+
+{
+    "format_version": "1.10.0",
+    "minecraft:attachable": {
+        "description": {
+            "identifier": "starktma:gumball_helmet",
+            "scripts": {
+                "pre_animation": [
+                    "v.health_step = math.floor((q.property('starktma:protection_max_health') / 2));",
+                    "v.health_frame = math.min(math.ceil((q.property('starktma:protection_health') / v.health_step)), 2);"
+                ],
+                "initialize": [
+                    "v.health_step=1;",
+                    "v.health_frame=2;"
+                ]
+            },
+            "materials": {
+                "default": "entity_alphatest"
+            },
+            "textures": {
+                "gumball_helmet_0": "textures/attachables/gumball_helmet/gumball_helmet_0",
+                "gumball_helmet_1": "textures/attachables/gumball_helmet/gumball_helmet_1",
+                "gumball_helmet_2": "textures/attachables/gumball_helmet/gumball_helmet_2"
+            },
+            "geometry": {
+                "default": "geometry.starktma.gumball_helmet"
+            },
+            "render_controllers": [
+                "controller.render.starktma.gumball_helmet.gumball_helmet"
+            ]
+        }
+    }
+}

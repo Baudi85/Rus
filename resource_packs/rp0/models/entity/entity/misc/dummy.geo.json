@@ -1,0 +1,52 @@
+//Filename: dummy.geo.json
+//Generated with Anvil@StarkTMA 0.5.4
+//25-10-2023 01:06:38 +0100
+//
+
+{
+    "format_version": "1.12.0",
+    "minecraft:geometry": [
+        {
+            "description": {
+                "identifier": "geometry.starktma.dummy",
+                "texture_width": 8,
+                "texture_height": 8,
+                "visible_bounds_width": 2,
+                "visible_bounds_height": 1.5,
+                "visible_bounds_offset": [
+                    0,
+                    0.25,
+                    0
+                ]
+            },
+            "bones": [
+                {
+                    "name": "root",
+                    "pivot": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "cubes": [
+                        {
+                            "origin": [
+                                0,
+                                0,
+                                0
+                            ],
+                            "size": [
+                                0,
+                                0,
+                                0
+                            ],
+                            "uv": [
+                                0,
+                                0
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,118 @@
+//Filename: engine_proj.rc.json
+//Generated with Anvil@StarkTMA 0.5.4
+//25-10-2023 01:06:43 +0100
+//
+
+{
+    "format_version": "1.10.0",
+    "render_controllers": {
+        "controller.render.starktma.engine_proj.choc_shoot": {
+            "materials": [
+                {
+                    "*": "Material.default"
+                }
+            ],
+            "geometry": "Geometry.sprite",
+            "textures": [
+                "Texture.choc_shoot"
+            ]
+        },
+        "controller.render.starktma.engine_proj.j_bean_shoot": {
+            "materials": [
+                {
+                    "*": "Material.jelly_beans"
+                }
+            ],
+            "geometry": "Geometry.j_bean_shoot",
+            "textures": [
+                "Texture.j_bean_shoot"
+            ],
+            "uv_anim": {
+                "offset": [
+                    "v.uv_frame",
+                    0
+                ],
+                "scale": [
+                    1,
+                    1
+                ]
+            }
+        },
+        "controller.render.starktma.engine_proj.slushie_shoot": {
+            "materials": [
+                {
+                    "*": "Material.blend"
+                }
+            ],
+            "geometry": "Geometry.slushie_shoot",
+            "textures": [
+                "Texture.slushie_shoot"
+            ]
+        },
+        "controller.render.starktma.engine_proj.toast_marsh": {
+            "materials": [
+                {
+                    "*": "Material.default"
+                }
+            ],
+            "geometry": "Geometry.sprite",
+            "textures": [
+                "Texture.toast_marsh"
+            ]
+        },
+        "controller.render.starktma.engine_proj.candy_cane": {
+            "materials": [
+                {
+                    "*": "Material.default"
+                }
+            ],
+            "geometry": "Geometry.sprite",
+            "textures": [
+                "Texture.candy_cane"
+            ]
+        },
+        "controller.render.starktma.engine_proj.gumball_blast": {
+            "materials": [
+                {
+                    "*": "Material.default"
+                }
+            ],
+            "geometry": "Geometry.gumball_blast",
+            "textures": [
+                "Texture.gumball_blast"
+            ]
+        },
+        "controller.render.starktma.engine_proj.bubblegum_shoot": {
+            "materials": [
+                {
+                    "*": "Material.default"
+                }
+            ],
+            "geometry": "Geometry.sprite",
+            "textures": [
+                "Texture.bubblegum_shoot"
+            ]
+        },
+        "controller.render.starktma.engine_proj.jellybean_juggler": {
+            "materials": [
+                {
+                    "*": "Material.jelly_beans"
+                }
+            ],
+            "geometry": "Geometry.jellybean_juggler",
+            "textures": [
+                "Texture.jellybean_juggler"
+            ],
+            "uv_anim": {
+                "offset": [
+                    "v.uv_frame",
+                    0
+                ],
+                "scale": [
+                    1,
+                    1
+                ]
+            }
+        }
+    }
+}

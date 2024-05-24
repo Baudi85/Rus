@@ -1,0 +1,43 @@
+//Filename: camp.entity.json
+//Generated with Anvil@StarkTMA 0.5.4
+//25-10-2023 01:06:44 +0100
+//
+
+{
+    "format_version": "1.10.0",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "starktma:camp",
+            "animations": {
+                "attacker_fog_controller": "controller.animation.starktma.camp.attacker_fog_controller",
+                "campfire_controller": "controller.animation.starktma.camp.campfire_controller"
+            },
+            "scripts": {
+                "animate": [
+                    "attacker_fog_controller",
+                    "campfire_controller"
+                ]
+            },
+            "materials": {
+                "default": "entity_alphatest"
+            },
+            "textures": {
+                "default": "textures/entity/camp/camp"
+            },
+            "geometry": {
+                "default": "geometry.starktma.camp"
+            },
+            "particle_effects": {
+                "attacker_fog": "starktma:attacker_fog",
+                "campfire_particle": "starktma:campfire_particle"
+            },
+            "render_controllers": [
+                "controller.render.starktma.camp.default"
+            ],
+            "spawn_egg": {
+                "base_color": "#000000",
+                "overlay_color": "#cb2a2a"
+            }
+        }
+    }
+}

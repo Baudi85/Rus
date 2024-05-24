@@ -1,0 +1,61 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.starktma.slushie_shoot.directional_setup": {
+			"loop": true,
+			"override_previous_animation": false,
+			"bones": {
+				"root": {
+					"rotation": [0, "v.rounded_rotation", 0]
+				}
+			}
+		},
+		"animation.starktma.slushie_shoot.idle": {
+			"loop": true,
+			"bones": {
+				"eyes": {
+					"position": [0, "Math.sin(q.anim_time*400-90) ", 0]
+				},
+				"straw": {
+					"position": [0, "-Math.cos(q.anim_time*400) ", 0]
+				},
+				"tip": {
+					"rotation": ["Math.sin(q.anim_time*400)*7", 0, 0]
+				},
+				"root": {
+					"position": ["Math.cos(q.anim_time*200)", "Math.sin(q.anim_time*400)+1.1", 0]
+				}
+			}
+		},
+		"animation.starktma.slushie_shoot.shoot": {
+			"animation_length": 0.6667,
+			"override_previous_animation": true,
+			"bones": {
+				"root": {
+					"position": {
+						"0.0": [0, 0, 0],
+						"0.25": [0, 0, -3],
+						"0.4167": [0, 0, 3],
+						"0.6667": [0, 0, 0]
+					}
+				},
+				"straw": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.25": [12.5, 0, 0],
+						"0.4167": [-5, 0, 0],
+						"0.6667": [0, 0, 0]
+					}
+				},
+				"tip": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.25": [-35, 0, 0],
+						"0.4167": [15, 0, 0],
+						"0.6667": [0, 0, 0]
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,29 @@
+//Filename: level_picker.entity.json
+//Generated with Anvil@StarkTMA 0.5.4
+//25-10-2023 01:06:43 +0100
+//
+
+{
+    "format_version": "1.10.0",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "starktma:level_picker",
+            "materials": {
+                "default": "entity_alphatest"
+            },
+            "textures": {
+                "dummy": "textures/entity/misc/dummy"
+            },
+            "geometry": {
+                "dummy": "geometry.starktma.dummy"
+            },
+            "render_controllers": [
+                "controller.render.starktma.level_picker.dummy"
+            ],
+            "spawn_egg": {
+                "base_color": "#000000",
+                "overlay_color": "#000000"
+            }
+        }
+    }
+}

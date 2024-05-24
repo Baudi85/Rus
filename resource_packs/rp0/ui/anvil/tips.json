@@ -1,0 +1,578 @@
+//Filename: tips.json
+//Generated with Anvil@StarkTMA 0.5.4
+//25-10-2023 01:06:43 +0100
+//
+
+{
+    "namespace": "anvil_tips",
+    "tip_icon_base@anvil_common.image": {
+        "texture": "textures/ui/panel_bg",
+        "size": [
+            150,
+            "100%"
+        ],
+        "controls": [
+            {
+                "icon@anvil_tips.tip_icon": {}
+            }
+        ]
+    },
+    "tip_icon@anvil_common.image": {
+        "keep_ratio": true,
+        "texture": "$texture",
+        "uv_size": "$uv_size",
+        "size": [
+            "default",
+            "100% - 6px"
+        ],
+        "uv": "@anvil_animations.aseprite_animation"
+    },
+    "tip_text_base@anvil_common.panel": {
+        "size": [
+            "100%c",
+            "100%"
+        ],
+        "anchor_from": "bottom_left",
+        "anchor_to": "bottom_left",
+        "controls": [
+            {
+                "image@anvil_common.image": {
+                    "size": [
+                        "100%c + 12px",
+                        "100%c + 8px"
+                    ],
+                    "texture": "textures/ui/panel_bg",
+                    "layer": -1,
+                    "anchor_from": "bottom_left",
+                    "anchor_to": "bottom_left",
+                    "controls": [
+                        {
+                            "msg@anvil_tips.tip_text": {}
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "tip_text@anvil_common.label": {
+        "shadow": true,
+        "localize": true,
+        "text": "$text",
+        "text_alignment": "left"
+    },
+    "tip_device_base@anvil_common.stack_panel": {
+        "size": [
+            "100%c",
+            "100%"
+        ],
+        "anchor_from": "bottom_left",
+        "anchor_to": "bottom_left",
+        "type": "stack_panel",
+        "orientation": "horizontal",
+        "controls": [
+            {
+                "txt@anvil_tips.tip_text_base": {}
+            },
+            {
+                "device@anvil_tips.tip_icon_base": {}
+            }
+        ]
+    },
+    "tip_device@anvil_common.panel": {
+        "size": [
+            "100%c",
+            "100%"
+        ],
+        "controls": [
+            {
+                "native_input@anvil_tips.tip_device_base": {
+                    "bindings": [
+                        {
+                            "binding_name": "(not #is_using_gamepad)",
+                            "binding_name_override": "#visible"
+                        }
+                    ],
+                    "variables": [
+                        {
+                            "requires": "($win10_edition or (not ($is_android or $is_ios)))",
+                            "$texture": "$texture_pc",
+                            "$text": "$text_pc",
+                            "$uv_size": "$uv_size_pc"
+                        },
+                        {
+                            "requires": "($is_android or $is_ios)",
+                            "$texture": "$texture_mobile",
+                            "$text": "$text_mobile",
+                            "$uv_size": "$uv_size_mobile"
+                        }
+                    ]
+                }
+            },
+            {
+                "gamepad_input@anvil_tips.tip_device_base": {
+                    "bindings": [
+                        {
+                            "binding_name": "#is_using_gamepad",
+                            "binding_name_override": "#visible"
+                        }
+                    ],
+                    "variables": [
+                        {
+                            "requires": "($win10_edition or $xbox_one)",
+                            "$texture": "$texture_xbox",
+                            "$text": "$text_xbox",
+                            "$uv_size": "$uv_size_xbox"
+                        },
+                        {
+                            "requires": "($is_ps4 or $is_android or $is_ios)",
+                            "$texture": "$texture_ps4",
+                            "$text": "$text_ps4",
+                            "$uv_size": "$uv_size_ps4"
+                        },
+                        {
+                            "requires": "($nx_os)",
+                            "$texture": "$texture_switch",
+                            "$text": "$text_switch",
+                            "$uv_size": "$uv_size_switch"
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "tip_cursor_factory": {
+        "type": "panel",
+        "factory": {
+            "name": "hud_title_text_factory",
+            "control_ids": {
+                "hud_title_text": "tip_cursor_element@anvil_tips.tip_cursor"
+            }
+        }
+    },
+    "tip_cursor@anvil_common.title_binding": {
+        "$binding_text": "$anvil.tip_cursor.bool",
+        "type": "panel",
+        "size": [
+            "100%c",
+            "100%"
+        ],
+        "offset": "@anvil_animations.tip_in_long",
+        "anchor_from": "bottom_left",
+        "anchor_to": "bottom_left",
+        "controls": [
+            {
+                "cursor@anvil_tips.tip_device": {
+                    "$text_pc": "anvil_tips.cursor_pc",
+                    "$texture_pc": "textures/ui/tip_cursor_pc",
+                    "$uv_size_pc": [
+                        52,
+                        33
+                    ],
+                    "$text_xbox": "anvil_tips.cursor_xbox",
+                    "$texture_xbox": "textures/ui/tip_cursor_xbox",
+                    "$uv_size_xbox": [
+                        300,
+                        184
+                    ],
+                    "$text_ps4": "anvil_tips.cursor_ps4",
+                    "$texture_ps4": "textures/ui/tip_cursor_ps4",
+                    "$uv_size_ps4": [
+                        288,
+                        176
+                    ],
+                    "$text_switch": "anvil_tips.cursor_switch",
+                    "$texture_switch": "textures/ui/tip_cursor_switch",
+                    "$uv_size_switch": [
+                        224,
+                        176
+                    ],
+                    "$text_mobile": "anvil_tips.cursor_mobile",
+                    "$texture_mobile": "textures/ui/tip_cursor_mobile",
+                    "$uv_size_mobile": [
+                        126,
+                        64
+                    ]
+                }
+            }
+        ]
+    },
+    "tip_hotbar_factory": {
+        "type": "panel",
+        "factory": {
+            "name": "hud_title_text_factory",
+            "control_ids": {
+                "hud_title_text": "tip_hotbar_element@anvil_tips.tip_hotbar"
+            }
+        }
+    },
+    "tip_hotbar@anvil_common.title_binding": {
+        "$binding_text": "$anvil.tip_hotbar.bool",
+        "type": "panel",
+        "size": [
+            "100%c",
+            "100%"
+        ],
+        "offset": "@anvil_animations.tip_in_long",
+        "anchor_from": "bottom_left",
+        "anchor_to": "bottom_left",
+        "controls": [
+            {
+                "hotbar@anvil_tips.tip_device": {
+                    "$text_pc": "anvil_tips.hotbar_pc",
+                    "$texture_pc": "textures/ui/tip_hotbar_pc",
+                    "$uv_size_pc": [
+                        24,
+                        26
+                    ],
+                    "$text_xbox": "anvil_tips.hotbar_xbox",
+                    "$texture_xbox": "textures/ui/tip_hotbar_xbox",
+                    "$uv_size_xbox": [
+                        300,
+                        184
+                    ],
+                    "$text_ps4": "anvil_tips.hotbar_ps4",
+                    "$texture_ps4": "textures/ui/tip_hotbar_ps4",
+                    "$uv_size_ps4": [
+                        288,
+                        176
+                    ],
+                    "$text_switch": "anvil_tips.hotbar_switch",
+                    "$texture_switch": "textures/ui/tip_hotbar_switch",
+                    "$uv_size_switch": [
+                        224,
+                        176
+                    ],
+                    "$text_mobile": "anvil_tips.hotbar_mobile",
+                    "$texture_mobile": "textures/ui/tip_hotbar_mobile",
+                    "$uv_size_mobile": [
+                        126,
+                        64
+                    ]
+                }
+            }
+        ]
+    },
+    "tip_use_factory": {
+        "type": "panel",
+        "factory": {
+            "name": "hud_title_text_factory",
+            "control_ids": {
+                "hud_title_text": "tip_use_element@anvil_tips.tip_use"
+            }
+        }
+    },
+    "tip_use@anvil_common.title_binding": {
+        "$binding_text": "$anvil.tip_use.bool",
+        "type": "panel",
+        "size": [
+            "100%c",
+            "100%"
+        ],
+        "offset": "@anvil_animations.tip_in_long",
+        "anchor_from": "bottom_left",
+        "anchor_to": "bottom_left",
+        "controls": [
+            {
+                "use@anvil_tips.tip_device": {
+                    "$text_pc": "anvil_tips.use_pc",
+                    "$texture_pc": "textures/ui/tip_use_pc",
+                    "$uv_size_pc": [
+                        24,
+                        26
+                    ],
+                    "$text_xbox": "anvil_tips.use_xbox",
+                    "$texture_xbox": "textures/ui/tip_use_xbox",
+                    "$uv_size_xbox": [
+                        300,
+                        184
+                    ],
+                    "$text_ps4": "anvil_tips.use_ps4",
+                    "$texture_ps4": "textures/ui/tip_use_ps4",
+                    "$uv_size_ps4": [
+                        288,
+                        176
+                    ],
+                    "$text_switch": "anvil_tips.use_switch",
+                    "$texture_switch": "textures/ui/tip_use_switch",
+                    "$uv_size_switch": [
+                        224,
+                        176
+                    ],
+                    "$text_mobile": "anvil_tips.use_mobile",
+                    "$texture_mobile": "textures/ui/tip_use_mobile",
+                    "$uv_size_mobile": [
+                        126,
+                        64
+                    ]
+                }
+            }
+        ]
+    },
+    "tip_success_factory": {
+        "type": "panel",
+        "factory": {
+            "name": "hud_title_text_factory",
+            "control_ids": {
+                "hud_title_text": "tip_success_element@anvil_tips.tip_success"
+            }
+        }
+    },
+    "tip_success@anvil_common.title_binding": {
+        "$binding_text": "$anvil.tip_success.bool",
+        "type": "image",
+        "offset": "@anvil_animations.tip_in_short",
+        "texture": "textures/ui/panel_bg",
+        "size": [
+            "100%c",
+            "100%c"
+        ],
+        "anchor_from": "bottom_left",
+        "anchor_to": "bottom_left",
+        "controls": [
+            {
+                "stack@anvil_common.stack_panel": {
+                    "orientation": "horizontal",
+                    "size": [
+                        "100%c",
+                        "100%cm"
+                    ],
+                    "controls": [
+                        {
+                            "p0@anvil_common.panel": {
+                                "size": [
+                                    8,
+                                    20
+                                ]
+                            }
+                        },
+                        {
+                            "p@anvil_common.panel": {
+                                "size": [
+                                    "100%c",
+                                    20
+                                ],
+                                "controls": [
+                                    {
+                                        "success_text@anvil_common.label": {
+                                            "text": "anvil_tip.tip_success",
+                                            "localize": true,
+                                            "layer": 1,
+                                            "text_alignment": "left"
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "p1@anvil_common.panel": {
+                                "size": [
+                                    8,
+                                    20
+                                ]
+                            }
+                        },
+                        {
+                            "checkmark@anvil_common.image": {
+                                "texture": "textures/ui/checkmark",
+                                "size": [
+                                    20,
+                                    20
+                                ]
+                            }
+                        },
+                        {
+                            "p2@anvil_common.panel": {
+                                "size": [
+                                    8,
+                                    20
+                                ]
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "tip_kill_factory": {
+        "type": "panel",
+        "factory": {
+            "name": "hud_title_text_factory",
+            "control_ids": {
+                "hud_title_text": "tip_kill_element@anvil_tips.tip_kill"
+            }
+        }
+    },
+    "tip_kill@anvil_common.title_binding": {
+        "$binding_text": "$anvil.tip_kill.bool",
+        "type": "image",
+        "offset": "@anvil_animations.tip_in_long",
+        "texture": "textures/ui/panel_bg",
+        "size": [
+            "100%c",
+            "100%c"
+        ],
+        "anchor_from": "bottom_left",
+        "anchor_to": "bottom_left",
+        "controls": [
+            {
+                "stack@anvil_common.stack_panel": {
+                    "orientation": "horizontal",
+                    "size": [
+                        "100%c",
+                        "100%cm"
+                    ],
+                    "controls": [
+                        {
+                            "p0@anvil_common.panel": {
+                                "size": [
+                                    8,
+                                    20
+                                ]
+                            }
+                        },
+                        {
+                            "p@anvil_common.panel": {
+                                "size": [
+                                    "100%c",
+                                    20
+                                ],
+                                "controls": [
+                                    {
+                                        "Kill_text@anvil_common.label": {
+                                            "text": "anvil_tip.tip_kill",
+                                            "localize": true,
+                                            "layer": 1,
+                                            "text_alignment": "left"
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "p1@anvil_common.panel": {
+                                "size": [
+                                    8,
+                                    20
+                                ]
+                            }
+                        },
+                        {
+                            "zombie_head@anvil_common.image": {
+                                "texture": "textures/ui/zombie_head",
+                                "size": [
+                                    20,
+                                    20
+                                ]
+                            }
+                        },
+                        {
+                            "p2@anvil_common.panel": {
+                                "size": [
+                                    8,
+                                    20
+                                ]
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "tip_message_factory": {
+        "type": "panel",
+        "factory": {
+            "name": "hud_title_text_factory",
+            "control_ids": {
+                "hud_title_text": "tip_message_element@anvil_tips.tip_message"
+            }
+        }
+    },
+    "tip_message@anvil_common.title_binding": {
+        "$binding_text": "$anvil.tip_message.bool",
+        "type": "panel",
+        "size": [
+            "100%c",
+            "100%c"
+        ],
+        "anchor_from": "bottom_left",
+        "anchor_to": "bottom_left",
+        "offset": "@anvil_animations.tip_in_long",
+        "controls": [
+            {
+                "msg@anvil_common.image": {
+                    "texture": "textures/ui/panel_bg",
+                    "size": [
+                        "100%c + 12px",
+                        "100%c + 12px"
+                    ],
+                    "controls": [
+                        {
+                            "msg@anvil_tips.tip_text": {
+                                "text": "#text",
+                                "layer": 1,
+                                "bindings": [
+                                    {
+                                        "binding_type": "view",
+                                        "source_control_name": "tip_message",
+                                        "source_property_name": "#subtitle_text",
+                                        "target_property_name": "#text"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "tip_panel@anvil_common.panel": {
+        "offset": [
+            0,
+            "-100%y"
+        ],
+        "anchor_from": "bottom_left",
+        "anchor_to": "bottom_left",
+        "controls": [
+            {
+                "success@anvil_tips.tip_success_factory": {}
+            },
+            {
+                "Kill@anvil_tips.tip_kill_factory": {}
+            },
+            {
+                "message@anvil_tips.tip_message_factory": {}
+            },
+            {
+                "cursor@anvil_tips.tip_cursor_factory": {}
+            },
+            {
+                "hotbar@anvil_tips.tip_hotbar_factory": {}
+            },
+            {
+                "use@anvil_tips.tip_use_factory": {}
+            }
+        ]
+    },
+    "tips_panel@anvil_common.panel": {
+        "controls": [
+            {
+                "tips_main@anvil_tips.tip_panel": {
+                    "size": [
+                        "63%",
+                        "15%x"
+                    ],
+                    "ignored": "$touch"
+                }
+            },
+            {
+                "tips_touch@anvil_tips.tip_panel": {
+                    "size": [
+                        "40%",
+                        "15%x"
+                    ],
+                    "ignored": "(not $touch)"
+                }
+            }
+        ]
+    }
+}

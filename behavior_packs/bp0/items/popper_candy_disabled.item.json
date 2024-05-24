@@ -1,0 +1,26 @@
+//Filename: popper_candy_disabled.item.json
+//Generated with Anvil@StarkTMA 0.5.2
+//11-10-2023 00:51:12 +0100
+//
+
+{
+    "format_version": "1.20.30",
+    "minecraft:item": {
+        "components": {
+            "minecraft:icon": {
+                "texture": "popper_candy_disabled"
+            },
+            "minecraft:display_name": {
+                "value": "item.starktma:popper_candy_tower.name"
+            },
+            "minecraft:cooldown": {
+                "category": "popper_candy",
+                "duration": 20
+            },
+            "minecraft:max_stack_size": 1
+        },
+        "description": {
+            "identifier": "starktma:popper_candy_disabled"
+        }
+    }
+}

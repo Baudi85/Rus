@@ -1,0 +1,60 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.starktma.molten_chocolate_aod",
+				"texture_width": 128,
+				"texture_height": 128
+			}
+		},
+		{
+			"description": {
+				"identifier": "geometry.starktma.molten_chocolate_projectile",
+				"texture_width": 64,
+				"texture_height": 64,
+				"visible_bounds_width": 4,
+				"visible_bounds_height": 11.5,
+				"visible_bounds_offset": [0, 5.25, 0]
+			},
+			"bones": [
+				{
+					"name": "root",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{
+							"origin": [-8, -8, -8],
+							"size": [16, 16, 16],
+							"uv": {
+								"north": {
+									"uv": [0, 0],
+									"uv_size": [16, 16]
+								},
+								"east": {
+									"uv": [0, 16],
+									"uv_size": [16, 16]
+								},
+								"south": {
+									"uv": [16, 0],
+									"uv_size": [16, 16]
+								},
+								"west": {
+									"uv": [16, 16],
+									"uv_size": [16, 16]
+								},
+								"up": {
+									"uv": [0, 32],
+									"uv_size": [16, 16]
+								},
+								"down": {
+									"uv": [32, 16],
+									"uv_size": [16, -16]
+								}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,40 @@
+//Filename: house.entity.json
+//Generated with Anvil@StarkTMA 0.5.4
+//25-10-2023 01:06:44 +0100
+//
+
+{
+    "format_version": "1.10.0",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "starktma:house",
+            "animations": {
+                "particles_controller": "controller.animation.starktma.house.particles_controller"
+            },
+            "scripts": {
+                "animate": [
+                    "particles_controller"
+                ]
+            },
+            "materials": {
+                "default": "entity_alphatest"
+            },
+            "textures": {
+                "default": "textures/entity/house/house"
+            },
+            "geometry": {
+                "default": "geometry.starktma.house"
+            },
+            "particle_effects": {
+                "attacker_fog": "starktma:attacker_fog"
+            },
+            "render_controllers": [
+                "controller.render.starktma.house.default"
+            ],
+            "spawn_egg": {
+                "base_color": "#000000",
+                "overlay_color": "#4280dd"
+            }
+        }
+    }
+}

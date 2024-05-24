@@ -1,0 +1,263 @@
+//Filename: terrain_texture.json
+//Generated with Anvil@StarkTMA 0.5.4
+//25-10-2023 01:06:44 +0100
+//
+
+{
+    "num_mip_levels": 4,
+    "padding": 8,
+    "resource_pack_name": "sugar_rush",
+    "texture_data": {
+        "grass_water_center": {
+            "textures": [
+                "textures/blocks/grass_water_center"
+            ]
+        },
+        "grass_water_corner": {
+            "textures": [
+                "textures/blocks/grass_water_corner"
+            ]
+        },
+        "grass_water_side": {
+            "textures": [
+                "textures/blocks/grass_water_side"
+            ]
+        },
+        "grass_water_parallel": {
+            "textures": [
+                "textures/blocks/grass_water_parallel"
+            ]
+        },
+        "grass_water_c_corner": {
+            "textures": [
+                "textures/blocks/grass_water_c_corner"
+            ]
+        },
+        "grass_water_x_corner": {
+            "textures": [
+                "textures/blocks/grass_water_x_corner"
+            ]
+        },
+        "grass_water_inward": {
+            "textures": [
+                "textures/blocks/grass_water_inward"
+            ]
+        },
+        "grass_dirt_center": {
+            "textures": [
+                "textures/blocks/grass_dirt_center"
+            ]
+        },
+        "grass_dirt_corner": {
+            "textures": [
+                "textures/blocks/grass_dirt_corner"
+            ]
+        },
+        "grass_dirt_side": {
+            "textures": [
+                "textures/blocks/grass_dirt_side"
+            ]
+        },
+        "grass_dirt_parallel": {
+            "textures": [
+                "textures/blocks/grass_dirt_parallel"
+            ]
+        },
+        "grass_dirt_c_corner": {
+            "textures": [
+                "textures/blocks/grass_dirt_c_corner"
+            ]
+        },
+        "grass_dirt_x_corner": {
+            "textures": [
+                "textures/blocks/grass_dirt_x_corner"
+            ]
+        },
+        "grass_dirt_inward": {
+            "textures": [
+                "textures/blocks/grass_dirt_inward"
+            ]
+        },
+        "grass_tile_center": {
+            "textures": [
+                "textures/blocks/grass_tile_center"
+            ]
+        },
+        "grass_tile_corner": {
+            "textures": [
+                "textures/blocks/grass_tile_corner"
+            ]
+        },
+        "grass_tile_side": {
+            "textures": [
+                "textures/blocks/grass_tile_side"
+            ]
+        },
+        "grass_tile_parallel": {
+            "textures": [
+                "textures/blocks/grass_tile_parallel"
+            ]
+        },
+        "grass_tile_c_corner": {
+            "textures": [
+                "textures/blocks/grass_tile_c_corner"
+            ]
+        },
+        "grass_tile_x_corner": {
+            "textures": [
+                "textures/blocks/grass_tile_x_corner"
+            ]
+        },
+        "grass_tile_inward": {
+            "textures": [
+                "textures/blocks/grass_tile_inward"
+            ]
+        },
+        "grass_stone_center": {
+            "textures": [
+                "textures/blocks/grass_stone_center"
+            ]
+        },
+        "grass_stone_corner": {
+            "textures": [
+                "textures/blocks/grass_stone_corner"
+            ]
+        },
+        "grass_stone_side": {
+            "textures": [
+                "textures/blocks/grass_stone_side"
+            ]
+        },
+        "grass_stone_parallel": {
+            "textures": [
+                "textures/blocks/grass_stone_parallel"
+            ]
+        },
+        "grass_stone_c_corner": {
+            "textures": [
+                "textures/blocks/grass_stone_c_corner"
+            ]
+        },
+        "grass_stone_x_corner": {
+            "textures": [
+                "textures/blocks/grass_stone_x_corner"
+            ]
+        },
+        "grass_stone_inward": {
+            "textures": [
+                "textures/blocks/grass_stone_inward"
+            ]
+        },
+        "grass_cobblestone_center": {
+            "textures": [
+                "textures/blocks/grass_cobblestone_center"
+            ]
+        },
+        "grass_cobblestone_corner": {
+            "textures": [
+                "textures/blocks/grass_cobblestone_corner"
+            ]
+        },
+        "grass_cobblestone_side": {
+            "textures": [
+                "textures/blocks/grass_cobblestone_side"
+            ]
+        },
+        "grass_cobblestone_parallel": {
+            "textures": [
+                "textures/blocks/grass_cobblestone_parallel"
+            ]
+        },
+        "grass_cobblestone_c_corner": {
+            "textures": [
+                "textures/blocks/grass_cobblestone_c_corner"
+            ]
+        },
+        "grass_cobblestone_x_corner": {
+            "textures": [
+                "textures/blocks/grass_cobblestone_x_corner"
+            ]
+        },
+        "grass_cobblestone_inward": {
+            "textures": [
+                "textures/blocks/grass_cobblestone_inward"
+            ]
+        },
+        "grass_dirt_center_0": {
+            "textures": [
+                "textures/blocks/grass_dirt_center_0"
+            ]
+        },
+        "grass_dirt_center_1": {
+            "textures": [
+                "textures/blocks/grass_dirt_center_1"
+            ]
+        },
+        "grass_dirt_center_2": {
+            "textures": [
+                "textures/blocks/grass_dirt_center_2"
+            ]
+        },
+        "dirt_0": {
+            "textures": [
+                "textures/blocks/dirt_0"
+            ]
+        },
+        "dirt_1": {
+            "textures": [
+                "textures/blocks/dirt_1"
+            ]
+        },
+        "dirt_2": {
+            "textures": [
+                "textures/blocks/dirt_2"
+            ]
+        },
+        "dirt_3": {
+            "textures": [
+                "textures/blocks/dirt_3"
+            ]
+        },
+        "asphalt_0": {
+            "textures": [
+                "textures/blocks/asphalt_0"
+            ]
+        },
+        "asphalt_1": {
+            "textures": [
+                "textures/blocks/asphalt_1"
+            ]
+        },
+        "asphalt_2": {
+            "textures": [
+                "textures/blocks/asphalt_2"
+            ]
+        },
+        "curb_stone_0": {
+            "textures": [
+                "textures/blocks/curb_stone_0"
+            ]
+        },
+        "curb_stone_1": {
+            "textures": [
+                "textures/blocks/curb_stone_1"
+            ]
+        },
+        "fence_0": {
+            "textures": [
+                "textures/blocks/fence_0"
+            ]
+        },
+        "fence_1": {
+            "textures": [
+                "textures/blocks/fence_1"
+            ]
+        },
+        "fence_2": {
+            "textures": [
+                "textures/blocks/fence_2"
+            ]
+        }
+    },
+    "texture_name": "atlas.terrain"
+}

@@ -1,0 +1,54 @@
+{ "frames": [
+   {
+    "filename": "tip_cursor_ps4 0.png",
+    "frame": { "x": 0, "y": 0, "w": 288, "h": 176 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 288, "h": 176 },
+    "sourceSize": { "w": 288, "h": 176 },
+    "duration": 500
+   },
+   {
+    "filename": "tip_cursor_ps4 1.png",
+    "frame": { "x": 288, "y": 0, "w": 288, "h": 176 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 288, "h": 176 },
+    "sourceSize": { "w": 288, "h": 176 },
+    "duration": 500
+   },
+   {
+    "filename": "tip_cursor_ps4 2.png",
+    "frame": { "x": 576, "y": 0, "w": 288, "h": 176 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 288, "h": 176 },
+    "sourceSize": { "w": 288, "h": 176 },
+    "duration": 500
+   },
+   {
+    "filename": "tip_cursor_ps4 3.png",
+    "frame": { "x": 864, "y": 0, "w": 288, "h": 176 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 288, "h": 176 },
+    "sourceSize": { "w": 288, "h": 176 },
+    "duration": 500
+   }
+ ],
+ "meta": {
+  "app": "https://www.aseprite.org/",
+  "version": "1.2.40-x64",
+  "image": "tip_cursor_ps4.png",
+  "format": "RGBA8888",
+  "size": { "w": 1152, "h": 176 },
+  "scale": "1",
+  "frameTags": [
+  ],
+  "layers": [
+   { "name": "Sprite Sheet", "opacity": 255, "blendMode": "normal" }
+  ],
+  "slices": [
+  ]
+ }
+}

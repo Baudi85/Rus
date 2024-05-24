@@ -1,0 +1,19 @@
+//Filename: engine_aod.animation.json
+//Generated with Anvil@StarkTMA 0.5.4
+//25-10-2023 01:06:44 +0100
+//
+
+{
+    "format_version": "1.10.0",
+    "animations": {
+        "animation.starktma.engine_aod.molten_chocolate_damage": {
+            "loop": true,
+            "timeline": {
+                "0.5": [
+                    "/event entity @e [family = attacker, x = ~-4, y = ~, z = ~-1, dx = 8, dz = 2] take_fake_1_damage"
+                ]
+            },
+            "animation_length": 0.6
+        }
+    }
+}

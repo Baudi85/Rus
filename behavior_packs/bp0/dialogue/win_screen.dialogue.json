@@ -1,0 +1,237 @@
+//Filename: win_screen.dialogue.json
+//Generated with Anvil@StarkTMA 0.5.4
+//25-10-2023 01:06:40 +0100
+//
+
+{
+    "format_version": "1.18.0",
+    "minecraft:npc_dialogue": {
+        "scenes": [
+            {
+                "scene_tag": "win_screen_0",
+                "npc_name": "{\"rawtext\":[{\"text\": \"win_screen\"}]}",
+                "text": "{\"rawtext\":[{\"translate\": \"raw_text_2\", \"with\": [\"\\n\"]}]}",
+                "buttons": [
+                    {
+                        "name": "Next Level",
+                        "commands": [
+                            "/function StateMachine/misc/next_main_state",
+                            "/event entity @a not_win_screen",
+                            "/event entity @s despawn"
+                        ]
+                    }
+                ]
+            },
+            {
+                "scene_tag": "win_screen_2",
+                "npc_name": "{\"rawtext\":[{\"text\": \"win_screen\"}]}",
+                "text": "{\"rawtext\":[{\"translate\": \"raw_text_3\", \"with\": [\"\\n\"]}]}",
+                "buttons": [
+                    {
+                        "name": "Next Level",
+                        "commands": [
+                            "/function StateMachine/misc/next_main_state",
+                            "/event entity @a not_win_screen",
+                            "/event entity @s despawn"
+                        ]
+                    }
+                ]
+            },
+            {
+                "scene_tag": "win_screen_4",
+                "npc_name": "{\"rawtext\":[{\"text\": \"win_screen\"}]}",
+                "text": "{\"rawtext\":[{\"translate\": \"raw_text_4\", \"with\": [\"\\n\"]}]}",
+                "buttons": [
+                    {
+                        "name": "Next Level",
+                        "commands": [
+                            "/function StateMachine/misc/next_main_state",
+                            "/event entity @a not_win_screen",
+                            "/event entity @s despawn"
+                        ]
+                    }
+                ]
+            },
+            {
+                "scene_tag": "win_screen_6",
+                "npc_name": "{\"rawtext\":[{\"text\": \"win_screen\"}]}",
+                "text": "{\"rawtext\":[{\"translate\": \"raw_text_5\", \"with\": [\"\\n\"]}]}",
+                "buttons": [
+                    {
+                        "name": "Next Level",
+                        "commands": [
+                            "/function StateMachine/misc/next_main_state",
+                            "/event entity @a not_win_screen",
+                            "/event entity @s despawn"
+                        ]
+                    }
+                ]
+            },
+            {
+                "scene_tag": "win_screen_8",
+                "npc_name": "{\"rawtext\":[{\"text\": \"win_screen\"}]}",
+                "text": "{\"rawtext\":[{\"translate\": \"raw_text_6\", \"with\": [\"\\n\"]}]}",
+                "buttons": [
+                    {
+                        "name": "Next Level",
+                        "commands": [
+                            "/function StateMachine/misc/next_main_state",
+                            "/event entity @a not_win_screen",
+                            "/event entity @s despawn"
+                        ]
+                    }
+                ]
+            },
+            {
+                "scene_tag": "win_screen_10",
+                "npc_name": "{\"rawtext\":[{\"text\": \"win_screen\"}]}",
+                "text": "{\"rawtext\":[{\"translate\": \"raw_text_7\", \"with\": [\"\\n\"]}]}",
+                "buttons": [
+                    {
+                        "name": "Next Level",
+                        "commands": [
+                            "/function StateMachine/misc/next_main_state",
+                            "/event entity @a not_win_screen",
+                            "/event entity @s despawn"
+                        ]
+                    }
+                ]
+            },
+            {
+                "scene_tag": "win_screen_12",
+                "npc_name": "{\"rawtext\":[{\"text\": \"win_screen\"}]}",
+                "text": "{\"rawtext\":[{\"translate\": \"raw_text_8\", \"with\": [\"\\n\"]}]}",
+                "buttons": [
+                    {
+                        "name": "Next Level",
+                        "commands": [
+                            "/function StateMachine/misc/next_main_state",
+                            "/event entity @a not_win_screen",
+                            "/event entity @s despawn"
+                        ]
+                    }
+                ]
+            },
+            {
+                "scene_tag": "win_screen_14",
+                "npc_name": "{\"rawtext\":[{\"text\": \"win_screen\"}]}",
+                "text": "{\"rawtext\":[{\"translate\": \"raw_text_9\", \"with\": [\"\\n\"]}]}",
+                "buttons": [
+                    {
+                        "name": "Next Level",
+                        "commands": [
+                            "/function StateMachine/misc/next_main_state",
+                            "/event entity @a not_win_screen",
+                            "/event entity @s despawn"
+                        ]
+                    }
+                ]
+            },
+            {
+                "scene_tag": "win_screen_16",
+                "npc_name": "{\"rawtext\":[{\"text\": \"win_screen\"}]}",
+                "text": "{\"rawtext\":[{\"translate\": \"raw_text_10\", \"with\": [\"\\n\"]}]}",
+                "buttons": [
+                    {
+                        "name": "Next Level",
+                        "commands": [
+                            "/function StateMachine/misc/next_main_state",
+                            "/event entity @a not_win_screen",
+                            "/event entity @s despawn"
+                        ]
+                    }
+                ]
+            },
+            {
+                "scene_tag": "win_screen_18",
+                "npc_name": "{\"rawtext\":[{\"text\": \"win_screen\"}]}",
+                "text": "{\"rawtext\":[{\"translate\": \"raw_text_11\", \"with\": [\"\\n\"]}]}",
+                "buttons": [
+                    {
+                        "name": "Next Level",
+                        "commands": [
+                            "/function StateMachine/misc/next_main_state",
+                            "/event entity @a not_win_screen",
+                            "/event entity @s despawn"
+                        ]
+                    }
+                ]
+            },
+            {
+                "scene_tag": "win_screen_20",
+                "npc_name": "{\"rawtext\":[{\"text\": \"win_screen\"}]}",
+                "text": "{\"rawtext\":[{\"translate\": \"raw_text_12\", \"with\": [\"\\n\"]}]}",
+                "buttons": [
+                    {
+                        "name": "Next Level",
+                        "commands": [
+                            "/function StateMachine/misc/next_main_state",
+                            "/event entity @a not_win_screen",
+                            "/event entity @s despawn"
+                        ]
+                    }
+                ]
+            },
+            {
+                "scene_tag": "win_screen_22",
+                "npc_name": "{\"rawtext\":[{\"text\": \"win_screen\"}]}",
+                "text": "{\"rawtext\":[{\"translate\": \"raw_text_13\", \"with\": [\"\\n\"]}]}",
+                "buttons": [
+                    {
+                        "name": "Next Level",
+                        "commands": [
+                            "/function StateMachine/misc/next_main_state",
+                            "/event entity @a not_win_screen",
+                            "/event entity @s despawn"
+                        ]
+                    }
+                ]
+            },
+            {
+                "scene_tag": "win_screen_24",
+                "npc_name": "{\"rawtext\":[{\"text\": \"win_screen\"}]}",
+                "text": "{\"rawtext\":[{\"translate\": \"raw_text_14\", \"with\": [\"\\n\"]}]}",
+                "buttons": [
+                    {
+                        "name": "Next Level",
+                        "commands": [
+                            "/function StateMachine/misc/next_main_state",
+                            "/event entity @a not_win_screen",
+                            "/event entity @s despawn"
+                        ]
+                    }
+                ]
+            },
+            {
+                "scene_tag": "win_screen_26",
+                "npc_name": "{\"rawtext\":[{\"text\": \"win_screen\"}]}",
+                "text": "{\"rawtext\":[{\"translate\": \"raw_text_15\", \"with\": [\"\\n\"]}]}",
+                "buttons": [
+                    {
+                        "name": "Next Level",
+                        "commands": [
+                            "/function StateMachine/misc/next_main_state",
+                            "/event entity @a not_win_screen",
+                            "/event entity @s despawn"
+                        ]
+                    }
+                ]
+            },
+            {
+                "scene_tag": "win_screen_28",
+                "npc_name": "{\"rawtext\":[{\"text\": \"win_screen\"}]}",
+                "text": "{\"rawtext\":[{\"translate\": \"raw_text_16\", \"with\": [\"\\n\"]}]}",
+                "buttons": [
+                    {
+                        "name": "Next Level",
+                        "commands": [
+                            "/function StateMachine/misc/next_main_state",
+                            "/event entity @a not_win_screen",
+                            "/event entity @s despawn"
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

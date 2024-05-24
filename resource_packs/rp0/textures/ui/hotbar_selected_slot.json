@@ -1,0 +1,17 @@
+//Filename: hotbar_selected_slot.json
+//Generated with Anvil@StarkTMA 0.5.4
+//25-10-2023 01:06:39 +0100
+//
+
+{
+    "nineslice_size": [
+        3,
+        3,
+        3,
+        3
+    ],
+    "base_size": [
+        8,
+        8
+    ]
+}

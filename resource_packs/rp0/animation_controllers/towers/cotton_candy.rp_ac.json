@@ -1,0 +1,63 @@
+//Filename: cotton_candy.rp_ac.json
+//Generated with Anvil@StarkTMA 0.5.4
+//25-10-2023 01:06:41 +0100
+//
+
+{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.starktma.cotton_candy.candy_generator": {
+            "initial_state": "default",
+            "states": {
+                "default": {
+                    "transitions": [
+                        {
+                            "generate": "q.property('starktma:generate')"
+                        }
+                    ]
+                },
+                "generate": {
+                    "animations": [
+                        "generate"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "(q.all_animations_finished && !(q.property('starktma:generate')))"
+                        }
+                    ],
+                    "particle_effects": [
+                        {
+                            "effect": "candy_generate",
+                            "locator": "root"
+                        }
+                    ]
+                }
+            }
+        },
+        "controller.animation.starktma.cotton_candy.is_disabled_ctrl": {
+            "initial_state": "default",
+            "states": {
+                "default": {
+                    "transitions": [
+                        {
+                            "is_disabled": "q.property('starktma:is_disabled')"
+                        }
+                    ]
+                },
+                "is_disabled": {
+                    "transitions": [
+                        {
+                            "default": "1"
+                        }
+                    ],
+                    "particle_effects": [
+                        {
+                            "effect": "disabled_particle",
+                            "locator": "root"
+                        }
+                    ]
+                }
+            }
+        }
+    }
+}

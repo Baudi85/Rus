@@ -1,0 +1,179 @@
+//Filename: sounds.json
+//Generated with Anvil@StarkTMA 0.5.4
+//25-10-2023 01:06:44 +0100
+//
+
+{
+    "entity_sounds": {
+        "entities": {
+            "starktma:basic_zombie": {
+                "volume": 5,
+                "pitch": [
+                    0.8,
+                    1.2
+                ],
+                "events": {
+                    "ambient": {
+                        "sound": "starktma.basic_zombie.groan"
+                    },
+                    "attack": {
+                        "sound": "starktma.basic_zombie.attack"
+                    }
+                }
+            },
+            "starktma:sugar_rush_zombie": {
+                "volume": 5,
+                "pitch": [
+                    0.8,
+                    1.2
+                ],
+                "events": {
+                    "ambient": {
+                        "sound": "starktma.basic_zombie.groan"
+                    },
+                    "attack": {
+                        "sound": "starktma.basic_zombie.attack"
+                    }
+                }
+            },
+            "starktma:gumball_helmet_zombie": {
+                "volume": 5,
+                "pitch": [
+                    0.8,
+                    1.2
+                ],
+                "events": {
+                    "ambient": {
+                        "sound": "starktma.basic_zombie.groan"
+                    },
+                    "attack": {
+                        "sound": "starktma.basic_zombie.attack"
+                    }
+                }
+            },
+            "starktma:candy_gobbler_zombie": {
+                "volume": 5,
+                "pitch": [
+                    0.8,
+                    1.2
+                ],
+                "events": {
+                    "ambient": {
+                        "sound": "starktma.basic_zombie.groan"
+                    },
+                    "attack": {
+                        "sound": "starktma.basic_zombie.attack"
+                    }
+                }
+            },
+            "starktma:lollipop_shield_zombie": {
+                "volume": 5,
+                "pitch": [
+                    0.8,
+                    1.2
+                ],
+                "events": {
+                    "ambient": {
+                        "sound": "starktma.basic_zombie.groan"
+                    },
+                    "attack": {
+                        "sound": "starktma.basic_zombie.attack"
+                    }
+                }
+            },
+            "starktma:jellybean_juggler": {
+                "volume": 5,
+                "pitch": [
+                    0.8,
+                    1.2
+                ],
+                "events": {
+                    "shoot": {
+                        "sound": "starktma.jellybean_juggler.shoot"
+                    },
+                    "ambient": {
+                        "sound": "starktma.basic_zombie.groan"
+                    },
+                    "attack": {
+                        "sound": "starktma.basic_zombie.attack"
+                    }
+                }
+            },
+            "starktma:sugar_imp_zombie": {
+                "volume": 5,
+                "pitch": [
+                    0.8,
+                    1.2
+                ],
+                "events": {
+                    "ambient": {
+                        "sound": "starktma.sugar_imp_zombie.groan"
+                    },
+                    "attack": {
+                        "sound": "starktma.basic_zombie.attack"
+                    }
+                }
+            },
+            "starktma:sugar_spawner": {
+                "volume": 5,
+                "pitch": [
+                    0.8,
+                    1.2
+                ],
+                "events": {
+                    "ambient": {
+                        "sound": "starktma.basic_zombie.groan"
+                    },
+                    "attack": {
+                        "sound": "starktma.basic_zombie.attack"
+                    }
+                }
+            },
+            "starktma:ice_cream_cone": {
+                "volume": 5,
+                "pitch": [
+                    0.8,
+                    1.2
+                ],
+                "events": {
+                    "ambient": {
+                        "sound": "starktma.basic_zombie.groan"
+                    },
+                    "attack": {
+                        "sound": "starktma.basic_zombie.attack"
+                    }
+                }
+            },
+            "starktma:sugar_overlord": {
+                "volume": 5,
+                "pitch": [
+                    0.8,
+                    1.2
+                ],
+                "events": {
+                    "ambient": {
+                        "sound": "starktma.basic_zombie.groan"
+                    },
+                    "attack": {
+                        "sound": "starktma.basic_zombie.attack"
+                    }
+                }
+            },
+            "starktma:candy_jammer": {
+                "volume": 5,
+                "pitch": [
+                    0.8,
+                    1.2
+                ],
+                "events": {
+                    "ambient": {
+                        "sound": "starktma.candy_jammer.groan"
+                    },
+                    "attack": {
+                        "sound": "starktma.basic_zombie.attack"
+                    }
+                }
+            }
+        }
+    }
+}

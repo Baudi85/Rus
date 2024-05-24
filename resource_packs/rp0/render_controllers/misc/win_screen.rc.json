@@ -1,0 +1,61 @@
+//Filename: win_screen.rc.json
+//Generated with Anvil@StarkTMA 0.5.4
+//25-10-2023 01:06:43 +0100
+//
+
+{
+    "format_version": "1.10.0",
+    "render_controllers": {
+        "controller.render.starktma.win_screen.default": {
+            "arrays": {
+                "textures": {
+                    "Array.texts": [
+                        "Texture.win_screen_0",
+                        "Texture.win_screen_2",
+                        "Texture.win_screen_4",
+                        "Texture.win_screen_6",
+                        "Texture.win_screen_8",
+                        "Texture.win_screen_10",
+                        "Texture.win_screen_12",
+                        "Texture.win_screen_14",
+                        "Texture.win_screen_16",
+                        "Texture.win_screen_18",
+                        "Texture.win_screen_20",
+                        "Texture.win_screen_22",
+                        "Texture.win_screen_24",
+                        "Texture.win_screen_26",
+                        "Texture.win_screen_28"
+                    ]
+                },
+                "geometries": {
+                    "Array.geos": [
+                        "Geometry.win_screen_0",
+                        "Geometry.win_screen_2",
+                        "Geometry.win_screen_4",
+                        "Geometry.win_screen_6",
+                        "Geometry.win_screen_8",
+                        "Geometry.win_screen_10",
+                        "Geometry.win_screen_12",
+                        "Geometry.win_screen_14",
+                        "Geometry.win_screen_16",
+                        "Geometry.win_screen_18",
+                        "Geometry.win_screen_20",
+                        "Geometry.win_screen_22",
+                        "Geometry.win_screen_24",
+                        "Geometry.win_screen_26",
+                        "Geometry.win_screen_28"
+                    ]
+                }
+            },
+            "materials": [
+                {
+                    "*": "Material.default"
+                }
+            ],
+            "geometry": "Array.geos[q.variant]",
+            "textures": [
+                "Array.texts[q.variant]"
+            ]
+        }
+    }
+}

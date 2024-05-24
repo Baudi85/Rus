@@ -1,0 +1,1471 @@
+//Filename: hud.json
+//Generated with Anvil@StarkTMA 0.5.4
+//25-10-2023 01:06:43 +0100
+//
+
+{
+    "namespace": "anvil_hud",
+    "anvil_hud": {
+        "type": "panel",
+        "controls": [
+            {
+                "slide_instance@anvil_hud.slide_factory": {}
+            },
+            {
+                "scope_view_instance@anvil_hud.scope_view_factory": {}
+            },
+            {
+                "unsupported_players_instance@anvil_hud.unsupported_players_factory": {}
+            },
+            {
+                "surge_wave_title_instance@anvil_hud.surge_wave_title_factory": {}
+            },
+            {
+                "final_wave_title_instance@anvil_hud.final_wave_title_factory": {}
+            },
+            {
+                "ready_instance@anvil_hud.ready_factory": {}
+            },
+            {
+                "set_instance@anvil_hud.set_factory": {}
+            },
+            {
+                "candy_instance@anvil_hud.candy_factory": {}
+            },
+            {
+                "starktma_logo_instance@anvil_hud.starktma_logo_factory": {}
+            },
+            {
+                "progress_bar@anvil_progress_bar.progress_bar": {}
+            },
+            {
+                "hotbar@anvil_hotbar.hotbar_panel": {}
+            },
+            {
+                "freeze_out_instance@anvil_hud.freeze_out_factory": {}
+            },
+            {
+                "credits_instance@anvil_hud.credits_factory": {}
+            },
+            {
+                "tips_panel@anvil_tips.tips_panel": {}
+            }
+        ]
+    },
+    "slide_image": {
+        "type": "image",
+        "offset": "$anim_offset",
+        "texture": "textures/ui/black_element",
+        "keep_ratio": false,
+        "anchor_from": "center",
+        "anchor_to": "center",
+        "layer": 100,
+        "size": [
+            "100%",
+            "100%"
+        ],
+        "controls": [
+            {
+                "slide_tilt_right": {
+                    "type": "image",
+                    "texture": "textures/ui/slide_tilt",
+                    "keep_ratio": true,
+                    "anchor_from": "right_middle",
+                    "anchor_to": "right_middle",
+                    "size": [
+                        "default",
+                        "100%"
+                    ],
+                    "offset": [
+                        "-50%",
+                        0
+                    ]
+                }
+            },
+            {
+                "slide_tilt_left": {
+                    "type": "image",
+                    "texture": "textures/ui/slide_tilt",
+                    "keep_ratio": true,
+                    "anchor_from": "left_middle",
+                    "anchor_to": "left_middle",
+                    "size": [
+                        "default",
+                        "100%"
+                    ],
+                    "offset": [
+                        "50%x",
+                        0
+                    ]
+                }
+            }
+        ]
+    },
+    "slide_factory": {
+        "type": "panel",
+        "factory": {
+            "name": "hud_title_text_factory",
+            "control_ids": {
+                "hud_title_text": "slide_element@anvil_hud.slide"
+            }
+        }
+    },
+    "slide": {
+        "type": "panel",
+        "bindings": [
+            {
+                "binding_name": "#hud_title_text_string",
+                "binding_name_override": "#text",
+                "binding_type": "global"
+            }
+        ],
+        "controls": [
+            {
+                "in@anvil_hud.slide_image": {
+                    "$anim_offset": "@anvil_animations.slide_in",
+                    "bindings": [
+                        {
+                            "binding_type": "view",
+                            "source_property_name": "(not((#text - $anvil.slide_in.text) = #text))",
+                            "target_property_name": "#visible"
+                        },
+                        {
+                            "binding_name": "#hud_title_text_string",
+                            "binding_name_override": "#text",
+                            "binding_type": "global"
+                        }
+                    ]
+                }
+            },
+            {
+                "out@anvil_hud.slide_image": {
+                    "$anim_offset": "@anvil_animations.slide_out",
+                    "bindings": [
+                        {
+                            "binding_type": "view",
+                            "source_property_name": "(not((#text - $anvil.slide_out.text) = #text))",
+                            "target_property_name": "#visible"
+                        },
+                        {
+                            "binding_name": "#hud_title_text_string",
+                            "binding_name_override": "#text",
+                            "binding_type": "global"
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "scope_view_factory": {
+        "type": "panel",
+        "factory": {
+            "name": "hud_title_text_factory",
+            "control_ids": {
+                "hud_title_text": "scope_view_element@anvil_hud.scope_view"
+            }
+        }
+    },
+    "scope_view": {
+        "type": "panel",
+        "alpha": 0.8,
+        "offset": [
+            "-39%",
+            "39%"
+        ],
+        "propagate_alpha": true,
+        "bindings": [
+            {
+                "binding_name": "#hud_title_text_string",
+                "binding_name_override": "#text",
+                "binding_type": "global"
+            }
+        ],
+        "controls": [
+            {
+                "in@anvil_hud.scope_view_image": {
+                    "$anim_size": "@anvil_animations.scope_view_in",
+                    "bindings": [
+                        {
+                            "binding_type": "view",
+                            "source_property_name": "$anvil.scope_view_in.bool",
+                            "target_property_name": "#visible"
+                        },
+                        {
+                            "binding_name": "#hud_title_text_string",
+                            "binding_name_override": "#text",
+                            "binding_type": "global"
+                        }
+                    ]
+                }
+            },
+            {
+                "out@anvil_hud.scope_view_image": {
+                    "$anim_size": "@anvil_animations.scope_view_out",
+                    "bindings": [
+                        {
+                            "binding_type": "view",
+                            "source_property_name": "$anvil.scope_view_out.bool",
+                            "target_property_name": "#visible"
+                        },
+                        {
+                            "binding_name": "#hud_title_text_string",
+                            "binding_name_override": "#text",
+                            "binding_type": "global"
+                        }
+                    ]
+                }
+            },
+            {
+                "full_in@anvil_hud.scope_view_image": {
+                    "$anim_size": "@anvil_animations.scope_view_full_in",
+                    "bindings": [
+                        {
+                            "binding_type": "view",
+                            "source_property_name": "$anvil.scope_view_full_in.bool",
+                            "target_property_name": "#visible"
+                        },
+                        {
+                            "binding_name": "#hud_title_text_string",
+                            "binding_name_override": "#text",
+                            "binding_type": "global"
+                        }
+                    ]
+                }
+            },
+            {
+                "full_out@anvil_hud.scope_view_image": {
+                    "$anim_size": "@anvil_animations.scope_view_full_out",
+                    "bindings": [
+                        {
+                            "binding_type": "view",
+                            "source_property_name": "$anvil.scope_view_full_out.bool",
+                            "target_property_name": "#visible"
+                        },
+                        {
+                            "binding_name": "#hud_title_text_string",
+                            "binding_name_override": "#text",
+                            "binding_type": "global"
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "black_element@anvil_common.image": {
+        "texture": "textures/ui/black_element",
+        "keep_ratio": false
+    },
+    "scope_view_image@anvil_common.image": {
+        "offset": [
+            0,
+            "10px"
+        ],
+        "texture": "textures/ui/scope_view",
+        "anchor_from": "center",
+        "anchor_to": "center",
+        "layer": 101,
+        "size": "$anim_size",
+        "controls": [
+            {
+                "right_bar@anvil_hud.black_element": {
+                    "anchor_from": "right_middle",
+                    "anchor_to": "right_middle",
+                    "size": [
+                        "40000%",
+                        "100%"
+                    ],
+                    "offset": [
+                        "100%x + 0.5px",
+                        0
+                    ]
+                }
+            },
+            {
+                "left_bar@anvil_hud.black_element": {
+                    "anchor_from": "left_middle",
+                    "anchor_to": "left_middle",
+                    "size": [
+                        "40000%",
+                        "100%"
+                    ],
+                    "offset": [
+                        "-100%x - 0.5px",
+                        0
+                    ]
+                }
+            },
+            {
+                "top_bar@anvil_hud.black_element": {
+                    "anchor_from": "top_middle",
+                    "anchor_to": "top_middle",
+                    "size": [
+                        "40000%",
+                        "40000%"
+                    ],
+                    "offset": [
+                        0,
+                        "-100%x - 0.5px"
+                    ]
+                }
+            },
+            {
+                "bottom_bar@anvil_hud.black_element": {
+                    "anchor_from": "bottom_middle",
+                    "anchor_to": "bottom_middle",
+                    "size": [
+                        "40000%",
+                        "40000%"
+                    ],
+                    "offset": [
+                        0,
+                        "100%x + 0.5px"
+                    ]
+                }
+            }
+        ]
+    },
+    "unsupported_players_factory": {
+        "type": "panel",
+        "factory": {
+            "name": "hud_title_text_factory",
+            "control_ids": {
+                "hud_title_text": "unsupported_players_element@anvil_hud.unsupported_players"
+            }
+        }
+    },
+    "unsupported_players@anvil_common.title_binding": {
+        "$binding_text": "$anvil.unsupported_players.bool",
+        "type": "panel",
+        "size": [
+            "100%",
+            "100%"
+        ],
+        "layer": 100,
+        "anchor_from": "center",
+        "anchor_to": "center",
+        "controls": [
+            {
+                "unsupported_players_background": {
+                    "type": "image",
+                    "texture": "textures/ui/black_element",
+                    "size": [
+                        "100%",
+                        "100%"
+                    ],
+                    "keep_ratio": false
+                }
+            },
+            {
+                "unsupported_players_image": {
+                    "type": "image",
+                    "texture": "textures/ui/unsupported_players",
+                    "anchor_from": "center",
+                    "anchor_to": "center",
+                    "size": "@anvil_animations.unsupported_players_zoom_in",
+                    "alpha": "@anvil_animations.unsupported_players_alpha_in"
+                }
+            },
+            {
+                "unsupported_players_tip": {
+                    "type": "label",
+                    "text_alignment": "center",
+                    "size": [
+                        "80%",
+                        "default"
+                    ],
+                    "offset": [
+                        0,
+                        "60px"
+                    ],
+                    "text": "#text",
+                    "shadow": true,
+                    "font_size": "large",
+                    "bindings": [
+                        {
+                            "binding_name": "#hud_subtitle_text_string",
+                            "binding_name_override": "#text"
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "surge_wave_title_factory": {
+        "type": "panel",
+        "factory": {
+            "name": "hud_title_text_factory",
+            "control_ids": {
+                "hud_title_text": "surge_wave_title_element@anvil_hud.surge_wave_title"
+            }
+        }
+    },
+    "surge_wave_title@anvil_common.title_binding": {
+        "$binding_text": "$anvil.surge_wave_title.bool",
+        "type": "panel",
+        "size": [
+            "100%",
+            "100%"
+        ],
+        "layer": 100,
+        "anchor_from": "center",
+        "anchor_to": "center",
+        "controls": [
+            {
+                "surge_wave_title_image": {
+                    "type": "image",
+                    "texture": "textures/ui/surge_wave_title",
+                    "anchor_from": "center",
+                    "anchor_to": "center",
+                    "size": "@anvil_animations.surge_wave_title_zoom_in",
+                    "alpha": "@anvil_animations.surge_wave_title_alpha_in"
+                }
+            },
+            {
+                "surge_wave_title_tip": {
+                    "type": "label",
+                    "text_alignment": "center",
+                    "size": [
+                        "80%",
+                        "default"
+                    ],
+                    "offset": [
+                        0,
+                        "60px"
+                    ],
+                    "text": "#text",
+                    "shadow": true,
+                    "font_size": "large",
+                    "bindings": [
+                        {
+                            "binding_name": "#hud_subtitle_text_string",
+                            "binding_name_override": "#text"
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "final_wave_title_factory": {
+        "type": "panel",
+        "factory": {
+            "name": "hud_title_text_factory",
+            "control_ids": {
+                "hud_title_text": "final_wave_title_element@anvil_hud.final_wave_title"
+            }
+        }
+    },
+    "final_wave_title@anvil_common.title_binding": {
+        "$binding_text": "$anvil.final_wave_title.bool",
+        "type": "panel",
+        "size": [
+            "100%",
+            "100%"
+        ],
+        "layer": 100,
+        "anchor_from": "center",
+        "anchor_to": "center",
+        "controls": [
+            {
+                "final_wave_title_image": {
+                    "type": "image",
+                    "texture": "textures/ui/final_wave_title",
+                    "anchor_from": "center",
+                    "anchor_to": "center",
+                    "size": "@anvil_animations.final_wave_title_zoom_in",
+                    "alpha": "@anvil_animations.final_wave_title_alpha_in"
+                }
+            },
+            {
+                "final_wave_title_tip": {
+                    "type": "label",
+                    "text_alignment": "center",
+                    "size": [
+                        "80%",
+                        "default"
+                    ],
+                    "offset": [
+                        0,
+                        "60px"
+                    ],
+                    "text": "#text",
+                    "shadow": true,
+                    "font_size": "large",
+                    "bindings": [
+                        {
+                            "binding_name": "#hud_subtitle_text_string",
+                            "binding_name_override": "#text"
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "ready_factory": {
+        "type": "panel",
+        "factory": {
+            "name": "hud_title_text_factory",
+            "control_ids": {
+                "hud_title_text": "ready_element@anvil_hud.ready"
+            }
+        }
+    },
+    "ready@anvil_common.title_binding": {
+        "$binding_text": "$anvil.ready.bool",
+        "type": "panel",
+        "size": [
+            "100%",
+            "100%"
+        ],
+        "layer": 100,
+        "anchor_from": "center",
+        "anchor_to": "center",
+        "controls": [
+            {
+                "ready_image": {
+                    "type": "image",
+                    "texture": "textures/ui/ready",
+                    "anchor_from": "center",
+                    "anchor_to": "center",
+                    "size": "@anvil_animations.ready_zoom_in",
+                    "alpha": "@anvil_animations.ready_alpha_in"
+                }
+            },
+            {
+                "ready_tip": {
+                    "type": "label",
+                    "text_alignment": "center",
+                    "size": [
+                        "80%",
+                        "default"
+                    ],
+                    "offset": [
+                        0,
+                        "60px"
+                    ],
+                    "text": "#text",
+                    "shadow": true,
+                    "font_size": "large",
+                    "bindings": [
+                        {
+                            "binding_name": "#hud_subtitle_text_string",
+                            "binding_name_override": "#text"
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "set_factory": {
+        "type": "panel",
+        "factory": {
+            "name": "hud_title_text_factory",
+            "control_ids": {
+                "hud_title_text": "set_element@anvil_hud.set"
+            }
+        }
+    },
+    "set@anvil_common.title_binding": {
+        "$binding_text": "$anvil.set.bool",
+        "type": "panel",
+        "size": [
+            "100%",
+            "100%"
+        ],
+        "layer": 100,
+        "anchor_from": "center",
+        "anchor_to": "center",
+        "controls": [
+            {
+                "set_image": {
+                    "type": "image",
+                    "texture": "textures/ui/set",
+                    "anchor_from": "center",
+                    "anchor_to": "center",
+                    "size": "@anvil_animations.set_zoom_in",
+                    "alpha": "@anvil_animations.set_alpha_in"
+                }
+            },
+            {
+                "set_tip": {
+                    "type": "label",
+                    "text_alignment": "center",
+                    "size": [
+                        "80%",
+                        "default"
+                    ],
+                    "offset": [
+                        0,
+                        "60px"
+                    ],
+                    "text": "#text",
+                    "shadow": true,
+                    "font_size": "large",
+                    "bindings": [
+                        {
+                            "binding_name": "#hud_subtitle_text_string",
+                            "binding_name_override": "#text"
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "candy_factory": {
+        "type": "panel",
+        "factory": {
+            "name": "hud_title_text_factory",
+            "control_ids": {
+                "hud_title_text": "candy_element@anvil_hud.candy"
+            }
+        }
+    },
+    "candy@anvil_common.title_binding": {
+        "$binding_text": "$anvil.candy.bool",
+        "type": "panel",
+        "size": [
+            "100%",
+            "100%"
+        ],
+        "layer": 100,
+        "anchor_from": "center",
+        "anchor_to": "center",
+        "controls": [
+            {
+                "candy_image": {
+                    "type": "image",
+                    "texture": "textures/ui/candy",
+                    "anchor_from": "center",
+                    "anchor_to": "center",
+                    "size": "@anvil_animations.candy_zoom_in",
+                    "alpha": "@anvil_animations.candy_alpha_in"
+                }
+            },
+            {
+                "candy_tip": {
+                    "type": "label",
+                    "text_alignment": "center",
+                    "size": [
+                        "80%",
+                        "default"
+                    ],
+                    "offset": [
+                        0,
+                        "60px"
+                    ],
+                    "text": "#text",
+                    "shadow": true,
+                    "font_size": "large",
+                    "bindings": [
+                        {
+                            "binding_name": "#hud_subtitle_text_string",
+                            "binding_name_override": "#text"
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "starktma_logo_factory": {
+        "type": "panel",
+        "factory": {
+            "name": "hud_title_text_factory",
+            "control_ids": {
+                "hud_title_text": "starktma_logo_element@anvil_hud.starktma_logo"
+            }
+        }
+    },
+    "starktma_logo@anvil_common.title_binding": {
+        "$binding_text": "$anvil.starktma_logo.bool",
+        "type": "image",
+        "texture": "textures/ui/background_000",
+        "size": [
+            "100%",
+            "100%"
+        ],
+        "keep_ratio": false,
+        "layer": 100,
+        "controls": [
+            {
+                "img@anvil_common.image": {
+                    "texture": "textures/ui/starktma_logo",
+                    "size": [
+                        "40%",
+                        "40%x"
+                    ],
+                    "offset": [
+                        0,
+                        "-50%y"
+                    ],
+                    "anchor_from": "center",
+                    "anchor_to": "center"
+                }
+            },
+            {
+                "text@anvil_common.label": {
+                    "text": "#text",
+                    "offset": [
+                        0,
+                        "200%y"
+                    ],
+                    "font_size": "large",
+                    "anchor_from": "center",
+                    "anchor_to": "center",
+                    "bindings": [
+                        {
+                            "binding_name": "#hud_subtitle_text_string",
+                            "binding_name_override": "#text"
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "freeze_out_factory": {
+        "type": "panel",
+        "factory": {
+            "name": "hud_title_text_factory",
+            "control_ids": {
+                "hud_title_text": "freeze_out_element@anvil_hud.freeze_out"
+            }
+        }
+    },
+    "freeze_out@anvil_common.title_binding": {
+        "$binding_text": "$anvil.freeze_out.bool",
+        "type": "panel",
+        "layer": 100,
+        "controls": [
+            {
+                "background@anvil_common.image": {
+                    "texture": "textures/ui/background_ffffffff",
+                    "size": [
+                        "100%",
+                        "100%"
+                    ],
+                    "keep_ratio": false,
+                    "alpha": "@anvil_animations.freeze_wait"
+                }
+            }
+        ]
+    },
+    "credits_factory": {
+        "type": "panel",
+        "factory": {
+            "name": "hud_title_text_factory",
+            "control_ids": {
+                "hud_title_text": "credits_element@anvil_hud.credits"
+            }
+        }
+    },
+    "credits@anvil_common.title_binding": {
+        "$binding_text": "$anvil.credits.bool",
+        "type": "panel",
+        "layer": 100,
+        "controls": [
+            {
+                "credits_background@anvil_common.image": {
+                    "texture": "textures/ui/black_element",
+                    "size": [
+                        "100%",
+                        "100%"
+                    ],
+                    "keep_ratio": false,
+                    "layer": -1
+                }
+            },
+            {
+                "credits_text@anvil_common.stack_panel": {
+                    "offset": "@anvil_animations.credits_scroll",
+                    "controls": [
+                        {
+                            "panel_0@anvil_common.panel": {
+                                "size": [
+                                    "100%",
+                                    "100%c"
+                                ],
+                                "controls": [
+                                    {
+                                        "image_0@anvil_common.image": {
+                                            "texture": "textures/ui/starktma_logo",
+                                            "size": [
+                                                50,
+                                                50
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "space_1@anvil_common.panel": {
+                                "size": [
+                                    0,
+                                    20
+                                ]
+                            }
+                        },
+                        {
+                            "panel_2@anvil_common.panel": {
+                                "size": [
+                                    "100%",
+                                    "100%c"
+                                ],
+                                "controls": [
+                                    {
+                                        "title_2@anvil_common.label": {
+                                            "text": "Sugar Rush",
+                                            "font_size": "large"
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "space_3@anvil_common.panel": {
+                                "size": [
+                                    0,
+                                    20
+                                ]
+                            }
+                        },
+                        {
+                            "panel_4@anvil_common.panel": {
+                                "size": [
+                                    "100%",
+                                    "100%c"
+                                ],
+                                "controls": [
+                                    {
+                                        "title_4@anvil_common.label": {
+                                            "text": "StarkTMA",
+                                            "color": [
+                                                1,
+                                                0,
+                                                0
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "space_5@anvil_common.panel": {
+                                "size": [
+                                    0,
+                                    20
+                                ]
+                            }
+                        },
+                        {
+                            "credits_section_6@anvil_common.stack_panel": {
+                                "orientation": "horizontal",
+                                "size": [
+                                    "100%",
+                                    "100%c"
+                                ],
+                                "controls": [
+                                    {
+                                        "panel_title_6@anvil_common.panel": {
+                                            "size": [
+                                                "45%",
+                                                "100%c"
+                                            ],
+                                            "controls": [
+                                                {
+                                                    "title_6@anvil_common.label": {
+                                                        "text": "Directed by:",
+                                                        "size": [
+                                                            "100%",
+                                                            "default"
+                                                        ],
+                                                        "text_alignment": "right"
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "section_sep_6@anvil_common.panel": {
+                                            "size": [
+                                                "10%",
+                                                0
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "names_6@anvil_common.stack_panel": {
+                                            "size": [
+                                                "45%",
+                                                "100%c"
+                                            ],
+                                            "controls": [
+                                                {
+                                                    "name_0_6@anvil_common.label": {
+                                                        "text": "YASSER BENFOUGHAL",
+                                                        "text_alignment": "left"
+                                                    }
+                                                },
+                                                {
+                                                    "name_1_6@anvil_common.label": {
+                                                        "text": "ALAA BENFOUGHAL",
+                                                        "text_alignment": "left"
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "space_7@anvil_common.panel": {
+                                "size": [
+                                    0,
+                                    20
+                                ]
+                            }
+                        },
+                        {
+                            "panel_8@anvil_common.panel": {
+                                "size": [
+                                    "100%",
+                                    "100%c"
+                                ],
+                                "controls": [
+                                    {
+                                        "title_8@anvil_common.label": {
+                                            "text": "GAMEPLAY",
+                                            "font_size": "large"
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "space_9@anvil_common.panel": {
+                                "size": [
+                                    0,
+                                    20
+                                ]
+                            }
+                        },
+                        {
+                            "credits_section_10@anvil_common.stack_panel": {
+                                "orientation": "horizontal",
+                                "size": [
+                                    "100%",
+                                    "100%c"
+                                ],
+                                "controls": [
+                                    {
+                                        "panel_title_10@anvil_common.panel": {
+                                            "size": [
+                                                "45%",
+                                                "100%c"
+                                            ],
+                                            "controls": [
+                                                {
+                                                    "title_10@anvil_common.label": {
+                                                        "text": "Lead Developer:",
+                                                        "size": [
+                                                            "100%",
+                                                            "default"
+                                                        ],
+                                                        "text_alignment": "right"
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "section_sep_10@anvil_common.panel": {
+                                            "size": [
+                                                "10%",
+                                                0
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "names_10@anvil_common.stack_panel": {
+                                            "size": [
+                                                "45%",
+                                                "100%c"
+                                            ],
+                                            "controls": [
+                                                {
+                                                    "name_0_10@anvil_common.label": {
+                                                        "text": "YASSER BENFOUGHAL",
+                                                        "text_alignment": "left"
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "space_11@anvil_common.panel": {
+                                "size": [
+                                    0,
+                                    20
+                                ]
+                            }
+                        },
+                        {
+                            "panel_12@anvil_common.panel": {
+                                "size": [
+                                    "100%",
+                                    "100%c"
+                                ],
+                                "controls": [
+                                    {
+                                        "title_12@anvil_common.label": {
+                                            "text": "ART",
+                                            "font_size": "large"
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "space_13@anvil_common.panel": {
+                                "size": [
+                                    0,
+                                    20
+                                ]
+                            }
+                        },
+                        {
+                            "credits_section_14@anvil_common.stack_panel": {
+                                "orientation": "horizontal",
+                                "size": [
+                                    "100%",
+                                    "100%c"
+                                ],
+                                "controls": [
+                                    {
+                                        "panel_title_14@anvil_common.panel": {
+                                            "size": [
+                                                "45%",
+                                                "100%c"
+                                            ],
+                                            "controls": [
+                                                {
+                                                    "title_14@anvil_common.label": {
+                                                        "text": "Lead Artist:",
+                                                        "size": [
+                                                            "100%",
+                                                            "default"
+                                                        ],
+                                                        "text_alignment": "right"
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "section_sep_14@anvil_common.panel": {
+                                            "size": [
+                                                "10%",
+                                                0
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "names_14@anvil_common.stack_panel": {
+                                            "size": [
+                                                "45%",
+                                                "100%c"
+                                            ],
+                                            "controls": [
+                                                {
+                                                    "name_0_14@anvil_common.label": {
+                                                        "text": "YASSER BENFOUGHAL",
+                                                        "text_alignment": "left"
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "credits_section_15@anvil_common.stack_panel": {
+                                "orientation": "horizontal",
+                                "size": [
+                                    "100%",
+                                    "100%c"
+                                ],
+                                "controls": [
+                                    {
+                                        "panel_title_15@anvil_common.panel": {
+                                            "size": [
+                                                "45%",
+                                                "100%c"
+                                            ],
+                                            "controls": [
+                                                {
+                                                    "title_15@anvil_common.label": {
+                                                        "text": "Artists:",
+                                                        "size": [
+                                                            "100%",
+                                                            "default"
+                                                        ],
+                                                        "text_alignment": "right"
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "section_sep_15@anvil_common.panel": {
+                                            "size": [
+                                                "10%",
+                                                0
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "names_15@anvil_common.stack_panel": {
+                                            "size": [
+                                                "45%",
+                                                "100%c"
+                                            ],
+                                            "controls": [
+                                                {
+                                                    "name_0_15@anvil_common.label": {
+                                                        "text": "SAM MCLAUGHLIN",
+                                                        "text_alignment": "left"
+                                                    }
+                                                },
+                                                {
+                                                    "name_1_15@anvil_common.label": {
+                                                        "text": "NOUR HAMZAOUI",
+                                                        "text_alignment": "left"
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "space_16@anvil_common.panel": {
+                                "size": [
+                                    0,
+                                    20
+                                ]
+                            }
+                        },
+                        {
+                            "panel_17@anvil_common.panel": {
+                                "size": [
+                                    "100%",
+                                    "100%c"
+                                ],
+                                "controls": [
+                                    {
+                                        "title_17@anvil_common.label": {
+                                            "text": "LEVEL DESIGN",
+                                            "font_size": "large"
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "space_18@anvil_common.panel": {
+                                "size": [
+                                    0,
+                                    20
+                                ]
+                            }
+                        },
+                        {
+                            "credits_section_19@anvil_common.stack_panel": {
+                                "orientation": "horizontal",
+                                "size": [
+                                    "100%",
+                                    "100%c"
+                                ],
+                                "controls": [
+                                    {
+                                        "panel_title_19@anvil_common.panel": {
+                                            "size": [
+                                                "45%",
+                                                "100%c"
+                                            ],
+                                            "controls": [
+                                                {
+                                                    "title_19@anvil_common.label": {
+                                                        "text": "Lead Level Designer:",
+                                                        "size": [
+                                                            "100%",
+                                                            "default"
+                                                        ],
+                                                        "text_alignment": "right"
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "section_sep_19@anvil_common.panel": {
+                                            "size": [
+                                                "10%",
+                                                0
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "names_19@anvil_common.stack_panel": {
+                                            "size": [
+                                                "45%",
+                                                "100%c"
+                                            ],
+                                            "controls": [
+                                                {
+                                                    "name_0_19@anvil_common.label": {
+                                                        "text": "YASSER BENFOUGHAL",
+                                                        "text_alignment": "left"
+                                                    }
+                                                },
+                                                {
+                                                    "name_1_19@anvil_common.label": {
+                                                        "text": "ALAA BENFOUGHAL",
+                                                        "text_alignment": "left"
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "space_20@anvil_common.panel": {
+                                "size": [
+                                    0,
+                                    20
+                                ]
+                            }
+                        },
+                        {
+                            "panel_21@anvil_common.panel": {
+                                "size": [
+                                    "100%",
+                                    "100%c"
+                                ],
+                                "controls": [
+                                    {
+                                        "title_21@anvil_common.label": {
+                                            "text": "SOUNDS",
+                                            "font_size": "large"
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "space_22@anvil_common.panel": {
+                                "size": [
+                                    0,
+                                    20
+                                ]
+                            }
+                        },
+                        {
+                            "credits_section_23@anvil_common.stack_panel": {
+                                "orientation": "horizontal",
+                                "size": [
+                                    "100%",
+                                    "100%c"
+                                ],
+                                "controls": [
+                                    {
+                                        "panel_title_23@anvil_common.panel": {
+                                            "size": [
+                                                "45%",
+                                                "100%c"
+                                            ],
+                                            "controls": [
+                                                {
+                                                    "title_23@anvil_common.label": {
+                                                        "text": "Sound Effects:",
+                                                        "size": [
+                                                            "100%",
+                                                            "default"
+                                                        ],
+                                                        "text_alignment": "right"
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "section_sep_23@anvil_common.panel": {
+                                            "size": [
+                                                "10%",
+                                                0
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "names_23@anvil_common.stack_panel": {
+                                            "size": [
+                                                "45%",
+                                                "100%c"
+                                            ],
+                                            "controls": [
+                                                {
+                                                    "name_0_23@anvil_common.label": {
+                                                        "text": "zapsplat.com",
+                                                        "text_alignment": "left"
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "credits_section_24@anvil_common.stack_panel": {
+                                "orientation": "horizontal",
+                                "size": [
+                                    "100%",
+                                    "100%c"
+                                ],
+                                "controls": [
+                                    {
+                                        "panel_title_24@anvil_common.panel": {
+                                            "size": [
+                                                "45%",
+                                                "100%c"
+                                            ],
+                                            "controls": [
+                                                {
+                                                    "title_24@anvil_common.label": {
+                                                        "text": "MUSIC:",
+                                                        "size": [
+                                                            "100%",
+                                                            "default"
+                                                        ],
+                                                        "text_alignment": "right"
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "section_sep_24@anvil_common.panel": {
+                                            "size": [
+                                                "10%",
+                                                0
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "names_24@anvil_common.stack_panel": {
+                                            "size": [
+                                                "45%",
+                                                "100%c"
+                                            ],
+                                            "controls": [
+                                                {
+                                                    "name_0_24@anvil_common.label": {
+                                                        "text": "VAIAMAN",
+                                                        "text_alignment": "left"
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "space_25@anvil_common.panel": {
+                                "size": [
+                                    0,
+                                    20
+                                ]
+                            }
+                        },
+                        {
+                            "panel_26@anvil_common.panel": {
+                                "size": [
+                                    "100%",
+                                    "100%c"
+                                ],
+                                "controls": [
+                                    {
+                                        "title_26@anvil_common.label": {
+                                            "text": "TOOLS",
+                                            "font_size": "large"
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "space_27@anvil_common.panel": {
+                                "size": [
+                                    0,
+                                    20
+                                ]
+                            }
+                        },
+                        {
+                            "panel_28@anvil_common.panel": {
+                                "size": [
+                                    "100%",
+                                    "100%c"
+                                ],
+                                "controls": [
+                                    {
+                                        "title_28@anvil_common.label": {
+                                            "text": "Anvil"
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "panel_29@anvil_common.panel": {
+                                "size": [
+                                    "100%",
+                                    "100%c"
+                                ],
+                                "controls": [
+                                    {
+                                        "title_29@anvil_common.label": {
+                                            "text": "LDtk"
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "panel_30@anvil_common.panel": {
+                                "size": [
+                                    "100%",
+                                    "100%c"
+                                ],
+                                "controls": [
+                                    {
+                                        "title_30@anvil_common.label": {
+                                            "text": "Blockbench"
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}

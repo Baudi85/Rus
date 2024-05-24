@@ -1,0 +1,382 @@
+//Filename: hotbar.json
+//Generated with Anvil@StarkTMA 0.5.4
+//25-10-2023 01:06:43 +0100
+//
+
+{
+    "namespace": "anvil_hotbar",
+    "empty_slot@anvil_common.image": {
+        "texture": "textures/ui/panel_bg"
+    },
+    "empty_slot_element": {
+        "type": "panel",
+        "controls": [
+            {
+                "bottom@empty_slot": {}
+            },
+            {
+                "$slot_element@$slot_element": {}
+            }
+        ]
+    },
+    "player_renderer@empty_slot_element": {
+        "$slot_element": "anvil_common.player_renderer"
+    },
+    "resources_element@anvil_common.image": {
+        "size": [
+            "80%",
+            "80%"
+        ],
+        "anchor_from": "center",
+        "anchor_to": "center",
+        "texture": "textures/ui/resources_image",
+        "controls": [
+            {
+                "resources_count@anvil_common.retrieve_score": {
+                    "offset": [
+                        0,
+                        "37%"
+                    ],
+                    "$index": 0,
+                    "$color": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "visible": true
+                }
+            }
+        ]
+    },
+    "resources@empty_slot_element": {
+        "$slot_element": "resources_element"
+    },
+    "inventory_button@common.button": {
+        "button_mappings": [
+            {
+                "from_button_id": "button.menu_select",
+                "to_button_id": "button.hotbar_inventory_button",
+                "mapping_type": "pressed"
+            }
+        ],
+        "bindings": [
+            {
+                "binding_name": "#inventory_touch_button",
+                "binding_name_override": "#visible"
+            }
+        ],
+        "controls": [
+            {
+                "default@empty_slot": {}
+            },
+            {
+                "hover@empty_slot": {}
+            },
+            {
+                "pressed@empty_slot": {}
+            },
+            {
+                "dots@anvil_common.image": {
+                    "texture": "textures/ui/inventory_button"
+                }
+            }
+        ]
+    },
+    "hotbar_slot_button": {
+        "type": "button",
+        "$hotbar_select": "button.hotbar_select",
+        "focus_enabled": true,
+        "button_mappings": [
+            {
+                "from_button_id": "button.menu_select",
+                "to_button_id": "$hotbar_select",
+                "mapping_type": "pressed",
+                "button_up_right_of_first_refusal": true
+            },
+            {
+                "from_button_id": "button.menu_ok",
+                "to_button_id": "button.hotbar_ok",
+                "mapping_type": "focused"
+            },
+            {
+                "to_button_id": "button.slot_pressed",
+                "mapping_type": "pressed"
+            }
+        ],
+        "bindings": [
+            {
+                "binding_collection_name": "$hotbar_collection_name",
+                "binding_type": "collection_details"
+            }
+        ]
+    },
+    "cooldown_renderer@hud.cooldown_renderer": {
+        "offset": [
+            1,
+            -3
+        ]
+    },
+    "hotbar_slot_image@anvil_common.image": {
+        "texture": "textures/ui/hotbar_slot_image",
+        "size": [
+            "70%",
+            "90%"
+        ]
+    },
+    "hotbar_slot_selected_image@anvil_common.image": {
+        "texture": "textures/ui/hotbar_selected_slot",
+        "size": [
+            "70% + 4px",
+            "100% + 2px"
+        ],
+        "bindings": [
+            {
+                "binding_name": "#slot_selected",
+                "binding_name_override": "#visible",
+                "binding_type": "collection",
+                "binding_collection_name": "$hotbar_collection_name"
+            }
+        ]
+    },
+    "hotbar_item_template": {
+        "type": "panel",
+        "size": [
+            "11.11%",
+            "100%"
+        ],
+        "controls": [
+            {
+                "hotbar_slot_selected_image@hotbar_slot_selected_image": {}
+            },
+            {
+                "hotbar_slot_image@hotbar_slot_image": {}
+            },
+            {
+                "hotbar_item@hud.hotbar_hud_item_icon": {
+                    "size": [
+                        "90%",
+                        "100%x"
+                    ],
+                    "layer": 0
+                }
+            },
+            {
+                "cooldown0@cooldown_renderer": {}
+            },
+            {
+                "cooldown1@cooldown_renderer": {}
+            },
+            {
+                "cooldown2@cooldown_renderer": {}
+            },
+            {
+                "cooldown3@cooldown_renderer": {}
+            },
+            {
+                "cooldown4@cooldown_renderer": {}
+            },
+            {
+                "cooldown5@cooldown_renderer": {}
+            },
+            {
+                "hotbar_slot_button@hotbar_slot_button": {
+                    "size": [
+                        "90%",
+                        "90%"
+                    ],
+                    "anchor_from": "center",
+                    "anchor_to": "center",
+                    "layer": 10
+                }
+            }
+        ]
+    },
+    "hotbar_items": {
+        "type": "grid",
+        "size": [
+            "100% - 6px",
+            "100% - 6px"
+        ],
+        "$hotbar_collection_name": "hotbar_items",
+        "$item_collection_name": "hotbar_items",
+        "collection_name": "$hotbar_collection_name",
+        "grid_dimensions": [
+            9,
+            1
+        ],
+        "controls": [
+            {
+                "0@hotbar_item_template": {
+                    "grid_position": [
+                        0,
+                        0
+                    ]
+                }
+            },
+            {
+                "1@hotbar_item_template": {
+                    "grid_position": [
+                        1,
+                        0
+                    ]
+                }
+            },
+            {
+                "2@hotbar_item_template": {
+                    "grid_position": [
+                        2,
+                        0
+                    ]
+                }
+            },
+            {
+                "3@hotbar_item_template": {
+                    "grid_position": [
+                        3,
+                        0
+                    ]
+                }
+            },
+            {
+                "4@hotbar_item_template": {
+                    "grid_position": [
+                        4,
+                        0
+                    ]
+                }
+            },
+            {
+                "5@hotbar_item_template": {
+                    "grid_position": [
+                        5,
+                        0
+                    ]
+                }
+            },
+            {
+                "6@hotbar_item_template": {
+                    "grid_position": [
+                        6,
+                        0
+                    ]
+                }
+            },
+            {
+                "7@hotbar_item_template": {
+                    "grid_position": [
+                        7,
+                        0
+                    ]
+                }
+            },
+            {
+                "8@hotbar_item_template": {
+                    "grid_position": [
+                        8,
+                        0
+                    ]
+                }
+            }
+        ]
+    },
+    "hotbar@empty_slot_element": {
+        "$slot_element": "hotbar_items"
+    },
+    "hotbar_background@anvil_common.image": {
+        "texture": "textures/ui/hotbar_bg",
+        "layer": 99,
+        "controls": [
+            {
+                "hotbar_stack_panel": {
+                    "type": "stack_panel",
+                    "orientation": "horizontal",
+                    "size": [
+                        "100% - 6px",
+                        "100%cm"
+                    ],
+                    "$stack_count_required": true,
+                    "$durability_bar_required": false,
+                    "$storage_bar_required": false,
+                    "controls": [
+                        {
+                            "player@player_renderer": {
+                                "size": [
+                                    "10%",
+                                    "100%x"
+                                ]
+                            }
+                        },
+                        {
+                            "resource@resources": {
+                                "size": [
+                                    "10%",
+                                    "100%x"
+                                ]
+                            }
+                        },
+                        {
+                            "hotbar@hotbar": {
+                                "size": [
+                                    "80%",
+                                    "100%sm"
+                                ]
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "inventory_button@inventory_button": {
+                    "size": [
+                        "10%",
+                        "100%x"
+                    ],
+                    "offset": [
+                        "50% + 50%x",
+                        0
+                    ]
+                }
+            }
+        ]
+    },
+    "hotbar_panel@anvil_common.panel": {
+        "controls": [
+            {
+                "hotbar_main@anvil_hotbar.hotbar_background": {
+                    "size": [
+                        "63%",
+                        "100%cm + 6px"
+                    ],
+                    "offset": [
+                        "4px",
+                        "-4px"
+                    ],
+                    "anchor_from": "bottom_left",
+                    "anchor_to": "bottom_left",
+                    "ignored": "$touch"
+                }
+            },
+            {
+                "hotbar_touch@anvil_hotbar.hotbar_background": {
+                    "size": [
+                        "40%",
+                        "100%cm + 6px"
+                    ],
+                    "offset": [
+                        "-10%x",
+                        0
+                    ],
+                    "anchor_from": "bottom_middle",
+                    "anchor_to": "bottom_middle",
+                    "bindings": [
+                        {
+                            "binding_name": "#using_touch",
+                            "binding_name_override": "#visible"
+                        }
+                    ],
+                    "ignored": "(not $touch)"
+                }
+            }
+        ]
+    }
+}

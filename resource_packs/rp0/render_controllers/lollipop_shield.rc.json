@@ -1,0 +1,30 @@
+//Filename: lollipop_shield.rc.json
+//Generated with Anvil@StarkTMA 0.5.4
+//25-10-2023 01:06:43 +0100
+//
+
+{
+    "format_version": "1.10.0",
+    "render_controllers": {
+        "controller.render.starktma.lollipop_shield.lollipop_shield": {
+            "arrays": {
+                "textures": {
+                    "Array.textures": [
+                        "Texture.lollipop_shield_2",
+                        "Texture.lollipop_shield_1",
+                        "Texture.lollipop_shield_0"
+                    ]
+                }
+            },
+            "materials": [
+                {
+                    "*": "Material.default"
+                }
+            ],
+            "geometry": "Geometry.default",
+            "textures": [
+                "Array.textures[v.health_frame]"
+            ]
+        }
+    }
+}

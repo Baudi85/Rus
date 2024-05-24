@@ -1,0 +1,40 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.starktma.lollipop_shield",
+				"texture_width": 128,
+				"texture_height": 128,
+				"visible_bounds_width": 3,
+				"visible_bounds_height": 3.5,
+				"visible_bounds_offset": [0, 1.25, 0]
+			},
+			"bones": [
+				{
+					"name": "root",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "body",
+					"parent": "root",
+					"pivot": [0, 8.5, 0]
+				},
+				{
+					"name": "rightArm",
+					"parent": "body",
+					"pivot": [3, 11, -1]
+				},
+				{
+					"name": "shield",
+					"parent": "rightArm",
+					"pivot": [6, 5.95696, -2.26926],
+					"rotation": [-19.21401, -4.44819, -33.82238],
+					"cubes": [
+						{"origin": [-1, 4.95696, -9.26926], "size": [14, 2, 14], "uv": [0, 0]}
+					]
+				}
+			]
+		}
+	]
+}

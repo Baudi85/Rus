@@ -1,0 +1,17 @@
+//Filename: progress_bar_background.json
+//Generated with Anvil@StarkTMA 0.5.4
+//25-10-2023 01:06:39 +0100
+//
+
+{
+    "nineslice_size": [
+        10,
+        10,
+        10,
+        10
+    ],
+    "base_size": [
+        22,
+        22
+    ]
+}

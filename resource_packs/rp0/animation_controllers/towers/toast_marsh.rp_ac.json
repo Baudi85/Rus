@@ -1,0 +1,62 @@
+//Filename: toast_marsh.rp_ac.json
+//Generated with Anvil@StarkTMA 0.5.4
+//25-10-2023 01:06:41 +0100
+//
+
+{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.starktma.toast_marsh.root": {
+            "initial_state": "default",
+            "states": {
+                "default": {
+                    "transitions": [
+                        {
+                            "shoot": "q.is_charged"
+                        }
+                    ]
+                },
+                "shoot": {
+                    "animations": [
+                        "shoot"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "q.all_animations_finished"
+                        }
+                    ],
+                    "sound_effects": [
+                        {
+                            "effect": "shoot"
+                        }
+                    ]
+                }
+            }
+        },
+        "controller.animation.starktma.toast_marsh.is_disabled_ctrl": {
+            "initial_state": "default",
+            "states": {
+                "default": {
+                    "transitions": [
+                        {
+                            "is_disabled": "q.property('starktma:is_disabled')"
+                        }
+                    ]
+                },
+                "is_disabled": {
+                    "transitions": [
+                        {
+                            "default": "1"
+                        }
+                    ],
+                    "particle_effects": [
+                        {
+                            "effect": "disabled_particle",
+                            "locator": "root"
+                        }
+                    ]
+                }
+            }
+        }
+    }
+}

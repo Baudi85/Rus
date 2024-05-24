@@ -1,0 +1,161 @@
+//Filename: item_texture.json
+//Generated with Anvil@StarkTMA 0.5.4
+//25-10-2023 01:06:44 +0100
+//
+
+{
+    "resource_pack_name": "sugar_rush",
+    "texture_name": "atlas.items",
+    "texture_data": {
+        "choc_shoot_enabled": {
+            "textures": [
+                "textures/items/choc_shoot_enabled"
+            ]
+        },
+        "choc_shoot_disabled": {
+            "textures": [
+                "textures/items/choc_shoot_disabled"
+            ]
+        },
+        "gummy_bear_enabled": {
+            "textures": [
+                "textures/items/gummy_bear_enabled"
+            ]
+        },
+        "gummy_bear_disabled": {
+            "textures": [
+                "textures/items/gummy_bear_disabled"
+            ]
+        },
+        "popcorn_bomb_enabled": {
+            "textures": [
+                "textures/items/popcorn_bomb_enabled"
+            ]
+        },
+        "popcorn_bomb_disabled": {
+            "textures": [
+                "textures/items/popcorn_bomb_disabled"
+            ]
+        },
+        "j_bean_shoot_enabled": {
+            "textures": [
+                "textures/items/j_bean_shoot_enabled"
+            ]
+        },
+        "j_bean_shoot_disabled": {
+            "textures": [
+                "textures/items/j_bean_shoot_disabled"
+            ]
+        },
+        "slushie_shoot_enabled": {
+            "textures": [
+                "textures/items/slushie_shoot_enabled"
+            ]
+        },
+        "slushie_shoot_disabled": {
+            "textures": [
+                "textures/items/slushie_shoot_disabled"
+            ]
+        },
+        "cotton_candy_enabled": {
+            "textures": [
+                "textures/items/cotton_candy_enabled"
+            ]
+        },
+        "cotton_candy_disabled": {
+            "textures": [
+                "textures/items/cotton_candy_disabled"
+            ]
+        },
+        "molten_chocolate_enabled": {
+            "textures": [
+                "textures/items/molten_chocolate_enabled"
+            ]
+        },
+        "molten_chocolate_disabled": {
+            "textures": [
+                "textures/items/molten_chocolate_disabled"
+            ]
+        },
+        "gingerbread_enabled": {
+            "textures": [
+                "textures/items/gingerbread_enabled"
+            ]
+        },
+        "gingerbread_disabled": {
+            "textures": [
+                "textures/items/gingerbread_disabled"
+            ]
+        },
+        "toast_marsh_enabled": {
+            "textures": [
+                "textures/items/toast_marsh_enabled"
+            ]
+        },
+        "toast_marsh_disabled": {
+            "textures": [
+                "textures/items/toast_marsh_disabled"
+            ]
+        },
+        "mint_shock_enabled": {
+            "textures": [
+                "textures/items/mint_shock_enabled"
+            ]
+        },
+        "mint_shock_disabled": {
+            "textures": [
+                "textures/items/mint_shock_disabled"
+            ]
+        },
+        "candy_cane_enabled": {
+            "textures": [
+                "textures/items/candy_cane_enabled"
+            ]
+        },
+        "candy_cane_disabled": {
+            "textures": [
+                "textures/items/candy_cane_disabled"
+            ]
+        },
+        "popper_candy_enabled": {
+            "textures": [
+                "textures/items/popper_candy_enabled"
+            ]
+        },
+        "popper_candy_disabled": {
+            "textures": [
+                "textures/items/popper_candy_disabled"
+            ]
+        },
+        "gumball_blast_enabled": {
+            "textures": [
+                "textures/items/gumball_blast_enabled"
+            ]
+        },
+        "gumball_blast_disabled": {
+            "textures": [
+                "textures/items/gumball_blast_disabled"
+            ]
+        },
+        "bubblegum_shoot_enabled": {
+            "textures": [
+                "textures/items/bubblegum_shoot_enabled"
+            ]
+        },
+        "bubblegum_shoot_disabled": {
+            "textures": [
+                "textures/items/bubblegum_shoot_disabled"
+            ]
+        },
+        "ice_cream_bomb_enabled": {
+            "textures": [
+                "textures/items/ice_cream_bomb_enabled"
+            ]
+        },
+        "ice_cream_bomb_disabled": {
+            "textures": [
+                "textures/items/ice_cream_bomb_disabled"
+            ]
+        }
+    }
+}

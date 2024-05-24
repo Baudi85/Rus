@@ -1,0 +1,394 @@
+//Filename: progress_bar.json
+//Generated with Anvil@StarkTMA 0.5.4
+//25-10-2023 01:06:43 +0100
+//
+
+{
+    "namespace": "anvil_progress_bar",
+    "progress_bar_label_background@anvil_common.image_label": {
+        "texture": "textures/ui/progress_bar_background",
+        "$localize": true,
+        "size": [
+            "100%c + 8px",
+            "100%c + 4px"
+        ]
+    },
+    "progress_bar_label_binding_background@anvil_common.image_label_binding": {
+        "texture": "textures/ui/progress_bar_background",
+        "$localize": true,
+        "size": [
+            "100%c + 8px",
+            "100%c + 4px"
+        ]
+    },
+    "icon_label@progress_bar_label_background": {
+        "$text": "",
+        "controls": [
+            {
+                "icon_label_stack@anvil_common.stack_panel": {
+                    "orientation": "horizontal",
+                    "size": [
+                        "100%c",
+                        "100%cm"
+                    ],
+                    "controls": [
+                        {
+                            "ctrl@anvil_common.image": {
+                                "texture": "$texture",
+                                "size": [
+                                    "100%y",
+                                    "100%sm"
+                                ],
+                                "keep_ratio": true
+                            }
+                        },
+                        {
+                            "padding": {
+                                "type": "panel",
+                                "size": [
+                                    5,
+                                    1
+                                ]
+                            }
+                        },
+                        {
+                            "text@anvil_common.label": {
+                                "text": "#text",
+                                "layer": 1,
+                                "bindings": [
+                                    {
+                                        "binding_type": "view",
+                                        "source_control_name": "$control_name",
+                                        "source_property_name": "#text",
+                                        "target_property_name": "#text"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "bar_indicator@anvil_common.image_label_binding": {
+        "texture": "textures/ui/bar_indicator",
+        "$control_name": "percentage",
+        "keep_ratio": false,
+        "clip_direction": "right",
+        "$clip_offset": 0.01,
+        "bindings": [
+            {
+                "binding_type": "view",
+                "source_control_name": "percentage",
+                "source_property_name": "#score",
+                "target_property_name": "#score"
+            },
+            {
+                "binding_type": "view",
+                "source_property_name": "(1 - (#score * $clip_offset))",
+                "target_property_name": "#clip_ratio"
+            }
+        ]
+    },
+    "wave_step@anvil_common.image": {
+        "texture": "textures/ui/wave_step",
+        "size": [
+            "fill",
+            "default"
+        ]
+    },
+    "wave_step_panel@anvil_common.stack_panel": {
+        "orientation": "horizontal",
+        "size": [
+            "100%",
+            "100%"
+        ],
+        "offset": [
+            0,
+            -1
+        ],
+        "collection_name": "wave_steps",
+        "factory": {
+            "name": "wave_steps_factory",
+            "control_name": "anvil_progress_bar.wave_step"
+        },
+        "bindings": [
+            {
+                "binding_type": "view",
+                "source_control_name": "waves_level",
+                "source_property_name": "#score",
+                "target_property_name": "#collection_length"
+            },
+            {
+                "binding_name": "#score",
+                "binding_name_override": "#collection_length"
+            }
+        ]
+    },
+    "bar_panel@anvil_common.panel": {
+        "controls": [
+            {
+                "bar_left@anvil_common.image": {
+                    "texture": "textures/ui/progress_bar_outline_left",
+                    "size": [
+                        "8px",
+                        "100%"
+                    ],
+                    "keep_ratio": true,
+                    "offset": [
+                        "-50% + 4px",
+                        0
+                    ]
+                }
+            },
+            {
+                "bar_outline@anvil_common.image": {
+                    "texture": "textures/ui/progress_bar_outline",
+                    "size": [
+                        "100% - 16px",
+                        "100%"
+                    ]
+                }
+            },
+            {
+                "bar_right@anvil_common.image": {
+                    "texture": "textures/ui/progress_bar_outline_right",
+                    "size": [
+                        "8px",
+                        "100%"
+                    ],
+                    "keep_ratio": true,
+                    "offset": [
+                        "50% - 4px",
+                        0
+                    ]
+                }
+            },
+            {
+                "indicator@bar_indicator": {
+                    "size": [
+                        "100% - 16px - 6px",
+                        "100% - 6px"
+                    ]
+                }
+            },
+            {
+                "waves@wave_step_panel": {
+                    "size": [
+                        "100% - 16px",
+                        "100%"
+                    ]
+                }
+            }
+        ]
+    },
+    "level_indicator@progress_bar_label_binding_background": {
+        "$control_name": "level_number",
+        "anchor_from": "center",
+        "anchor_to": "center",
+        "bindings": [
+            {
+                "binding_type": "view",
+                "source_control_name": "chapter_index",
+                "source_property_name": "#score",
+                "target_property_name": "#area"
+            },
+            {
+                "binding_type": "view",
+                "source_control_name": "level_index",
+                "source_property_name": "#score",
+                "target_property_name": "#level"
+            },
+            {
+                "binding_type": "view",
+                "source_property_name": "('§z' + #area + ' - ' + #level)",
+                "target_property_name": "#text"
+            }
+        ]
+    },
+    "killed_indicator@icon_label": {
+        "$texture": "textures/ui/killed_image",
+        "$control_name": "killed_number"
+    },
+    "high_score_panel@icon_label": {
+        "$texture": "textures/ui/high_score",
+        "$control_name": "high_score"
+    },
+    "info_panel@anvil_common.stack_panel": {
+        "orientation": "horizontal",
+        "controls": [
+            {
+                "space@anvil_common.panel": {
+                    "size": [
+                        "8px",
+                        0
+                    ]
+                }
+            },
+            {
+                "text@anvil_progress_bar.progress_bar_label_background": {
+                    "$text": "anvil_progress.progress"
+                }
+            },
+            {
+                "level_number@anvil_progress_bar.level_indicator": {
+                    "anchor_from": "center",
+                    "anchor_to": "center"
+                }
+            },
+            {
+                "killed@anvil_progress_bar.killed_indicator": {}
+            }
+        ]
+    },
+    "default_panel@anvil_common.stack_panel": {
+        "anchor_from": "bottom_right",
+        "anchor_to": "bottom_right",
+        "size": [
+            "30% - 8px",
+            "100%c"
+        ],
+        "offset": [
+            "-4px",
+            "-4px"
+        ],
+        "controls": [
+            {
+                "info@info_panel": {
+                    "size": [
+                        "100%",
+                        "100%cm"
+                    ]
+                }
+            },
+            {
+                "bar@bar_panel": {
+                    "size": [
+                        "100%",
+                        15
+                    ]
+                }
+            }
+        ],
+        "bindings": [
+            {
+                "binding_type": "view",
+                "source_control_name": "panel_type",
+                "source_property_name": "(#score = 1)",
+                "target_property_name": "#visible"
+            }
+        ]
+    },
+    "infinite_panel@anvil_common.stack_panel": {
+        "anchor_from": "bottom_right",
+        "anchor_to": "bottom_right",
+        "size": [
+            "100%cm",
+            "100%c"
+        ],
+        "offset": [
+            "-4px",
+            "-4px"
+        ],
+        "controls": [
+            {
+                "stack_0@anvil_common.stack_panel": {
+                    "size": [
+                        "100%c",
+                        "100%cm"
+                    ],
+                    "orientation": "horizontal",
+                    "controls": [
+                        {
+                            "high_text@anvil_progress_bar.progress_bar_label_background": {
+                                "$text": "anvil_progress.high_score"
+                            }
+                        },
+                        {
+                            "high_number@anvil_progress_bar.high_score_panel": {}
+                        }
+                    ]
+                }
+            },
+            {
+                "stack_1@anvil_common.stack_panel": {
+                    "size": [
+                        "100%c",
+                        "100%cm"
+                    ],
+                    "orientation": "horizontal",
+                    "controls": [
+                        {
+                            "current_text@anvil_progress_bar.progress_bar_label_background": {
+                                "$text": "anvil_progress.current_score"
+                            }
+                        },
+                        {
+                            "current_killed@anvil_progress_bar.killed_indicator": {}
+                        }
+                    ]
+                }
+            }
+        ],
+        "bindings": [
+            {
+                "binding_type": "view",
+                "source_control_name": "panel_type",
+                "source_property_name": "(#score = 2)",
+                "target_property_name": "#visible"
+            }
+        ]
+    },
+    "progress_bar@anvil_common.panel": {
+        "controls": [
+            {
+                "default_progress_bar@anvil_progress_bar.default_panel": {}
+            },
+            {
+                "infinite_progress_bar@anvil_progress_bar.infinite_panel": {}
+            },
+            {
+                "percentage@anvil_common.retrieve_score": {
+                    "$index": 1,
+                    "$score_offset": 10000
+                }
+            },
+            {
+                "chapter_index@anvil_common.retrieve_score": {
+                    "$index": 2,
+                    "$score_offset": 20000
+                }
+            },
+            {
+                "level_index@anvil_common.retrieve_score": {
+                    "$index": 3,
+                    "$score_offset": 30000
+                }
+            },
+            {
+                "waves_level@anvil_common.retrieve_score": {
+                    "$index": 4,
+                    "$score_offset": 40000
+                }
+            },
+            {
+                "killed_number@anvil_common.retrieve_score": {
+                    "$index": 5,
+                    "$score_offset": 50000
+                }
+            },
+            {
+                "panel_type@anvil_common.retrieve_score": {
+                    "$index": 6,
+                    "$score_offset": 60000
+                }
+            },
+            {
+                "high_score@anvil_common.retrieve_score": {
+                    "$index": 7,
+                    "$score_offset": 70000
+                }
+            }
+        ]
+    }
+}

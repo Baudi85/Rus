@@ -1,0 +1,2135 @@
+//Filename: molten_chocolate.behavior.json
+//Generated with Anvil@StarkTMA 0.5.4
+//25-10-2023 01:06:41 +0100
+//
+
+{
+    "format_version": "1.19.0",
+    "minecraft:entity": {
+        "component_groups": {
+            "despawn": {
+                "minecraft:instant_despawn": {}
+            },
+            "ai": {
+                "minecraft:movement": {
+                    "value": 0
+                },
+                "minecraft:type_family": {
+                    "family": [
+                        "tower",
+                        "is_target",
+                        "damage_1"
+                    ]
+                },
+                "minecraft:follow_range": {
+                    "value": 27
+                },
+                "minecraft:behavior.nearest_attackable_target": {
+                    "entity_types": [
+                        {
+                            "filters": {
+                                "all_of": [
+                                    {
+                                        "test": "is_family",
+                                        "value": "attacker",
+                                        "subject": "other"
+                                    },
+                                    {
+                                        "test": "is_family",
+                                        "value": "is_target",
+                                        "subject": "other"
+                                    }
+                                ]
+                            },
+                            "max_dist": 27
+                        }
+                    ],
+                    "must_see": true,
+                    "reselect_targets": true,
+                    "priority": 0
+                },
+                "minecraft:behavior.summon_entity": {
+                    "summon_choices": [
+                        {
+                            "cast_duration": 3,
+                            "cooldown_time": 4,
+                            "max_activation_range": 81,
+                            "min_activation_range": 2,
+                            "weight": 3,
+                            "sequence": [
+                                {
+                                    "entity_type": "starktma:engine_aod<molten_chocolate>",
+                                    "base_delay": 2.5,
+                                    "entity_lifespan": 10,
+                                    "shape": "circle",
+                                    "size": 0,
+                                    "target": "target"
+                                }
+                            ]
+                        }
+                    ],
+                    "priority": 2
+                }
+            },
+            "is_disabled": {
+                "minecraft:type_family": {
+                    "family": [
+                        "tower",
+                        "is_target"
+                    ]
+                },
+                "minecraft:timer": {
+                    "time_down_event": {
+                        "event": "is_enabled",
+                        "target": "self"
+                    },
+                    "time": 10
+                }
+            }
+        },
+        "components": {
+            "minecraft:conditional_bandwidth_optimization": {
+                "default_values": {
+                    "use_motion_prediction_hints": true
+                }
+            },
+            "minecraft:damage_sensor": {
+                "triggers": [
+                    {
+                        "deals_damage": false,
+                        "on_damage": {
+                            "event": "take_fake_1_damage",
+                            "filters": {
+                                "all_of": [
+                                    {
+                                        "test": "is_family",
+                                        "value": "give_fake_1_damage",
+                                        "subject": "damager"
+                                    },
+                                    {
+                                        "test": "is_family",
+                                        "value": "tower",
+                                        "subject": "damager",
+                                        "operator": "not"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "deals_damage": false,
+                        "on_damage": {
+                            "event": "take_fake_2_damage",
+                            "filters": {
+                                "all_of": [
+                                    {
+                                        "test": "is_family",
+                                        "value": "give_fake_2_damage",
+                                        "subject": "damager"
+                                    },
+                                    {
+                                        "test": "is_family",
+                                        "value": "tower",
+                                        "subject": "damager",
+                                        "operator": "not"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "deals_damage": false,
+                        "on_damage": {
+                            "event": "take_fake_3_damage",
+                            "filters": {
+                                "all_of": [
+                                    {
+                                        "test": "is_family",
+                                        "value": "give_fake_3_damage",
+                                        "subject": "damager"
+                                    },
+                                    {
+                                        "test": "is_family",
+                                        "value": "tower",
+                                        "subject": "damager",
+                                        "operator": "not"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "deals_damage": false,
+                        "on_damage": {
+                            "event": "take_fake_4_damage",
+                            "filters": {
+                                "all_of": [
+                                    {
+                                        "test": "is_family",
+                                        "value": "give_fake_4_damage",
+                                        "subject": "damager"
+                                    },
+                                    {
+                                        "test": "is_family",
+                                        "value": "tower",
+                                        "subject": "damager",
+                                        "operator": "not"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "deals_damage": false,
+                        "on_damage": {
+                            "event": "take_fake_5_damage",
+                            "filters": {
+                                "all_of": [
+                                    {
+                                        "test": "is_family",
+                                        "value": "give_fake_5_damage",
+                                        "subject": "damager"
+                                    },
+                                    {
+                                        "test": "is_family",
+                                        "value": "tower",
+                                        "subject": "damager",
+                                        "operator": "not"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "deals_damage": false,
+                        "on_damage": {
+                            "event": "take_fake_6_damage",
+                            "filters": {
+                                "all_of": [
+                                    {
+                                        "test": "is_family",
+                                        "value": "give_fake_6_damage",
+                                        "subject": "damager"
+                                    },
+                                    {
+                                        "test": "is_family",
+                                        "value": "tower",
+                                        "subject": "damager",
+                                        "operator": "not"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "deals_damage": false,
+                        "on_damage": {
+                            "event": "take_fake_7_damage",
+                            "filters": {
+                                "all_of": [
+                                    {
+                                        "test": "is_family",
+                                        "value": "give_fake_7_damage",
+                                        "subject": "damager"
+                                    },
+                                    {
+                                        "test": "is_family",
+                                        "value": "tower",
+                                        "subject": "damager",
+                                        "operator": "not"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "deals_damage": false,
+                        "on_damage": {
+                            "event": "take_fake_8_damage",
+                            "filters": {
+                                "all_of": [
+                                    {
+                                        "test": "is_family",
+                                        "value": "give_fake_8_damage",
+                                        "subject": "damager"
+                                    },
+                                    {
+                                        "test": "is_family",
+                                        "value": "tower",
+                                        "subject": "damager",
+                                        "operator": "not"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "deals_damage": false,
+                        "on_damage": {
+                            "event": "take_fake_9_damage",
+                            "filters": {
+                                "all_of": [
+                                    {
+                                        "test": "is_family",
+                                        "value": "give_fake_9_damage",
+                                        "subject": "damager"
+                                    },
+                                    {
+                                        "test": "is_family",
+                                        "value": "tower",
+                                        "subject": "damager",
+                                        "operator": "not"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "deals_damage": false,
+                        "on_damage": {
+                            "event": "take_fake_10_damage",
+                            "filters": {
+                                "all_of": [
+                                    {
+                                        "test": "is_family",
+                                        "value": "give_fake_10_damage",
+                                        "subject": "damager"
+                                    },
+                                    {
+                                        "test": "is_family",
+                                        "value": "tower",
+                                        "subject": "damager",
+                                        "operator": "not"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "deals_damage": false,
+                        "on_damage": {
+                            "event": "take_fake_11_damage",
+                            "filters": {
+                                "all_of": [
+                                    {
+                                        "test": "is_family",
+                                        "value": "give_fake_11_damage",
+                                        "subject": "damager"
+                                    },
+                                    {
+                                        "test": "is_family",
+                                        "value": "tower",
+                                        "subject": "damager",
+                                        "operator": "not"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "deals_damage": false,
+                        "on_damage": {
+                            "event": "take_fake_12_damage",
+                            "filters": {
+                                "all_of": [
+                                    {
+                                        "test": "is_family",
+                                        "value": "give_fake_12_damage",
+                                        "subject": "damager"
+                                    },
+                                    {
+                                        "test": "is_family",
+                                        "value": "tower",
+                                        "subject": "damager",
+                                        "operator": "not"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "deals_damage": false,
+                        "on_damage": {
+                            "event": "take_fake_13_damage",
+                            "filters": {
+                                "all_of": [
+                                    {
+                                        "test": "is_family",
+                                        "value": "give_fake_13_damage",
+                                        "subject": "damager"
+                                    },
+                                    {
+                                        "test": "is_family",
+                                        "value": "tower",
+                                        "subject": "damager",
+                                        "operator": "not"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "deals_damage": false,
+                        "on_damage": {
+                            "event": "take_fake_14_damage",
+                            "filters": {
+                                "all_of": [
+                                    {
+                                        "test": "is_family",
+                                        "value": "give_fake_14_damage",
+                                        "subject": "damager"
+                                    },
+                                    {
+                                        "test": "is_family",
+                                        "value": "tower",
+                                        "subject": "damager",
+                                        "operator": "not"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "deals_damage": false,
+                        "on_damage": {
+                            "event": "take_fake_15_damage",
+                            "filters": {
+                                "all_of": [
+                                    {
+                                        "test": "is_family",
+                                        "value": "give_fake_15_damage",
+                                        "subject": "damager"
+                                    },
+                                    {
+                                        "test": "is_family",
+                                        "value": "tower",
+                                        "subject": "damager",
+                                        "operator": "not"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "deals_damage": false,
+                        "on_damage": {
+                            "event": "take_fake_16_damage",
+                            "filters": {
+                                "all_of": [
+                                    {
+                                        "test": "is_family",
+                                        "value": "give_fake_16_damage",
+                                        "subject": "damager"
+                                    },
+                                    {
+                                        "test": "is_family",
+                                        "value": "tower",
+                                        "subject": "damager",
+                                        "operator": "not"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "deals_damage": false,
+                        "on_damage": {
+                            "event": "take_fake_17_damage",
+                            "filters": {
+                                "all_of": [
+                                    {
+                                        "test": "is_family",
+                                        "value": "give_fake_17_damage",
+                                        "subject": "damager"
+                                    },
+                                    {
+                                        "test": "is_family",
+                                        "value": "tower",
+                                        "subject": "damager",
+                                        "operator": "not"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "deals_damage": false,
+                        "on_damage": {
+                            "event": "take_fake_18_damage",
+                            "filters": {
+                                "all_of": [
+                                    {
+                                        "test": "is_family",
+                                        "value": "give_fake_18_damage",
+                                        "subject": "damager"
+                                    },
+                                    {
+                                        "test": "is_family",
+                                        "value": "tower",
+                                        "subject": "damager",
+                                        "operator": "not"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "deals_damage": false,
+                        "on_damage": {
+                            "event": "take_fake_19_damage",
+                            "filters": {
+                                "all_of": [
+                                    {
+                                        "test": "is_family",
+                                        "value": "give_fake_19_damage",
+                                        "subject": "damager"
+                                    },
+                                    {
+                                        "test": "is_family",
+                                        "value": "tower",
+                                        "subject": "damager",
+                                        "operator": "not"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "deals_damage": false,
+                        "on_damage": {
+                            "event": "take_fake_20_damage",
+                            "filters": {
+                                "all_of": [
+                                    {
+                                        "test": "is_family",
+                                        "value": "give_fake_20_damage",
+                                        "subject": "damager"
+                                    },
+                                    {
+                                        "test": "is_family",
+                                        "value": "tower",
+                                        "subject": "damager",
+                                        "operator": "not"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "deals_damage": false,
+                        "on_damage": {
+                            "event": "take_fake_21_damage",
+                            "filters": {
+                                "all_of": [
+                                    {
+                                        "test": "is_family",
+                                        "value": "give_fake_21_damage",
+                                        "subject": "damager"
+                                    },
+                                    {
+                                        "test": "is_family",
+                                        "value": "tower",
+                                        "subject": "damager",
+                                        "operator": "not"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "deals_damage": false,
+                        "on_damage": {
+                            "event": "take_fake_22_damage",
+                            "filters": {
+                                "all_of": [
+                                    {
+                                        "test": "is_family",
+                                        "value": "give_fake_22_damage",
+                                        "subject": "damager"
+                                    },
+                                    {
+                                        "test": "is_family",
+                                        "value": "tower",
+                                        "subject": "damager",
+                                        "operator": "not"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "deals_damage": false,
+                        "on_damage": {
+                            "event": "take_fake_23_damage",
+                            "filters": {
+                                "all_of": [
+                                    {
+                                        "test": "is_family",
+                                        "value": "give_fake_23_damage",
+                                        "subject": "damager"
+                                    },
+                                    {
+                                        "test": "is_family",
+                                        "value": "tower",
+                                        "subject": "damager",
+                                        "operator": "not"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "deals_damage": false,
+                        "on_damage": {
+                            "event": "take_fake_24_damage",
+                            "filters": {
+                                "all_of": [
+                                    {
+                                        "test": "is_family",
+                                        "value": "give_fake_24_damage",
+                                        "subject": "damager"
+                                    },
+                                    {
+                                        "test": "is_family",
+                                        "value": "tower",
+                                        "subject": "damager",
+                                        "operator": "not"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "deals_damage": false,
+                        "on_damage": {
+                            "event": "take_fake_25_damage",
+                            "filters": {
+                                "all_of": [
+                                    {
+                                        "test": "is_family",
+                                        "value": "give_fake_25_damage",
+                                        "subject": "damager"
+                                    },
+                                    {
+                                        "test": "is_family",
+                                        "value": "tower",
+                                        "subject": "damager",
+                                        "operator": "not"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "deals_damage": false,
+                        "on_damage": {
+                            "event": "take_fake_26_damage",
+                            "filters": {
+                                "all_of": [
+                                    {
+                                        "test": "is_family",
+                                        "value": "give_fake_26_damage",
+                                        "subject": "damager"
+                                    },
+                                    {
+                                        "test": "is_family",
+                                        "value": "tower",
+                                        "subject": "damager",
+                                        "operator": "not"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "deals_damage": false,
+                        "on_damage": {
+                            "event": "take_fake_27_damage",
+                            "filters": {
+                                "all_of": [
+                                    {
+                                        "test": "is_family",
+                                        "value": "give_fake_27_damage",
+                                        "subject": "damager"
+                                    },
+                                    {
+                                        "test": "is_family",
+                                        "value": "tower",
+                                        "subject": "damager",
+                                        "operator": "not"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "deals_damage": false,
+                        "on_damage": {
+                            "event": "take_fake_28_damage",
+                            "filters": {
+                                "all_of": [
+                                    {
+                                        "test": "is_family",
+                                        "value": "give_fake_28_damage",
+                                        "subject": "damager"
+                                    },
+                                    {
+                                        "test": "is_family",
+                                        "value": "tower",
+                                        "subject": "damager",
+                                        "operator": "not"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "deals_damage": false,
+                        "on_damage": {
+                            "event": "take_fake_29_damage",
+                            "filters": {
+                                "all_of": [
+                                    {
+                                        "test": "is_family",
+                                        "value": "give_fake_29_damage",
+                                        "subject": "damager"
+                                    },
+                                    {
+                                        "test": "is_family",
+                                        "value": "tower",
+                                        "subject": "damager",
+                                        "operator": "not"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "deals_damage": false,
+                        "on_damage": {
+                            "event": "take_fake_30_damage",
+                            "filters": {
+                                "all_of": [
+                                    {
+                                        "test": "is_family",
+                                        "value": "give_fake_30_damage",
+                                        "subject": "damager"
+                                    },
+                                    {
+                                        "test": "is_family",
+                                        "value": "tower",
+                                        "subject": "damager",
+                                        "operator": "not"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "deals_damage": false,
+                        "on_damage": {
+                            "event": "take_fake_31_damage",
+                            "filters": {
+                                "all_of": [
+                                    {
+                                        "test": "is_family",
+                                        "value": "give_fake_31_damage",
+                                        "subject": "damager"
+                                    },
+                                    {
+                                        "test": "is_family",
+                                        "value": "tower",
+                                        "subject": "damager",
+                                        "operator": "not"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "deals_damage": false,
+                        "on_damage": {
+                            "event": "take_fake_32_damage",
+                            "filters": {
+                                "all_of": [
+                                    {
+                                        "test": "is_family",
+                                        "value": "give_fake_32_damage",
+                                        "subject": "damager"
+                                    },
+                                    {
+                                        "test": "is_family",
+                                        "value": "tower",
+                                        "subject": "damager",
+                                        "operator": "not"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "deals_damage": false,
+                        "on_damage": {
+                            "event": "take_fake_33_damage",
+                            "filters": {
+                                "all_of": [
+                                    {
+                                        "test": "is_family",
+                                        "value": "give_fake_33_damage",
+                                        "subject": "damager"
+                                    },
+                                    {
+                                        "test": "is_family",
+                                        "value": "tower",
+                                        "subject": "damager",
+                                        "operator": "not"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "deals_damage": false,
+                        "on_damage": {
+                            "event": "take_fake_34_damage",
+                            "filters": {
+                                "all_of": [
+                                    {
+                                        "test": "is_family",
+                                        "value": "give_fake_34_damage",
+                                        "subject": "damager"
+                                    },
+                                    {
+                                        "test": "is_family",
+                                        "value": "tower",
+                                        "subject": "damager",
+                                        "operator": "not"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "deals_damage": false,
+                        "on_damage": {
+                            "event": "take_fake_35_damage",
+                            "filters": {
+                                "all_of": [
+                                    {
+                                        "test": "is_family",
+                                        "value": "give_fake_35_damage",
+                                        "subject": "damager"
+                                    },
+                                    {
+                                        "test": "is_family",
+                                        "value": "tower",
+                                        "subject": "damager",
+                                        "operator": "not"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "deals_damage": false,
+                        "on_damage": {
+                            "event": "take_fake_36_damage",
+                            "filters": {
+                                "all_of": [
+                                    {
+                                        "test": "is_family",
+                                        "value": "give_fake_36_damage",
+                                        "subject": "damager"
+                                    },
+                                    {
+                                        "test": "is_family",
+                                        "value": "tower",
+                                        "subject": "damager",
+                                        "operator": "not"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "deals_damage": false,
+                        "on_damage": {
+                            "event": "take_fake_37_damage",
+                            "filters": {
+                                "all_of": [
+                                    {
+                                        "test": "is_family",
+                                        "value": "give_fake_37_damage",
+                                        "subject": "damager"
+                                    },
+                                    {
+                                        "test": "is_family",
+                                        "value": "tower",
+                                        "subject": "damager",
+                                        "operator": "not"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "deals_damage": false,
+                        "on_damage": {
+                            "event": "take_fake_38_damage",
+                            "filters": {
+                                "all_of": [
+                                    {
+                                        "test": "is_family",
+                                        "value": "give_fake_38_damage",
+                                        "subject": "damager"
+                                    },
+                                    {
+                                        "test": "is_family",
+                                        "value": "tower",
+                                        "subject": "damager",
+                                        "operator": "not"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "deals_damage": false,
+                        "on_damage": {
+                            "event": "take_fake_39_damage",
+                            "filters": {
+                                "all_of": [
+                                    {
+                                        "test": "is_family",
+                                        "value": "give_fake_39_damage",
+                                        "subject": "damager"
+                                    },
+                                    {
+                                        "test": "is_family",
+                                        "value": "tower",
+                                        "subject": "damager",
+                                        "operator": "not"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "deals_damage": false,
+                        "on_damage": {
+                            "event": "take_fake_40_damage",
+                            "filters": {
+                                "all_of": [
+                                    {
+                                        "test": "is_family",
+                                        "value": "give_fake_40_damage",
+                                        "subject": "damager"
+                                    },
+                                    {
+                                        "test": "is_family",
+                                        "value": "tower",
+                                        "subject": "damager",
+                                        "operator": "not"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "deals_damage": false,
+                        "on_damage": {
+                            "event": "take_fake_41_damage",
+                            "filters": {
+                                "all_of": [
+                                    {
+                                        "test": "is_family",
+                                        "value": "give_fake_41_damage",
+                                        "subject": "damager"
+                                    },
+                                    {
+                                        "test": "is_family",
+                                        "value": "tower",
+                                        "subject": "damager",
+                                        "operator": "not"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "deals_damage": false,
+                        "on_damage": {
+                            "event": "take_fake_42_damage",
+                            "filters": {
+                                "all_of": [
+                                    {
+                                        "test": "is_family",
+                                        "value": "give_fake_42_damage",
+                                        "subject": "damager"
+                                    },
+                                    {
+                                        "test": "is_family",
+                                        "value": "tower",
+                                        "subject": "damager",
+                                        "operator": "not"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "deals_damage": false,
+                        "on_damage": {
+                            "event": "take_fake_43_damage",
+                            "filters": {
+                                "all_of": [
+                                    {
+                                        "test": "is_family",
+                                        "value": "give_fake_43_damage",
+                                        "subject": "damager"
+                                    },
+                                    {
+                                        "test": "is_family",
+                                        "value": "tower",
+                                        "subject": "damager",
+                                        "operator": "not"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "deals_damage": false,
+                        "on_damage": {
+                            "event": "take_fake_44_damage",
+                            "filters": {
+                                "all_of": [
+                                    {
+                                        "test": "is_family",
+                                        "value": "give_fake_44_damage",
+                                        "subject": "damager"
+                                    },
+                                    {
+                                        "test": "is_family",
+                                        "value": "tower",
+                                        "subject": "damager",
+                                        "operator": "not"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "deals_damage": false,
+                        "on_damage": {
+                            "event": "take_fake_45_damage",
+                            "filters": {
+                                "all_of": [
+                                    {
+                                        "test": "is_family",
+                                        "value": "give_fake_45_damage",
+                                        "subject": "damager"
+                                    },
+                                    {
+                                        "test": "is_family",
+                                        "value": "tower",
+                                        "subject": "damager",
+                                        "operator": "not"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "deals_damage": false,
+                        "on_damage": {
+                            "event": "take_fake_46_damage",
+                            "filters": {
+                                "all_of": [
+                                    {
+                                        "test": "is_family",
+                                        "value": "give_fake_46_damage",
+                                        "subject": "damager"
+                                    },
+                                    {
+                                        "test": "is_family",
+                                        "value": "tower",
+                                        "subject": "damager",
+                                        "operator": "not"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "deals_damage": false,
+                        "on_damage": {
+                            "event": "take_fake_47_damage",
+                            "filters": {
+                                "all_of": [
+                                    {
+                                        "test": "is_family",
+                                        "value": "give_fake_47_damage",
+                                        "subject": "damager"
+                                    },
+                                    {
+                                        "test": "is_family",
+                                        "value": "tower",
+                                        "subject": "damager",
+                                        "operator": "not"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "deals_damage": false,
+                        "on_damage": {
+                            "event": "take_fake_48_damage",
+                            "filters": {
+                                "all_of": [
+                                    {
+                                        "test": "is_family",
+                                        "value": "give_fake_48_damage",
+                                        "subject": "damager"
+                                    },
+                                    {
+                                        "test": "is_family",
+                                        "value": "tower",
+                                        "subject": "damager",
+                                        "operator": "not"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "deals_damage": false,
+                        "on_damage": {
+                            "event": "take_fake_49_damage",
+                            "filters": {
+                                "all_of": [
+                                    {
+                                        "test": "is_family",
+                                        "value": "give_fake_49_damage",
+                                        "subject": "damager"
+                                    },
+                                    {
+                                        "test": "is_family",
+                                        "value": "tower",
+                                        "subject": "damager",
+                                        "operator": "not"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "deals_damage": false,
+                        "on_damage": {
+                            "event": "take_fake_50_damage",
+                            "filters": {
+                                "all_of": [
+                                    {
+                                        "test": "is_family",
+                                        "value": "give_fake_50_damage",
+                                        "subject": "damager"
+                                    },
+                                    {
+                                        "test": "is_family",
+                                        "value": "tower",
+                                        "subject": "damager",
+                                        "operator": "not"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "deals_damage": false,
+                        "on_damage": {
+                            "event": "take_fake_51_damage",
+                            "filters": {
+                                "all_of": [
+                                    {
+                                        "test": "is_family",
+                                        "value": "give_fake_51_damage",
+                                        "subject": "damager"
+                                    },
+                                    {
+                                        "test": "is_family",
+                                        "value": "tower",
+                                        "subject": "damager",
+                                        "operator": "not"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "deals_damage": false,
+                        "on_damage": {
+                            "event": "take_fake_52_damage",
+                            "filters": {
+                                "all_of": [
+                                    {
+                                        "test": "is_family",
+                                        "value": "give_fake_52_damage",
+                                        "subject": "damager"
+                                    },
+                                    {
+                                        "test": "is_family",
+                                        "value": "tower",
+                                        "subject": "damager",
+                                        "operator": "not"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "deals_damage": false,
+                        "on_damage": {
+                            "event": "take_fake_53_damage",
+                            "filters": {
+                                "all_of": [
+                                    {
+                                        "test": "is_family",
+                                        "value": "give_fake_53_damage",
+                                        "subject": "damager"
+                                    },
+                                    {
+                                        "test": "is_family",
+                                        "value": "tower",
+                                        "subject": "damager",
+                                        "operator": "not"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "deals_damage": false,
+                        "on_damage": {
+                            "event": "take_fake_54_damage",
+                            "filters": {
+                                "all_of": [
+                                    {
+                                        "test": "is_family",
+                                        "value": "give_fake_54_damage",
+                                        "subject": "damager"
+                                    },
+                                    {
+                                        "test": "is_family",
+                                        "value": "tower",
+                                        "subject": "damager",
+                                        "operator": "not"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "deals_damage": false,
+                        "on_damage": {
+                            "event": "take_fake_55_damage",
+                            "filters": {
+                                "all_of": [
+                                    {
+                                        "test": "is_family",
+                                        "value": "give_fake_55_damage",
+                                        "subject": "damager"
+                                    },
+                                    {
+                                        "test": "is_family",
+                                        "value": "tower",
+                                        "subject": "damager",
+                                        "operator": "not"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "deals_damage": false,
+                        "on_damage": {
+                            "event": "take_fake_56_damage",
+                            "filters": {
+                                "all_of": [
+                                    {
+                                        "test": "is_family",
+                                        "value": "give_fake_56_damage",
+                                        "subject": "damager"
+                                    },
+                                    {
+                                        "test": "is_family",
+                                        "value": "tower",
+                                        "subject": "damager",
+                                        "operator": "not"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "deals_damage": false,
+                        "on_damage": {
+                            "event": "take_fake_57_damage",
+                            "filters": {
+                                "all_of": [
+                                    {
+                                        "test": "is_family",
+                                        "value": "give_fake_57_damage",
+                                        "subject": "damager"
+                                    },
+                                    {
+                                        "test": "is_family",
+                                        "value": "tower",
+                                        "subject": "damager",
+                                        "operator": "not"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "deals_damage": false,
+                        "on_damage": {
+                            "event": "take_fake_58_damage",
+                            "filters": {
+                                "all_of": [
+                                    {
+                                        "test": "is_family",
+                                        "value": "give_fake_58_damage",
+                                        "subject": "damager"
+                                    },
+                                    {
+                                        "test": "is_family",
+                                        "value": "tower",
+                                        "subject": "damager",
+                                        "operator": "not"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "deals_damage": false,
+                        "on_damage": {
+                            "event": "take_fake_59_damage",
+                            "filters": {
+                                "all_of": [
+                                    {
+                                        "test": "is_family",
+                                        "value": "give_fake_59_damage",
+                                        "subject": "damager"
+                                    },
+                                    {
+                                        "test": "is_family",
+                                        "value": "tower",
+                                        "subject": "damager",
+                                        "operator": "not"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "deals_damage": false,
+                        "on_damage": {
+                            "event": "take_fake_60_damage",
+                            "filters": {
+                                "all_of": [
+                                    {
+                                        "test": "is_family",
+                                        "value": "give_fake_60_damage",
+                                        "subject": "damager"
+                                    },
+                                    {
+                                        "test": "is_family",
+                                        "value": "tower",
+                                        "subject": "damager",
+                                        "operator": "not"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "deals_damage": false,
+                        "on_damage": {
+                            "event": "take_fake_61_damage",
+                            "filters": {
+                                "all_of": [
+                                    {
+                                        "test": "is_family",
+                                        "value": "give_fake_61_damage",
+                                        "subject": "damager"
+                                    },
+                                    {
+                                        "test": "is_family",
+                                        "value": "tower",
+                                        "subject": "damager",
+                                        "operator": "not"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "deals_damage": false,
+                        "on_damage": {
+                            "event": "take_fake_62_damage",
+                            "filters": {
+                                "all_of": [
+                                    {
+                                        "test": "is_family",
+                                        "value": "give_fake_62_damage",
+                                        "subject": "damager"
+                                    },
+                                    {
+                                        "test": "is_family",
+                                        "value": "tower",
+                                        "subject": "damager",
+                                        "operator": "not"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "deals_damage": false,
+                        "on_damage": {
+                            "event": "take_fake_63_damage",
+                            "filters": {
+                                "all_of": [
+                                    {
+                                        "test": "is_family",
+                                        "value": "give_fake_63_damage",
+                                        "subject": "damager"
+                                    },
+                                    {
+                                        "test": "is_family",
+                                        "value": "tower",
+                                        "subject": "damager",
+                                        "operator": "not"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "deals_damage": false,
+                        "on_damage": {
+                            "event": "take_fake_64_damage",
+                            "filters": {
+                                "all_of": [
+                                    {
+                                        "test": "is_family",
+                                        "value": "give_fake_64_damage",
+                                        "subject": "damager"
+                                    },
+                                    {
+                                        "test": "is_family",
+                                        "value": "tower",
+                                        "subject": "damager",
+                                        "operator": "not"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "deals_damage": false,
+                        "on_damage": {
+                            "event": "take_fake_65_damage",
+                            "filters": {
+                                "all_of": [
+                                    {
+                                        "test": "is_family",
+                                        "value": "give_fake_65_damage",
+                                        "subject": "damager"
+                                    },
+                                    {
+                                        "test": "is_family",
+                                        "value": "tower",
+                                        "subject": "damager",
+                                        "operator": "not"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "deals_damage": false,
+                        "on_damage": {
+                            "event": "take_fake_66_damage",
+                            "filters": {
+                                "all_of": [
+                                    {
+                                        "test": "is_family",
+                                        "value": "give_fake_66_damage",
+                                        "subject": "damager"
+                                    },
+                                    {
+                                        "test": "is_family",
+                                        "value": "tower",
+                                        "subject": "damager",
+                                        "operator": "not"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "deals_damage": false,
+                        "on_damage": {
+                            "event": "take_fake_67_damage",
+                            "filters": {
+                                "all_of": [
+                                    {
+                                        "test": "is_family",
+                                        "value": "give_fake_67_damage",
+                                        "subject": "damager"
+                                    },
+                                    {
+                                        "test": "is_family",
+                                        "value": "tower",
+                                        "subject": "damager",
+                                        "operator": "not"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "deals_damage": false,
+                        "on_damage": {
+                            "event": "take_fake_68_damage",
+                            "filters": {
+                                "all_of": [
+                                    {
+                                        "test": "is_family",
+                                        "value": "give_fake_68_damage",
+                                        "subject": "damager"
+                                    },
+                                    {
+                                        "test": "is_family",
+                                        "value": "tower",
+                                        "subject": "damager",
+                                        "operator": "not"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "deals_damage": false,
+                        "on_damage": {
+                            "event": "take_fake_69_damage",
+                            "filters": {
+                                "all_of": [
+                                    {
+                                        "test": "is_family",
+                                        "value": "give_fake_69_damage",
+                                        "subject": "damager"
+                                    },
+                                    {
+                                        "test": "is_family",
+                                        "value": "tower",
+                                        "subject": "damager",
+                                        "operator": "not"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "deals_damage": false,
+                        "on_damage": {
+                            "event": "take_fake_70_damage",
+                            "filters": {
+                                "all_of": [
+                                    {
+                                        "test": "is_family",
+                                        "value": "give_fake_70_damage",
+                                        "subject": "damager"
+                                    },
+                                    {
+                                        "test": "is_family",
+                                        "value": "tower",
+                                        "subject": "damager",
+                                        "operator": "not"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "deals_damage": false,
+                        "on_damage": {
+                            "event": "take_fake_71_damage",
+                            "filters": {
+                                "all_of": [
+                                    {
+                                        "test": "is_family",
+                                        "value": "give_fake_71_damage",
+                                        "subject": "damager"
+                                    },
+                                    {
+                                        "test": "is_family",
+                                        "value": "tower",
+                                        "subject": "damager",
+                                        "operator": "not"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "deals_damage": false,
+                        "on_damage": {
+                            "event": "take_fake_72_damage",
+                            "filters": {
+                                "all_of": [
+                                    {
+                                        "test": "is_family",
+                                        "value": "give_fake_72_damage",
+                                        "subject": "damager"
+                                    },
+                                    {
+                                        "test": "is_family",
+                                        "value": "tower",
+                                        "subject": "damager",
+                                        "operator": "not"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "deals_damage": false,
+                        "on_damage": {
+                            "event": "take_fake_inf_damage",
+                            "filters": {
+                                "all_of": [
+                                    {
+                                        "test": "is_family",
+                                        "value": "give_fake_inf_damage",
+                                        "subject": "damager"
+                                    },
+                                    {
+                                        "test": "is_family",
+                                        "value": "tower",
+                                        "subject": "damager",
+                                        "operator": "not"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "deals_damage": false
+                    }
+                ]
+            },
+            "minecraft:jump.static": {
+                "jump_power": 0
+            },
+            "minecraft:health": {
+                "value": 1,
+                "max": 1,
+                "min": 1
+            },
+            "minecraft:type_family": {
+                "family": [
+                    "tower"
+                ]
+            },
+            "minecraft:movement.basic": {},
+            "minecraft:navigation.generic": {},
+            "minecraft:knockback_resistance": {
+                "value": 1
+            },
+            "minecraft:attack": {
+                "damage": 1
+            },
+            "minecraft:pushable": {
+                "is_pushable": false,
+                "is_pushable_by_piston": false
+            },
+            "minecraft:is_stackable": {},
+            "minecraft:collision_box": {
+                "height": 2,
+                "width": 0.9
+            },
+            "minecraft:custom_hit_test": {
+                "hitboxes": [
+                    {
+                        "width": 2,
+                        "height": 2,
+                        "pivot": [
+                            0,
+                            1.5,
+                            0
+                        ]
+                    }
+                ]
+            }
+        },
+        "events": {
+            "despawn": {
+                "add": {
+                    "component_groups": [
+                        "despawn"
+                    ]
+                }
+            },
+            "take_fake_1_damage": {
+                "set_property": {
+                    "starktma:health": "math.max((q.property('starktma:health') - 1), 0)"
+                }
+            },
+            "take_fake_2_damage": {
+                "set_property": {
+                    "starktma:health": "math.max((q.property('starktma:health') - 2), 0)"
+                }
+            },
+            "take_fake_3_damage": {
+                "set_property": {
+                    "starktma:health": "math.max((q.property('starktma:health') - 3), 0)"
+                }
+            },
+            "take_fake_4_damage": {
+                "set_property": {
+                    "starktma:health": "math.max((q.property('starktma:health') - 4), 0)"
+                }
+            },
+            "take_fake_5_damage": {
+                "set_property": {
+                    "starktma:health": "math.max((q.property('starktma:health') - 5), 0)"
+                }
+            },
+            "take_fake_6_damage": {
+                "set_property": {
+                    "starktma:health": "math.max((q.property('starktma:health') - 6), 0)"
+                }
+            },
+            "take_fake_7_damage": {
+                "set_property": {
+                    "starktma:health": "math.max((q.property('starktma:health') - 7), 0)"
+                }
+            },
+            "take_fake_8_damage": {
+                "set_property": {
+                    "starktma:health": "math.max((q.property('starktma:health') - 8), 0)"
+                }
+            },
+            "take_fake_9_damage": {
+                "set_property": {
+                    "starktma:health": "math.max((q.property('starktma:health') - 9), 0)"
+                }
+            },
+            "take_fake_10_damage": {
+                "set_property": {
+                    "starktma:health": "math.max((q.property('starktma:health') - 10), 0)"
+                }
+            },
+            "take_fake_11_damage": {
+                "set_property": {
+                    "starktma:health": "math.max((q.property('starktma:health') - 11), 0)"
+                }
+            },
+            "take_fake_12_damage": {
+                "set_property": {
+                    "starktma:health": "math.max((q.property('starktma:health') - 12), 0)"
+                }
+            },
+            "take_fake_13_damage": {
+                "set_property": {
+                    "starktma:health": "math.max((q.property('starktma:health') - 13), 0)"
+                }
+            },
+            "take_fake_14_damage": {
+                "set_property": {
+                    "starktma:health": "math.max((q.property('starktma:health') - 14), 0)"
+                }
+            },
+            "take_fake_15_damage": {
+                "set_property": {
+                    "starktma:health": "math.max((q.property('starktma:health') - 15), 0)"
+                }
+            },
+            "take_fake_16_damage": {
+                "set_property": {
+                    "starktma:health": "math.max((q.property('starktma:health') - 16), 0)"
+                }
+            },
+            "take_fake_17_damage": {
+                "set_property": {
+                    "starktma:health": "math.max((q.property('starktma:health') - 17), 0)"
+                }
+            },
+            "take_fake_18_damage": {
+                "set_property": {
+                    "starktma:health": "math.max((q.property('starktma:health') - 18), 0)"
+                }
+            },
+            "take_fake_19_damage": {
+                "set_property": {
+                    "starktma:health": "math.max((q.property('starktma:health') - 19), 0)"
+                }
+            },
+            "take_fake_20_damage": {
+                "set_property": {
+                    "starktma:health": "math.max((q.property('starktma:health') - 20), 0)"
+                }
+            },
+            "take_fake_21_damage": {
+                "set_property": {
+                    "starktma:health": "math.max((q.property('starktma:health') - 21), 0)"
+                }
+            },
+            "take_fake_22_damage": {
+                "set_property": {
+                    "starktma:health": "math.max((q.property('starktma:health') - 22), 0)"
+                }
+            },
+            "take_fake_23_damage": {
+                "set_property": {
+                    "starktma:health": "math.max((q.property('starktma:health') - 23), 0)"
+                }
+            },
+            "take_fake_24_damage": {
+                "set_property": {
+                    "starktma:health": "math.max((q.property('starktma:health') - 24), 0)"
+                }
+            },
+            "take_fake_25_damage": {
+                "set_property": {
+                    "starktma:health": "math.max((q.property('starktma:health') - 25), 0)"
+                }
+            },
+            "take_fake_26_damage": {
+                "set_property": {
+                    "starktma:health": "math.max((q.property('starktma:health') - 26), 0)"
+                }
+            },
+            "take_fake_27_damage": {
+                "set_property": {
+                    "starktma:health": "math.max((q.property('starktma:health') - 27), 0)"
+                }
+            },
+            "take_fake_28_damage": {
+                "set_property": {
+                    "starktma:health": "math.max((q.property('starktma:health') - 28), 0)"
+                }
+            },
+            "take_fake_29_damage": {
+                "set_property": {
+                    "starktma:health": "math.max((q.property('starktma:health') - 29), 0)"
+                }
+            },
+            "take_fake_30_damage": {
+                "set_property": {
+                    "starktma:health": "math.max((q.property('starktma:health') - 30), 0)"
+                }
+            },
+            "take_fake_31_damage": {
+                "set_property": {
+                    "starktma:health": "math.max((q.property('starktma:health') - 31), 0)"
+                }
+            },
+            "take_fake_32_damage": {
+                "set_property": {
+                    "starktma:health": "math.max((q.property('starktma:health') - 32), 0)"
+                }
+            },
+            "take_fake_33_damage": {
+                "set_property": {
+                    "starktma:health": "math.max((q.property('starktma:health') - 33), 0)"
+                }
+            },
+            "take_fake_34_damage": {
+                "set_property": {
+                    "starktma:health": "math.max((q.property('starktma:health') - 34), 0)"
+                }
+            },
+            "take_fake_35_damage": {
+                "set_property": {
+                    "starktma:health": "math.max((q.property('starktma:health') - 35), 0)"
+                }
+            },
+            "take_fake_36_damage": {
+                "set_property": {
+                    "starktma:health": "math.max((q.property('starktma:health') - 36), 0)"
+                }
+            },
+            "take_fake_37_damage": {
+                "set_property": {
+                    "starktma:health": "math.max((q.property('starktma:health') - 37), 0)"
+                }
+            },
+            "take_fake_38_damage": {
+                "set_property": {
+                    "starktma:health": "math.max((q.property('starktma:health') - 38), 0)"
+                }
+            },
+            "take_fake_39_damage": {
+                "set_property": {
+                    "starktma:health": "math.max((q.property('starktma:health') - 39), 0)"
+                }
+            },
+            "take_fake_40_damage": {
+                "set_property": {
+                    "starktma:health": "math.max((q.property('starktma:health') - 40), 0)"
+                }
+            },
+            "take_fake_41_damage": {
+                "set_property": {
+                    "starktma:health": "math.max((q.property('starktma:health') - 41), 0)"
+                }
+            },
+            "take_fake_42_damage": {
+                "set_property": {
+                    "starktma:health": "math.max((q.property('starktma:health') - 42), 0)"
+                }
+            },
+            "take_fake_43_damage": {
+                "set_property": {
+                    "starktma:health": "math.max((q.property('starktma:health') - 43), 0)"
+                }
+            },
+            "take_fake_44_damage": {
+                "set_property": {
+                    "starktma:health": "math.max((q.property('starktma:health') - 44), 0)"
+                }
+            },
+            "take_fake_45_damage": {
+                "set_property": {
+                    "starktma:health": "math.max((q.property('starktma:health') - 45), 0)"
+                }
+            },
+            "take_fake_46_damage": {
+                "set_property": {
+                    "starktma:health": "math.max((q.property('starktma:health') - 46), 0)"
+                }
+            },
+            "take_fake_47_damage": {
+                "set_property": {
+                    "starktma:health": "math.max((q.property('starktma:health') - 47), 0)"
+                }
+            },
+            "take_fake_48_damage": {
+                "set_property": {
+                    "starktma:health": "math.max((q.property('starktma:health') - 48), 0)"
+                }
+            },
+            "take_fake_49_damage": {
+                "set_property": {
+                    "starktma:health": "math.max((q.property('starktma:health') - 49), 0)"
+                }
+            },
+            "take_fake_50_damage": {
+                "set_property": {
+                    "starktma:health": "math.max((q.property('starktma:health') - 50), 0)"
+                }
+            },
+            "take_fake_51_damage": {
+                "set_property": {
+                    "starktma:health": "math.max((q.property('starktma:health') - 51), 0)"
+                }
+            },
+            "take_fake_52_damage": {
+                "set_property": {
+                    "starktma:health": "math.max((q.property('starktma:health') - 52), 0)"
+                }
+            },
+            "take_fake_53_damage": {
+                "set_property": {
+                    "starktma:health": "math.max((q.property('starktma:health') - 53), 0)"
+                }
+            },
+            "take_fake_54_damage": {
+                "set_property": {
+                    "starktma:health": "math.max((q.property('starktma:health') - 54), 0)"
+                }
+            },
+            "take_fake_55_damage": {
+                "set_property": {
+                    "starktma:health": "math.max((q.property('starktma:health') - 55), 0)"
+                }
+            },
+            "take_fake_56_damage": {
+                "set_property": {
+                    "starktma:health": "math.max((q.property('starktma:health') - 56), 0)"
+                }
+            },
+            "take_fake_57_damage": {
+                "set_property": {
+                    "starktma:health": "math.max((q.property('starktma:health') - 57), 0)"
+                }
+            },
+            "take_fake_58_damage": {
+                "set_property": {
+                    "starktma:health": "math.max((q.property('starktma:health') - 58), 0)"
+                }
+            },
+            "take_fake_59_damage": {
+                "set_property": {
+                    "starktma:health": "math.max((q.property('starktma:health') - 59), 0)"
+                }
+            },
+            "take_fake_60_damage": {
+                "set_property": {
+                    "starktma:health": "math.max((q.property('starktma:health') - 60), 0)"
+                }
+            },
+            "take_fake_61_damage": {
+                "set_property": {
+                    "starktma:health": "math.max((q.property('starktma:health') - 61), 0)"
+                }
+            },
+            "take_fake_62_damage": {
+                "set_property": {
+                    "starktma:health": "math.max((q.property('starktma:health') - 62), 0)"
+                }
+            },
+            "take_fake_63_damage": {
+                "set_property": {
+                    "starktma:health": "math.max((q.property('starktma:health') - 63), 0)"
+                }
+            },
+            "take_fake_64_damage": {
+                "set_property": {
+                    "starktma:health": "math.max((q.property('starktma:health') - 64), 0)"
+                }
+            },
+            "take_fake_65_damage": {
+                "set_property": {
+                    "starktma:health": "math.max((q.property('starktma:health') - 65), 0)"
+                }
+            },
+            "take_fake_66_damage": {
+                "set_property": {
+                    "starktma:health": "math.max((q.property('starktma:health') - 66), 0)"
+                }
+            },
+            "take_fake_67_damage": {
+                "set_property": {
+                    "starktma:health": "math.max((q.property('starktma:health') - 67), 0)"
+                }
+            },
+            "take_fake_68_damage": {
+                "set_property": {
+                    "starktma:health": "math.max((q.property('starktma:health') - 68), 0)"
+                }
+            },
+            "take_fake_69_damage": {
+                "set_property": {
+                    "starktma:health": "math.max((q.property('starktma:health') - 69), 0)"
+                }
+            },
+            "take_fake_70_damage": {
+                "set_property": {
+                    "starktma:health": "math.max((q.property('starktma:health') - 70), 0)"
+                }
+            },
+            "take_fake_71_damage": {
+                "set_property": {
+                    "starktma:health": "math.max((q.property('starktma:health') - 71), 0)"
+                }
+            },
+            "take_fake_72_damage": {
+                "set_property": {
+                    "starktma:health": "math.max((q.property('starktma:health') - 72), 0)"
+                }
+            },
+            "take_fake_inf_damage": {
+                "set_property": {
+                    "starktma:health": 0
+                }
+            },
+            "kill": {
+                "set_property": {
+                    "starktma:health": 0
+                }
+            },
+            "minecraft:entity_spawned": {
+                "add": {
+                    "component_groups": [
+                        "ai"
+                    ]
+                }
+            },
+            "is_disabled": {
+                "add": {
+                    "component_groups": [
+                        "is_disabled"
+                    ]
+                },
+                "remove": {
+                    "component_groups": [
+                        "ai"
+                    ]
+                },
+                "set_property": {
+                    "starktma:is_disabled": true
+                }
+            },
+            "is_enabled": {
+                "add": {
+                    "component_groups": [
+                        "ai"
+                    ]
+                },
+                "remove": {
+                    "component_groups": [
+                        "is_disabled"
+                    ]
+                },
+                "set_property": {
+                    "starktma:is_disabled": false
+                }
+            }
+        },
+        "description": {
+            "identifier": "starktma:molten_chocolate",
+            "animations": {
+                "root": "controller.animation.starktma.molten_chocolate.root"
+            },
+            "scripts": {
+                "animate": [
+                    "root"
+                ]
+            },
+            "properties": {
+                "starktma:health": {
+                    "type": "int",
+                    "default": 72,
+                    "range": [
+                        0,
+                        72
+                    ],
+                    "client_sync": true
+                },
+                "starktma:max_health": {
+                    "type": "int",
+                    "default": 72,
+                    "range": [
+                        0,
+                        72
+                    ],
+                    "client_sync": true
+                },
+                "starktma:is_disabled": {
+                    "type": "bool",
+                    "default": false,
+                    "client_sync": true
+                }
+            },
+            "is_spawnable": true,
+            "is_summonable": true
+        }
+    }
+}

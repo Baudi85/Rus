@@ -1,0 +1,23 @@
+//Filename: house.rp_ac.json
+//Generated with Anvil@StarkTMA 0.5.4
+//25-10-2023 01:06:44 +0100
+//
+
+{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.starktma.house.particles_controller": {
+            "initial_state": "default",
+            "states": {
+                "default": {
+                    "particle_effects": [
+                        {
+                            "effect": "attacker_fog",
+                            "locator": "attacker_fog"
+                        }
+                    ]
+                }
+            }
+        }
+    }
+}

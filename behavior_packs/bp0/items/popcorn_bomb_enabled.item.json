@@ -1,0 +1,30 @@
+//Filename: popcorn_bomb_enabled.item.json
+//Generated with Anvil@StarkTMA 0.5.2
+//11-10-2023 00:51:12 +0100
+//
+
+{
+    "format_version": "1.20.30",
+    "minecraft:item": {
+        "components": {
+            "minecraft:icon": {
+                "texture": "popcorn_bomb_enabled"
+            },
+            "minecraft:display_name": {
+                "value": "item.starktma:popcorn_bomb.name"
+            },
+            "minecraft:cooldown": {
+                "category": "popcorn_bomb",
+                "duration": 30
+            },
+            "minecraft:max_stack_size": 1,
+            "minecraft:use_duration": 999999,
+            "minecraft:food": {
+                "can_always_eat": true
+            }
+        },
+        "description": {
+            "identifier": "starktma:popcorn_bomb_enabled"
+        }
+    }
+}

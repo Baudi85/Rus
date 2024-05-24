@@ -1,0 +1,228 @@
+//Filename: card_picker.bp_ac.json
+//Generated with Anvil@StarkTMA 0.5.4
+//25-10-2023 01:06:43 +0100
+//
+
+{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.starktma.card_picker.root": {
+            "initial_state": "default",
+            "states": {
+                "default": {
+                    "on_entry": [
+                        "/gamemode adventure @a",
+                        "/clear @a   "
+                    ],
+                    "animations": [
+                        "dialogue_opener"
+                    ]
+                }
+            }
+        },
+        "controller.animation.starktma.card_picker.give_cards": {
+            "initial_state": "default",
+            "states": {
+                "default": {
+                    "transitions": [
+                        {
+                            "card_picker_0": "q.variant == 0"
+                        },
+                        {
+                            "card_picker_1": "q.variant == 1"
+                        },
+                        {
+                            "card_picker_2": "q.variant == 2"
+                        },
+                        {
+                            "card_picker_3": "q.variant == 3"
+                        },
+                        {
+                            "card_picker_4": "q.variant == 4"
+                        },
+                        {
+                            "card_picker_5": "q.variant == 5"
+                        },
+                        {
+                            "card_picker_6": "q.variant == 6"
+                        },
+                        {
+                            "card_picker_7": "q.variant == 7"
+                        },
+                        {
+                            "card_picker_8": "q.variant == 8"
+                        },
+                        {
+                            "card_picker_9": "q.variant == 9"
+                        },
+                        {
+                            "card_picker_10": "q.variant == 10"
+                        },
+                        {
+                            "card_picker_11": "q.variant == 11"
+                        },
+                        {
+                            "card_picker_12": "q.variant == 12"
+                        },
+                        {
+                            "card_picker_13": "q.variant == 13"
+                        },
+                        {
+                            "card_picker_14": "q.variant == 14"
+                        }
+                    ]
+                },
+                "card_picker_0": {
+                    "on_entry": [
+                        "/give @a starktma:choc_shoot_disabled 1 0 {\"minecraft:item_lock\": {\"mode\": \"lock_in_slot\"}}"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "q.variant != 0"
+                        }
+                    ]
+                },
+                "card_picker_1": {
+                    "on_entry": [
+                        "/give @a starktma:gummy_bear_disabled 1 0 {\"minecraft:item_lock\": {\"mode\": \"lock_in_slot\"}}"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "q.variant != 1"
+                        }
+                    ]
+                },
+                "card_picker_2": {
+                    "on_entry": [
+                        "/give @a starktma:popcorn_bomb_disabled 1 0 {\"minecraft:item_lock\": {\"mode\": \"lock_in_slot\"}}"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "q.variant != 2"
+                        }
+                    ]
+                },
+                "card_picker_3": {
+                    "on_entry": [
+                        "/give @a starktma:j_bean_shoot_disabled 1 0 {\"minecraft:item_lock\": {\"mode\": \"lock_in_slot\"}}"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "q.variant != 3"
+                        }
+                    ]
+                },
+                "card_picker_4": {
+                    "on_entry": [
+                        "/give @a starktma:slushie_shoot_disabled 1 0 {\"minecraft:item_lock\": {\"mode\": \"lock_in_slot\"}}"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "q.variant != 4"
+                        }
+                    ]
+                },
+                "card_picker_5": {
+                    "on_entry": [
+                        "/give @a starktma:cotton_candy_disabled 1 0 {\"minecraft:item_lock\": {\"mode\": \"lock_in_slot\"}}"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "q.variant != 5"
+                        }
+                    ]
+                },
+                "card_picker_6": {
+                    "on_entry": [
+                        "/give @a starktma:molten_chocolate_disabled 1 0 {\"minecraft:item_lock\": {\"mode\": \"lock_in_slot\"}}"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "q.variant != 6"
+                        }
+                    ]
+                },
+                "card_picker_7": {
+                    "on_entry": [
+                        "/give @a starktma:gingerbread_disabled 1 0 {\"minecraft:item_lock\": {\"mode\": \"lock_in_slot\"}}"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "q.variant != 7"
+                        }
+                    ]
+                },
+                "card_picker_8": {
+                    "on_entry": [
+                        "/give @a starktma:toast_marsh_disabled 1 0 {\"minecraft:item_lock\": {\"mode\": \"lock_in_slot\"}}"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "q.variant != 8"
+                        }
+                    ]
+                },
+                "card_picker_9": {
+                    "on_entry": [
+                        "/give @a starktma:mint_shock_disabled 1 0 {\"minecraft:item_lock\": {\"mode\": \"lock_in_slot\"}}"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "q.variant != 9"
+                        }
+                    ]
+                },
+                "card_picker_10": {
+                    "on_entry": [
+                        "/give @a starktma:candy_cane_disabled 1 0 {\"minecraft:item_lock\": {\"mode\": \"lock_in_slot\"}}"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "q.variant != 10"
+                        }
+                    ]
+                },
+                "card_picker_11": {
+                    "on_entry": [
+                        "/give @a starktma:popper_candy_disabled 1 0 {\"minecraft:item_lock\": {\"mode\": \"lock_in_slot\"}}"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "q.variant != 11"
+                        }
+                    ]
+                },
+                "card_picker_12": {
+                    "on_entry": [
+                        "/give @a starktma:gumball_blast_disabled 1 0 {\"minecraft:item_lock\": {\"mode\": \"lock_in_slot\"}}"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "q.variant != 12"
+                        }
+                    ]
+                },
+                "card_picker_13": {
+                    "on_entry": [
+                        "/give @a starktma:bubblegum_shoot_disabled 1 0 {\"minecraft:item_lock\": {\"mode\": \"lock_in_slot\"}}"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "q.variant != 13"
+                        }
+                    ]
+                },
+                "card_picker_14": {
+                    "on_entry": [
+                        "/give @a starktma:ice_cream_bomb_disabled 1 0 {\"minecraft:item_lock\": {\"mode\": \"lock_in_slot\"}}"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "q.variant != 14"
+                        }
+                    ]
+                }
+            }
+        }
+    }
+}

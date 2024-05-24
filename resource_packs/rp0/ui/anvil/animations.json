@@ -1,0 +1,501 @@
+//Filename: animations.json
+//Generated with Anvil@StarkTMA 0.5.4
+//25-10-2023 01:06:43 +0100
+//
+
+{
+    "namespace": "anvil_animations",
+    "slide_in": {
+        "anim_type": "offset",
+        "easing": "in_out_sine",
+        "from": [
+            "-150%",
+            "0%"
+        ],
+        "to": [
+            "0%",
+            "0%"
+        ],
+        "duration": "$anvil.slide_in.duration",
+        "next": "@anvil_animations.slide_wait"
+    },
+    "slide_wait": {
+        "anim_type": "wait"
+    },
+    "slide_out": {
+        "anim_type": "offset",
+        "easing": "in_out_sine",
+        "from": [
+            "0%",
+            "0%"
+        ],
+        "to": [
+            "150%",
+            "0%"
+        ],
+        "duration": "$anvil.slide_out.duration"
+    },
+    "scope_view_in": {
+        "anim_type": "size",
+        "easing": "in_out_sine",
+        "from": [
+            "100%y",
+            "300%"
+        ],
+        "to": [
+            "100%y",
+            "15%"
+        ],
+        "duration": "$anvil.scope_view_in.duration",
+        "next": "@anvil_animations.scope_view_wait"
+    },
+    "scope_view_wait": {
+        "anim_type": "wait"
+    },
+    "scope_view_out": {
+        "anim_type": "size",
+        "easing": "in_out_sine",
+        "from": [
+            "100%y",
+            "15%"
+        ],
+        "to": [
+            "100%y",
+            "300%"
+        ],
+        "duration": "$anvil.scope_view_out.duration"
+    },
+    "scope_view_full_in": {
+        "anim_type": "size",
+        "easing": "in_out_sine",
+        "from": [
+            "100%y",
+            "300%"
+        ],
+        "to": [
+            "100%y",
+            "0.3%"
+        ],
+        "duration": "$anvil.scope_view_in.duration",
+        "next": "@anvil_animations.scope_view_full_wait"
+    },
+    "scope_view_full_wait": {
+        "anim_type": "wait"
+    },
+    "scope_view_full_out": {
+        "anim_type": "size",
+        "easing": "in_out_sine",
+        "from": [
+            "100%y",
+            "0.3%"
+        ],
+        "to": [
+            "100%y",
+            "300%"
+        ],
+        "duration": "$anvil.scope_view_out.duration"
+    },
+    "unsupported_players_zoom_in": {
+        "anim_type": "size",
+        "easing": "linear",
+        "from": [
+            "30%",
+            "30%"
+        ],
+        "to": [
+            "40%",
+            "40%"
+        ],
+        "duration": "$anvil.image.unsupported_players_in",
+        "next": "@anvil_animations.unsupported_players_zoom_wait"
+    },
+    "unsupported_players_zoom_wait": {
+        "anim_type": "wait",
+        "duration": "$anvil.image.unsupported_players_wait",
+        "next": "@anvil_animations.unsupported_players_zoom_out"
+    },
+    "unsupported_players_zoom_out": {
+        "anim_type": "size",
+        "easing": "linear",
+        "from": [
+            "40%",
+            "40%"
+        ],
+        "to": [
+            "50%",
+            "50%"
+        ],
+        "duration": "$anvil.image.unsupported_players_out"
+    },
+    "unsupported_players_alpha_in": {
+        "anim_type": "alpha",
+        "easing": "out_quad",
+        "from": 0,
+        "to": 1,
+        "duration": "$anvil.image.unsupported_players_in",
+        "next": "@anvil_animations.unsupported_players_alpha_wait"
+    },
+    "unsupported_players_alpha_wait": {
+        "anim_type": "wait",
+        "duration": "$anvil.image.unsupported_players_wait",
+        "next": "@anvil_animations.unsupported_players_alpha_out"
+    },
+    "unsupported_players_alpha_out": {
+        "anim_type": "alpha",
+        "easing": "in_out_sine",
+        "from": 1,
+        "to": 0,
+        "duration": "$anvil.image.unsupported_players_out",
+        "destroy_at_end": "hud_title_text"
+    },
+    "surge_wave_title_zoom_in": {
+        "anim_type": "size",
+        "easing": "linear",
+        "from": [
+            "400%",
+            "400%"
+        ],
+        "to": [
+            "70%",
+            "70%"
+        ],
+        "duration": "$anvil.image.surge_wave_title_in",
+        "next": "@anvil_animations.surge_wave_title_zoom_wait"
+    },
+    "surge_wave_title_zoom_wait": {
+        "anim_type": "wait",
+        "duration": "$anvil.image.surge_wave_title_wait",
+        "next": "@anvil_animations.surge_wave_title_zoom_out"
+    },
+    "surge_wave_title_zoom_out": {
+        "anim_type": "size",
+        "easing": "linear",
+        "from": [
+            "70%",
+            "70%"
+        ],
+        "to": [
+            "60%",
+            "60%"
+        ],
+        "duration": "$anvil.image.surge_wave_title_out"
+    },
+    "surge_wave_title_alpha_in": {
+        "anim_type": "alpha",
+        "easing": "out_quad",
+        "from": 0,
+        "to": 1,
+        "duration": "$anvil.image.surge_wave_title_in",
+        "next": "@anvil_animations.surge_wave_title_alpha_wait"
+    },
+    "surge_wave_title_alpha_wait": {
+        "anim_type": "wait",
+        "duration": "$anvil.image.surge_wave_title_wait",
+        "next": "@anvil_animations.surge_wave_title_alpha_out"
+    },
+    "surge_wave_title_alpha_out": {
+        "anim_type": "alpha",
+        "easing": "in_out_sine",
+        "from": 1,
+        "to": 0,
+        "duration": "$anvil.image.surge_wave_title_out",
+        "destroy_at_end": "hud_title_text"
+    },
+    "final_wave_title_zoom_in": {
+        "anim_type": "size",
+        "easing": "linear",
+        "from": [
+            "400%",
+            "400%"
+        ],
+        "to": [
+            "70%",
+            "70%"
+        ],
+        "duration": "$anvil.image.final_wave_title_in",
+        "next": "@anvil_animations.final_wave_title_zoom_wait"
+    },
+    "final_wave_title_zoom_wait": {
+        "anim_type": "wait",
+        "duration": "$anvil.image.final_wave_title_wait",
+        "next": "@anvil_animations.final_wave_title_zoom_out"
+    },
+    "final_wave_title_zoom_out": {
+        "anim_type": "size",
+        "easing": "linear",
+        "from": [
+            "70%",
+            "70%"
+        ],
+        "to": [
+            "60%",
+            "60%"
+        ],
+        "duration": "$anvil.image.final_wave_title_out"
+    },
+    "final_wave_title_alpha_in": {
+        "anim_type": "alpha",
+        "easing": "out_quad",
+        "from": 0,
+        "to": 1,
+        "duration": "$anvil.image.final_wave_title_in",
+        "next": "@anvil_animations.final_wave_title_alpha_wait"
+    },
+    "final_wave_title_alpha_wait": {
+        "anim_type": "wait",
+        "duration": "$anvil.image.final_wave_title_wait",
+        "next": "@anvil_animations.final_wave_title_alpha_out"
+    },
+    "final_wave_title_alpha_out": {
+        "anim_type": "alpha",
+        "easing": "in_out_sine",
+        "from": 1,
+        "to": 0,
+        "duration": "$anvil.image.final_wave_title_out",
+        "destroy_at_end": "hud_title_text"
+    },
+    "ready_zoom_in": {
+        "anim_type": "size",
+        "easing": "linear",
+        "from": [
+            "400%",
+            "400%"
+        ],
+        "to": [
+            "70%",
+            "70%"
+        ],
+        "duration": "$anvil.image.ready_in",
+        "next": "@anvil_animations.ready_zoom_wait"
+    },
+    "ready_zoom_wait": {
+        "anim_type": "wait",
+        "duration": "$anvil.image.ready_wait",
+        "next": "@anvil_animations.ready_zoom_out"
+    },
+    "ready_zoom_out": {
+        "anim_type": "size",
+        "easing": "linear",
+        "from": [
+            "70%",
+            "70%"
+        ],
+        "to": [
+            "60%",
+            "60%"
+        ],
+        "duration": "$anvil.image.ready_out"
+    },
+    "ready_alpha_in": {
+        "anim_type": "alpha",
+        "easing": "out_quad",
+        "from": 0,
+        "to": 1,
+        "duration": "$anvil.image.ready_in",
+        "next": "@anvil_animations.ready_alpha_wait"
+    },
+    "ready_alpha_wait": {
+        "anim_type": "wait",
+        "duration": "$anvil.image.ready_wait",
+        "next": "@anvil_animations.ready_alpha_out"
+    },
+    "ready_alpha_out": {
+        "anim_type": "alpha",
+        "easing": "in_out_sine",
+        "from": 1,
+        "to": 0,
+        "duration": "$anvil.image.ready_out",
+        "destroy_at_end": "hud_title_text"
+    },
+    "set_zoom_in": {
+        "anim_type": "size",
+        "easing": "linear",
+        "from": [
+            "400%",
+            "400%"
+        ],
+        "to": [
+            "70%",
+            "70%"
+        ],
+        "duration": "$anvil.image.set_in",
+        "next": "@anvil_animations.set_zoom_wait"
+    },
+    "set_zoom_wait": {
+        "anim_type": "wait",
+        "duration": "$anvil.image.set_wait",
+        "next": "@anvil_animations.set_zoom_out"
+    },
+    "set_zoom_out": {
+        "anim_type": "size",
+        "easing": "linear",
+        "from": [
+            "70%",
+            "70%"
+        ],
+        "to": [
+            "60%",
+            "60%"
+        ],
+        "duration": "$anvil.image.set_out"
+    },
+    "set_alpha_in": {
+        "anim_type": "alpha",
+        "easing": "out_quad",
+        "from": 0,
+        "to": 1,
+        "duration": "$anvil.image.set_in",
+        "next": "@anvil_animations.set_alpha_wait"
+    },
+    "set_alpha_wait": {
+        "anim_type": "wait",
+        "duration": "$anvil.image.set_wait",
+        "next": "@anvil_animations.set_alpha_out"
+    },
+    "set_alpha_out": {
+        "anim_type": "alpha",
+        "easing": "in_out_sine",
+        "from": 1,
+        "to": 0,
+        "duration": "$anvil.image.set_out",
+        "destroy_at_end": "hud_title_text"
+    },
+    "candy_zoom_in": {
+        "anim_type": "size",
+        "easing": "linear",
+        "from": [
+            "400%",
+            "400%"
+        ],
+        "to": [
+            "70%",
+            "70%"
+        ],
+        "duration": "$anvil.image.candy_in",
+        "next": "@anvil_animations.candy_zoom_wait"
+    },
+    "candy_zoom_wait": {
+        "anim_type": "wait",
+        "duration": "$anvil.image.candy_wait",
+        "next": "@anvil_animations.candy_zoom_out"
+    },
+    "candy_zoom_out": {
+        "anim_type": "size",
+        "easing": "linear",
+        "from": [
+            "70%",
+            "70%"
+        ],
+        "to": [
+            "60%",
+            "60%"
+        ],
+        "duration": "$anvil.image.candy_out"
+    },
+    "candy_alpha_in": {
+        "anim_type": "alpha",
+        "easing": "out_quad",
+        "from": 0,
+        "to": 1,
+        "duration": "$anvil.image.candy_in",
+        "next": "@anvil_animations.candy_alpha_wait"
+    },
+    "candy_alpha_wait": {
+        "anim_type": "wait",
+        "duration": "$anvil.image.candy_wait",
+        "next": "@anvil_animations.candy_alpha_out"
+    },
+    "candy_alpha_out": {
+        "anim_type": "alpha",
+        "easing": "in_out_sine",
+        "from": 1,
+        "to": 0,
+        "duration": "$anvil.image.candy_out",
+        "destroy_at_end": "hud_title_text"
+    },
+    "freeze_wait": {
+        "anim_type": "alpha",
+        "easing": "linear",
+        "duration": 1,
+        "from": 1,
+        "to": 1,
+        "next": "@anvil_animations.freeze_out"
+    },
+    "freeze_out": {
+        "anim_type": "alpha",
+        "easing": "linear",
+        "duration": 2,
+        "from": 1,
+        "to": 0
+    },
+    "credits_scroll": {
+        "anim_type": "offset",
+        "duration": 30,
+        "from": [
+            0,
+            "160%"
+        ],
+        "to": [
+            0,
+            "-160%"
+        ],
+        "destroy_at_end": "hud_title_text"
+    },
+    "tip_in_long": {
+        "anim_type": "offset",
+        "easing": "in_out_sine",
+        "from": [
+            "1%",
+            "100%x"
+        ],
+        "to": [
+            "1%",
+            0
+        ],
+        "duration": "$anvil.tip.in",
+        "next": "@anvil_animations.tip_stay_long"
+    },
+    "tip_stay_long": {
+        "anim_type": "wait",
+        "duration": "$anvil.tip.stay_long"
+    },
+    "tip_in_short": {
+        "anim_type": "offset",
+        "easing": "in_out_sine",
+        "from": [
+            "-100%x",
+            0
+        ],
+        "to": [
+            "1%",
+            0
+        ],
+        "duration": "$anvil.tip.in",
+        "next": "@anvil_animations.tip_stay_short"
+    },
+    "tip_stay_short": {
+        "anim_type": "wait",
+        "duration": "$anvil.tip.stay_short",
+        "next": "@anvil_animations.tip_out"
+    },
+    "tip_out": {
+        "anim_type": "offset",
+        "easing": "in_out_sine",
+        "from": [
+            "1%",
+            0
+        ],
+        "to": [
+            "-100%x",
+            0
+        ],
+        "duration": "$anvil.tip.out"
+    },
+    "aseprite_animation": {
+        "anim_type": "aseprite_flip_book",
+        "initial_uv": [
+            0,
+            0
+        ]
+    }
+}

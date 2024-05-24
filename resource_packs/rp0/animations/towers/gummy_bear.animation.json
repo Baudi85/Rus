@@ -1,0 +1,91 @@
+//Filename: gummy_bear.animation.json
+//Generated with Anvil@StarkTMA 0.5.0
+//22-07-2023 12:07:05 +0100
+//
+
+{
+    "format_version": "1.8.0",
+    "animations": {
+        "animation.starktma.gummy_bear.directional_setup": {
+            "loop": true,
+            "override_previous_animation": false,
+            "bones": {
+                "root": {
+                    "rotation": [
+                        0,
+                        "v.rounded_rotation",
+                        0
+                    ]
+                }
+            }
+        },
+        "animation.starktma.gummy_bear.idle": {
+            "loop": true,
+            "bones": {
+                "head": {
+                    "position": [
+                        "Math.cos(q.anim_time*200)",
+                        "Math.sin(q.anim_time*400)",
+                        0
+                    ]
+                },
+                "eyes": {
+                    "position": [
+                        0,
+                        "Math.sin(q.anim_time*400-90) ",
+                        0
+                    ]
+                },
+                "arms": {
+                    "position": [
+                        0,
+                        "Math.sin(q.anim_time*400-45) ",
+                        0
+                    ]
+                },
+                "head2": {
+                    "position": [
+                        "Math.cos(q.anim_time*200)",
+                        "Math.sin(q.anim_time*400)",
+                        0
+                    ]
+                },
+                "eyes2": {
+                    "position": [
+                        0,
+                        "Math.sin(q.anim_time*400-90) ",
+                        0
+                    ]
+                },
+                "arms2": {
+                    "position": [
+                        0,
+                        "Math.sin(q.anim_time*400-45) ",
+                        0
+                    ]
+                },
+                "head3": {
+                    "position": [
+                        "Math.sin(q.anim_time*400)",
+                        0,
+                        0
+                    ]
+                },
+                "eyes3": {
+                    "position": [
+                        "Math.sin(q.anim_time*400-90) ",
+                        0,
+                        0
+                    ]
+                },
+                "arms3": {
+                    "position": [
+                        "Math.sin(q.anim_time*400-45) ",
+                        0,
+                        0
+                    ]
+                }
+            }
+        }
+    }
+}

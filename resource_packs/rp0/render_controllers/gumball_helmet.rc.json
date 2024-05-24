@@ -1,0 +1,30 @@
+//Filename: gumball_helmet.rc.json
+//Generated with Anvil@StarkTMA 0.5.4
+//25-10-2023 01:06:42 +0100
+//
+
+{
+    "format_version": "1.10.0",
+    "render_controllers": {
+        "controller.render.starktma.gumball_helmet.gumball_helmet": {
+            "arrays": {
+                "textures": {
+                    "Array.textures": [
+                        "Texture.gumball_helmet_2",
+                        "Texture.gumball_helmet_1",
+                        "Texture.gumball_helmet_0"
+                    ]
+                }
+            },
+            "materials": [
+                {
+                    "*": "Material.default"
+                }
+            ],
+            "geometry": "Geometry.default",
+            "textures": [
+                "Array.textures[v.health_frame]"
+            ]
+        }
+    }
+}

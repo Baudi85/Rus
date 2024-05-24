@@ -1,0 +1,75 @@
+//Filename: house.behavior.json
+//Generated with Anvil@StarkTMA 0.5.4
+//25-10-2023 01:06:44 +0100
+//
+
+{
+    "format_version": "1.19.0",
+    "minecraft:entity": {
+        "component_groups": {
+            "despawn": {
+                "minecraft:instant_despawn": {}
+            }
+        },
+        "components": {
+            "minecraft:conditional_bandwidth_optimization": {
+                "default_values": {
+                    "use_motion_prediction_hints": true
+                }
+            },
+            "minecraft:jump.static": {
+                "jump_power": 0
+            },
+            "minecraft:movement.basic": {},
+            "minecraft:navigation.walk": {},
+            "minecraft:movement": {
+                "value": 0
+            },
+            "minecraft:physics": {
+                "has_collision": true,
+                "has_gravity": true
+            },
+            "minecraft:knockback_resistance": {
+                "value": 1
+            },
+            "minecraft:health": {
+                "value": 6
+            },
+            "minecraft:collision_box": {
+                "height": 1,
+                "width": 1
+            },
+            "minecraft:breathable": {},
+            "minecraft:damage_sensor": {
+                "triggers": [
+                    {
+                        "deals_damage": false
+                    }
+                ]
+            },
+            "minecraft:pushable": {
+                "is_pushable": false,
+                "is_pushable_by_piston": false
+            },
+            "minecraft:push_through": {
+                "value": 1
+            }
+        },
+        "events": {
+            "despawn": {
+                "add": {
+                    "component_groups": [
+                        "despawn"
+                    ]
+                }
+            },
+            "kill": {
+                "trigger": "despawn"
+            }
+        },
+        "description": {
+            "identifier": "starktma:house",
+            "is_summonable": true
+        }
+    }
+}

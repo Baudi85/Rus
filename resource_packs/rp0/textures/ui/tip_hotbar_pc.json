@@ -1,0 +1,36 @@
+{ "frames": [
+   {
+    "filename": "tip_hotbar_pc 0.png",
+    "frame": { "x": 0, "y": 0, "w": 24, "h": 26 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 24, "h": 26 },
+    "sourceSize": { "w": 24, "h": 26 },
+    "duration": 500
+   },
+   {
+    "filename": "tip_hotbar_pc 1.png",
+    "frame": { "x": 24, "y": 0, "w": 24, "h": 26 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 24, "h": 26 },
+    "sourceSize": { "w": 24, "h": 26 },
+    "duration": 500
+   }
+ ],
+ "meta": {
+  "app": "https://www.aseprite.org/",
+  "version": "1.2.40-x64",
+  "image": "tip_hotbar_pc.png",
+  "format": "RGBA8888",
+  "size": { "w": 48, "h": 26 },
+  "scale": "1",
+  "frameTags": [
+  ],
+  "layers": [
+   { "name": "Sprite Sheet", "opacity": 255, "blendMode": "normal" }
+  ],
+  "slices": [
+  ]
+ }
+}

@@ -1,0 +1,136 @@
+//Filename: engine_aod.behavior.json
+//Generated with Anvil@StarkTMA 0.5.4
+//25-10-2023 01:06:44 +0100
+//
+
+{
+    "format_version": "1.19.0",
+    "minecraft:entity": {
+        "component_groups": {
+            "despawn": {
+                "minecraft:instant_despawn": {}
+            },
+            "explode": {
+                "minecraft:explode": {
+                    "breaks_blocks": false,
+                    "fuse_length": [
+                        0,
+                        0
+                    ],
+                    "fuse_lit": true,
+                    "power": 1
+                }
+            },
+            "molten_chocolate": {
+                "minecraft:timer": {
+                    "time_down_event": {
+                        "event": "molten_chocolate_hit",
+                        "target": "self"
+                    },
+                    "time": 0.5
+                }
+            }
+        },
+        "components": {
+            "minecraft:conditional_bandwidth_optimization": {
+                "default_values": {
+                    "use_motion_prediction_hints": true
+                }
+            },
+            "minecraft:collision_box": {
+                "height": 0,
+                "width": 0
+            },
+            "minecraft:physics": {
+                "has_collision": true,
+                "has_gravity": true
+            },
+            "minecraft:health": {
+                "value": 1,
+                "max": 1,
+                "min": 1
+            },
+            "minecraft:pushable": {
+                "is_pushable": false,
+                "is_pushable_by_piston": false
+            },
+            "minecraft:damage_sensor": {
+                "triggers": [
+                    {
+                        "deals_damage": false
+                    }
+                ]
+            }
+        },
+        "events": {
+            "despawn": {
+                "add": {
+                    "component_groups": [
+                        "despawn"
+                    ]
+                }
+            },
+            "explode": {
+                "add": {
+                    "component_groups": [
+                        "explode"
+                    ]
+                }
+            },
+            "molten_chocolate": {
+                "add": {
+                    "component_groups": [
+                        "molten_chocolate"
+                    ]
+                },
+                "set_property": {
+                    "starktma:variant": 0
+                }
+            },
+            "molten_chocolate_hit": {
+                "add": {
+                    "component_groups": [
+                        "molten_chocolate_hit"
+                    ]
+                },
+                "remove": {
+                    "component_groups": [
+                        "molten_chocolate"
+                    ]
+                },
+                "set_property": {
+                    "starktma:on_hit": true
+                }
+            }
+        },
+        "description": {
+            "identifier": "starktma:engine_aod",
+            "animations": {
+                "root": "controller.animation.starktma.engine_aod.root",
+                "molten_chocolate_damage": "animation.starktma.engine_aod.molten_chocolate_damage"
+            },
+            "scripts": {
+                "animate": [
+                    "root"
+                ]
+            },
+            "properties": {
+                "starktma:on_hit": {
+                    "type": "bool",
+                    "default": false,
+                    "client_sync": true
+                },
+                "starktma:variant": {
+                    "type": "int",
+                    "default": 0,
+                    "range": [
+                        0,
+                        128
+                    ],
+                    "client_sync": true
+                }
+            },
+            "is_summonable": true
+        }
+    }
+}

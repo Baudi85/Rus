@@ -1,0 +1,36 @@
+//Filename: camp.rp_ac.json
+//Generated with Anvil@StarkTMA 0.5.4
+//25-10-2023 01:06:44 +0100
+//
+
+{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.starktma.camp.attacker_fog_controller": {
+            "initial_state": "default",
+            "states": {
+                "default": {
+                    "particle_effects": [
+                        {
+                            "effect": "attacker_fog",
+                            "locator": "attacker_fog"
+                        }
+                    ]
+                }
+            }
+        },
+        "controller.animation.starktma.camp.campfire_controller": {
+            "initial_state": "default",
+            "states": {
+                "default": {
+                    "particle_effects": [
+                        {
+                            "effect": "campfire_particle",
+                            "locator": "campfire_particle"
+                        }
+                    ]
+                }
+            }
+        }
+    }
+}

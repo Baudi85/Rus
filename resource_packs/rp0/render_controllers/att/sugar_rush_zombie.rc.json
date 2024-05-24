@@ -1,0 +1,27 @@
+//Filename: sugar_rush_zombie.rc.json
+//Generated with Anvil@StarkTMA 0.5.4
+//25-10-2023 01:06:42 +0100
+//
+
+{
+    "format_version": "1.10.0",
+    "render_controllers": {
+        "controller.render.starktma.sugar_rush_zombie.default": {
+            "materials": [
+                {
+                    "*": "Material.default"
+                }
+            ],
+            "geometry": "Geometry.default",
+            "textures": [
+                "Texture.default"
+            ],
+            "overlay_color": {
+                "a": 0.5,
+                "r": "q.property('starktma:is_on_fire')",
+                "g": "(q.property('starktma:is_frozen') || q.property('starktma:is_slowed'))",
+                "b": "(q.property('starktma:is_frozen') || q.property('starktma:is_slowed'))"
+            }
+        }
+    }
+}

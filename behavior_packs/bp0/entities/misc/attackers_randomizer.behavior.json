@@ -1,0 +1,2010 @@
+//Filename: attackers_randomizer.behavior.json
+//Generated with Anvil@StarkTMA 0.5.4
+//25-10-2023 01:06:43 +0100
+//
+
+{
+    "format_version": "1.19.0",
+    "minecraft:entity": {
+        "component_groups": {
+            "despawn": {
+                "minecraft:instant_despawn": {}
+            },
+            "starktma:basic_zombie": {
+                "minecraft:transformation": {
+                    "into": "starktma:basic_zombie<minecraft:entity_spawned>"
+                }
+            },
+            "starktma:sugar_rush_zombie": {
+                "minecraft:transformation": {
+                    "into": "starktma:sugar_rush_zombie<minecraft:entity_spawned>"
+                }
+            },
+            "starktma:gumball_helmet_zombie": {
+                "minecraft:transformation": {
+                    "into": "starktma:gumball_helmet_zombie<minecraft:entity_spawned>"
+                }
+            },
+            "starktma:candy_gobbler_zombie": {
+                "minecraft:transformation": {
+                    "into": "starktma:candy_gobbler_zombie<minecraft:entity_spawned>"
+                }
+            },
+            "starktma:lollipop_shield_zombie": {
+                "minecraft:transformation": {
+                    "into": "starktma:lollipop_shield_zombie<minecraft:entity_spawned>"
+                }
+            },
+            "starktma:jellybean_juggler": {
+                "minecraft:transformation": {
+                    "into": "starktma:jellybean_juggler<minecraft:entity_spawned>"
+                }
+            },
+            "starktma:sugar_imp_zombie": {
+                "minecraft:transformation": {
+                    "into": "starktma:sugar_imp_zombie<minecraft:entity_spawned>"
+                }
+            },
+            "starktma:sugar_spawner": {
+                "minecraft:transformation": {
+                    "into": "starktma:sugar_spawner<minecraft:entity_spawned>"
+                }
+            },
+            "starktma:ice_cream_cone": {
+                "minecraft:transformation": {
+                    "into": "starktma:ice_cream_cone<minecraft:entity_spawned>"
+                }
+            },
+            "starktma:sugar_overlord": {
+                "minecraft:transformation": {
+                    "into": "starktma:sugar_overlord<minecraft:entity_spawned>"
+                }
+            },
+            "starktma:candy_jammer": {
+                "minecraft:transformation": {
+                    "into": "starktma:candy_jammer<minecraft:entity_spawned>"
+                }
+            }
+        },
+        "components": {
+            "minecraft:conditional_bandwidth_optimization": {
+                "default_values": {
+                    "use_motion_prediction_hints": true
+                }
+            }
+        },
+        "events": {
+            "despawn": {
+                "add": {
+                    "component_groups": [
+                        "despawn"
+                    ]
+                }
+            },
+            "level_0": {
+                "randomize": [
+                    {
+                        "weight": 1,
+                        "add": {
+                            "component_groups": [
+                                "starktma:basic_zombie"
+                            ]
+                        }
+                    }
+                ]
+            },
+            "level_1": {
+                "randomize": [
+                    {
+                        "weight": 1,
+                        "add": {
+                            "component_groups": [
+                                "starktma:basic_zombie"
+                            ]
+                        }
+                    }
+                ]
+            },
+            "level_2": {
+                "randomize": [
+                    {
+                        "weight": 1,
+                        "add": {
+                            "component_groups": [
+                                "starktma:basic_zombie"
+                            ]
+                        }
+                    }
+                ]
+            },
+            "level_3": {
+                "randomize": [
+                    {
+                        "weight": 1,
+                        "add": {
+                            "component_groups": [
+                                "starktma:basic_zombie"
+                            ]
+                        }
+                    }
+                ]
+            },
+            "level_4": {
+                "randomize": [
+                    {
+                        "weight": 4,
+                        "add": {
+                            "component_groups": [
+                                "starktma:basic_zombie"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 1,
+                        "add": {
+                            "component_groups": [
+                                "starktma:sugar_rush_zombie"
+                            ]
+                        }
+                    }
+                ]
+            },
+            "level_5": {
+                "randomize": [
+                    {
+                        "weight": 3,
+                        "add": {
+                            "component_groups": [
+                                "starktma:basic_zombie"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 1,
+                        "add": {
+                            "component_groups": [
+                                "starktma:sugar_rush_zombie"
+                            ]
+                        }
+                    }
+                ]
+            },
+            "level_6": {
+                "randomize": [
+                    {
+                        "weight": 7,
+                        "add": {
+                            "component_groups": [
+                                "starktma:basic_zombie"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 2,
+                        "add": {
+                            "component_groups": [
+                                "starktma:sugar_rush_zombie"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 1,
+                        "add": {
+                            "component_groups": [
+                                "starktma:gumball_helmet_zombie"
+                            ]
+                        }
+                    }
+                ]
+            },
+            "level_7": {
+                "randomize": [
+                    {
+                        "weight": 7,
+                        "add": {
+                            "component_groups": [
+                                "starktma:basic_zombie"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 3,
+                        "add": {
+                            "component_groups": [
+                                "starktma:sugar_rush_zombie"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 1,
+                        "add": {
+                            "component_groups": [
+                                "starktma:gumball_helmet_zombie"
+                            ]
+                        }
+                    }
+                ]
+            },
+            "level_8": {
+                "randomize": [
+                    {
+                        "weight": 7,
+                        "add": {
+                            "component_groups": [
+                                "starktma:basic_zombie"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 4,
+                        "add": {
+                            "component_groups": [
+                                "starktma:sugar_rush_zombie"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 3,
+                        "add": {
+                            "component_groups": [
+                                "starktma:gumball_helmet_zombie"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 3,
+                        "add": {
+                            "component_groups": [
+                                "starktma:candy_gobbler_zombie"
+                            ]
+                        }
+                    }
+                ]
+            },
+            "level_9": {
+                "randomize": [
+                    {
+                        "weight": 5,
+                        "add": {
+                            "component_groups": [
+                                "starktma:basic_zombie"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 3,
+                        "add": {
+                            "component_groups": [
+                                "starktma:sugar_rush_zombie"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 3,
+                        "add": {
+                            "component_groups": [
+                                "starktma:gumball_helmet_zombie"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 3,
+                        "add": {
+                            "component_groups": [
+                                "starktma:candy_gobbler_zombie"
+                            ]
+                        }
+                    }
+                ]
+            },
+            "level_10": {
+                "randomize": [
+                    {
+                        "weight": 7,
+                        "add": {
+                            "component_groups": [
+                                "starktma:basic_zombie"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 3,
+                        "add": {
+                            "component_groups": [
+                                "starktma:sugar_rush_zombie"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 3,
+                        "add": {
+                            "component_groups": [
+                                "starktma:gumball_helmet_zombie"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 3,
+                        "add": {
+                            "component_groups": [
+                                "starktma:candy_gobbler_zombie"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 1,
+                        "add": {
+                            "component_groups": [
+                                "starktma:lollipop_shield_zombie"
+                            ]
+                        }
+                    }
+                ]
+            },
+            "level_11": {
+                "randomize": [
+                    {
+                        "weight": 5,
+                        "add": {
+                            "component_groups": [
+                                "starktma:basic_zombie"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 3,
+                        "add": {
+                            "component_groups": [
+                                "starktma:sugar_rush_zombie"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 3,
+                        "add": {
+                            "component_groups": [
+                                "starktma:gumball_helmet_zombie"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 3,
+                        "add": {
+                            "component_groups": [
+                                "starktma:candy_gobbler_zombie"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 2,
+                        "add": {
+                            "component_groups": [
+                                "starktma:lollipop_shield_zombie"
+                            ]
+                        }
+                    }
+                ]
+            },
+            "level_12": {
+                "randomize": [
+                    {
+                        "weight": 5,
+                        "add": {
+                            "component_groups": [
+                                "starktma:basic_zombie"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 3,
+                        "add": {
+                            "component_groups": [
+                                "starktma:sugar_rush_zombie"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 3,
+                        "add": {
+                            "component_groups": [
+                                "starktma:gumball_helmet_zombie"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 3,
+                        "add": {
+                            "component_groups": [
+                                "starktma:candy_gobbler_zombie"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 3,
+                        "add": {
+                            "component_groups": [
+                                "starktma:lollipop_shield_zombie"
+                            ]
+                        }
+                    }
+                ]
+            },
+            "level_13": {
+                "randomize": [
+                    {
+                        "weight": 5,
+                        "add": {
+                            "component_groups": [
+                                "starktma:basic_zombie"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 3,
+                        "add": {
+                            "component_groups": [
+                                "starktma:sugar_rush_zombie"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 3,
+                        "add": {
+                            "component_groups": [
+                                "starktma:gumball_helmet_zombie"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 3,
+                        "add": {
+                            "component_groups": [
+                                "starktma:candy_gobbler_zombie"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 3,
+                        "add": {
+                            "component_groups": [
+                                "starktma:lollipop_shield_zombie"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 1,
+                        "add": {
+                            "component_groups": [
+                                "starktma:jellybean_juggler"
+                            ]
+                        }
+                    }
+                ]
+            },
+            "level_14": {
+                "randomize": [
+                    {
+                        "weight": 5,
+                        "add": {
+                            "component_groups": [
+                                "starktma:basic_zombie"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 3,
+                        "add": {
+                            "component_groups": [
+                                "starktma:sugar_rush_zombie"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 3,
+                        "add": {
+                            "component_groups": [
+                                "starktma:gumball_helmet_zombie"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 3,
+                        "add": {
+                            "component_groups": [
+                                "starktma:candy_gobbler_zombie"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 3,
+                        "add": {
+                            "component_groups": [
+                                "starktma:lollipop_shield_zombie"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 2,
+                        "add": {
+                            "component_groups": [
+                                "starktma:jellybean_juggler"
+                            ]
+                        }
+                    }
+                ]
+            },
+            "level_15": {
+                "randomize": [
+                    {
+                        "weight": 5,
+                        "add": {
+                            "component_groups": [
+                                "starktma:basic_zombie"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 3,
+                        "add": {
+                            "component_groups": [
+                                "starktma:sugar_rush_zombie"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 3,
+                        "add": {
+                            "component_groups": [
+                                "starktma:gumball_helmet_zombie"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 3,
+                        "add": {
+                            "component_groups": [
+                                "starktma:candy_gobbler_zombie"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 3,
+                        "add": {
+                            "component_groups": [
+                                "starktma:lollipop_shield_zombie"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 2,
+                        "add": {
+                            "component_groups": [
+                                "starktma:jellybean_juggler"
+                            ]
+                        }
+                    }
+                ]
+            },
+            "level_16": {
+                "randomize": [
+                    {
+                        "weight": 7,
+                        "add": {
+                            "component_groups": [
+                                "starktma:basic_zombie"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 3,
+                        "add": {
+                            "component_groups": [
+                                "starktma:sugar_rush_zombie"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 3,
+                        "add": {
+                            "component_groups": [
+                                "starktma:gumball_helmet_zombie"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 3,
+                        "add": {
+                            "component_groups": [
+                                "starktma:candy_gobbler_zombie"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 3,
+                        "add": {
+                            "component_groups": [
+                                "starktma:lollipop_shield_zombie"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 2,
+                        "add": {
+                            "component_groups": [
+                                "starktma:jellybean_juggler"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 1,
+                        "add": {
+                            "component_groups": [
+                                "starktma:sugar_imp_zombie"
+                            ]
+                        }
+                    }
+                ]
+            },
+            "level_17": {
+                "randomize": [
+                    {
+                        "weight": 7,
+                        "add": {
+                            "component_groups": [
+                                "starktma:basic_zombie"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 3,
+                        "add": {
+                            "component_groups": [
+                                "starktma:sugar_rush_zombie"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 3,
+                        "add": {
+                            "component_groups": [
+                                "starktma:gumball_helmet_zombie"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 3,
+                        "add": {
+                            "component_groups": [
+                                "starktma:candy_gobbler_zombie"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 3,
+                        "add": {
+                            "component_groups": [
+                                "starktma:lollipop_shield_zombie"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 2,
+                        "add": {
+                            "component_groups": [
+                                "starktma:jellybean_juggler"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 3,
+                        "add": {
+                            "component_groups": [
+                                "starktma:sugar_imp_zombie"
+                            ]
+                        }
+                    }
+                ]
+            },
+            "level_18": {
+                "randomize": [
+                    {
+                        "weight": 5,
+                        "add": {
+                            "component_groups": [
+                                "starktma:basic_zombie"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 3,
+                        "add": {
+                            "component_groups": [
+                                "starktma:sugar_rush_zombie"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 3,
+                        "add": {
+                            "component_groups": [
+                                "starktma:gumball_helmet_zombie"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 3,
+                        "add": {
+                            "component_groups": [
+                                "starktma:candy_gobbler_zombie"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 3,
+                        "add": {
+                            "component_groups": [
+                                "starktma:lollipop_shield_zombie"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 2,
+                        "add": {
+                            "component_groups": [
+                                "starktma:jellybean_juggler"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 3,
+                        "add": {
+                            "component_groups": [
+                                "starktma:sugar_imp_zombie"
+                            ]
+                        }
+                    }
+                ]
+            },
+            "level_19": {
+                "randomize": [
+                    {
+                        "weight": 5,
+                        "add": {
+                            "component_groups": [
+                                "starktma:basic_zombie"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 3,
+                        "add": {
+                            "component_groups": [
+                                "starktma:sugar_rush_zombie"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 3,
+                        "add": {
+                            "component_groups": [
+                                "starktma:gumball_helmet_zombie"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 3,
+                        "add": {
+                            "component_groups": [
+                                "starktma:candy_gobbler_zombie"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 3,
+                        "add": {
+                            "component_groups": [
+                                "starktma:lollipop_shield_zombie"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 2,
+                        "add": {
+                            "component_groups": [
+                                "starktma:jellybean_juggler"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 3,
+                        "add": {
+                            "component_groups": [
+                                "starktma:sugar_imp_zombie"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 1,
+                        "add": {
+                            "component_groups": [
+                                "starktma:sugar_spawner"
+                            ]
+                        }
+                    }
+                ]
+            },
+            "level_20": {
+                "randomize": [
+                    {
+                        "weight": 5,
+                        "add": {
+                            "component_groups": [
+                                "starktma:basic_zombie"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 3,
+                        "add": {
+                            "component_groups": [
+                                "starktma:sugar_rush_zombie"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 3,
+                        "add": {
+                            "component_groups": [
+                                "starktma:gumball_helmet_zombie"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 3,
+                        "add": {
+                            "component_groups": [
+                                "starktma:candy_gobbler_zombie"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 3,
+                        "add": {
+                            "component_groups": [
+                                "starktma:lollipop_shield_zombie"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 2,
+                        "add": {
+                            "component_groups": [
+                                "starktma:jellybean_juggler"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 3,
+                        "add": {
+                            "component_groups": [
+                                "starktma:sugar_imp_zombie"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 2,
+                        "add": {
+                            "component_groups": [
+                                "starktma:sugar_spawner"
+                            ]
+                        }
+                    }
+                ]
+            },
+            "level_21": {
+                "randomize": [
+                    {
+                        "weight": 5,
+                        "add": {
+                            "component_groups": [
+                                "starktma:basic_zombie"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 3,
+                        "add": {
+                            "component_groups": [
+                                "starktma:sugar_rush_zombie"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 3,
+                        "add": {
+                            "component_groups": [
+                                "starktma:gumball_helmet_zombie"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 3,
+                        "add": {
+                            "component_groups": [
+                                "starktma:candy_gobbler_zombie"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 3,
+                        "add": {
+                            "component_groups": [
+                                "starktma:lollipop_shield_zombie"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 2,
+                        "add": {
+                            "component_groups": [
+                                "starktma:jellybean_juggler"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 3,
+                        "add": {
+                            "component_groups": [
+                                "starktma:sugar_imp_zombie"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 3,
+                        "add": {
+                            "component_groups": [
+                                "starktma:sugar_spawner"
+                            ]
+                        }
+                    }
+                ]
+            },
+            "level_22": {
+                "randomize": [
+                    {
+                        "weight": 5,
+                        "add": {
+                            "component_groups": [
+                                "starktma:basic_zombie"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 3,
+                        "add": {
+                            "component_groups": [
+                                "starktma:sugar_rush_zombie"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 3,
+                        "add": {
+                            "component_groups": [
+                                "starktma:gumball_helmet_zombie"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 3,
+                        "add": {
+                            "component_groups": [
+                                "starktma:candy_gobbler_zombie"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 3,
+                        "add": {
+                            "component_groups": [
+                                "starktma:lollipop_shield_zombie"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 2,
+                        "add": {
+                            "component_groups": [
+                                "starktma:jellybean_juggler"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 3,
+                        "add": {
+                            "component_groups": [
+                                "starktma:sugar_imp_zombie"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 3,
+                        "add": {
+                            "component_groups": [
+                                "starktma:sugar_spawner"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 1,
+                        "add": {
+                            "component_groups": [
+                                "starktma:ice_cream_cone"
+                            ]
+                        }
+                    }
+                ]
+            },
+            "level_23": {
+                "randomize": [
+                    {
+                        "weight": 5,
+                        "add": {
+                            "component_groups": [
+                                "starktma:basic_zombie"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 3,
+                        "add": {
+                            "component_groups": [
+                                "starktma:sugar_rush_zombie"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 3,
+                        "add": {
+                            "component_groups": [
+                                "starktma:gumball_helmet_zombie"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 3,
+                        "add": {
+                            "component_groups": [
+                                "starktma:candy_gobbler_zombie"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 3,
+                        "add": {
+                            "component_groups": [
+                                "starktma:lollipop_shield_zombie"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 2,
+                        "add": {
+                            "component_groups": [
+                                "starktma:jellybean_juggler"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 3,
+                        "add": {
+                            "component_groups": [
+                                "starktma:sugar_imp_zombie"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 3,
+                        "add": {
+                            "component_groups": [
+                                "starktma:sugar_spawner"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 2,
+                        "add": {
+                            "component_groups": [
+                                "starktma:ice_cream_cone"
+                            ]
+                        }
+                    }
+                ]
+            },
+            "level_24": {
+                "randomize": [
+                    {
+                        "weight": 5,
+                        "add": {
+                            "component_groups": [
+                                "starktma:basic_zombie"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 3,
+                        "add": {
+                            "component_groups": [
+                                "starktma:sugar_rush_zombie"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 3,
+                        "add": {
+                            "component_groups": [
+                                "starktma:gumball_helmet_zombie"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 3,
+                        "add": {
+                            "component_groups": [
+                                "starktma:candy_gobbler_zombie"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 3,
+                        "add": {
+                            "component_groups": [
+                                "starktma:lollipop_shield_zombie"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 2,
+                        "add": {
+                            "component_groups": [
+                                "starktma:jellybean_juggler"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 3,
+                        "add": {
+                            "component_groups": [
+                                "starktma:sugar_imp_zombie"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 3,
+                        "add": {
+                            "component_groups": [
+                                "starktma:sugar_spawner"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 3,
+                        "add": {
+                            "component_groups": [
+                                "starktma:ice_cream_cone"
+                            ]
+                        }
+                    }
+                ]
+            },
+            "level_25": {
+                "randomize": [
+                    {
+                        "weight": 5,
+                        "add": {
+                            "component_groups": [
+                                "starktma:basic_zombie"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 3,
+                        "add": {
+                            "component_groups": [
+                                "starktma:sugar_rush_zombie"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 3,
+                        "add": {
+                            "component_groups": [
+                                "starktma:gumball_helmet_zombie"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 3,
+                        "add": {
+                            "component_groups": [
+                                "starktma:candy_gobbler_zombie"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 3,
+                        "add": {
+                            "component_groups": [
+                                "starktma:lollipop_shield_zombie"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 2,
+                        "add": {
+                            "component_groups": [
+                                "starktma:jellybean_juggler"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 3,
+                        "add": {
+                            "component_groups": [
+                                "starktma:sugar_imp_zombie"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 3,
+                        "add": {
+                            "component_groups": [
+                                "starktma:sugar_spawner"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 3,
+                        "add": {
+                            "component_groups": [
+                                "starktma:ice_cream_cone"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 1,
+                        "add": {
+                            "component_groups": [
+                                "starktma:sugar_overlord"
+                            ]
+                        }
+                    }
+                ]
+            },
+            "level_26": {
+                "randomize": [
+                    {
+                        "weight": 5,
+                        "add": {
+                            "component_groups": [
+                                "starktma:basic_zombie"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 3,
+                        "add": {
+                            "component_groups": [
+                                "starktma:sugar_rush_zombie"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 3,
+                        "add": {
+                            "component_groups": [
+                                "starktma:gumball_helmet_zombie"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 3,
+                        "add": {
+                            "component_groups": [
+                                "starktma:candy_gobbler_zombie"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 3,
+                        "add": {
+                            "component_groups": [
+                                "starktma:lollipop_shield_zombie"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 2,
+                        "add": {
+                            "component_groups": [
+                                "starktma:jellybean_juggler"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 3,
+                        "add": {
+                            "component_groups": [
+                                "starktma:sugar_imp_zombie"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 3,
+                        "add": {
+                            "component_groups": [
+                                "starktma:sugar_spawner"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 3,
+                        "add": {
+                            "component_groups": [
+                                "starktma:ice_cream_cone"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 1,
+                        "add": {
+                            "component_groups": [
+                                "starktma:sugar_overlord"
+                            ]
+                        }
+                    }
+                ]
+            },
+            "level_27": {
+                "randomize": [
+                    {
+                        "weight": 5,
+                        "add": {
+                            "component_groups": [
+                                "starktma:basic_zombie"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 3,
+                        "add": {
+                            "component_groups": [
+                                "starktma:sugar_rush_zombie"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 3,
+                        "add": {
+                            "component_groups": [
+                                "starktma:gumball_helmet_zombie"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 3,
+                        "add": {
+                            "component_groups": [
+                                "starktma:candy_gobbler_zombie"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 3,
+                        "add": {
+                            "component_groups": [
+                                "starktma:lollipop_shield_zombie"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 2,
+                        "add": {
+                            "component_groups": [
+                                "starktma:jellybean_juggler"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 3,
+                        "add": {
+                            "component_groups": [
+                                "starktma:sugar_imp_zombie"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 3,
+                        "add": {
+                            "component_groups": [
+                                "starktma:sugar_spawner"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 3,
+                        "add": {
+                            "component_groups": [
+                                "starktma:ice_cream_cone"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 1,
+                        "add": {
+                            "component_groups": [
+                                "starktma:sugar_overlord"
+                            ]
+                        }
+                    }
+                ]
+            },
+            "level_28": {
+                "randomize": [
+                    {
+                        "weight": 5,
+                        "add": {
+                            "component_groups": [
+                                "starktma:basic_zombie"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 3,
+                        "add": {
+                            "component_groups": [
+                                "starktma:sugar_rush_zombie"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 3,
+                        "add": {
+                            "component_groups": [
+                                "starktma:gumball_helmet_zombie"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 3,
+                        "add": {
+                            "component_groups": [
+                                "starktma:candy_gobbler_zombie"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 3,
+                        "add": {
+                            "component_groups": [
+                                "starktma:lollipop_shield_zombie"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 2,
+                        "add": {
+                            "component_groups": [
+                                "starktma:jellybean_juggler"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 3,
+                        "add": {
+                            "component_groups": [
+                                "starktma:sugar_imp_zombie"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 3,
+                        "add": {
+                            "component_groups": [
+                                "starktma:sugar_spawner"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 3,
+                        "add": {
+                            "component_groups": [
+                                "starktma:ice_cream_cone"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 1,
+                        "add": {
+                            "component_groups": [
+                                "starktma:sugar_overlord"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 1,
+                        "add": {
+                            "component_groups": [
+                                "starktma:candy_jammer"
+                            ]
+                        }
+                    }
+                ]
+            },
+            "level_29": {
+                "randomize": [
+                    {
+                        "weight": 6,
+                        "add": {
+                            "component_groups": [
+                                "starktma:basic_zombie"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 3,
+                        "add": {
+                            "component_groups": [
+                                "starktma:sugar_rush_zombie"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 3,
+                        "add": {
+                            "component_groups": [
+                                "starktma:gumball_helmet_zombie"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 3,
+                        "add": {
+                            "component_groups": [
+                                "starktma:candy_gobbler_zombie"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 3,
+                        "add": {
+                            "component_groups": [
+                                "starktma:lollipop_shield_zombie"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 2,
+                        "add": {
+                            "component_groups": [
+                                "starktma:jellybean_juggler"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 3,
+                        "add": {
+                            "component_groups": [
+                                "starktma:sugar_imp_zombie"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 3,
+                        "add": {
+                            "component_groups": [
+                                "starktma:sugar_spawner"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 3,
+                        "add": {
+                            "component_groups": [
+                                "starktma:ice_cream_cone"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 1,
+                        "add": {
+                            "component_groups": [
+                                "starktma:sugar_overlord"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 1,
+                        "add": {
+                            "component_groups": [
+                                "starktma:candy_jammer"
+                            ]
+                        }
+                    }
+                ]
+            },
+            "level_30": {
+                "randomize": [
+                    {
+                        "weight": 6,
+                        "add": {
+                            "component_groups": [
+                                "starktma:basic_zombie"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 3,
+                        "add": {
+                            "component_groups": [
+                                "starktma:sugar_rush_zombie"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 3,
+                        "add": {
+                            "component_groups": [
+                                "starktma:gumball_helmet_zombie"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 3,
+                        "add": {
+                            "component_groups": [
+                                "starktma:candy_gobbler_zombie"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 3,
+                        "add": {
+                            "component_groups": [
+                                "starktma:lollipop_shield_zombie"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 2,
+                        "add": {
+                            "component_groups": [
+                                "starktma:jellybean_juggler"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 3,
+                        "add": {
+                            "component_groups": [
+                                "starktma:sugar_imp_zombie"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 3,
+                        "add": {
+                            "component_groups": [
+                                "starktma:sugar_spawner"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 3,
+                        "add": {
+                            "component_groups": [
+                                "starktma:ice_cream_cone"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 1,
+                        "add": {
+                            "component_groups": [
+                                "starktma:sugar_overlord"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 1,
+                        "add": {
+                            "component_groups": [
+                                "starktma:candy_jammer"
+                            ]
+                        }
+                    }
+                ]
+            },
+            "level_-1": {
+                "randomize": [
+                    {
+                        "weight": 5,
+                        "add": {
+                            "component_groups": [
+                                "starktma:basic_zombie"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 3,
+                        "add": {
+                            "component_groups": [
+                                "starktma:sugar_rush_zombie"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 3,
+                        "add": {
+                            "component_groups": [
+                                "starktma:gumball_helmet_zombie"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 3,
+                        "add": {
+                            "component_groups": [
+                                "starktma:candy_gobbler_zombie"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 3,
+                        "add": {
+                            "component_groups": [
+                                "starktma:lollipop_shield_zombie"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 2,
+                        "add": {
+                            "component_groups": [
+                                "starktma:jellybean_juggler"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 3,
+                        "add": {
+                            "component_groups": [
+                                "starktma:sugar_imp_zombie"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 3,
+                        "add": {
+                            "component_groups": [
+                                "starktma:sugar_spawner"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 3,
+                        "add": {
+                            "component_groups": [
+                                "starktma:ice_cream_cone"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 1,
+                        "add": {
+                            "component_groups": [
+                                "starktma:sugar_overlord"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 1,
+                        "add": {
+                            "component_groups": [
+                                "starktma:candy_jammer"
+                            ]
+                        }
+                    }
+                ]
+            },
+            "level_-2": {
+                "randomize": [
+                    {
+                        "weight": 5,
+                        "add": {
+                            "component_groups": [
+                                "starktma:basic_zombie"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 3,
+                        "add": {
+                            "component_groups": [
+                                "starktma:sugar_rush_zombie"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 3,
+                        "add": {
+                            "component_groups": [
+                                "starktma:gumball_helmet_zombie"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 3,
+                        "add": {
+                            "component_groups": [
+                                "starktma:candy_gobbler_zombie"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 3,
+                        "add": {
+                            "component_groups": [
+                                "starktma:lollipop_shield_zombie"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 2,
+                        "add": {
+                            "component_groups": [
+                                "starktma:jellybean_juggler"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 3,
+                        "add": {
+                            "component_groups": [
+                                "starktma:sugar_imp_zombie"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 3,
+                        "add": {
+                            "component_groups": [
+                                "starktma:sugar_spawner"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 3,
+                        "add": {
+                            "component_groups": [
+                                "starktma:ice_cream_cone"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 1,
+                        "add": {
+                            "component_groups": [
+                                "starktma:sugar_overlord"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 1,
+                        "add": {
+                            "component_groups": [
+                                "starktma:candy_jammer"
+                            ]
+                        }
+                    }
+                ]
+            },
+            "level_-3": {
+                "randomize": [
+                    {
+                        "weight": 5,
+                        "add": {
+                            "component_groups": [
+                                "starktma:basic_zombie"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 3,
+                        "add": {
+                            "component_groups": [
+                                "starktma:sugar_rush_zombie"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 3,
+                        "add": {
+                            "component_groups": [
+                                "starktma:gumball_helmet_zombie"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 3,
+                        "add": {
+                            "component_groups": [
+                                "starktma:candy_gobbler_zombie"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 3,
+                        "add": {
+                            "component_groups": [
+                                "starktma:lollipop_shield_zombie"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 2,
+                        "add": {
+                            "component_groups": [
+                                "starktma:jellybean_juggler"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 3,
+                        "add": {
+                            "component_groups": [
+                                "starktma:sugar_imp_zombie"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 3,
+                        "add": {
+                            "component_groups": [
+                                "starktma:sugar_spawner"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 3,
+                        "add": {
+                            "component_groups": [
+                                "starktma:ice_cream_cone"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 1,
+                        "add": {
+                            "component_groups": [
+                                "starktma:sugar_overlord"
+                            ]
+                        }
+                    },
+                    {
+                        "weight": 1,
+                        "add": {
+                            "component_groups": [
+                                "starktma:candy_jammer"
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        "description": {
+            "identifier": "starktma:attackers_randomizer",
+            "is_summonable": true
+        }
+    }
+}

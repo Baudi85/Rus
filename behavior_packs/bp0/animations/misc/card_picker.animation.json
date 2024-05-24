@@ -1,0 +1,34 @@
+//Filename: card_picker.animation.json
+//Generated with Anvil@StarkTMA 0.5.4
+//25-10-2023 01:06:43 +0100
+//
+
+{
+    "format_version": "1.10.0",
+    "animations": {
+        "animation.starktma.card_picker.dialogue_opener": {
+            "loop": true,
+            "timeline": {
+                "0.5": [
+                    "/execute  if score sugar_rush level_index matches 1..2 run dialogue open @s @a card_picker_1",
+                    "/execute  if score sugar_rush level_index matches 3..4 run dialogue open @s @a card_picker_2",
+                    "/execute  if score sugar_rush level_index matches 5..6 run dialogue open @s @a card_picker_3",
+                    "/execute  if score sugar_rush level_index matches 7..8 run dialogue open @s @a card_picker_4",
+                    "/execute  if score sugar_rush level_index matches 9..10 run dialogue open @s @a card_picker_5",
+                    "/execute  if score sugar_rush level_index matches 11..12 run dialogue open @s @a card_picker_6",
+                    "/execute  if score sugar_rush level_index matches 13..14 run dialogue open @s @a card_picker_7",
+                    "/execute  if score sugar_rush level_index matches 15..16 run dialogue open @s @a card_picker_8",
+                    "/execute  if score sugar_rush level_index matches 17..18 run dialogue open @s @a card_picker_9",
+                    "/execute  if score sugar_rush level_index matches 19..20 run dialogue open @s @a card_picker_10",
+                    "/execute  if score sugar_rush level_index matches 21..22 run dialogue open @s @a card_picker_11",
+                    "/execute  if score sugar_rush level_index matches 23..24 run dialogue open @s @a card_picker_12",
+                    "/execute  if score sugar_rush level_index matches 25..26 run dialogue open @s @a card_picker_13",
+                    "/execute  if score sugar_rush level_index matches 27..28 run dialogue open @s @a card_picker_14",
+                    "/execute  if score sugar_rush level_index matches 29..30 run dialogue open @s @a card_picker_15",
+                    "/execute  if score sugar_rush level_index matches ..-1 run dialogue open @s @a card_picker_15"
+                ]
+            },
+            "animation_length": 0.6
+        }
+    }
+}

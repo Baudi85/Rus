@@ -1,0 +1,166 @@
+//Filename: grass_water.block.json
+//Generated with Anvil@StarkTMA 0.5.4
+//25-10-2023 01:06:44 +0100
+//
+
+{
+    "format_version": "1.20.30",
+    "minecraft:block": {
+        "description": {
+            "identifier": "starktma:grass_water",
+            "states": {
+                "starktma:rotation": [
+                    "0",
+                    "90",
+                    "180",
+                    "270"
+                ],
+                "starktma:state": [
+                    "corner",
+                    "side",
+                    "center",
+                    "parallel",
+                    "c_corner",
+                    "x_corner",
+                    "inward"
+                ]
+            }
+        },
+        "components": {
+            "minecraft:material_instances": {
+                "*": {
+                    "texture": "grass_water_center",
+                    "render_method": "alpha_test"
+                }
+            },
+            "minecraft:geometry": "geometry.starktma.layers_3"
+        },
+        "permutations": [
+            {
+                "condition": "q.block_state('starktma:rotation') == '0'",
+                "components": {
+                    "minecraft:transformation": {
+                        "rotation": [
+                            0,
+                            0,
+                            0
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('starktma:rotation') == '90'",
+                "components": {
+                    "minecraft:transformation": {
+                        "rotation": [
+                            0,
+                            90,
+                            0
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('starktma:rotation') == '180'",
+                "components": {
+                    "minecraft:transformation": {
+                        "rotation": [
+                            0,
+                            180,
+                            0
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('starktma:rotation') == '270'",
+                "components": {
+                    "minecraft:transformation": {
+                        "rotation": [
+                            0,
+                            -90,
+                            0
+                        ]
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('starktma:state') == 'corner'",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "grass_water_corner",
+                            "render_method": "alpha_test"
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('starktma:state') == 'side'",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "grass_water_side",
+                            "render_method": "alpha_test"
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('starktma:state') == 'center'",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "grass_water_center",
+                            "render_method": "alpha_test"
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('starktma:state') == 'parallel'",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "grass_water_parallel",
+                            "render_method": "alpha_test"
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('starktma:state') == 'c_corner'",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "grass_water_c_corner",
+                            "render_method": "alpha_test"
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('starktma:state') == 'x_corner'",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "grass_water_x_corner",
+                            "render_method": "alpha_test"
+                        }
+                    }
+                }
+            },
+            {
+                "condition": "q.block_state('starktma:state') == 'inward'",
+                "components": {
+                    "minecraft:material_instances": {
+                        "*": {
+                            "texture": "grass_water_inward",
+                            "render_method": "alpha_test"
+                        }
+                    }
+                }
+            }
+        ]
+    }
+}
